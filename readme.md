@@ -35,10 +35,8 @@
 
 =====================
 
-#bower
-
- npm install -g bower
- (在那個資料夾) bower i載回套件
+如果gulp無法順利彈出瀏覽器視窗
+	輸入 npm rebuild node-sass
 
 
 
