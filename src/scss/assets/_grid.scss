@@ -36,7 +36,7 @@ div[class*= col-md-pull],
 div[class*= col-lg-push],
 div[class*= col-lg-pull]{position: relative;}
 
-@media screen and (max-width: $rwd-xs-breakpoint){
+@include respones(xs) {
 		.container{
 			width:$grid-xs-container;
 		}
@@ -55,7 +55,7 @@ div[class*= col-lg-pull]{position: relative;}
 		}
 	}
 }
-@media screen and (min-width: $rwd-sm-breakpoint){
+@include respones(sm) {
 		.container{
 			width:$grid-sm-container;
 		}
@@ -74,7 +74,7 @@ div[class*= col-lg-pull]{position: relative;}
 		}
 	}
 }
-@media screen and (min-width: $rwd-md-breakpoint){
+@include respones(md){
 		.container {
 	    width: $grid-md-container;
 	  }
@@ -93,7 +93,7 @@ div[class*= col-lg-pull]{position: relative;}
 		}
 	}
 }
-@media screen and (min-width: $rwd-lg-breakpoint){
+@include respones(lg) {
 		.container {
 	    width:$grid-lg-container
 	  }
