@@ -1,6 +1,6 @@
 @mixin respones($screen-size) {
     @if $screen-size == "xs" {
-        @media all and (max-width: $rwd-xs-breakpoint) {
+        @media screen and (max-width: $rwd-xs-breakpoint) {
              @content;
         }
     }
