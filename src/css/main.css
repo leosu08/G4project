@@ -561,6 +561,92 @@ nav {
     border: 2px solid #95d3e4;
     border-radius: 50%; }
 
+#navButtonHidden {
+  position: absolute;
+  right: 0px; }
+
+#navButton {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  margin: auto;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #45484d;
+  color: #f2f2f2;
+  border-radius: 50%;
+  display: none; }
+
+#navButton:before,
+#navButton:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: .8s; }
+
+#navButton:before {
+  box-shadow: 0 -6px 0px #fff; }
+
+#navButton:after {
+  box-shadow: 0 6px 0px #fff; }
+
+#navButtonHidden:checked ~ #navButton:before {
+  transform: rotate(45deg);
+  box-shadow: none; }
+
+#navButtonHidden:checked ~ #navButton:after {
+  transform: rotate(-45deg);
+  box-shadow: none; }
+
+@keyframes aa {
+  0% {
+    right: 0px;
+    top: 0px;
+    opacity: 0; }
+  100% {
+    right: 0px;
+    top: -70px;
+    opacity: 1; } }
+
+@keyframes bb {
+  0% {
+    right: 0px;
+    top: 0px;
+    opacity: 0; }
+  100% {
+    right: 40px;
+    top: -40px;
+    opacity: 1; } }
+
+@keyframes cc {
+  0% {
+    right: 0px;
+    top: 0px;
+    opacity: 0; }
+  100% {
+    right: 70px;
+    top: -10px;
+    opacity: 1; } }
+
+@keyframes dd {
+  0% {
+    right: 0px;
+    top: 0px;
+    opacity: 0; }
+  100% {
+    right: 100px;
+    top: 20px;
+    opacity: 1; } }
+
 footer {
   width: 100%;
   height: 50px;
@@ -573,11 +659,35 @@ footer {
 
 @media screen and (max-width: 767px) {
   .menu {
-    padding-right: 20px; }
-    .menu .mainMenu a {
-      color: #fff;
-      background-color: #ccc;
-      padding: 5px; } }
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    margin: auto;
+    text-align: center;
+    z-index: -2;
+    display: none; }
+    .menu .mainMenu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0px;
+      margin: auto; }
+      .menu .mainMenu a {
+        color: steelblue;
+        font-size: 16px; }
+  #navButtonHidden:checked ~ .menu {
+    display: block; }
+  #navButtonHidden:checked ~ .menu li:nth-of-type(1) {
+    animation: aa .8s both; }
+  #navButtonHidden:checked ~ .menu li:nth-of-type(2) {
+    animation: bb .8s both; }
+  #navButtonHidden:checked ~ .menu li:nth-of-type(3) {
+    animation: cc .8s both; }
+  #navButtonHidden:checked ~ .menu li:nth-of-type(4) {
+    animation: dd .8s both; }
+  #navButton {
+    display: block; } }
 
 @media all and (max-width: 992px) and (min-width: 768px) {
   .menu .mainMenu a {

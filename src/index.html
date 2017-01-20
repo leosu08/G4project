@@ -6,10 +6,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="libs/ferroMenu/jquery.ferro.ferroMenu.css">
-	<script src="libs/ferroMenu/jquery-1.9.1.min.js"></script>
 	<script scr="libs/jquery/dist/jquery.min.js"></script>
-	<script src="libs/ferroMenu/jquery.ferro.ferroMenu-1.2.3.min.js"></script>
 	<script src="js/menu.js"></script>
 </head>
 <body>
@@ -17,13 +14,13 @@
 	<nav>
 		<div class="container relative">
 			<div class="row">
+				<input type="checkbox" id="navButtonHidden">
+				<label id="navButton" for="navButtonHidden"></label>
 				<ul class="menu">
 					<li class="mainMenu"><a href="#">觀星活動</a></li>
 					<li class="mainMenu"><a href="#">星際論壇</a></li>
 					<li class="mainMenu"><a href="#">照&nbsp片&nbsp牆</a></li>
 					<li class="mainMenu"><a href="#">星&nbsp知&nbsp識</a></li>
-					<!-- <li id="signUp"><a href="#"><i class="fa fa-envelope-open" aria-hidden="true"></i></a></li>
-					<li id="signIn"><a href="#"><img src="img/memberPhoto.png"></a></li> -->
 				</ul>
 				<ul>
 					<li id="signUp"><a href="#"><i class="fa fa-envelope-open" aria-hidden="true"></i></a></li>
@@ -31,7 +28,15 @@
 				</ul>
 			</div>
 		</div>
-	</nav>
+	<!-- 	<div id="mobileMenu">
+			<ul>
+				<li><a href="#">觀星活動</a></li>
+				<li><a href="#">星際論壇</a></li>
+				<li><a href="#">照&nbsp片&nbsp牆</a></li>
+				<li><a href="#">星&nbsp知&nbsp識</a></li>
+			</ul>
+		</div>
+	</nav> -->
 <footer>
 	Copyright@2017 by Zero Gravity
 </footer>	
