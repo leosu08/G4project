@@ -1,9 +1,0 @@
-$(document).ready(function(){
-		if($(window).width()<768){
-			$('#nav').ferroMenu({
-				position:"center-bottom",
-				radius:120,
-				drag:false
-			})
-	}
-})
