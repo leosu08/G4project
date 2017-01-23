@@ -35,17 +35,17 @@ gulp.task('server',['sass'], function() {
 // });
 
 gulp.task('watch', function () {
-    gulp.watch('./scss/**/*.+(scss|sass)',['sass']);
-    gulp.watch("./js/*.js").on('change', browserSync.reload);
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch('scss/**/*.+(scss|sass)',['sass']);
+    gulp.watch("js/*.js").on('change', browserSync.reload);
+    gulp.watch("*.html").on('change', browserSync.reload);
     // gulp.watch('**/*.php').on('change', browserSync.reload);
 });
 
 
 gulp.task('sass', function () {
-  return gulp.src('./scss/**/*.scss')
+  return gulp.src('scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css/'))
+    .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
 });
 
@@ -63,7 +63,7 @@ gulp.task('sass', function () {
 
 
 gulp.task('concatCSS', function() {
-    return gulp.src('./css/*.css')
+    return gulp.src('css/*.css')
         .pipe(concat('all.css'))
         .pipe(gulp.dest('./dist/css/'));
 });//合併css

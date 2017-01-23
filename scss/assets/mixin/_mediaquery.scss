@@ -6,18 +6,18 @@
     }
 
     @else if $screen-size == "sm" {
-        @media all and (max-width: $rwd-sm-breakpoint) and (min-width: $rwd-xs-breakpoint + 1) {
+        @media screen and (max-width: $rwd-sm-breakpoint) and (min-width: $rwd-xs-breakpoint + 1) {
              @content;
         }
     }
 
     @else if $screen-size == "md" {
-        @media all and (max-width: $rwd-md-breakpoint) and (min-width: $rwd-sm-breakpoint + 1) {
+        @media screen and (max-width: $rwd-md-breakpoint) and (min-width: $rwd-sm-breakpoint + 1) {
              @content;
         }
     }
     @else if $screen-size == "lg" {
-        @media all and (min-width: $rwd-md-breakpoint + 1) {
+        @media screen and (min-width: $rwd-md-breakpoint + 1) {
              @content;
         }
 }
