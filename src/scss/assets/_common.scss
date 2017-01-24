@@ -1,0 +1,29 @@
+.text-center{
+	text-align: center;
+} 
+.text-right{
+	text-align: right;
+} 
+.text-left{
+	text-align: left;
+} 
+.hidden{
+	visibility: hidden;
+}
+.relative{
+	position: relative;
+}
+
+.btn{
+	@include btn(100px,35px,5px);
+}
+
+.btn-lg{
+	@include btn(155px,55px,5px);
+}
+.btn-blue{
+	@include btn-color($blue,$white);
+}
+.btn-blue1{
+	@include btn-color(transparent,$blue,$blue);
+}

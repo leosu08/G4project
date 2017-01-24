@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 gulp.task('server',['sass'], function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "src/"
         }
     });
 });
@@ -35,47 +35,35 @@ gulp.task('server',['sass'], function() {
 // });
 
 gulp.task('watch', function () {
-    gulp.watch('scss/**/*.+(scss|sass)',['sass']);
-    gulp.watch("js/*.js").on('change', browserSync.reload);
-    gulp.watch("*.html").on('change', browserSync.reload);
+    gulp.watch('src/scss/**/*.+(scss|sass)',['sass']);
+    gulp.watch("src/js/*.js").on('change', browserSync.reload);
+    gulp.watch("src/*.html").on('change', browserSync.reload);
     // gulp.watch('**/*.php').on('change', browserSync.reload);
 });
 
 
 gulp.task('sass', function () {
-  return gulp.src('scss/**/*.scss')
+  return gulp.src('src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('css/'))
+    .pipe(gulp.dest('src/css/'))
     .pipe(browserSync.stream());
 });
 
-// gulp.task('webserver', function() {
-//     gulp.src('./src/')
-//         .pipe(webserver({
-//             port: 1234,
-//             livereload: true,
-//             directoryListing: false,
-//             open: true,
-//             fallback: 'index.html'
-//         }));
-// });
-
-
 
 gulp.task('concatCSS', function() {
-    return gulp.src('css/*.css')
+    return gulp.src('src/css/*.css')
         .pipe(concat('all.css'))
-        .pipe(gulp.dest('./dist/css/'));
+        .pipe(gulp.dest('dist/css/'));
 });//合併css
 
 gulp.task('concatJS', function() {
-    return gulp.src('./js/*.js')
+    return gulp.src('src/js/*.js')
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('./dist/js/'));
+        .pipe(gulp.dest('dist/js/'));
 });//合併js
 
 gulp.task('minify-css', function() {
-    return gulp.src('./dist/css/all.css')
+    return gulp.src('dist/css/all.css')
         .pipe(minifyCSS({
             keepBreaks: true,
         }))
@@ -83,32 +71,32 @@ gulp.task('minify-css', function() {
             path.basename += ".min";
             path.extname = ".css";
         }))
-        .pipe(gulp.dest('./dist/css/'));
+        .pipe(gulp.dest('dist/css/'));
 });//壓縮css
 
 gulp.task('uglify',function() {
-    return gulp.src('./dist/js/all.js')
+    return gulp.src('dist/js/all.js')
         .pipe(uglify())
         .pipe(rename(function(path) {
             path.basename += ".min";
             path.extname = ".js";
         }))
-        .pipe(gulp.dest('./dist/js/'));
+        .pipe(gulp.dest('dist/js/'));
 });//壓縮js
 
 gulp.task('html-replace', function() {
     var opts = { comments: false, spare: false, quotes: true };
-    return gulp.src('./*.html')
+    return gulp.src('src/*.html')
         .pipe(htmlreplace({
             'css': 'css/all.min.css',
             'js': 'js/all.min.js'
         }))
         .pipe(minifyHTML(opts))
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('dist/'));
 });
  
 gulp.task('imagemin', function() {
-    gulp.src('img/*.{png,jpg,gif,ico}')
+    gulp.src('src/img/*.{png,jpg,gif,ico}')
         .pipe(cache(imagemin({
             progressive: true,
             svgoPlugins: [{ removeViewBox: false }],
