@@ -529,7 +529,7 @@ nav {
   .menu .mainMenu {
     display: inline-block; }
     .menu .mainMenu a:hover {
-      border-bottom: 3px solid #6bc2f4; }
+      border-bottom: 3px solid #4f9cdd; }
     .menu .mainMenu a {
       display: block;
       padding: 35px 14px 15px;
@@ -559,7 +559,7 @@ nav {
     height: 100%;
     margin-top: 15px; }
   #signIn a:hover img {
-    border: 2px solid #6bc2f4;
+    border: 2px solid #4f9cdd;
     border-radius: 50%; }
 
 #navButtonHidden {

@@ -1,6 +1,5 @@
 @import "assets/font";
 @import "assets/color";
-@import "assets/grid";
 
 
 @mixin btn($width,$height,$radius){
@@ -16,14 +15,15 @@
 		text-decoration: none;
 		line-height: $height;
 		font-size: 18px;
+		letter-spacing: 2px;
 	}
 }
 
 @mixin btn-color($bgcolor,$fzcolor,$bdcolor:$bgcolor ){
 	background-color: $bgcolor;
-	border:1px solid $bdcolor; 
+	border:1px solid $bdcolor;
 	a{
-		color:$fzcolor;	
+		color:$fzcolor;
 	}
 }
 
@@ -69,20 +69,14 @@
 .btn-purple{
 	@include btn-color($purple,$white);
 }
-.btn-steelblue{
-	@include btn-color($steelblue,$white);
-}
-.btn-green-blue{
-	@include btn-color($green-blue,$white);
+.btn-blue{
+	@include btn-color($blue,$white);
 }
 .btn-purple1{
 	@include btn-color(transparent,$purple,$purple);
 }
-.btn-steelblue1{
-	@include btn-color(transparent,$steelblue,$steelblue);
-}
-.btn-green-blue1{
-	@include btn-color(transparent,$green-blue,$green-blue);
+.btn-blue1{
+	@include btn-color(transparent,$blue,$blue);
 }
 
 
@@ -125,10 +119,7 @@
 	background-color: $blue;
 }
 .item10{
-	background-color: $steelblue;
-}
-.item11{
-	background-color: $red;
+	background-color: $orange;
 }
 .item12{
 	background-color: $light-grey;
@@ -136,15 +127,7 @@
 .item13{
 	background-color: $grey;
 }
-.item14{
-	background-color: $yellow;
-}
-.item15{
-	background-color: $a-bgc;
-}
-.item16{
-	background-color: $f-green;
-}
+
 
 
 
