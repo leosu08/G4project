@@ -61,11 +61,11 @@
 	margin:100px 0;
 }
 .btn{
-	@include btn(100px,35px,5px);
+	@include btn(85px,35px,5px);
 }
 
 .btn-lg{
-	@include btn(155px,55px,5px);
+	@include btn(125px,38px,5px);
 }
 
 .btn-purple{

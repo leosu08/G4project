@@ -448,7 +448,7 @@ template {
   margin: 100px 0; }
 
 .btn {
-  width: 100px;
+  width: 85px;
   height: 35px;
   text-align: center;
   display: inline-block;
@@ -463,8 +463,8 @@ template {
     letter-spacing: 2px; }
 
 .btn-lg {
-  width: 155px;
-  height: 55px;
+  width: 125px;
+  height: 38px;
   text-align: center;
   display: inline-block;
   border: 1px solid transparent;
@@ -473,7 +473,7 @@ template {
     padding: 0px 10px;
     display: block;
     text-decoration: none;
-    line-height: 55px;
+    line-height: 38px;
     font-size: 18px;
     letter-spacing: 2px; }
 
