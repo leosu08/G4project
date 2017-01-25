@@ -1,6 +1,3 @@
-*{
-	box-sizing: border-box;
-}
 .container{
 	margin: auto;
 	padding-right:$grid-container-padding;
@@ -39,6 +36,10 @@ div[class*= col-lg-pull]{position: relative;}
 @include respones(xs) {
 		.container{
 			width:$grid-xs-container;
+		}
+		.row{
+			margin-left: 0;
+			margin-right: 0;
 		}
 	@for $i from 1 through $grid-column{
 		.col-xs-#{$i}{
