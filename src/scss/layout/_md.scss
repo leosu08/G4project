@@ -1,119 +1,48 @@
 @include respones(md) {
-	body {
-		background-image: url('../img/p1.jpg');
-		background-size: cover;
-	}
+    #logo {
+        float: left;
+        width: 12%;
+        padding-top: 15px;
+    }
 
-	#gap {
-		width: 100%;
-		height: 90px;
-	}
+    .mainMenu {
+        float: left;
+        padding-top: 30px;
 
-	#logo {
-		float: left;
-		width: 10%;
+        li {
+            display: inline-block;
+            position: relative;
+        }
 
-		img {
-			height: 90px;
-		}
-	}
+        &.menu {
+            width: 74%;
+            text-align: right;
 
-	#nav {
-		position: fixed;
-		right: 0;
-		left: 0;
-		top: 0;
-		margin: auto;
-		// background-image: linear-gradient(to left,rgba(0,0,0,0.4) 30%, rgba(255,255,255,0.2) 75%);
-		background-color: $o-black;
-		height: 90px;
-		z-index: 100;
-	}
+            a {
+                display: block;
+                color: $white;
+                font-size: $fz-nav;
+                padding: 12px;
+                letter-spacing: 1px;
 
-	.menu {
-		font-size: $fz-nav;
-		float: left;
-		text-align: right;
-		width: 80%;
+                span {
+                    font-size: $fz-nav + 4;
+                    font-weight: 900;
+                }
+            }
+        }
 
-		.mainMenu {
-			display: inline-block;
-			margin: 0 15px;
+        &.signArea {
+            width: 14%;
+            text-align: right;
+        }
+    }
 
-			a:hover {
-				border-bottom: 3px solid $blue;
-				color: $white;
-			}
+    .menu a:hover:after {
+        color: white;
+    }
 
-			a {
-				display: block;
-				padding: 0 2px;
-				line-height: 35px;
-				vertical-align: middle;
-				color: $light-grey;
-				letter-spacing: 1px;
-			}
-		}
-	}
-
-	#signUp {
-		display: inline-block;
-		width: 5%;
-		text-align: center;
-
-		a {
-			color: #fff;
-			font-size: $fz-nav - 2px;
-			padding: 0 10px;
-			line-height: 70px;
-
-			:hover {
-				color: $light-grey;
-			}
-
-			i {
-				font-size: 16px;
-			}
-		}
-	}
-
-	#signIn {
-		display: inline-block;
-		width: 70px;
-		height: 70px;
-		vertical-align: middle;
-		width: 5%;
-		padding-top: 5px;
-		a {
-			display: block;
-		}
-
-		img {
-			width: 100%;
-			height: 100%;
-			// margin-top:15px;
-		}
-
-		a:hover img {
-			border: 2px solid $blue;
-			border-radius: 50%;
-		}
-	}
-	//for mobile
-	#navButtonHidden {
-		position: absolute;
-		right: -1000px;
-	}
-
-	#navButton {
-		position: absolute;
-		top: 18px;
-		left: 15px;
-		width: 40px;
-		height: 40px;
-		background: #45484d;
-		color: #f2f2f2;
-		border-radius: 50%;
-		display: none;
-	}
+    .menu a:hover {
+        border-bottom: 4px solid $blue-green;
+    }
 }

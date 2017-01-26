@@ -1,0 +1,39 @@
+//after
+.menu li a:after {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    font-size: 16px;
+    color: $light-grey;
+}
+
+.menu li:nth-of-type(1) a:after {
+    content: '觀星活動';
+}
+
+.menu li:nth-of-type(2) a:after {
+    content: '星際論壇';
+}
+
+.menu li:nth-of-type(3) a:after {
+    content: '照片';
+}
+
+.menu li:nth-of-type(4) a:after {
+    content: '星知識';
+    right: 5px;
+}
+
+#nav {
+    height: 80px;
+    width: 100%;
+    background-color: $black;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#navButtonHidden {
+    position: absolute;
+    left: -1000px;
+}

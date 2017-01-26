@@ -1,0 +1,37 @@
+@include respones(sm) {
+  #logo{
+    float: none;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-top: 15px;
+  }
+  .mainMenu{
+    float: left;
+    padding-top: 30px;
+      li{
+        display: inline-block;
+        position: relative;
+      }
+      &.menu{
+        display: none;
+      }
+      &.signArea{
+        position: absolute;
+        top: 5px;
+        right:5px;
+        padding-top: 25px;
+          .btn{
+            width: 60px;
+            font-size: 12px;
+            background-color: transparent;
+            border:0px;
+            display: inline-block;
+          }
+        }
+      }
+
+
+
+
+}
