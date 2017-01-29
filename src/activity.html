@@ -13,11 +13,51 @@
 		  overflow: hidden;
 		  width: 100%;
 		  height: 100%;
+		  text-align: center;
+		}
+		#canvas{
+			width: 100%;	
+			height: 500px;	
 		}
 
 		canvas {
-		  opacity: 0.5;
+		  opacity: 0.7;
 		  
+		}
+			#star{
+				margin: auto;	
+				position: absolute;
+				top: 200;	
+				right: 0;	
+				left: 0;		
+				stroke-dashoffset: 3000;
+    			stroke-dasharray: 3000;
+				animation: circle 10s linear both;
+				z-index: 10;
+			}
+
+			@keyframes circle{
+				100%{
+					stroke-dashoffset:0;
+				}
+				
+			}
+		#tit{
+			opacity: 0;
+			animation: fadeIn 5s both;
+		}
+		@keyframes fadeIn{
+			100%{
+				opacity: 1;
+			}
+		}
+		.a-btn{
+			position: absolute;
+			bottom: 20px;	
+			right: 0;	
+			left: 0;	
+			margin: auto;		
+			z-index: 10;
 		}
 	</style>
 </head>
@@ -49,7 +89,50 @@
 				</ul>
 			</div>
 		</div>
-		<canvas id="canvas"></canvas>
+
+		<svg id="star" width="600" height="600" >
+			<g>
+			  <title>Layer 1</title>
+			  <polygon transform="rotate(-90 279.40002441406256,210.50000000000003) " id="svg_3" fill-opacity="0" stroke-width="5" stroke="#c3d5da" points="433.8207702636719,210.5 356.61041259765625,344.2323303222656 202.1896209716797,344.2323303222656 124.97923278808594,210.5 202.1896209716797,76.76766967773438 356.61041259765625,76.76766967773438 433.8207702636719,210.5 " strokeWidth="5" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" cy="210" cx="279.399994">
+			
+			
+			  
+			  <animateTransform attributeType="xml"
+			                    attributeName="transform"
+			                    type="rotate"
+			                    from="0 279.399994 210"
+			                    to="360 279.399994 210"
+			                    dur="40s"
+			                    repeatCount="indefinite"/>
+			 </polygon>
+			  <polygon fill-opacity="0" stroke-width="5" stroke="#0dd1d7" points="433.820775457056,210 356.6103846767702,343.7323197037026 202.1896031161986,343.7323197037026 124.97921233591276,210.00000000000003 202.1896031161985,76.26768029629739 356.6103846767702,76.26768029629739 433.820775457056,210 " strokeWidth="5" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" id="svg_1" cy="210" cx="279.399994">
+			  <animateTransform 
+			                    attributeName="transform"
+			                    type="rotate"
+			                    from="0 279.399994 210"
+			                    to="-360 279.399994 210"
+			                    dur="40s"
+			                    repeatCount="indefinite"/>
+			  </polygon>
+			  <text id=tit x="170" y="230" fill="#fff"  style="font:55px 微軟正黑體;font-weight: bold;">觀星活動
+				  
+			  </text>
+			  <!-- <text x="200" y="200" fill="none" stroke="red" style="font:70px 標楷體;writing-mode:tb;">你好!?</text> -->
+
+			 </g>
+		</svg>
+		<canvas id="canvas">
+			
+
+		</canvas>
+		
+</nav>
+<div class="a-btn">
+	<div class="btn-lg btn-blue"><a href="#">推薦活動</a></div>
+	<div class="btn-lg btn-blue"><a href="#">新增活動</a></div>
+</div>
+
+
 		<!-- <footer>
 	Copyright@2017 by Zero Gravity
 </footer> -->
