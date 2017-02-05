@@ -1,13 +1,90 @@
 @include respones(xs) {
 	//在此輸入內容
-
-
-
-
-
-
-
-
-
-
+.a-map{
+	display: none;
 }
+.a-phone-control{
+
+	display: block;
+	position: fixed;
+			  bottom: 50px;
+			  left: 0;
+			  right: 0;
+			  margin: auto;
+	text-align: center;
+	.a-phone-btn{
+		color:$white;
+		line-height: 38px;
+	}
+}
+.a-banner{
+	display: none;
+}
+#a-popups{
+	margin-top: 100px;
+}
+.a-tab{
+	display: none;
+}
+.a-phone-searchContainer{
+	width: 80%;
+	margin: auto;
+}
+.a-phone-search{
+	display: block;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	// text-align: center;
+	width: 100%;
+	background-color: #444;
+	#a-phone-input_1{
+		margin-top: 20px;
+	}
+	input{
+		
+		height: 30px;
+		width: 100%;
+		// text-align: center;
+		background-color: #666;
+		border:none;
+		font-size: 20px;
+		// box-shadow:2px 2px 1px rgba(0,0,0,0.5) inset;
+
+	}
+	.a-phone-icon{
+		position: absolute;
+				  top: 25px;
+				  left: 70px;
+				  margin: auto;
+		width: 30px;
+		font-size: 20px;
+	}
+	.a-phone-icon-2{
+		position: relative;
+				  top: 25px;
+				  left: 10px;
+				  margin: auto;
+		width: 30px;
+		font-size: 20px;
+	}
+	.a-phone-input{
+		display: none;
+	}
+	.fa-chevron-up{
+		cursor: pointer;
+		position: relative;
+		top: 10px;
+		display: block;
+		text-align: left;
+		display: none;
+		font-size: $fz-h2;
+		color:#888;
+	}
+}
+
+
+
+
+
+}//xs結束

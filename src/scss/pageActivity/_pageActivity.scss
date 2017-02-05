@@ -1,3 +1,305 @@
+//此處為 共用設定
+body,html{
+	font-family: "微軟正黑體";
+}
+.table{
+	display: table;
+	border-collapse: collapse; 
+}
+.thead{
+	display: table-header-group;
+}
+.tbody{
+	display:table-row-group;
+}
+.tr{
+	display: table-row;
+}
+.tr:after{
+	content:'';
+	display: block;
+	clear:both;
+}
+.th,.td{
+	display: table-cell;
+}
+.a-banner{
+	text-align: center;
+	background: url(../img/a_010.jpg);
+	background-size: cover;
+	background-position: bottom center;
+	.a-down{
+
+		i{
+			margin: 20px;
+			color:$blue-green;
+			font-size: $fz-h2;
+		}
+	}
+}
+.a-panel{
+	position: relative;
+	text-align: left;
+	border-radius: 50%;
+	width: 100%;
+	box-sizing:border-box;
+	height: 0;
+	padding: 50%;
+	background: url("../img/a_013.jpg");
+	background-size:100% 100%;
+	background-position: center center;
+
+
+	input{
+		width: 100px;
+	}
+	.a-panel-item{
+		margin-bottom: 30px;
+	}
+	ul{
+		margin-top: 20px;
+	}
+	li{
+		display: inline-block;
+		color:#ddd;
+	}
+}
+.a-title{
+	font-size: $fz-h2;
+	color:$white;
+	margin: 20px;
+}
+.a-panel-control{
+	width: 320px;
+	height: 200px;
+	position: absolute;
+			  top: 0;
+			  bottom: 0;
+			  left: 0;
+			  right: 0;
+			  margin: auto;
+}
+.a-text{
+	font-size: $fz-p;
+	color:#fff;
+	display: inline-block;
+}
+.a-tab{
+
+	div{
+		margin: 40px 20px 20px 0;
+		border:1px solid $blue;
+		float: left;
+		p{
+			color:$light-blue;
+			font-size: $fz-h5;
+		}
+	}
+}
+.a-item{
+	line-height: 1.5;
+
+}
+.a-text-content{
+	color:#fff;
+	font-size: $fz-h7;
+}
+
+
+
+/*=====================================
+            增加活動頁面
+    =======================================*/
+.a-lb-add{
+	background: url("../img/a_008.jpg");
+	padding: 20px;
+	// background-color: #666;
+	width: 100%;
+	margin: auto;
+	.tr{
+		width: 100%;
+		// background-color: #444;
+		.td:first-child{
+		}
+	}
+	
+	.td{
+		padding: 20px;
+		textarea{
+			width: 80%;
+			height: 200px;
+			vertical-align: top;
+		}
+	}
+	.table:first-child{
+		text-align: center;
+		font-size: $fz-h3;
+		font-weight: bold;
+	}
+	.table{
+		width: 100%;
+		margin: auto;
+		// background-color: #666;
+		.tr:first-child{
+			width: 100%;
+
+		}
+		.tr:nth-child(3){
+			p{
+				vertical-align: middle;
+			}
+		}
+		.tr:nth-child(2){
+			input{
+				width: 350px;
+			}
+		}
+
+		.thead{
+			padding: 20px;
+		}
+	}
+	.table:first-child .td{
+		border-bottom: 2px solid #fff;
+
+	}
+
+	.table:last-child .td{
+		text-align: center;
+		input{
+			margin: 50px;
+			color:$white;
+		}
+	}
+	.table:nth-child(2){
+		.tr .td:first-child{
+			width: 150px;
+		}
+		.tr{
+			border-bottom:1px dotted #fff;
+		}
+		
+	}
+	color:$white;
+}
+.a-x{
+	float: right;
+	font-size: $fz-h5;
+}//增加活動頁面結束
+
+
+
+
+
+/*=====================================
+            活動詳細頁面
+    =======================================*/
+.a-lb-act{
+	background:url("../img/a_008.jpg");
+	background-position: center top;
+	.table{
+		position: relative;
+		margin: auto;
+		width: 100%;
+		.td{
+			position: relative;
+			padding:20px;
+			color:$white;
+			.a-text{
+				position: relative;
+			}
+		}	
+		.tr{
+			border-bottom: 1px solid #346671;
+		}
+		.tr span{
+			position: absolute;
+			right: 0;
+			font-size: 16px;
+			color:#fff;
+			vertical-align: middle;
+			
+
+		}
+		.tr:nth-child(2) .td{
+			text-align: center;
+			span{
+				line-height: 72px;
+			}
+			.a-text{
+				font-size: $fz-h2;
+				vertical-align: middle;
+				display: block;
+				p{
+					margin: 20px;
+					display: inline-block;
+					font-weight: bold;
+				}
+			}
+			
+		}
+
+		.tr:nth-child(7) .td{
+
+			.a-text{
+				display: block;
+			}
+		}
+		.tr:first-child .td .a-x{
+			font-size: $fz-h2;
+		}
+		.tr:nth-child(8) {
+			p{
+				font-size: $fz-h3;
+				text-align: center;
+				margin: 20px;
+			}
+			
+			.a-text{
+				line-height: 1.5;
+			}
+			.btn-lg{
+				display: block;
+				line-height: 38px;
+				margin:20px auto;
+
+			}
+		}
+		.tr:nth-child(9) .a-text{
+			width: 100%;
+		}
+		.tr:nth-child(10) .a-text{
+			width: 100%;
+		}
+	}
+	.a-user{
+		font-size: $fz-h1;
+		vertical-align: middle;
+		margin-top: 40px;
+		width: 100%;
+		position: relative;
+		textarea{
+			position: absolute;
+					  top: 0;
+					  left: 60px;
+					  right: 0;
+					  margin: auto;
+			vertical-align: middle;
+			height: 50px;
+			width: 85%;
+		}
+	}
+
+}//活動結束
+.a-phone-control{
+	display: none;
+}
+.a-phone-search{
+	display: none;
+}
+
+
+
 @import "pageMain/xs";
 @import "pageMain/sm";
 @import "pageMain/md";
@@ -6,6 +308,6 @@
 @import "pageBranch/sm";
 @import "pageBranch/md";
 @import "pageBranch/lg";
+@import "pageBranch/pageRecommend";
+@import "pageMain/maginic";
 // @import "../layout/nav";
-//此處為 共用設定
-
