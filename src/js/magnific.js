@@ -23,6 +23,7 @@ $('#a-popups').magnificPopup({
 });
 
 
+
 // Image popups
 $('#image-popups').magnificPopup({
   delegate: 'a',

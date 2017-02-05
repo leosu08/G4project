@@ -1,7 +1,10 @@
 $(function(){
-	$('#a-phone-mapBtn').click(function(){
-
-	})	
+	// $('#a-phone-mapBtn').click(function(){
+	// 	$('.a-map').css({
+	// 		'display':'block'
+	// 	});
+	// 	// initAutocomplete();
+	// })	
 	$('#a-phone-input_1').focus(function(){
 		$('#a-phone-input_1').hide();
 		$('.fa-chevron-up').show(500).css({
