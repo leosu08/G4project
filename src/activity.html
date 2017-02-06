@@ -18,6 +18,23 @@
 	
      <script type="text/javascript" src="js/googleMap.js"></script>
      <script type="text/javascript" src="js/activity.js"></script>
+
+
+     <!-- fullpage -->
+     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+     <link rel="stylesheet" type="text/css" href="libs/fullpage.js/jquery.fullPage.css" />
+     <script type="text/javascript" src="libs/fullpage.js/vendors/scrolloverflow.min.js"></script>
+
+	<script type="text/javascript" src="libs/fullpage.js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                verticalCentered: true,
+                anchors: ['anchor1', 'anchor2', 'anchor3'],
+                menu: '#menu'
+            });
+        });
+    </script>
 	<style>
 		body,html {
 		  background: #343434;
@@ -25,15 +42,17 @@
 		  width: 100%;
 		  height: 100%;
 		}
-		#canvas{
+		#a-canvas{
 			width: 100%;	
-			height: 900px;	
+			height: 100vh;
+			 opacity: 0.7;
+			 position: absolute;
+			 top: 0;
+			 left: 0;
+			 /*z-index: 1;*/
 		}
-
-		canvas {
-		  opacity: 0.7;
-		  
-		}
+		
+		
 			#a-star{
 				width: 450px;
 				margin:auto;	
@@ -70,12 +89,21 @@
 		nav{
 			z-index: 10;
 		}
+		.myContent{
+        height: 50vh;
+      }
 	</style>
 </head>
 
 <body>
+<!-- <canvas id="a-canvas">
+			
+
+		</canvas> -->
+<div id="fullpage">
+	<div class="section" id="section0">
 	<header id="header" class="">
-		<nav id="nav">
+        <nav id="nav">
 		<div class="container relative">
 			<div class="row">
 				<input type="checkbox" id="navButtonHidden">
@@ -152,143 +180,135 @@
 				<div class="clear"></div>		
 			</div>
 		</div>
-		
-		
-		<!-- <canvas id="canvas">
-			
-
-		</canvas> -->
+	</header><!-- /header -->
+    </div><!-- session1 -->
 		
 	
-			
 
-
-
-		
-	</header><!-- /header -->
-
-	<main>
-		<div class="container a-map">
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="a-panel">
-						<div class="a-panel-control">
-							<div class="a-panel-item">
-								<p class="a-text">活動日期</p>
-								<input type="date" name="" value="" placeholder="">
-								<p class="a-text">到</p>
-								<input type="date" name="" value="" placeholder="">
-							</div>
-							<div class="a-panel-item">
-								<p class="a-text">活動類型</p>
-								<ul>
-									<li>全部</li>
-									<li>天文觀測</li>
-									<li>親子觀星</li>
-									<li>天文攝影</li>
-									<li>休閒聯誼</li>
-								</ul>
-							</div>
-							<div class="a-panel-item">
-								<p class="a-text">活動地點</p>
-								<ul>
-									<li>全部</li>
-									<li>北部地區</li>
-									<li>中部地區</li>
-									<li>南部地區</li>
-									<li>東部地區</li>
-								</ul>
+	<div class="section" id="section1">
+          <main>
+				<div class="container a-map">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="a-panel">
+								<div class="a-panel-control">
+									<div class="a-panel-item">
+										<p class="a-text">活動日期</p>
+										<input type="date" name="" value="" placeholder="">
+										<p class="a-text">到</p>
+										<input type="date" name="" value="" placeholder="">
+									</div>
+									<div class="a-panel-item">
+										<p class="a-text">活動類型</p>
+										<ul>
+											<li>全部</li>
+											<li>天文觀測</li>
+											<li>親子觀星</li>
+											<li>天文攝影</li>
+											<li>休閒聯誼</li>
+										</ul>
+									</div>
+									<div class="a-panel-item">
+										<p class="a-text">活動地點</p>
+										<ul>
+											<li>全部</li>
+											<li>北部地區</li>
+											<li>中部地區</li>
+											<li>南部地區</li>
+											<li>東部地區</li>
+										</ul>
+									</div>
+								</div>
+								
 							</div>
 						</div>
-						
+						<div class="col-xs-12 col-sm-6 col-md-6 googleMap">
+							<div id="co">
+							        <p></p>
+							        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+							</div>
+							<div id="zero"></div>
+						      <div id="map">
+						      	
+						      </div>
+							<!-- <img src="img/a_014.jpg" alt="" class="rwd-img"> -->
+						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 googleMap">
-					<div id="co">
-					        <p></p>
-					        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+				<div class="container">
+					<div class="row" id="a-popups">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<div class="a-tab">
+								<div><p>最近時間</p></div>
+								<div><p>最高瀏覽</p></div>
+								<div><p>最多收藏</p></div>
+							</div>	
+						</div>
+						<div class="col-xs-12 a-phone-search">
+						<div class="a-phone-searchContainer">
+							<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
+								<input id="a-phone-input_1" type="text" name="" value="" placeholder="　　　搜尋日期、類型、地點">
+								<i class="fa fa-chevron-up" aria-hidden="true"></i>
+								<i  class="a-phone-input fa fa-clock-o a-phone-icon-2" aria-hidden="true"></i>
+								<input type="text" class="a-phone-input" placeholder="　　　依日期">
+								<i  class="a-phone-input fa fa-star-o a-phone-icon-2" aria-hidden="true"></i>
+								<input type="text" class="a-phone-input" placeholder="　　　依類型">
+								<i  class="a-phone-input fa fa-globe a-phone-icon-2" aria-hidden="true"></i>
+								<input type="text" class="a-phone-input" placeholder="　　　依地點">
+						</div>
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-3">
+								<a href="#a-popup-act" data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_007.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+							</div>
+						<div class="col-xs-12 col-sm-3 col-md-3">
+							<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_006.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+							</div>
+						<div class="col-xs-12 col-sm-3 col-md-3">
+							<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_001.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+							</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+							<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+							</div>
 					</div>
-					<div id="zero"></div>
-				      <div id="map">
-				      	
-				      </div>
-					<!-- <img src="img/a_014.jpg" alt="" class="rwd-img"> -->
 				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row" id="a-popups">
-				<div class="col-xs-12 col-sm-12 col-md-12">
-					<div class="a-tab">
-						<div><p>最近時間</p></div>
-						<div><p>最高瀏覽</p></div>
-						<div><p>最多收藏</p></div>
-					</div>	
-				</div>
-				<div class="col-xs-12 a-phone-search">
-				<div class="a-phone-searchContainer">
-					<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
-						<input id="a-phone-input_1" type="text" name="" value="" placeholder="　　　搜尋日期、類型、地點">
-						<i class="fa fa-chevron-up" aria-hidden="true"></i>
-						<i  class="a-phone-input fa fa-clock-o a-phone-icon-2" aria-hidden="true"></i>
-						<input type="text" class="a-phone-input" placeholder="　　　依日期">
-						<i  class="a-phone-input fa fa-star-o a-phone-icon-2" aria-hidden="true"></i>
-						<input type="text" class="a-phone-input" placeholder="　　　依類型">
-						<i  class="a-phone-input fa fa-globe a-phone-icon-2" aria-hidden="true"></i>
-						<input type="text" class="a-phone-input" placeholder="　　　依地點">
-				</div>
-				</div>
-				<div class="col-xs-12 col-sm-3 col-md-3">
-						<a href="#a-popup-act" data-effect="mfp-3d-unfold">
-						<div class="a-item a-phone-searchContainer">
-							<img src="img/a_007.jpg" alt="" class="rwd-img">
-							<p class="a-text">墾丁南十字觀星露營</p>
-							<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-							<p class="a-text-content">名額：16人</p>
-							<p class="a-text-content">發起人：Leo S</p>
-						</div></a>
-					</div>
-				<div class="col-xs-12 col-sm-3 col-md-3">
-					<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-						<div class="a-item a-phone-searchContainer">
-							<img src="img/a_006.jpg" alt="" class="rwd-img">
-							<p class="a-text">墾丁南十字觀星露營</p>
-							<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-							<p class="a-text-content">名額：16人</p>
-							<p class="a-text-content">發起人：Leo S</p>
-						</div></a>
-					</div>
-				<div class="col-xs-12 col-sm-3 col-md-3">
-					<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-						<div class="a-item a-phone-searchContainer">
-							<img src="img/a_001.jpg" alt="" class="rwd-img">
-							<p class="a-text">墾丁南十字觀星露營</p>
-							<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-							<p class="a-text-content">名額：16人</p>
-							<p class="a-text-content">發起人：Leo S</p>
-						</div></a>
-					</div>
-			<div class="col-xs-12 col-sm-3 col-md-3">
-					<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-						<div class="a-item a-phone-searchContainer">
-							<img src="img/a_002.jpg" alt="" class="rwd-img">
-							<p class="a-text">墾丁南十字觀星露營</p>
-							<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-							<p class="a-text-content">名額：16人</p>
-							<p class="a-text-content">發起人：Leo S</p>
-						</div></a>
-					</div>
-			</div>
-		</div>
-		
-			<a class="a-phone-control" href="activity_phone_map.html">
-				<div class="a-phone-btn btn-lg btn-blue" id="a-phone-mapBtn">
-					地圖搜尋
-				</div>
-			</a>	
-		
-	</main>
-	
+				
+					<a class="a-phone-control" href="activity_phone_map.html">
+						<div class="a-phone-btn btn-lg btn-blue" id="a-phone-mapBtn">
+							地圖搜尋
+						</div>
+					</a>	
+				
+			</main>
+        </div><!-- fullpage	 -->
+
 	<!-- 活動開始 -->
   <div id="a-popup-act" class="white-popup mfp-with-anim mfp-hide">
   	<div class="a-lb-act">

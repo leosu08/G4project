@@ -21,6 +21,8 @@
 	display: table-cell;
 }
 .a-banner{
+	height: 100vh;
+	z-index: 20;
 	text-align: center;
 	background: url(../img/a_010.jpg);
 	background-size: cover;
@@ -42,7 +44,7 @@
 	box-sizing:border-box;
 	height: 0;
 	padding: 50%;
-	background: url("../img/a_013.jpg");
+	background: url("../img/a_015.jpg");
 	background-size:100% 100%;
 	background-position: center center;
 
