@@ -1,13 +1,60 @@
 @include respones(xs) {
-	//在此輸入內容
+	//手機版
+	#m_wrapper{
+		.m_user_img{
+			width: 120px;
+			height: 120px;
+			.m_user_lv{
+				display: none;
+			}
+
+
+		}
+
+		#canvas{
+			width: 130%;
+			}
+
+		.m_infos{
+			
+			.m_value{
+				display: none;
+			}
+			.m_infos_right{
+
+				.m_info_id{
+					top:10%; 
+					left: 5%;
+				}
+				.m_info_photo{
+					top: 38%;
+				}
+
+			}
+
+			.m_infos_left{
+				.m_info_activity{
+					right: 30%;
+					top: 20%;
+				}
+
+				.m_info_forumpost{
+					right: 30%;
+				}
+
+			}
+		}
+
+	}
+
+	//lightbox
+	// .m_lightbox_area{
+	// 	width: 
+	// }
 
 
 
-
-
-
-
-
+	
 
 
 }
