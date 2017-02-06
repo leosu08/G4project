@@ -1,229 +1,137 @@
 @include respones(xs) {
-	body {
-		background-image: url('../img/p1.jpg');
-		background-size: cover;
-	}
+    #logo {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        padding-top: 15px;
+    }//after
+    .menu li a:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        font-size: 16px;
+        color: $light-grey;
+    }
 
-	#logo {
-		float: left;
-		width: 10%;
+    .menu li:nth-of-type(1) a:after {
+        content: '觀星活動';
+    }
 
-		img {
-			height: 90px;
-		}
-	}
+    .menu li:nth-of-type(2) a:after {
+        content: '星際論壇';
+    }
 
-	#nav {
-		position: fixed;
-		right: 0;
-		left: 0;
-		top: 0;
-		margin: auto;
-		// background-image: linear-gradient(to left,rgba(0,0,0,0.4) 30%, rgba(255,255,255,0.2) 75%);
-		background-color: $o-black;
-		height: 90px;
-		z-index: 100;
-	}
+    .menu li:nth-of-type(3) a:after {
+        content: '照片';
+    }
 
-	.menu {
-		font-size: $fz-nav;
-		float: left;
-		text-align: right;
-		width: 80%;
+    .menu li:nth-of-type(4) a:after {
+        content: '星知識';
+        right: 5px;
+    }
 
-		.mainMenu {
-			display: inline-block;
-			margin: 0 15px;
+    .mainMenu {
+        li {
+            display: inline-block;
+            position: relative;
+        }
 
-			a:hover {
-				border-bottom: 3px solid $blue;
-				color: $white;
-			}
+        &.menu {
+            background-color: $black;
+            margin: auto;
+            text-align: center;
+            position: absolute;
+            top: 0px;
+            left: -300px;
+            bottom: 0;
+            height: 700px;
+            width: 700px;
+            border-radius: 50%;
+            padding-top: 370px;
+            padding-left: 200px;
+            z-index: -2;
+            transform: scale(0);
+            transition: .8s cubic-bezier(.13,.27,.06,.82);
+            li {
+                display: block;
+                text-align: center;
+            }
 
-			a {
-				display: block;
-				padding: 0 2px;
-				line-height: 35px;
-				vertical-align: middle;
-				color: $light-grey;
-				letter-spacing: 1px;
-			}
-		}
-	}
+            a {
+                display: block;
+                padding: 20px 10px;
+                font-size: 20px;
+                color: $white;
+            }
+        }
 
-	#signUp {
-		display: inline-block;
-		width: 5%;
-		text-align: center;
+        &.signArea {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            padding-top: 25px;
 
-		a {
-			color: #fff;
-			font-size: $fz-nav - 2px;
-			padding: 0 10px;
-			line-height: 70px;
+            .btn {
+                width: 60px;
+                font-size: 12px;
+                background-color: transparent;
+                border: 0;
+                display: inline-block;
+            }
+        }
+    }
 
-			:hover {
-				color: $light-grey;
-			}
+    #navButton {
+        position: absolute;
+        top: 25px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        background: #45484d;
+        color: #f2f2f2;
+        border-radius: 50%;
+        // display: none;
+    }
 
-			i {
-				font-size: 16px;
-			}
-		}
-	}
+    #navButton:after,
+    #navButton:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background-color: #fff;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: 0.8s;
+    }
 
-	#signIn {
-		display: inline-block;
-		width: 70px;
-		height: 70px;
-		vertical-align: middle;
-		width: 5%;
+    #navButton:before {
+        box-shadow: 0 -6px 0 #fff;
+    }
 
-		a {
-			display: block;
-		}
+    #navButton:after {
+        box-shadow: 0 6px 0 #fff;
+    }
 
-		img {
-			width: 100%;
-			height: 100%;
-			// margin-top:15px;
-		}
+    #navButtonHidden:checked ~ #navButton:before {
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
 
-		a:hover img {
-			border: 2px solid $blue;
-			border-radius: 50%;
-		}
-	}
-	//for mobile
-	#navButtonHidden {
-		position: absolute;
-		right: -1000px;
-	}
-
-	#navButton {
-		position: absolute;
-		top: 18px;
-		left: 15px;
-		width: 40px;
-		height: 40px;
-		background: #45484d;
-		color: #f2f2f2;
-		border-radius: 50%;
-		display: none;
-	}
-
-	#logo {
-		text-align: center;
-	}
-
-	#nav {
-		margin: auto;
-	}
-
-	#navButton:after,
-	#navButton:before {
-		content: '';
-		display: block;
-		position: absolute;
-		width: 16px;
-		height: 2px;
-		background-color: #fff;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		margin: auto;
-		transition: 0.8s;
-	}
-
-	#navButton:before {
-		box-shadow: 0 -6px 0 #fff;
-	}
-
-	#navButton:after {
-		box-shadow: 0 6px 0 #fff;
-	}
-
-	#navButtonHidden:checked ~ #navButton:before {
-		transform: rotate(45deg);
-		box-shadow: none;
-	}
-
-	#navButtonHidden:checked ~ #navButton:after {
-		transform: rotate(-45deg);
-		box-shadow: none;
-	}
-
-	#navButtonHidden:checked ~ .menu {
-		// display: block;
-		animation: mobileNav 1s both cubic-bezier(.13,.27,.06,.82);
-
-		:after {
-			animation: mobileNav2 1s both cubic-bezier(.13,.27,.06,.82);
-		}
-	}
-	@keyframes mobileNav {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-	@keyframes mobileNav2 {
-		0% {
-			left: -300px;
-		}
-
-		100% {
-			left: -150px;
-		}
-	}
-
-	.menu {
-		position: absolute;
-		left: 0;
-		top: 75px;
-		right: 0;
-		margin: auto;
-		text-align: center;
-		height: 200px;
-		display: none;
-
-		:after {
-			content: '';
-			width: 300px;
-			height: 300px;
-			background-color: $o-black;
-			position: fixed;
-			top: 0;
-			bottom: 0;
-			left: -150px;
-			right: 0;
-			border-radius: 50%;
-			z-index: -20;
-			display: none;
-		}
-
-		.mainMenu {
-			display: block;
-			text-align: left;
-
-			a {
-				color: $white;
-				font-size: 16px;
-				padding: 3px 0;
-			}
-
-			a:hover {
-				border-bottom: none;
-			}
-		}
-	}
-
-	#navButton {
-		display: block;
-		z-index: 100;
-	}
+    #navButtonHidden:checked ~ #navButton:after {
+        transform: rotate(-45deg);
+        box-shadow: none;
+    }
+    #navButtonHidden:checked ~ .menu{
+      top:150px;
+      transform: scale(1);
+      transition: .8s cubic-bezier(.13,.27,.06,.82);
+    }
 }

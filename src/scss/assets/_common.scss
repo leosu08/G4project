@@ -1,9 +1,8 @@
 *{
-	text-decoration: none;
-	list-style-type: none;
 	box-sizing: border-box;
-	margin:0;
-	padding:0;
+}
+a{
+	text-decoration: none;
 }
 
 .text-center{
@@ -23,7 +22,7 @@
 }
 
 .btn{
-	@include btn(85px,35px,5px);
+	@include btn(65px,35px,5px);
 }
 
 .btn-lg{
