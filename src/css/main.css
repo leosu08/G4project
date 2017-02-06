@@ -780,9 +780,6 @@ footer {
   line-height: 50px;
   font-size: 14px; }
 
-body, html {
-  font-family: "微軟正黑體"; }
-
 .table {
   display: table;
   border-collapse: collapse; }
@@ -1160,11 +1157,6 @@ body, html {
 #a-slide-4 {
   background-image: url("../img/a_004.jpg");
   transform: translate(100%, 200%); }
-
-html, body {
-  margin: 0;
-  padding: 10px;
-  -webkit-backface-visibility: hidden; }
 
 /* text-based popup styling */
 .white-popup {
