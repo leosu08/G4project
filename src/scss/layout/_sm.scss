@@ -16,19 +16,23 @@
       &.menu{
         display: none;
       }
-      &.signArea{
-        position: absolute;
-        top: 5px;
-        right:5px;
-        padding-top: 25px;
-          .btn{
-            width: 60px;
-            font-size: 12px;
-            background-color: transparent;
-            border:0px;
-            display: inline-block;
+      &.signArea {
+          width: 14%;
+          text-align: right;
+          position: absolute;
+          top:0;
+          right:0px;
+          a {
+              display: block;
+              font-size: $fz-nav - 2px;
+              color:$light-grey;
+              letter-spacing: 1px;
+              padding:5px;
+              &:hover{
+                color:$white;
+              }
           }
-        }
+      }
       }
 
 

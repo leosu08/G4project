@@ -1,4 +1,4 @@
-@mixin btn($width,$height,$radius){
+@mixin btn($width,$height,$radius,$fz:16px){
 	width:$width;
 	height:$height;
 	text-align:center;
@@ -10,7 +10,7 @@
 		display:block;
 		text-decoration: none;
 		line-height: $height;
-		font-size: 18px;
+		font-size: $fz;
 		letter-spacing: 2px;
 	}
 }

@@ -24,18 +24,18 @@
 	<script type="text/javascript" src="js/forum.js"></script>
 
 	<script type="text/javascript">
-	
+
 		$(function(){
-			
+
 		//h1進場動畫
 			var controller = new ScrollMagic.Controller();
 
 			var titleShow = new TimelineMax().staggerFromTo("#f_section1 .f_title",1,{
 					opacity:0,
-					scale:0.1,	
+					scale:0.1,
 				},{
 					opacity:1,
-				
+
 					scale:1,
 					rotation:360,
 					// ease:easeOut,
@@ -57,11 +57,11 @@
 
 			var descShow = new TimelineMax().staggerFromTo("#f_section1 .f_desc",10,{
 					opacity:0,
-					
-						
+
+
 				},{
 					opacity:1,
-					
+
 				},0.5);
 
 			var scene2 = new ScrollMagic.Scene({
@@ -83,11 +83,11 @@
 
 			var sectionOut = new TimelineMax().staggerFromTo("#f_section1 ",1,{
 					'webkitFilter': 'blur(0px)',
-					
-						
+
+
 				},{
 					'webkitFilter': 'blur(15px)',
-					
+
 				},0.5);
 
 
@@ -104,25 +104,25 @@
 
 
 		})
-		
+
 	</script>
 
-	
-	
+
+
 
 	<style type="text/css">
-		
+
 
 		*{
 			/*outline: 1px solid red;*/
 		}
-			
+
 
 	</style>
 </head>
 <body id="f_wrapper">
 	<!-- 導覽列 -->
-	<nav id="nav" style="z-index: 999999;background-color: rgba(0,0,0,0.2);">
+	<nav id="nav" style="z-index: 999999;">
 		<div class="container relative">
 			<div class="row">
 				<input type="checkbox" id="navButtonHidden">
@@ -131,10 +131,10 @@
 					<a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
 				</div>
 				<ul class="mainMenu menu">
-					<li><a href="activity.html"><span>A</span>ctivity</a></li>
-					<li><a href="#"><span>F</span>ourm</a></li>
-					<li><a href="#"><span>P</span>hoto</a></li>
-					<li><a href="#"><span>K</span>nowledge</a></li>
+					<li><a href="activity.html">觀星活動</a></li>
+					<li><a href="#">星際論壇</a></li>
+					<li><a href="#">照片</li>
+					<li><a href="#">星知識</li>
 				</ul>
 				<ul class="mainMenu signArea">
 					<li id="signLeft">
@@ -182,7 +182,7 @@
 			  <li class="colorful-tab-menu-item active" tab-background="img/forum/f_003.jpg"><a href="#bg-0">綜合討論區</a></li>
 			  <li class="colorful-tab-menu-item" tab-background="img/p1.jpg"><a href="#bg-1">天文攝影區</a></li>
 			  <li class="colorful-tab-menu-item" tab-background="img/forum/f_001.jpg"><a href="#bg-2">觀星設備區</a></li>
-			 
+
 			</ul>
 
 			<div class="f_fn_area text-right" >
@@ -195,9 +195,9 @@
 				<div class="clear"></div>
 			</div>
 
-			<div class="colorful-tab-container" style="width: 100%; margin: auto; padding-top:20px;overflow:auto;">  
-			  
-			  <div class="colorful-tab-content active" id="bg-0"">  
+			<div class="colorful-tab-container" style="width: 100%; margin: auto; padding-top:20px;overflow:auto;">
+
+			  <div class="colorful-tab-content active" id="bg-0"">
 				  <div class="f_posts">
 					<table class="text-left" cellspacing="5">
 						<thead>
@@ -214,7 +214,7 @@
 
 									<h4><a href="#" class="f_post_link">star trek 50年了!</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -236,7 +236,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -258,7 +258,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -280,7 +280,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -302,7 +302,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -323,7 +323,7 @@
 				  </div>
 			  </div>
 
-			  <div class="colorful-tab-content" id="bg-1"> 
+			  <div class="colorful-tab-content" id="bg-1">
 				<div class="f_posts">
 					<table class="text-left" cellspacing="5">
 						<thead>
@@ -340,7 +340,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -362,7 +362,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -384,7 +384,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -406,7 +406,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -428,7 +428,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -449,7 +449,7 @@
 				  </div>
 			  </div>
 
-			  <div class="colorful-tab-content" id="bg-2"> 
+			  <div class="colorful-tab-content" id="bg-2">
 				<div class="f_posts">
 					<table class="text-left" cellspacing="5">
 						<thead>
@@ -466,7 +466,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -488,7 +488,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -510,7 +510,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -532,7 +532,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -554,7 +554,7 @@
 
 									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
 									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
+
 								</td>
 								<td width="20%" class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
@@ -574,7 +574,7 @@
 					</table>
 				  </div>
 			  </div>
-			  
+
 			</div>
 
 
@@ -583,8 +583,8 @@
 		</div>
 		</div>
 		</div>
-	
-			
+
+
 		<!-- 論壇內容區塊end -->
 	</section>
 	<!-- 第二區結束 -->
@@ -641,7 +641,7 @@
 						<button>回覆</button>
 					</div>
 				<!-- 回覆&檢舉end -->
-				
+
 				</td></tr>
 				<tr>
 				<td width="20%" style="background-color: #000" class="text-center" class="f_user">
@@ -668,7 +668,7 @@
 <!-- lightbox測試 -->
 
 
-	
+
 </body>
 </html>
 
@@ -676,27 +676,23 @@
 <script type="text/javascript" src="js/colorfulTab.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	
-	$("#colorful").colorfulTab();    
-	
+
+	$("#colorful").colorfulTab();
+
 	$("#colorful-elliptic").colorfulTab({
 		theme: "elliptic"
-	}); 
-   
+	});
+
    $("#colorful-flatline").colorfulTab({
 		theme: "flatline"
-	});    
-	
+	});
+
 	$("#colorful-background-image").colorfulTab({
 		theme: "flatline",
 		backgroundImage: "true",
 		overlayColor: "#002F68",
 		overlayOpacity: "0.5"
-	});   
+	});
 
 });
 </script>
-
-
-
-
