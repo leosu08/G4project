@@ -32,6 +32,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
       }
 
       #pac-input {
+        z-index: 10;
         position: absolute;
         background-color: #fff;
         font-family: Roboto;
@@ -66,7 +67,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
         /*border-radius: 50%;*/
         height: 100%;
         width: 0%;
-        left: -300px;
+        /*left: -300px;*/
         font-size: 50px;
 
         text-align: center;
@@ -79,8 +80,8 @@ html, body { height: 100%; margin: 0; padding: 0; }
       }
       #co>input{
         position: relative;
-        top: -50px;
-        display:none;
+        /*top: -50px;*/
+        /*display:none;*/
       }
       
       #content{

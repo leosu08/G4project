@@ -31,11 +31,9 @@ function initAutocomplete() {
   twCenter={lat: 23.876571, lng: 121.091443};
   var map = new google.maps.Map(document.getElementById('map'), {
     center: twCenter,
-    zoom: 8,
-    mapTypeControlOptions: {
-        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-        position: google.maps.ControlPosition.TOP_CENTER
-    },
+    zoom: 7,
+    // disableDefaultUI:true,
+    mapTypeControl:false,
     mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
     
   });//map結束
@@ -60,7 +58,7 @@ function initAutocomplete() {
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Zero-Gravity</h1>'+
       '<div id="bodyContent">'+
-      '<img src="../img/a_001.jpg" width="100"><p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+      '<img src="img/a_001.jpg" width="100"><p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
       'sandstone rock formation in the southern part of the '+
       'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
       'south west of the nearest large town, Alice Springs; 450&#160;km '+
@@ -135,7 +133,7 @@ function initAutocomplete() {
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function(place) {
       var icon = {
-        url: '../images/marker.png',
+        url: '../img/a_001.jpg',
         size: new google.maps.Size(71, 71),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
@@ -161,11 +159,11 @@ function initAutocomplete() {
   });
   // [END region_getplaces]
   //新建一個div，用來設置map的center
-  var centerControlDiv = document.createElement('div');
-  var centerControl = new CenterControl(centerControlDiv, map);
+  // var centerControlDiv = document.createElement('div');
+  // var centerControl = new CenterControl(centerControlDiv, map);
 
-  centerControlDiv.index = -1;
-  map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(centerControlDiv);
+  // centerControlDiv.index = -1;
+  // map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(centerControlDiv);
   //centerControl結束
 
 

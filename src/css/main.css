@@ -816,11 +816,10 @@ footer {
 .a-panel {
   position: relative;
   text-align: left;
-  border-radius: 50%;
   width: 100%;
   box-sizing: border-box;
   height: 0;
-  padding: 50%;
+  height: 600px;
   background: url("../img/a_015.jpg");
   background-size: 100% 100%;
   background-position: center center; }
@@ -1007,8 +1006,6 @@ footer {
     .a-phone-control .a-phone-btn {
       color: #f3f7f7;
       line-height: 38px; }
-  .a-banner {
-    display: none; }
   #a-popups {
     margin-top: 100px; }
   .a-tab {
@@ -1055,7 +1052,9 @@ footer {
       text-align: left;
       display: none;
       font-size: 32px;
-      color: #888; } }
+      color: #888; }
+  .wrap {
+    display: none; } }
 
 .a-btn-recommend {
   margin: auto;
