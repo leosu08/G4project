@@ -2256,6 +2256,24 @@ footer {
   max-width: 80%;
   margin: 0 auto; }
 
+/*相片內頁*/
+.white-p-inside {
+  position: relative;
+  background: #000;
+  padding: 25px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 50px; }
+
+/*上傳頁面*/
+.white-upload {
+  position: relative;
+  background: #000;
+  /*width: 1000px;*/
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 50px; }
+
 /* 
 
 ====== Zoom effect ======
@@ -2740,6 +2758,365 @@ footer {
       width: 40%; }
   #f_section2 .f_posts {
     width: 100%; } }
+
+* {
+  font-family: "微軟正黑體",Tahoma,Arial; }
+
+.p-bigpic {
+  background-image: url(../img/p_bigpic_001.jpg);
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+  background-position: center center;
+  background-size: cover; }
+  .p-bigpic .h2 {
+    position: absolute;
+    color: #FFF;
+    font-size: 30px;
+    top: 70%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center; }
+  .p-bigpic a {
+    z-index: 11;
+    position: absolute;
+    color: #4f9cdd;
+    font-size: 24px;
+    top: 78%;
+    bottom: 0;
+    right: 10px;
+    left: 0;
+    margin: auto;
+    text-align: center; }
+
+.p-tabsearch .p-tab {
+  margin: 20px 0 20px 0;
+  text-align: center; }
+
+.p-tabsearch .p-tab a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0px 20px 0px 0px; }
+
+.p-tabsearch .p-tab a:hover {
+  border: 2px solid #7FC8E7;
+  padding: 5px; }
+
+.p-tabsearch .p-search {
+  margin-top: 15px;
+  height: 100%; }
+
+.p-tabsearch .input {
+  width: 100%;
+  position: relative;
+  text-align: right; }
+
+.p-tabsearch .p-search input {
+  font-size: 16px;
+  width: 280px;
+  height: 40px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  padding-left: 40px; }
+
+.p-tabsearch .fa-search {
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  left: 0px;
+  right: 260px;
+  margin: auto;
+  font-size: 22px;
+  z-index: 1; }
+
+.p-content {
+  background-color: #4A4A4A; }
+  .p-content .item {
+    margin-top: 30px;
+    position: relative; }
+  .p-content .box {
+    background-color: #fff; }
+  .p-content .item .pic img {
+    width: 100%;
+    height: 100%; }
+  .p-content .user {
+    position: absolute;
+    top: 20px;
+    left: 30px; }
+  .p-content .user img {
+    width: 25%;
+    border-radius: 50%;
+    float: left; }
+  .p-content .user p {
+    color: #fff;
+    float: left;
+    margin-top: 20px;
+    margin-left: 12px;
+    font-size: 14px; }
+  .p-content .content p {
+    margin: 12px;
+    font-size: 14px; }
+  .p-content .tab {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 6px;
+    margin-left: 12px; }
+  .p-content .tab a {
+    font-size: 12px; }
+  .p-content .view p {
+    width: 45%;
+    margin: 0px 6px 6px 0px;
+    font-size: 12px;
+    display: inline-block; }
+  .p-content .view p .fa {
+    padding-right: 5px; }
+  .p-content .view .icon {
+    width: 45%;
+    text-align: right;
+    display: inline-block; }
+  .p-content .view .fa {
+    color: #555;
+    padding-left: 12px; }
+  .p-content .btnbox {
+    margin-top: 50px;
+    text-align: center; }
+
+.p-inside {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 0px; }
+  .p-inside .p-in-pic {
+    margin-top: 10px; }
+    .p-inside .p-in-pic img {
+      width: 100%; }
+  .p-inside .p-in-content .container {
+    height: 800px;
+    background-color: #fff; }
+
+.p-in-content .user {
+  width: 100%;
+  height: 60px;
+  margin: 20px 0 20px 0; }
+  .p-in-content .user img {
+    width: 60px;
+    border-radius: 50%;
+    float: left; }
+  .p-in-content .user h5 {
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px; }
+
+.p-in-content .content {
+  border-bottom: 1px solid #888;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  margin-right: 60px; }
+  .p-in-content .content h3 {
+    font-size: 18px;
+    color: #4f9cdd; }
+  .p-in-content .content p {
+    font-size: 14px;
+    margin: 20px 0 20px 0; }
+
+.p-in-content .message {
+  margin: 20px 0px 0px 0px;
+  padding-left: 60px; }
+  .p-in-content .message .ms-user img {
+    margin-top: 5px;
+    width: 40px;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left; }
+  .p-in-content .message .ms-content {
+    float: left; }
+    .p-in-content .message .ms-content h5 {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 12px;
+      color: #4f9cdd; }
+    .p-in-content .message .ms-content h6 {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 12px; }
+    .p-in-content .message .ms-content p {
+      margin-top: 5px;
+      margin-left: 10px;
+      font-size: 10px; }
+
+.p-in-content .r-left {
+  height: 250px; }
+
+.p-in-content .right {
+  margin-top: 20px; }
+  .p-in-content .right .adress h2 {
+    font-size: 18px; }
+  .p-in-content .right .adress i {
+    font-size: 20px;
+    margin: 15px 5px 0px 5px;
+    color: #4f9cdd;
+    display: inline-block; }
+  .p-in-content .right .adress h5 {
+    font-size: 14px;
+    display: inline-block;
+    color: #555; }
+  .p-in-content .right .tag {
+    margin-top: 30px; }
+    .p-in-content .right .tag h2 {
+      font-size: 18px; }
+    .p-in-content .right .tag p {
+      margin-top: 10px; }
+    .p-in-content .right .tag a {
+      font-size: 14px; }
+
+.p-in-content .r-right {
+  height: 250px; }
+
+.p-in-content .icon {
+  text-align: right; }
+  .p-in-content .icon i {
+    font-size: 26px;
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.8); }
+
+.p-in-content .number {
+  margin-top: 60px;
+  text-align: right; }
+  .p-in-content .number h5 {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6); }
+  .p-in-content .number i {
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.8); }
+
+.p-in-content .recommend h2 {
+  font-size: 16px; }
+
+.p-in-content .recommend .item {
+  display: inline-block;
+  margin: 10px; }
+
+.p-in-content .recommend img {
+  width: 100px;
+  height: 100px; }
+
+.upload {
+  margin-top: 50px; }
+  .upload .container {
+    height: 850px;
+    background: url(../img/p_back_001.png); }
+  .upload .title h1 {
+    width: 1000px;
+    border-bottom: 2px solid #FFF;
+    margin-left: 70px;
+    padding-top: 80px;
+    color: #FFF; }
+  .upload .table {
+    width: 1000px;
+    margin-left: 70px;
+    padding-top: 50px; }
+    .upload .table th {
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.6); }
+    .upload .table #tit {
+      width: 200px;
+      height: 80px;
+      font-size: 18px;
+      color: #fff; }
+    .upload .table #box {
+      width: 800px;
+      height: 80px;
+      text-align: left; }
+    .upload .table textarea {
+      width: 800px;
+      height: 160px;
+      border-radius: 5px 5px; }
+    .upload .table #box p {
+      width: 100px;
+      background-color: #CCC;
+      padding-left: 10px;
+      margin-bottom: 10px; }
+    .upload .table input {
+      height: 22px;
+      border-radius: 3px 3px;
+      background: #fff; }
+  .upload .check {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center; }
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .p-tabsearch .p-tab {
+    margin: 10px 0 10px 0;
+    text-align: center; }
+  .p-tabsearch .p-tab a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    float: left;
+    display: inline-block;
+    padding: 7px;
+    margin: 10px; }
+  .p-tabsearch .p-tab a:hover {
+    border: 2px solid #7FC8E7; }
+  .p-in-content .content {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px; }
+  .p-in-content .message {
+    padding: 0px; } }
+
+@media screen and (min-width: 1280px) {
+  .fa-search {
+    position: absolute;
+    top: 8px;
+    bottom: 0;
+    left: 368px;
+    right: 0;
+    margin: auto;
+    font-size: 22px;
+    z-index: 1; } }
+
+@media screen and (max-width: 767px) {
+  .p-tabsearch .p-tab {
+    margin: 10px 0 10px 0;
+    text-align: center; }
+  .p-tabsearch .p-tab a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    padding: 7px;
+    margin: 10px; }
+  .p-tabsearch .p-search {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .p-tabsearch .input {
+    text-align: center; }
+  .p-tabsearch .p-search input {
+    height: 30px; }
+  .p-tabsearch .fa-search {
+    position: absolute;
+    top: 4px;
+    bottom: 0;
+    left: 15px;
+    right: 260px;
+    margin: auto;
+    font-size: 22px;
+    z-index: 1; }
+  .p-in-content .content {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px; }
+  .p-in-content .message {
+    padding: 0px; }
+  .recommend {
+    text-align: center; } }
 
 #m_body {
   background-image: url(../img/forum/f_003.jpg);
