@@ -1,6 +1,6 @@
 html, body { height: 100%; margin: 0; padding: 0; }
       .googleMap{
-        height: 600px;
+        height: 100vh;
       }
       #target {
         width: 345px;
@@ -33,7 +33,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 
       #pac-input {
         z-index: 10;
-        position: absolute;
+        /*position: absolute;*/
         background-color: #fff;
         font-family: Roboto;
         font-size: 15px;
@@ -41,7 +41,9 @@ html, body { height: 100%; margin: 0; padding: 0; }
         margin-left: 12px;
         padding: 0 11px 0 13px;
         text-overflow: ellipsis;
-        width: 300px;
+       width: 200px;
+       height: 24px;
+        text-align: left;
       }
 
       #pac-input:focus {

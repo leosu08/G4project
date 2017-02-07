@@ -1925,12 +1925,13 @@ footer {
     font-size: 32px; }
 
 .a-panel {
+  overflow: hidden;
   position: relative;
   text-align: left;
   width: 100%;
   box-sizing: border-box;
   height: 0;
-  height: 600px;
+  height: 100vh;
   background: url("../img/a_015.jpg");
   background-size: 100% 100%;
   background-position: center center; }
@@ -2103,6 +2104,9 @@ footer {
 .a-phone-search {
   display: none; }
 
+.a-oldSlider {
+  display: none; }
+
 @media screen and (max-width: 767px) {
   .a-map {
     display: none; }
@@ -2165,7 +2169,9 @@ footer {
       font-size: 32px;
       color: #888; }
   .wrap {
-    display: none; } }
+    display: none; }
+  .a-oldSlider {
+    display: block; } }
 
 .a-btn-recommend {
   margin: auto;
