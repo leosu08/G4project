@@ -580,736 +580,6 @@ div[class*=col-lg-pull] {
   width: 100%;
   height: auto; }
 
-<<<<<<< HEAD
-@media screen and (max-width: 992px) and (min-width: 768px) {
-  #f_nav {
-    width: 100%;
-    height: 70px;
-    background-color: rgba(20, 21, 26, 0.5);
-    position: fixed;
-    z-index: 100; }
-  .f_section {
-    height: 100vh;
-    width: 100%; }
-  #f_section1 {
-    color: #f3f7f7;
-    /*background: linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%); */
-    background-image: url(../img/forum/f_001.jpg);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    position: relative;
-    text-align: center; }
-    #f_section1:before {
-      content: '';
-      display: inline-block;
-      height: 100%;
-      width: 0px;
-      background-color: #fff;
-      vertical-align: middle; }
-    #f_section1 .f_title {
-      width: 30%;
-      text-align: center;
-      display: inline-block;
-      vertical-align: middle; }
-      #f_section1 .f_title h1 {
-        font-size: 40px;
-        text-shadow: 1px 1px 5px #000; }
-    #f_section1 .f_desc {
-      width: 70%;
-      height: 30%;
-      position: absolute;
-      top: 70%;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto; }
-      #f_section1 .f_desc h3 {
-        font-size: 28px;
-        color: rgba(255, 255, 255, 0.7);
-        margin-bottom: 10px;
-        text-shadow: 1px 1px 2px #333; }
-      #f_section1 .f_desc .fa-angle-double-down {
-        font-size: 50px;
-        color: #333;
-        margin-top: 30px;
-        font-weight: 300; }
-  #f_section2, #f_section3 {
-    background-image: url(../img/forum/f_003.jpg);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    padding-top: 80px;
-    position: relative; }
-    #f_section2 #f_subnav, #f_section3 #f_subnav {
-      background-color: rgba(51, 51, 51, 0.66);
-      padding: 10px;
-      width: 100%; }
-    #f_section2 .f_tab, #f_section3 .f_tab {
-      width: 50%;
-      float: left; }
-      #f_section2 .f_tab li, #f_section3 .f_tab li {
-        display: inline-block;
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        margin-right: 5px; }
-        #f_section2 .f_tab li a, #f_section3 .f_tab li a {
-          display: block;
-          color: rgba(255, 255, 255, 0.7);
-          font-size: 18px;
-          padding: 10px; }
-        #f_section2 .f_tab li.f_tab_active, #f_section3 .f_tab li.f_tab_active {
-          border: 2px solid white; }
-          #f_section2 .f_tab li.f_tab_active a, #f_section3 .f_tab li.f_tab_active a {
-            color: #0ce3ec; }
-        #f_section2 .f_tab li:hover, #f_section3 .f_tab li:hover {
-          border: 2px solid white;
-          box-shadow: -1px 1px 3px #ddd; }
-          #f_section2 .f_tab li:hover a, #f_section3 .f_tab li:hover a {
-            color: #0ce3ec; }
-    #f_section2 .f_fn_area, #f_section3 .f_fn_area {
-      width: 50%;
-      float: right; }
-      #f_section2 .f_fn_area button, #f_section3 .f_fn_area button {
-        font-size: 18px;
-        color: #f3f7f7;
-        letter-spacing: 0.02em; }
-      #f_section2 .f_fn_area .f_search, #f_section3 .f_fn_area .f_search {
-        display: inline-block;
-        height: 38px;
-        margin-left: 10px;
-        position: relative; }
-        #f_section2 .f_fn_area .f_search input, #f_section3 .f_fn_area .f_search input {
-          width: 100%;
-          height: 100%;
-          font-size: 14px;
-          padding: 5px 5px 5px 30px;
-          background-color: rgba(0, 0, 0, 0.3);
-          border-radius: 5px;
-          border: 1px solid rgba(255, 255, 255, 0.7);
-          color: #fff; }
-        #f_section2 .f_fn_area .f_search .fa-search, #f_section3 .f_fn_area .f_search .fa-search {
-          position: absolute;
-          color: rgba(255, 255, 255, 0.8);
-          font-size: 22px;
-          left: 7px;
-          top: 7px; }
-    #f_section2 .f_content, #f_section3 .f_content {
-      width: 100%;
-      height: 70vh;
-      margin-top: 40px;
-      overflow-y: auto; }
-      #f_section2 .f_content .f_scroll, #f_section3 .f_content .f_scroll {
-        display: inline-block;
-        width: 0px;
-        height: 100%;
-        border: 2px dashed #0ce3ec;
-        margin-left: 40px; }
-      #f_section2 .f_content .f_posts, #f_section3 .f_content .f_posts {
-        display: inline-block;
-        width: 80%;
-        height: 100%;
-        margin-left: 40px; }
-        #f_section2 .f_content .f_posts table, #f_section3 .f_content .f_posts table {
-          width: 100%;
-          color: #f3f7f7;
-          border-collapse: separate;
-          border-spacing: 0;
-          margin-top: 20px; }
-          #f_section2 .f_content .f_posts table thead tr, #f_section3 .f_content .f_posts table thead tr {
-            width: 100%;
-            height: 50px;
-            font-size: 16px;
-            border: 1px solid #000;
-            border-radius: 50%;
-            background-color: rgba(12, 227, 236, 0.8); }
-            #f_section2 .f_content .f_posts table thead tr th, #f_section3 .f_content .f_posts table thead tr th {
-              padding-left: 10px;
-              text-shadow: 1px 1px 1px #000; }
-              #f_section2 .f_content .f_posts table thead tr th .fa-sticky-note, #f_section3 .f_content .f_posts table thead tr th .fa-sticky-note {
-                background-color: #1f7477;
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                line-height: 40px;
-                text-align: center;
-                font-size: 20px;
-                margin-right: 20px;
-                box-shadow: 1px 1px 2px #000 inset; }
-          #f_section2 .f_content .f_posts table tbody tr, #f_section3 .f_content .f_posts table tbody tr {
-            width: 100%;
-            height: 70px;
-            font-size: 16px;
-            border: 1px solid #000;
-            border-radius: 50%;
-            background-color: rgba(12, 227, 236, 0.1);
-            margin-top: 50px; }
-            #f_section2 .f_content .f_posts table tbody tr td, #f_section3 .f_content .f_posts table tbody tr td {
-              padding-left: 10px; }
-              #f_section2 .f_content .f_posts table tbody tr td .fa-commenting, #f_section3 .f_content .f_posts table tbody tr td .fa-commenting {
-                background-color: rgba(0, 0, 0, 0.7);
-                width: 40px;
-                height: 40px;
-                border-radius: 5px;
-                line-height: 40px;
-                text-align: center;
-                font-size: 20px;
-                margin-right: 20px;
-                color: #aaa; }
-            #f_section2 .f_content .f_posts table tbody tr .f_topic h4, #f_section2 .f_content .f_posts table tbody tr .f_topic p, #f_section3 .f_content .f_posts table tbody tr .f_topic h4, #f_section3 .f_content .f_posts table tbody tr .f_topic p {
-              display: inline-block;
-              letter-spacing: 0.05em; }
-            #f_section2 .f_content .f_posts table tbody tr .f_topic h4 > a, #f_section3 .f_content .f_posts table tbody tr .f_topic h4 > a {
-              font-size: 16px;
-              color: #f3f7f7;
-              text-shadow: 1px 1px 1px #000; }
-            #f_section2 .f_content .f_posts table tbody tr .f_response p, #f_section3 .f_content .f_posts table tbody tr .f_response p {
-              display: inline-block;
-              font-size: 14px;
-              letter-spacing: 0.05em; }
-            #f_section2 .f_content .f_posts table tbody tr .f_response i, #f_section3 .f_content .f_posts table tbody tr .f_response i {
-              margin-right: 5px; }
-            #f_section2 .f_content .f_posts table tbody tr .f_response .fa-eye, #f_section3 .f_content .f_posts table tbody tr .f_response .fa-eye {
-              color: #aaa;
-              font-size: 20px; }
-            #f_section2 .f_content .f_posts table tbody tr .f_response .fa-comment-o, #f_section3 .f_content .f_posts table tbody tr .f_response .fa-comment-o {
-              margin-left: 10px;
-              color: #aaa;
-              font-size: 20px; }
-            #f_section2 .f_content .f_posts table tbody tr .f_user, #f_section3 .f_content .f_posts table tbody tr .f_user {
-              font-size: 14px;
-              color: rgba(255, 255, 255, 0.8); }
-              #f_section2 .f_content .f_posts table tbody tr .f_user p, #f_section3 .f_content .f_posts table tbody tr .f_user p {
-                padding-bottom: 5px;
-                font-family: Arial;
-                letter-spacing: 0.05em; }
-                #f_section2 .f_content .f_posts table tbody tr .f_user p:nth-child(1), #f_section3 .f_content .f_posts table tbody tr .f_user p:nth-child(1) {
-                  display: inline-block;
-                  vertical-align: middle; }
-                #f_section2 .f_content .f_posts table tbody tr .f_user p:nth-child(2), #f_section3 .f_content .f_posts table tbody tr .f_user p:nth-child(2) {
-                  display: inline-block;
-                  vertical-align: middle; }
-                #f_section2 .f_content .f_posts table tbody tr .f_user p:nth-child(3), #f_section3 .f_content .f_posts table tbody tr .f_user p:nth-child(3) {
-                  color: #0ce3ec;
-                  font-size: 12px;
-                  display: inline-block;
-                  vertical-align: middle;
-                  margin-left: 25px; }
-  #f_section3 {
-    background-image: url(../img/forum/f_001.jpg); }
-  #f_lightbox {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    overflow: hidden; }
-    #f_lightbox .f_lightbox_content {
-      width: 80%;
-      height: 80%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      overflow: auto; }
-      #f_lightbox .f_lightbox_content .fa-times {
-        font-size: 25px;
-        float: right; }
-      #f_lightbox .f_lightbox_content table {
-        margin: auto;
-        margin-top: 60px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        letter-spacing: 0.05em;
-        font-family: Arial;
-        color: rgba(255, 255, 255, 0.7); }
-        #f_lightbox .f_lightbox_content table th, #f_lightbox .f_lightbox_content table td {
-          padding: 15px; }
-        #f_lightbox .f_lightbox_content table td {
-          border-bottom: 1px solid #fff; }
-        #f_lightbox .f_lightbox_content table th {
-          background-color: #1f4c74; }
-        #f_lightbox .f_lightbox_content table td > p {
-          line-height: 1.5em; }
-        #f_lightbox .f_lightbox_content table img {
-          width: 50px;
-          height: 50px; }
-        #f_lightbox .f_lightbox_content table .user_level {
-          color: #877a5f; }
-        #f_lightbox .f_lightbox_content table .f_btn {
-          width: 100%;
-          height: 20px;
-          margin-top: 30px;
-          text-align: left; }
-          #f_lightbox .f_lightbox_content table .f_btn button {
-            width: 40px;
-            height: 25px;
-            border-radius: 5px;
-            border: 1px solid #aa89bd;
-            background-color: rgba(0, 0, 0, 0.3);
-            color: #aa89bd;
-            text-shadow: 1px 1px 1px #000;
-            float: right; } }
-
-@media screen and (min-width: 993px) {
-  #f_nav {
-    width: 100%;
-    height: 70px;
-    background-color: rgba(20, 21, 26, 0.5);
-    position: fixed;
-    z-index: 100; }
-  .f_section {
-    height: 100vh;
-    width: 100%; }
-  #f_section1 {
-    color: #f3f7f7;
-    /*background: linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%); */
-    background-image: url(../img/forum/f_001.jpg);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    position: relative;
-    text-align: center; }
-    #f_section1:before {
-      content: '';
-      display: inline-block;
-      height: 100%;
-      width: 0px;
-      background-color: #fff;
-      vertical-align: middle; }
-    #f_section1 .f_title {
-      width: 30%;
-      text-align: center;
-      display: inline-block;
-      vertical-align: middle; }
-      #f_section1 .f_title h1 {
-        font-size: 40px;
-        text-shadow: 1px 1px 5px #000; }
-    #f_section1 .f_desc {
-      width: 70%;
-      height: 30%;
-      position: absolute;
-      top: 70%;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto; }
-      #f_section1 .f_desc h3 {
-        font-size: 28px;
-        color: rgba(255, 255, 255, 0.7);
-        margin-bottom: 10px;
-        text-shadow: 1px 1px 2px #333; }
-      #f_section1 .f_desc .fa-angle-double-down {
-        font-size: 50px;
-        color: #333;
-        margin-top: 30px;
-        font-weight: 300; }
-  #f_section2, #f_section3 {
-    background-image: url(../img/forum/f_003.jpg);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    padding-top: 80px;
-    position: relative; }
-    #f_section2 #f_subnav, #f_section3 #f_subnav {
-      background-color: rgba(51, 51, 51, 0.66);
-      padding: 10px;
-      width: 100%; }
-    #f_section2 .f_tab, #f_section3 .f_tab {
-      width: 50%;
-      float: left; }
-      #f_section2 .f_tab li, #f_section3 .f_tab li {
-        display: inline-block;
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        margin-right: 5px; }
-        #f_section2 .f_tab li a, #f_section3 .f_tab li a {
-          display: block;
-          color: rgba(255, 255, 255, 0.7);
-          font-size: 18px;
-          padding: 10px; }
-        #f_section2 .f_tab li.f_tab_active, #f_section3 .f_tab li.f_tab_active {
-          border: 2px solid white; }
-          #f_section2 .f_tab li.f_tab_active a, #f_section3 .f_tab li.f_tab_active a {
-            color: #0ce3ec; }
-        #f_section2 .f_tab li:hover, #f_section3 .f_tab li:hover {
-          border: 2px solid white;
-          box-shadow: -1px 1px 3px #ddd; }
-          #f_section2 .f_tab li:hover a, #f_section3 .f_tab li:hover a {
-            color: #0ce3ec; }
-    #f_section2 .f_fn_area, #f_section3 .f_fn_area {
-      width: 50%;
-      float: right; }
-      #f_section2 .f_fn_area button, #f_section3 .f_fn_area button {
-        font-size: 18px;
-        color: #f3f7f7;
-        letter-spacing: 0.02em; }
-      #f_section2 .f_fn_area .f_search, #f_section3 .f_fn_area .f_search {
-        display: inline-block;
-        height: 38px;
-        margin-left: 10px;
-        position: relative; }
-        #f_section2 .f_fn_area .f_search input, #f_section3 .f_fn_area .f_search input {
-          width: 100%;
-          height: 100%;
-          font-size: 14px;
-          padding: 5px 5px 5px 30px;
-          background-color: rgba(0, 0, 0, 0.3);
-          border-radius: 5px;
-          border: 1px solid rgba(255, 255, 255, 0.7);
-          color: #fff; }
-        #f_section2 .f_fn_area .f_search .fa-search, #f_section3 .f_fn_area .f_search .fa-search {
-          position: absolute;
-          color: rgba(255, 255, 255, 0.8);
-          font-size: 22px;
-          left: 7px;
-          top: 7px; }
-    #f_section2 .f_content, #f_section3 .f_content {
-      width: 100%;
-      height: 70vh;
-      margin-top: 40px;
-      overflow-y: auto; }
-      #f_section2 .f_content .f_scroll, #f_section3 .f_content .f_scroll {
-        display: inline-block;
-        width: 0px;
-        height: 100%;
-        border: 2px dashed #0ce3ec;
-        margin-left: 60px; }
-      #f_section2 .f_content .f_posts, #f_section3 .f_content .f_posts {
-        display: inline-block;
-        width: 80%;
-        height: 100%;
-        margin-left: 100px; }
-        #f_section2 .f_content .f_posts table, #f_section3 .f_content .f_posts table {
-          width: 100%;
-          color: #f3f7f7;
-          border-collapse: separate;
-          border-spacing: 0;
-          margin-top: 20px; }
-          #f_section2 .f_content .f_posts table thead tr, #f_section3 .f_content .f_posts table thead tr {
-            width: 100%;
-            height: 50px;
-            font-size: 16px;
-            border: 1px solid #000;
-            border-radius: 50%;
-            background-color: rgba(12, 227, 236, 0.8); }
-            #f_section2 .f_content .f_posts table thead tr th, #f_section3 .f_content .f_posts table thead tr th {
-              padding-left: 10px;
-              text-shadow: 1px 1px 1px #000; }
-              #f_section2 .f_content .f_posts table thead tr th .fa-sticky-note, #f_section3 .f_content .f_posts table thead tr th .fa-sticky-note {
-                background-color: #1f7477;
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                line-height: 40px;
-                text-align: center;
-                font-size: 20px;
-                margin-right: 20px;
-                box-shadow: 1px 1px 2px #000 inset; }
-          #f_section2 .f_content .f_posts table tbody tr, #f_section3 .f_content .f_posts table tbody tr {
-            width: 100%;
-            height: 70px;
-            font-size: 16px;
-            border: 1px solid #000;
-            border-radius: 50%;
-            background-color: rgba(12, 227, 236, 0.1);
-            margin-top: 50px; }
-            #f_section2 .f_content .f_posts table tbody tr td, #f_section3 .f_content .f_posts table tbody tr td {
-              padding-left: 10px; }
-              #f_section2 .f_content .f_posts table tbody tr td .fa-commenting, #f_section3 .f_content .f_posts table tbody tr td .fa-commenting {
-                background-color: rgba(0, 0, 0, 0.7);
-                width: 40px;
-                height: 40px;
-                border-radius: 5px;
-                line-height: 40px;
-                text-align: center;
-                font-size: 20px;
-                margin-right: 20px;
-                color: #aaa; }
-            #f_section2 .f_content .f_posts table tbody tr .f_topic h4, #f_section2 .f_content .f_posts table tbody tr .f_topic p, #f_section3 .f_content .f_posts table tbody tr .f_topic h4, #f_section3 .f_content .f_posts table tbody tr .f_topic p {
-              display: inline-block;
-              letter-spacing: 0.05em; }
-            #f_section2 .f_content .f_posts table tbody tr .f_topic h4 > a, #f_section3 .f_content .f_posts table tbody tr .f_topic h4 > a {
-              font-size: 16px;
-              color: #f3f7f7;
-              text-shadow: 1px 1px 1px #000; }
-            #f_section2 .f_content .f_posts table tbody tr .f_response p, #f_section3 .f_content .f_posts table tbody tr .f_response p {
-              display: inline-block;
-              font-size: 14px;
-              letter-spacing: 0.05em; }
-            #f_section2 .f_content .f_posts table tbody tr .f_response i, #f_section3 .f_content .f_posts table tbody tr .f_response i {
-              margin-right: 5px; }
-            #f_section2 .f_content .f_posts table tbody tr .f_response .fa-eye, #f_section3 .f_content .f_posts table tbody tr .f_response .fa-eye {
-              color: #aaa;
-              font-size: 20px; }
-            #f_section2 .f_content .f_posts table tbody tr .f_response .fa-comment-o, #f_section3 .f_content .f_posts table tbody tr .f_response .fa-comment-o {
-              margin-left: 10px;
-              color: #aaa;
-              font-size: 20px; }
-            #f_section2 .f_content .f_posts table tbody tr .f_user, #f_section3 .f_content .f_posts table tbody tr .f_user {
-              font-size: 14px;
-              color: rgba(255, 255, 255, 0.8); }
-              #f_section2 .f_content .f_posts table tbody tr .f_user p, #f_section3 .f_content .f_posts table tbody tr .f_user p {
-                padding-bottom: 5px;
-                font-family: Arial;
-                letter-spacing: 0.05em; }
-                #f_section2 .f_content .f_posts table tbody tr .f_user p:nth-child(1), #f_section3 .f_content .f_posts table tbody tr .f_user p:nth-child(1) {
-                  display: inline-block;
-                  vertical-align: middle; }
-                #f_section2 .f_content .f_posts table tbody tr .f_user p:nth-child(2), #f_section3 .f_content .f_posts table tbody tr .f_user p:nth-child(2) {
-                  display: inline-block;
-                  vertical-align: middle; }
-                #f_section2 .f_content .f_posts table tbody tr .f_user p:nth-child(3), #f_section3 .f_content .f_posts table tbody tr .f_user p:nth-child(3) {
-                  color: #0ce3ec;
-                  font-size: 12px;
-                  display: inline-block;
-                  vertical-align: middle; }
-  #f_section3 {
-    background-image: url(../img/forum/f_001.jpg); }
-  #f_lightbox {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    overflow: hidden; }
-    #f_lightbox .f_lightbox_content {
-      width: 80%;
-      height: 80%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      overflow: auto; }
-      #f_lightbox .f_lightbox_content .fa-times {
-        font-size: 25px;
-        float: right;
-        cursor: pointer; }
-      #f_lightbox .f_lightbox_content table {
-        margin: auto;
-        margin-top: 60px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        letter-spacing: 0.05em;
-        font-family: Arial;
-        color: rgba(255, 255, 255, 0.7); }
-        #f_lightbox .f_lightbox_content table th, #f_lightbox .f_lightbox_content table td {
-          padding: 15px; }
-        #f_lightbox .f_lightbox_content table td {
-          border-bottom: 1px solid #fff; }
-        #f_lightbox .f_lightbox_content table th {
-          background-color: #1f4c74; }
-        #f_lightbox .f_lightbox_content table td > p {
-          line-height: 1.5em; }
-        #f_lightbox .f_lightbox_content table .user_level {
-          color: #877a5f; }
-        #f_lightbox .f_lightbox_content table .f_btn {
-          width: 100%;
-          height: 20px;
-          margin-top: 30px;
-          text-align: left; }
-          #f_lightbox .f_lightbox_content table .f_btn button {
-            width: 40px;
-            height: 25px;
-            border-radius: 5px;
-            border: 1px solid #aa89bd;
-            background-color: rgba(0, 0, 0, 0.3);
-            color: #aa89bd;
-            text-shadow: 1px 1px 1px #000;
-            float: right;
-            margin-left: 10px; } }
-
-#f_nav {
-  box-shadow: 1px 1px 1px #000; }
-  #f_nav .f_nav {
-    float: left; }
-  #f_nav ul {
-    width: 100%;
-    height: 100%;
-    font-size: 0px; }
-    #f_nav ul li {
-      display: inline-block;
-      height: 100%; }
-      #f_nav ul li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        font-size: 15px;
-        color: #ddd;
-        text-align: right;
-        line-height: 70px; }
-  #f_nav .logo {
-    width: 20%;
-    padding-top: 5px; }
-    #f_nav .logo img {
-      height: 90%; }
-  #f_nav .menu {
-    width: 60%;
-    height: 70px; }
-    #f_nav .menu ul {
-      width: 70%;
-      margin: auto; }
-      #f_nav .menu ul li {
-        width: 25%;
-        text-align: center; }
-        #f_nav .menu ul li a {
-          color: #aac9e4;
-          font-size: 20px;
-          text-align: center; }
-        #f_nav .menu ul li a:hover {
-          color: rgba(150, 150, 150, 0.4);
-          text-shadow: 0px 10px 0px #17b6fc; }
-  #f_nav .login {
-    width: 20%;
-    height: 70px; }
-    #f_nav .login ul {
-      width: 40%;
-      float: right; }
-      #f_nav .login ul li {
-        width: 50%; }
-
-#m_body {
-  background-image: url(../img/forum/f_003.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-#m_wrapper {
-  width: 100%;
-  height: 100vh;
-  background-image: radial-gradient(ellipse at center, #1f4c74 0%, rgba(29, 34, 60, 0.5) 30%, rgba(9, 10, 15, 0.5) 50%);
-  position: relative; }
-  #m_wrapper h1 {
-    font-size: 28px;
-    color: #f3f7f7;
-    text-align: center;
-    font-family: Lato;
-    font-weight: 300;
-    letter-spacing: .4em;
-    text-transform: uppercase;
-    padding-top: 100px;
-    text-shadow: 0 10px 5px rgba(0, 0, 0, 0.2); }
-
-@keyframes m_float {
-  0% {
-    transform: translateY(-8px); }
-  100% {
-    transform: translateY(8px); } }
-  #m_wrapper .m_user_img {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    border: 5px solid rgba(70, 130, 180, 0.5);
-    text-align: center;
-    border-radius: 50%;
-    box-shadow: 1px 1px 6px #000;
-    z-index: 999;
-    transition: 3s cubic-bezier(0.24, 1.21, 0.32, 1.54); }
-    #m_wrapper .m_user_img img {
-      width: 100%;
-      height: 100%; }
-    #m_wrapper .m_user_img .m_user_lv {
-      position: absolute;
-      top: -10px;
-      left: -15px;
-      width: 60px;
-      height: 60px;
-      background-color: rgba(67, 116, 157, 0.7);
-      background-position: center center;
-      background-size: 100%;
-      border-radius: 40px;
-      line-height: 60px;
-      text-align: center;
-      color: rgba(255, 255, 255, 0.8);
-      text-shadow: 1px 1px 1px #000;
-      transition: 1s 0.5s cubic-bezier(0.24, 1.21, 0.32, 1.54); }
-  #m_wrapper #canvas {
-    width: 80%;
-    position: absolute;
-    top: 100px;
-    bottom: 0;
-    left: -85px;
-    right: 0;
-    margin: auto;
-    opacity: 0;
-    transition: 8s all;
-    animation: m_float 3s linear 0s infinite alternate; }
-  #m_wrapper .m_infos {
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    color: #fff; }
-    #m_wrapper .m_infos span {
-      display: block;
-      margin-bottom: 7px;
-      letter-spacing: 0.05em; }
-    #m_wrapper .m_infos .fa {
-      font-size: 22px; }
-    #m_wrapper .m_infos .m_label > a {
-      color: #73b6ef;
-      font-size: 18px;
-      font-weight: 800; }
-    #m_wrapper .m_infos .m_value {
-      font-size: 16px; }
-    #m_wrapper .m_infos .m_info {
-      position: absolute; }
-      #m_wrapper .m_infos .m_info:hover {
-        border-radius: 50%;
-        background-color: rgba(78, 104, 162, 0.8);
-        box-shadow: 1px 1px 1px #000;
-        padding: 10px;
-        transition: .5s all; }
-    #m_wrapper .m_infos .m_infos_left {
-      width: 50%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      text-align: right; }
-      #m_wrapper .m_infos .m_infos_left .m_info_activity {
-        right: 40%;
-        animation: m_float 3s linear 0s infinite alternate; }
-      #m_wrapper .m_infos .m_infos_left .m_info_forumpost {
-        bottom: -20px;
-        right: 40%;
-        animation: m_float 4.5s linear .5s infinite alternate; }
-    #m_wrapper .m_infos .m_infos_right {
-      width: 50%;
-      height: 100%;
-      position: absolute;
-      right: 0;
-      text-align: left; }
-      #m_wrapper .m_infos .m_infos_right .m_info_id {
-        left: 30%;
-        top: 20%;
-        animation: m_float 3s linear .5s infinite alternate both; }
-      #m_wrapper .m_infos .m_infos_right .m_info_photo {
-        left: 40%;
-        top: 60%;
-        animation: m_float 3s linear 0s infinite alternate; }
-      #m_wrapper .m_infos .m_infos_right .m_info_save {
-        bottom: -20px;
-        left: 30%;
-        animation: m_float 5s linear 1s infinite alternate; }
-=======
 .menu li a:after {
   position: absolute;
   top: -5px;
@@ -1499,16 +769,12 @@ div[class*=col-lg-pull] {
     color: white; }
   .menu a:hover {
     border-bottom: 4px solid #86d4f5; } }
->>>>>>> f44561e004d7b280201391ff6b5100a004e75b2b
 
-.m_lightbox_area {
+footer {
   width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  height: 50px;
+  background-color: #3e3e43;
   color: #fff;
-<<<<<<< HEAD
-  position: fixed;
-=======
   text-align: right;
   padding-right: 40px;
   line-height: 50px;
@@ -1578,133 +844,10 @@ body, html {
   width: 320px;
   height: 200px;
   position: absolute;
->>>>>>> f44561e004d7b280201391ff6b5100a004e75b2b
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-<<<<<<< HEAD
-  z-index: 9999;
-  overflow: hidden; }
-  .m_lightbox_area .lightbox_content {
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    overflow: auto; }
-    .m_lightbox_area .lightbox_content .m_title {
-      padding: 10px 0;
-      border-bottom: 1px solid #95d3e4; }
-      .m_lightbox_area .lightbox_content .m_title h4 {
-        display: inline-block;
-        width: 80%;
-        font-size: 20px; }
-      .m_lightbox_area .lightbox_content .m_title .fa-times {
-        font-size: 25px;
-        float: right;
-        cursor: pointer; }
-    .m_lightbox_area .lightbox_content table {
-      margin: auto;
-      margin-top: 60px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      letter-spacing: 0.05em;
-      font-family: Arial;
-      color: white;
-      font-weight: 400;
-      letter-spacing: 0.08em; }
-      .m_lightbox_area .lightbox_content table th, .m_lightbox_area .lightbox_content table td {
-        padding: 20px;
-        border-bottom: 1px dotted rgba(255, 255, 255, 0.6); }
-      .m_lightbox_area .lightbox_content table th {
-        text-transform: uppercase;
-        text-align: right;
-        font-weight: 300; }
-      .m_lightbox_area .lightbox_content table input {
-        padding: 3px 5px;
-        letter-spacing: 0.05em; }
-    .m_lightbox_area .lightbox_content button {
-      display: block;
-      margin: auto;
-      margin-top: 40px;
-      color: #fff;
-      font-size: 16px;
-      letter-spacing: 0.05em;
-      text-shadow: 1px 1px 1px #000; }
-
-.m_sub_tab {
-  font-size: 18px;
-  margin-top: 20px;
-  text-align: left; }
-  .m_sub_tab span {
-    display: inline-block;
-    padding: 10px;
-    border: 2px solid #86d4f5; }
-    .m_sub_tab span:nth-child(1) {
-      background-color: #86d4f5;
-      text-shadow: 1px 1px 1px #000; }
-    .m_sub_tab span:nth-child(2) {
-      color: #86d4f5; }
-
-#m_lightbox_activity .m_activity_table, #m_lightbox_post .m_activity_table {
-  margin-top: 50px; }
-
-#m_lightbox_activity table, #m_lightbox_post table {
-  margin-top: 0px;
-  border: 1px solid #86d4f5;
-  font-size: 16px; }
-  #m_lightbox_activity table th, #m_lightbox_post table th {
-    text-align: center;
-    background-color: #000; }
-  #m_lightbox_activity table td, #m_lightbox_post table td {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.6); }
-    #m_lightbox_activity table td a, #m_lightbox_post table td a {
-      color: #0ce3ec; }
-  #m_lightbox_activity table button, #m_lightbox_post table button {
-    margin: 0;
-    color: #4f9cdd; }
-
-#m_lightbox_activity .m_sub_sub_tab, #m_lightbox_post .m_sub_sub_tab {
-  width: 75%;
-  margin: auto;
-  font-size: 0px; }
-  #m_lightbox_activity .m_sub_sub_tab span, #m_lightbox_post .m_sub_sub_tab span {
-    display: inline-block;
-    margin: 0;
-    font-size: 16px;
-    padding: 10px 15px; }
-    #m_lightbox_activity .m_sub_sub_tab span:nth-child(1), #m_lightbox_post .m_sub_sub_tab span:nth-child(1) {
-      border: 1px solid #86d4f5;
-      color: #86d4f5;
-      text-shadow: 1px 1px 1px #000; }
-    #m_lightbox_activity .m_sub_sub_tab span:nth-child(2), #m_lightbox_post .m_sub_sub_tab span:nth-child(2) {
-      color: #fff; }
-
-@media screen and (max-width: 767px) {
-  #m_wrapper .m_user_img {
-    width: 120px;
-    height: 120px; }
-    #m_wrapper .m_user_img .m_user_lv {
-      display: none; }
-  #m_wrapper #canvas {
-    width: 130%; }
-  #m_wrapper .m_infos .m_value {
-    display: none; }
-  #m_wrapper .m_infos .m_infos_right .m_info_id {
-    top: 10%;
-    left: 5%; }
-  #m_wrapper .m_infos .m_infos_right .m_info_photo {
-    top: 38%; }
-  #m_wrapper .m_infos .m_infos_left .m_info_activity {
-    right: 30%;
-    top: 20%; }
-  #m_wrapper .m_infos .m_infos_left .m_info_forumpost {
-    right: 30%; } }
-=======
   margin: auto; }
 
 .a-text {
@@ -2242,4 +1385,539 @@ html, body {
   opacity: 0; }
 
 /* preview styles */
->>>>>>> f44561e004d7b280201391ff6b5100a004e75b2b
+.btn-blue:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #4f9cdd;
+  margin-top: 1px;
+  text-shadow: 1px 1px 1px #000;
+  box-shadow: 1px 5px 10px #000; }
+
+.f_section {
+  height: 100vh;
+  width: 100%; }
+
+#f_section1 {
+  color: #f3f7f7;
+  background-image: url(../img/forum/f_001.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  text-align: center; }
+  #f_section1:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 0px;
+    background-color: #fff;
+    vertical-align: middle; }
+  #f_section1 .f_title {
+    width: 30%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle; }
+    #f_section1 .f_title h1 {
+      font-size: 40px;
+      text-shadow: 1px 1px 5px #000; }
+  #f_section1 .f_desc {
+    width: 70%;
+    height: 30%;
+    position: absolute;
+    top: 70%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    #f_section1 .f_desc h3 {
+      font-size: 28px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px #333; }
+    #f_section1 .f_desc .fa-angle-double-down {
+      font-size: 50px;
+      color: #333;
+      margin-top: 30px;
+      font-weight: 300;
+      animation: m_float .8s linear 0s infinite alternate;
+      opacity: 0.6; }
+
+#f_section2 {
+  height: 100vh; }
+  #f_section2 #f_tab {
+    width: 45%;
+    float: left; }
+
+.f_fn_area {
+  width: 50%;
+  float: right;
+  padding-top: 15px;
+  position: relative;
+  z-index: 1; }
+  .f_fn_area button {
+    font-size: 18px;
+    color: #f3f7f7;
+    letter-spacing: 0.02em; }
+  .f_fn_area .f_search {
+    display: inline-block;
+    height: 38px;
+    margin-left: 10px;
+    position: relative; }
+    .f_fn_area .f_search input {
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+      padding: 5px 10px 5px 30px;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      color: #fff; }
+    .f_fn_area .f_search .fa-search {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 22px;
+      left: 7px;
+      top: 7px; }
+
+.f_posts {
+  width: 90%;
+  height: 100%;
+  box-shadow: -1px -1px 2px #333 inset;
+  box-shadow: 1px -1px 5px #333 inset;
+  animation: m_float 3s linear 0s infinite alternate;
+  margin: auto; }
+  .f_posts table {
+    width: 100%;
+    color: #f3f7f7;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px; }
+    .f_posts table thead tr {
+      width: 100%;
+      height: 50px;
+      font-size: 16px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background-color: rgba(12, 227, 236, 0.8); }
+      .f_posts table thead tr th {
+        padding: 10px;
+        text-shadow: 1px 1px 1px #000; }
+        .f_posts table thead tr th .fa-sticky-note {
+          background-color: #1f7477;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          line-height: 40px;
+          text-align: center;
+          font-size: 20px;
+          margin-right: 20px;
+          box-shadow: 1px 1px 2px #000 inset; }
+    .f_posts table tbody tr {
+      width: 100%;
+      height: 70px;
+      font-size: 16px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background-color: rgba(12, 227, 236, 0.1);
+      margin-top: 50px; }
+      .f_posts table tbody tr td {
+        padding: 10px; }
+        .f_posts table tbody tr td .fa-commenting {
+          background-color: rgba(0, 0, 0, 0.7);
+          width: 40px;
+          height: 40px;
+          border-radius: 5px;
+          line-height: 40px;
+          text-align: center;
+          font-size: 20px;
+          margin-right: 20px;
+          color: #aaa; }
+      .f_posts table tbody tr .f_topic h4, .f_posts table tbody tr .f_topic p {
+        display: inline-block;
+        letter-spacing: 0.05em; }
+      .f_posts table tbody tr .f_topic h4 > a {
+        font-size: 16px;
+        color: #f3f7f7;
+        text-shadow: 1px 1px 1px #000; }
+        .f_posts table tbody tr .f_topic h4 > a:hover {
+          color: #f5b286; }
+      .f_posts table tbody tr .f_response p {
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 0.05em; }
+      .f_posts table tbody tr .f_response i {
+        margin-right: 5px; }
+      .f_posts table tbody tr .f_response .fa-eye {
+        color: #aaa;
+        font-size: 20px; }
+      .f_posts table tbody tr .f_response .fa-comment-o {
+        margin-left: 10px;
+        color: #aaa;
+        font-size: 20px; }
+      .f_posts table tbody tr .f_user {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        text-shadow: 1px 1px 1px #000; }
+        .f_posts table tbody tr .f_user p {
+          padding-bottom: 5px;
+          font-family: Arial;
+          letter-spacing: 0.05em; }
+          .f_posts table tbody tr .f_user p:nth-child(1) {
+            display: inline-block;
+            vertical-align: middle; }
+          .f_posts table tbody tr .f_user p:nth-child(2) {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px; }
+            .f_posts table tbody tr .f_user p:nth-child(2) a {
+              color: steelblue; }
+              .f_posts table tbody tr .f_user p:nth-child(2) a:hover {
+                color: #86d4f5; }
+          .f_posts table tbody tr .f_user p:nth-child(3) {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle; }
+
+#f_lightbox {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  overflow: hidden; }
+  #f_lightbox .f_lightbox_content {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: auto; }
+    #f_lightbox .f_lightbox_content .fa-times {
+      font-size: 25px;
+      float: right;
+      cursor: pointer; }
+    #f_lightbox .f_lightbox_content table {
+      margin: auto;
+      margin-top: 60px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      letter-spacing: 0.05em;
+      font-family: Arial;
+      color: rgba(255, 255, 255, 0.7); }
+      #f_lightbox .f_lightbox_content table th, #f_lightbox .f_lightbox_content table td {
+        padding: 15px; }
+      #f_lightbox .f_lightbox_content table td {
+        border-bottom: 1px solid #fff; }
+      #f_lightbox .f_lightbox_content table th {
+        background-color: #1f4c74; }
+      #f_lightbox .f_lightbox_content table td > p {
+        line-height: 1.5em; }
+      #f_lightbox .f_lightbox_content table .user_level {
+        color: #877a5f; }
+      #f_lightbox .f_lightbox_content table .f_btn {
+        width: 100%;
+        height: 20px;
+        margin-top: 30px;
+        text-align: left; }
+        #f_lightbox .f_lightbox_content table .f_btn button {
+          width: 40px;
+          height: 25px;
+          border-radius: 5px;
+          border: 1px solid #aa89bd;
+          background-color: rgba(0, 0, 0, 0.3);
+          color: #aa89bd;
+          text-shadow: 1px 1px 1px #000;
+          float: right;
+          margin-left: 10px; }
+
+@media screen and (max-width: 767px) {
+  #f_section2 #f_tab {
+    width: 100%;
+    float: left;
+    flex-direction: none; }
+    #f_section2 #f_tab li {
+      display: inline-block;
+      width: 30%; }
+  #f_section2 .f_fn_area {
+    width: 100%;
+    text-align: center;
+    padding-top: 0; }
+    #f_section2 .f_fn_area button {
+      width: 40%;
+      font-size: 14px; }
+    #f_section2 .f_fn_area .f_search {
+      width: 40%; }
+  #f_section2 .f_posts {
+    width: 100%; } }
+
+#m_body {
+  background-image: url(../img/forum/f_003.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 0; }
+
+#m_wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(ellipse at center, #1f4c74 0%, rgba(29, 34, 60, 0.8) 30%, rgba(9, 10, 15, 0.5) 50%);
+  position: relative; }
+  #m_wrapper h1 {
+    font-size: 28px;
+    color: #f3f7f7;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 300;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    padding-top: 100px;
+    text-shadow: 0 10px 5px rgba(0, 0, 0, 0.2); }
+
+@keyframes m_float {
+  0% {
+    transform: translateY(-8px); }
+  100% {
+    transform: translateY(8px); } }
+  #m_wrapper .m_user_img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 5px solid rgba(70, 130, 180, 0.5);
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 1px 1px 6px #000;
+    z-index: 999;
+    transition: 3s cubic-bezier(0.24, 1.21, 0.32, 1.54); }
+    #m_wrapper .m_user_img img {
+      width: 100%;
+      height: 100%; }
+    #m_wrapper .m_user_img .m_user_lv {
+      position: absolute;
+      top: -10px;
+      left: -15px;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(67, 116, 157, 0.7);
+      background-position: center center;
+      background-size: 100%;
+      border-radius: 40px;
+      line-height: 60px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 1px 1px 1px #000;
+      transition: 1s 0.5s cubic-bezier(0.24, 1.21, 0.32, 1.54); }
+  #m_wrapper #canvas {
+    width: 80%;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: -85px;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transition: 8s all;
+    animation: m_float 3s linear 0s infinite alternate; }
+  #m_wrapper .m_infos {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #fff; }
+    #m_wrapper .m_infos span {
+      display: block;
+      margin-bottom: 7px;
+      letter-spacing: 0.05em; }
+    #m_wrapper .m_infos .fa {
+      font-size: 22px; }
+    #m_wrapper .m_infos .m_label > a {
+      color: #73b6ef;
+      font-size: 18px;
+      font-weight: 800; }
+    #m_wrapper .m_infos .m_value {
+      font-size: 16px; }
+    #m_wrapper .m_infos .m_info {
+      position: absolute; }
+      #m_wrapper .m_infos .m_info:hover {
+        border-radius: 50%;
+        background-color: rgba(78, 104, 162, 0.8);
+        box-shadow: 1px 1px 1px #000;
+        padding: 10px;
+        transition: .5s all; }
+    #m_wrapper .m_infos .m_infos_left {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      text-align: right; }
+      #m_wrapper .m_infos .m_infos_left .m_info_activity {
+        right: 40%;
+        animation: m_float 3s linear 0s infinite alternate; }
+      #m_wrapper .m_infos .m_infos_left .m_info_forumpost {
+        bottom: -20px;
+        right: 40%;
+        animation: m_float 4.5s linear .5s infinite alternate; }
+    #m_wrapper .m_infos .m_infos_right {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      text-align: left; }
+      #m_wrapper .m_infos .m_infos_right .m_info_id {
+        left: 30%;
+        top: 20%;
+        animation: m_float 3s linear .5s infinite alternate both; }
+      #m_wrapper .m_infos .m_infos_right .m_info_photo {
+        left: 40%;
+        top: 60%;
+        animation: m_float 3s linear 0s infinite alternate; }
+      #m_wrapper .m_infos .m_infos_right .m_info_save {
+        bottom: -20px;
+        left: 30%;
+        animation: m_float 5s linear 1s infinite alternate; }
+
+.m_lightbox_area {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  overflow: hidden; }
+  .m_lightbox_area .lightbox_content {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: auto; }
+    .m_lightbox_area .lightbox_content .m_title {
+      padding: 10px 0;
+      border-bottom: 1px solid #95d3e4; }
+      .m_lightbox_area .lightbox_content .m_title h4 {
+        display: inline-block;
+        width: 80%;
+        font-size: 20px; }
+      .m_lightbox_area .lightbox_content .m_title .fa-times {
+        font-size: 25px;
+        float: right;
+        cursor: pointer; }
+    .m_lightbox_area .lightbox_content table {
+      margin: auto;
+      margin-top: 60px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      letter-spacing: 0.05em;
+      font-family: Arial;
+      color: white;
+      font-weight: 400;
+      letter-spacing: 0.08em; }
+      .m_lightbox_area .lightbox_content table th, .m_lightbox_area .lightbox_content table td {
+        padding: 20px;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.6); }
+      .m_lightbox_area .lightbox_content table th {
+        text-transform: uppercase;
+        text-align: right;
+        font-weight: 300; }
+      .m_lightbox_area .lightbox_content table input {
+        padding: 3px 5px;
+        letter-spacing: 0.05em; }
+    .m_lightbox_area .lightbox_content button {
+      display: block;
+      margin: auto;
+      margin-top: 40px;
+      color: #fff;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      text-shadow: 1px 1px 1px #000; }
+
+.m_sub_tab {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: left; }
+  .m_sub_tab span {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #86d4f5; }
+    .m_sub_tab span:nth-child(1) {
+      background-color: #86d4f5;
+      text-shadow: 1px 1px 1px #000; }
+    .m_sub_tab span:nth-child(2) {
+      color: #86d4f5; }
+
+#m_lightbox_activity .m_activity_table, #m_lightbox_post .m_activity_table {
+  margin-top: 50px; }
+
+#m_lightbox_activity table, #m_lightbox_post table {
+  margin-top: 0px;
+  border: 1px solid #86d4f5;
+  font-size: 16px; }
+  #m_lightbox_activity table th, #m_lightbox_post table th {
+    text-align: center;
+    background-color: #000; }
+  #m_lightbox_activity table td, #m_lightbox_post table td {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6); }
+    #m_lightbox_activity table td a, #m_lightbox_post table td a {
+      color: #0ce3ec; }
+  #m_lightbox_activity table button, #m_lightbox_post table button {
+    margin: 0;
+    color: #4f9cdd; }
+
+#m_lightbox_activity .m_sub_sub_tab, #m_lightbox_post .m_sub_sub_tab {
+  width: 75%;
+  margin: auto;
+  font-size: 0px; }
+  #m_lightbox_activity .m_sub_sub_tab span, #m_lightbox_post .m_sub_sub_tab span {
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+    padding: 10px 15px; }
+    #m_lightbox_activity .m_sub_sub_tab span:nth-child(1), #m_lightbox_post .m_sub_sub_tab span:nth-child(1) {
+      border: 1px solid #86d4f5;
+      color: #86d4f5;
+      text-shadow: 1px 1px 1px #000; }
+    #m_lightbox_activity .m_sub_sub_tab span:nth-child(2), #m_lightbox_post .m_sub_sub_tab span:nth-child(2) {
+      color: #fff; }
+
+@media screen and (max-width: 767px) {
+  #m_wrapper .m_user_img {
+    width: 120px;
+    height: 120px; }
+    #m_wrapper .m_user_img .m_user_lv {
+      display: none; }
+  #m_wrapper #canvas {
+    width: 100%; }
+  #m_wrapper .m_infos .m_value {
+    display: none; }
+  #m_wrapper .m_infos .m_infos_right .m_info_id {
+    top: 10%;
+    left: 5%; }
+  #m_wrapper .m_infos .m_infos_right .m_info_photo {
+    top: 38%; }
+  #m_wrapper .m_infos .m_infos_left .m_info_activity {
+    right: 30%;
+    top: 20%; }
+  #m_wrapper .m_infos .m_infos_left .m_info_forumpost {
+    right: 30%; } }

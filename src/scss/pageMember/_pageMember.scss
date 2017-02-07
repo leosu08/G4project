@@ -8,114 +8,19 @@
 
 // @include respones(md) {
 	//993px以上
-
-
-	//導覽列test
-	#f_nav{
-		// background-color: rgba(80, 30, 30, 0.3);
-		box-shadow: 1px 1px 1px #000;
-
-		.f_nav{
-			float: left;
-		}
-
-		//共同設定
-		ul{
-			width: 100%;
-			height: 100%;
-			font-size: 0px;
-
-			li{
-				display: inline-block;
-				
-				height: 100%;
-
-				a{
-					display: block;
-					width: 100%;
-					height: 100%;
-					font-size: 15px;
-					color: #ddd;
-					text-align: right;
-					line-height: 70px;
-				}
-			}
-
-		}
-
+#m_body{
 		
 
-		.logo{
-			width: 20%;
-			// background-color: #fff;
-			padding-top: 5px;
-			img{
-				height: 90%;
-			}
-		}
-
-		.menu{
-			width: 60%;
-			height: 70px;
-			// background-color: #333;
-			ul{
-				width: 70%;
-				margin: auto;
-				// float: right;
-
-				li{
-					width: 25%;
-					text-align: center;
-
-					a{
-						// color: #17b6fc;
-						color: #aac9e4;
-						font-size: 20px;
-						text-align: center;
-						// text-shadow: 0 10px 1px rgba(255,255,255,.2);
-					}
-
-					a:hover{
-						// color: #17b6fc;
-						color: rgba(150,150,150,0.4);
-						text-shadow: 0px 10px 0px #17b6fc;
-						// text-decoration: underline;
-					}
-
-
-				}
-
-				
-
-			}
-			
-		}
-
-		.login{
-			width: 20%;
-			height: 70px;
-			// background-color: #fff;
-			ul{
-
-				width: 40%;
-				float: right;
-				li{
-					width: 50%;
-				}
-			}
-			
-		}
-	}
-
-
-
-	#m_body{
 		background-image: url(../img/forum/f_003.jpg);
 		// background: #333;
 		background-repeat: no-repeat;
 		background-size: cover;
+		position: relative;
+		padding: 0;
 
 	}
+
+
 
 //會員頁 
 	#m_wrapper{
@@ -125,7 +30,7 @@
 		// background-color: #19191f;
 		// background-color: rgba(31, 76, 116, 1.0);
 		// background-image: radial-gradient(ellipse at center, rgb(31, 76, 116) 0%, #090a0f 50%);
-		background-image: radial-gradient(ellipse at center, rgba(31, 76, 116, 1) 0%, rgba(29, 34, 60,0.5) 30%, rgba(9, 10, 15, 0.5) 50%);
+		background-image: radial-gradient(ellipse at center, rgba(31, 76, 116, 1) 0%, rgba(29, 34, 60,0.8) 30%, rgba(9, 10, 15, 0.5) 50%);
 		position: relative;
 // ##1
 		h1{
@@ -501,6 +406,7 @@
 		}
 	}
 @import "xs";
+// @import "md";
 
 
 

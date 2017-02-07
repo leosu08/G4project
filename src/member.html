@@ -17,11 +17,14 @@
 	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 	
-	
 
 	<style type="text/css">
 		*{
 			/*outline: 1px solid red;*/
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			box-sizing: border-box;
 		}
 
 		body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
@@ -47,30 +50,8 @@
 </head>
 <body id="m_body">
 <!-- 導覽列 -->
-	<nav id="f_nav">
-		<div class="container">
-			<div class="row">
-				<div class="f_nav logo">
-					<img src="img/logo.png">
-				</div>
-				<div class="f_nav menu">
-					<ul>
-						<li><a href="#">星活動</a></li>
-						<li><a href="#">星論壇</a></li>
-						<li><a href="#">照片牆</a></li>
-						<li><a href="#">星專欄</a></li>
-					</ul>
-				</div>
-				<div class="f_nav login">
-					<ul>
-						<li><a href="#">註冊</a></li>
-						<li><a href="#">登入</a></li>
-					</ul>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-	</nav>
+	
+
 <!-- 導覽列結束 -->
 <div id="particles-js"></div> 
 <div id="m_wrapper">
@@ -88,13 +69,13 @@
 	<div class="m_infos">
 		<div class="m_infos_left">
 			<div class="m_info m_info_activity">
-				<span class="m_label"><a href="#"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 我的活動</a></span>
+				<span class="m_label"><a href="#m_lightbox_activity"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 我的活動</a></span>
 				<span class="m_value">已報名1場活動</span>
 
 			</div>
 
 			<div class="m_info m_info_forumpost">
-				<span class="m_label"><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 我的貼文</a></span>
+				<span class="m_label"><a href="#m_lightbox_post"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 我的貼文</a></span>
 				<span class="m_value">已發表1則貼文</span>
 				
 			</div>	
@@ -103,7 +84,7 @@
 		<div class="m_infos_right">
 
 			<div class="m_info m_info_id">
-				<span class="m_label"><a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Allie213</a></span>
+				<span class="m_label"><a href="#m_lightbox_id"><i class="fa fa-globe" aria-hidden="true"></i> Allie213</a></span>
 				<span>會員等級：星際過客 </span>
 			</div>
 
