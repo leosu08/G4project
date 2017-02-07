@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+
+	<title>welcome to member page</title>
+
+	<script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="libs/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullpage.js"></script>
+	<script type="text/javascript" src="js/forum.js"></script>
+	<script src="js/member.js"></script>
+
+	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	
+
+	<style type="text/css">
+		*{
+			/*outline: 1px solid red;*/
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			box-sizing: border-box;
+		}
+
+		body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
+
+		canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ 
+
+		#particles-js{ 
+			position:absolute; 
+			width: 100%; height: 100%; 
+			background-color: transparent;
+			background-image: url("");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 50%;
+			opacity: 0;
+			/*transform: scale(0.1,0.1);*/
+			transition: 5s ease;
+
+
+		} 
+
+	</style>
+</head>
+<body id="m_body">
+<!-- 導覽列 -->
+	
+
+<!-- 導覽列結束 -->
+<div id="particles-js"></div> 
+<div id="m_wrapper">
+
+	<!-- <h1>Allie213's Account</h1> -->
+	<div class="m_user_img">
+		<img src="img/forum/f_005.png">
+		<div class="m_user_lv">
+			<p>Lv.99</p>
+		</div>
+	</div>
+	<canvas id="canvas" width="1300" height="592" style="background-color: transparent;">
+	</canvas>
+	
+	<div class="m_infos">
+		<div class="m_infos_left">
+			<div class="m_info m_info_activity">
+				<span class="m_label"><a href="#m_lightbox_activity"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 我的活動</a></span>
+				<span class="m_value">已報名1場活動</span>
+
+			</div>
+
+			<div class="m_info m_info_forumpost">
+				<span class="m_label"><a href="#m_lightbox_post"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 我的貼文</a></span>
+				<span class="m_value">已發表1則貼文</span>
+				
+			</div>	
+		</div>
+
+		<div class="m_infos_right">
+
+			<div class="m_info m_info_id">
+				<span class="m_label"><a href="#m_lightbox_id"><i class="fa fa-globe" aria-hidden="true"></i> Allie213</a></span>
+				<span>會員等級：星際過客 </span>
+			</div>
+
+			<div class="m_info m_info_photo">
+				<span class="m_label"><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i> 我的照片</a></span>
+				<span class="m_value">已分享9張照片</span>
+
+			</div>
+
+			<div class="m_info m_info_save">
+				<span class="m_label"><a href=""><i class="fa fa-star" aria-hidden="true"></i> 我的收藏</a></span>
+				<span class="m_value">已收藏1則貼文</span>
+				
+			</div>	
+			
+		</div>
+	</div>
+
+	
+</div>
+
+<!-- light box開始 -->
+<!-- 帳號修改 -->
+<div class="m_lightbox_area" id="m_lightbox_id" style="display: none;">
+<div class="container">
+	<div class="lightbox_content">
+		<div class="m_title">
+			<h4><i class="fa fa-globe" aria-hidden="true"></i> 修改會員資料</h4>
+			<div class="fa fa-times" aria-hidden="true" id="m_close_id"></div>
+		</div>
+		<table border="0" width="80%">
+			<tr><th width="30%" style="background-color: #000">會員帳號 ID</th>
+			<td width="70%">Allie213</td></tr>
+
+			<tr><th width="30%" style="background-color: #000">姓名 name</th>
+			<td width="70%">
+				<input type="text" name="" value="莊*娟">
+			</td></tr>
+
+			<tr><th width="30%" style="background-color: #000">電子信箱e-mail</th>
+			<td width="70%">
+				<input type="email" name="" value="shujiuan213@gmail.com" style="width: 200px">
+			</td></tr>
+
+			<tr><th width="30%" style="background-color: #000">行動電話mobile</th>
+			<td width="70%">
+				<input type="tel" pattern="[0][9][0-9]{8}" name="" value="0919000000" style="width: 150px">
+			</td></tr>
+
+			<tr><th width="30%" style="background-color: #000">家裡電話home</th>
+			<td width="70%">
+				<input type="tel" name="" value="03-0000000" style="width: 150px">
+			</td></tr>
+
+			<tr><th width="30%" style="background-color: #000">通訊地址Address</th>
+			<td width="70%">
+				<input type="text" name="" value="桃園市中壢區中大路000號" style="width: 350px">
+			</td></tr>
+		</table>
+
+		<button class="btn-lg btn-blue">確認修改</button>
+		
+	</div>
+</div>
+</div>
+<!-- 帳號修改結束 -->
+<!-- 我的活動 -->
+
+<div class="m_lightbox_area" id="m_lightbox_activity" style="display:none;">
+<div class="container">
+	<div class="lightbox_content">
+		<div class="m_title">
+			<h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 我的活動</h4>
+			<div class="fa fa-times" aria-hidden="true" id="m_close_activity"></div>
+		</div>
+		<div class="m_sub_tab">
+			<span>參加</span>
+			<span>主辦</span>
+		</div>
+		<div class="m_activity_table" >
+			<div class="m_sub_sub_tab">
+				<span>進行中</span>
+				<span>已結束</span>
+			</div>
+			<table border="0" width="80%">
+				<tr>
+					<th width="30%">活動名稱</th>
+					<th width="20%">時間</th>
+					<th width="15%">主辦人</th>
+					<th width="15%">報名狀態</th>
+					<th width="10%">異動</th>
+				</tr>
+				<tr>
+					<td>墾丁南十字星觀星露營</td>
+					<td>2017-05-01</td>
+					<td><a href="#">Leo S</a></td>
+					<td>完成</td>
+					<td><button class="btn btn-blue1">取消</button></td>
+				</tr>
+			</table>
+		
+			
+		</div>	
+	</div>
+</div>
+</div>
+<!-- 我的活動結束 -->
+
+<!-- 我的貼文開始 -->
+<div class="m_lightbox_area" id="m_lightbox_post" style="display:none;">
+<div class="container">
+	<div class="lightbox_content">
+		<div class="m_title">
+			<h4><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 我的貼文</h4>
+			<div class="fa fa-times" aria-hidden="true" id="m_close_post"></div>
+		</div>
+		
+		<div class="m_activity_table" >
+			<div class="m_sub_sub_tab">
+				<span>我的主題</span>
+				<span>我參與的主題</span>
+			</div>
+			<table border="0" width="80%">
+				<tr>
+					<th width="45%">主題</th>
+					<th width="15%">作者</th>
+					<th width="10%">回覆</th>
+					<th width="20%">最後回覆時間</th>
+					<th width="10%">版面</th>
+				</tr>
+				<tr>
+					<td>如何清楚拍攝星軌？</td>
+					<td><a href="#">Leo S</a></td>
+					<td>20</td>
+					<td>2017-02-02 15:00</td>
+					<td><a href="#">天文攝影</a></td>
+				</tr>
+			</table>
+		</div>	
+	</div>
+</div>
+</div>
+<!-- 我的貼文結束 -->
+
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+	particlesJS("particles-js", {"particles":{"number":{"value":50,"density":{"enable":true,"value_area":500}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"rgb(78, 104, 162)"},"polygon":{"nb_sides":5},"image":{"src":"","width":100,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.5,"sync":false}},"size":{"value":4,"random":true,"anim":{"enable":false,"speed":104.7579603868735,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":100,"color":"#ffffff","opacity":0.6,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"grab"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":500,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":8},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+
+
+	   var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+</script>

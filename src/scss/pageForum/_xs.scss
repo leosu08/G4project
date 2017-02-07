@@ -1,6 +1,44 @@
 @include respones(xs) {
 	//在此輸入內容
 
+#f_section2{
+		
+
+		#f_tab{
+			width: 100%;
+			float: left;
+			flex-direction: none;
+			li{
+				display: inline-block;
+				width: 30%;
+			}
+
+			a{
+				// width: 30%;
+			}
+		}
+		
+		.f_fn_area{
+			width: 100%;
+			text-align: center;
+			padding-top:0; 
+
+			button{
+				width: 40%;
+				font-size: 14px;
+
+			}
+
+			.f_search{
+				width: 40%;
+			}
+		}
+
+		.f_posts{
+			width: 100%
+		}
+	}
+
 
 
 

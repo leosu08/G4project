@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ZeroGravity</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/googleMap.css">
+	<!-- <script src="js/star.js"></script> -->
+
+	<!-- maginic -->
+	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+     <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+     <!-- <link rel="stylesheet" type="text/css" href="css/magnific.css"> -->
+     <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+     <script type="text/javascript" src="js/magnific.js"></script>
+	
+     <script type="text/javascript" src="js/googleMap.js"></script>
+     <script type="text/javascript" src="js/activity.js"></script>
+
+
+     <!-- fullpage -->
+     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+     <link rel="stylesheet" type="text/css" href="libs/fullpage.js/jquery.fullPage.css" />
+     <script type="text/javascript" src="libs/fullpage.js/vendors/scrolloverflow.min.js"></script>
+
+	<script type="text/javascript" src="libs/fullpage.js/jquery.fullPage.min.js"></script>
+
+
+	<!-- sly -->
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/sly.js"></script>
+	<script type="text/javascript" src="js/a_slider.js"></script>
+
+
+	<script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                verticalCentered: true,
+                anchors: ['anchor1', 'anchor2', 'anchor3'],
+                menu: '#menu'
+            });
+        });
+    </script>
+	<style>
+		body,html {
+		  background: #343434;
+		  /*overflow: hidden;*/
+		  width: 100%;
+		  height: 100%;
+		}
+		#a-canvas{
+			width: 100%;	
+			height: 100vh;
+			 opacity: 0.7;
+			 position: absolute;
+			 top: 0;
+			 left: 0;
+			 /*z-index: 1;*/
+		}
+		
+		
+			#a-star{
+				width: 450px;
+				margin:auto;	
+				margin-top: 80px;
+				margin-left: -90px;
+				/*background-color: #fff;		*/
+				stroke-dashoffset: 3000;
+    			stroke-dasharray: 3000;
+				animation: circle 10s linear both;
+				/*z-index: 10;*/
+				height: 40vh;
+			}
+
+			@keyframes circle{
+				100%{
+					stroke-dashoffset:0;
+				}
+				
+			}
+		#tit{
+			opacity: 0;
+			animation: fadeIn 5s both;
+		}
+		@keyframes fadeIn{
+			100%{
+				opacity: 1;
+			}
+		}
+		.a-btn{
+			
+			margin: auto;		
+			z-index: 10;
+		}
+		nav{
+			z-index: 10;
+		}
+		.myContent{
+        height: 50vh;
+      }
+      .wrap {
+  position: relative;
+  margin: 3em 0;
+}
+
+
+/* Frame */
+
+.frame {
+  /*height: 250px;*/
+  /*line-height: 250px;*/
+  /*overflow: hidden;*/
+}
+
+.frame ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 12px;
+}
+
+.frame ul li {
+  float: left;
+  width: 227px;
+  height: 100%;
+  margin: 0 10px 0 0;
+  padding: 0;
+  background: url(img/a_002.jpg);
+  color: #ddd;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.frame ul li.active {
+  color: #fff;
+  background: #a03232;
+}
+
+
+/* Scrollbar */
+
+.scrollbar {
+  margin: 0 0 1em 0;
+  height: 2px;
+  background: #666;
+  line-height: 0;
+}
+
+.scrollbar .handle {
+  width: 100px;
+  height: 100%;
+  background: #f00;
+  cursor: pointer;
+}
+
+.scrollbar .handle .mousearea {
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+
+/* Pages */
+
+.pages {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.pages li {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 4px;
+  text-indent: -999px;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .2);
+}
+
+.pages li:hover {
+  background: #aaa;
+}
+
+.pages li.active {
+  background: #666;
+}
+
+
+/* Controls */
+
+.controls {
+  margin: 25px 0;
+  text-align: center;
+}
+
+
+/* One Item Per Frame example*/
+
+.oneperframe {
+  height: 300px;
+  line-height: 300px;
+}
+
+.oneperframe ul li {
+  width: 1140px;
+}
+
+.oneperframe ul li.active {
+  background: #333;
+}
+
+
+/* Crazy example */
+
+.crazy ul li:nth-child(2n) {
+  width: 100px;
+  margin: 0 4px 0 20px;
+}
+
+.crazy ul li:nth-child(3n) {
+  width: 300px;
+  margin: 0 10px 0 5px;
+}
+
+.crazy ul li:nth-child(4n) {
+  width: 400px;
+  margin: 0 30px 0 2px;
+}
+.a-actItem{
+	width: 100%;	
+}
+.a-actItem img{
+	width: 100%;	
+}
+.scrollable-element{
+            height: 400px;
+            width: 600px;
+            overflow-y: scroll;
+            margin: 0 auto;
+        }
+</style>
+</head>
+
+<body>
+<!-- <canvas id="a-canvas">
+			
+
+		</canvas> -->
+<div id="fullpage">
+	<div class="section" id="section0">
+	<header id="header" class="">
+        <nav id="nav">
+		<div class="container relative">
+			<div class="row">
+				<input type="checkbox" id="navButtonHidden">
+				<label id="navButton" for="navButtonHidden"></label>
+				<div id="logo">
+					<a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
+				</div>
+				<ul class="mainMenu menu">
+					<li><a href="#"><span>A</span>ctivity</a></li>
+					<li><a href="#"><span>F</span>ourm</a></li>
+					<li><a href="#"><span>P</span>hoto</a></li>
+					<li><a href="#"><span>K</span>nowledge</a></li>
+				</ul>
+				<ul class="mainMenu signArea">
+					<li id="signLeft">
+						<!-- <i class="fa fa-envelope-open" aria-hidden="true"></i> -->
+						<span class="btn btn-blue"><a href="#">註冊</a></span>
+					</li>
+					<li id="signRight">
+						<!-- <a href="#"><img src="img/memberPhoto.png"></a> -->
+						<span class="btn btn-blue"><a href="#">登入</a></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+		</nav>
+		<div class="col-xs-12  col-sm-12 col-md-12  a-banner">
+		<div class="container ">
+			<div class="row">
+				
+						<svg id="a-star">
+							<g>
+							  <title>Layer 1</title>
+							  <polygon transform="rotate(0 279.40002441406256,210.50000000000003) " id="svg_3" fill-opacity="0" stroke-width="1" stroke="#c3d5da" points="433.8207702636719,210.5 356.61041259765625,344.2323303222656 202.1896209716797,344.2323303222656 124.97923278808594,210.5 202.1896209716797,76.76766967773438 356.61041259765625,76.76766967773438 433.8207702636719,210.5 " strokeWidth="1" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" cy="210" cx="279.399994">
+							
+							
+							  
+							  <animateTransform attributeType="xml"
+							                    attributeName="transform"
+							                    type="rotate"
+							                    from="0 279.399994 210"
+							                    to="360 279.399994 210"
+							                    dur="40s"
+							                    repeatCount="indefinite"/>
+							 </polygon>
+							  <polygon fill-opacity="0" stroke-width="1" stroke="#0dd1d7" points="433.820775457056,210 356.6103846767702,343.7323197037026 202.1896031161986,343.7323197037026 124.97921233591276,210.00000000000003 202.1896031161985,76.26768029629739 356.6103846767702,76.26768029629739 433.820775457056,210 " strokeWidth="1" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" id="svg_1" cy="210" cx="279.399994">
+							  <animateTransform 
+							                    attributeName="transform"
+							                    type="rotate"
+							                    from="0 279.399994 210"
+							                    to="-360 279.399994 210"
+							                    dur="40s"
+							                    repeatCount="indefinite"/>
+							  </polygon>
+							  <text id=tit x="170" y="230" fill="#fff"  style="font:55px 微軟正黑體;font-weight: bold;">觀星活動
+								  
+							  </text>
+							  <!-- <text x="200" y="200" fill="none" stroke="red" style="font:70px 標楷體;writing-mode:tb;">你好!?</text> -->
+
+							 </g>
+						</svg>
+						<p class="a-title">
+							一起欣賞天文的浩瀚與美麗
+						</p>
+						<div class="a-btn">
+							<div class="btn-lg btn-blue"><a href="activity_recommend.html">推薦活動</a></div>
+
+							<div class="btn-lg btn-blue" id="inline-popups"><a href="#test-popup" data-effect="mfp-3d-unfold">新增活動</a></div><div class="a-down">
+								<i class="fa fa-angle-double-down" aria-hidden="true"></i>
+							</div>
+						</div>
+				</div>
+				<div class="clear"></div>		
+			</div>
+		</div>
+	</header><!-- /header -->
+    </div><!-- session1 -->
+		
+	
+
+	<div class="section active" id="section1">
+          <main>
+				<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+				<div class="a-map">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="a-panel">
+								<div class="a-panel-control">
+									<div class="a-panel-item">
+										<p class="a-text">活動日期</p>
+										<input type="date" name="" value="" placeholder="">
+										<p class="a-text">到</p>
+										<input type="date" name="" value="" placeholder="">
+									</div>
+									<div class="a-panel-item">
+										<p class="a-text">活動類型</p>
+										<ul>
+											<li>全部</li>
+											<li>天文觀測</li>
+											<li>親子觀星</li>
+											<li>天文攝影</li>
+											<li>休閒聯誼</li>
+										</ul>
+									</div>
+									<div class="a-panel-item">
+										<p class="a-text">活動地點</p>
+										<ul>
+											<li>全部</li>
+											<li>北部地區</li>
+											<li>中部地區</li>
+											<li>南部地區</li>
+											<li>東部地區</li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 googleMap">
+							<div id="co">
+							        <p></p>
+							        
+							</div>
+							<div id="zero"></div>
+						      <div id="map">
+						      	
+						      </div>
+							<!-- <img src="img/a_014.jpg" alt="" class="rwd-img"> -->
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row scrollable-element" id="a-popups">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<div class="a-tab">
+								<div><p>最近時間</p></div>
+								<div><p>最高瀏覽</p></div>
+								<div><p>最多收藏</p></div>
+							</div>	
+						</div>
+						<div class="col-xs-12 a-phone-search">
+						<div class="a-phone-searchContainer">
+							<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
+								<input id="a-phone-input_1" type="text" name="" value="" placeholder="　　　搜尋日期、類型、地點">
+								<i class="fa fa-chevron-up" aria-hidden="true"></i>
+								<i  class="a-phone-input fa fa-clock-o a-phone-icon-2" aria-hidden="true"></i>
+								<input type="text" class="a-phone-input" placeholder="　　　依日期">
+								<i  class="a-phone-input fa fa-star-o a-phone-icon-2" aria-hidden="true"></i>
+								<input type="text" class="a-phone-input" placeholder="　　　依類型">
+								<i  class="a-phone-input fa fa-globe a-phone-icon-2" aria-hidden="true"></i>
+								<input type="text" class="a-phone-input" placeholder="　　　依地點">
+						</div>
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-3">
+								<a href="#a-popup-act" data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_007.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+							</div>
+						<div class="col-xs-12 col-sm-3 col-md-3">
+							<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_006.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+							</div>
+						<div class="col-xs-12 col-sm-3 col-md-3">
+							<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_001.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+							</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+							<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+							</div>
+					</div>
+				</div>
+
+				<!-- wrap sly開始 -->
+				<div class="wrap" id="a-popups">
+					
+					  <div class="frame" id="basic">
+					    <ul class="clearfix">
+					      <li>
+					      	
+					      	<div class="a-actItem">
+					      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+					      	</div>
+								
+					      </li>
+					      <li>
+					      	
+					      	<div class="a-actItem">
+					      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+					      	</div>
+								
+					      </li>
+					      <li>
+					      	
+					      	<div class="a-actItem">
+					      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+					      	</div>
+								
+					      </li>
+					      <li>
+					      	
+					      	<div class="a-actItem">
+					      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+					      	</div>
+								
+					      </li>
+					      <li>
+					      	
+					      	<div class="a-actItem">
+					      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+					      	</div>
+								
+					      </li>
+					      <li>
+					      	
+					      	<div class="a-actItem">
+					      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+					      	</div>
+								
+					      </li>
+					      <li>
+					      	
+					      	<div class="a-actItem">
+					      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+					      	</div>
+								
+					      </li>
+					      <li>
+					      	
+					      	<div class="a-actItem">
+					      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+					      	</div>
+								
+					      </li>
+					      <li>
+					      	
+					      	<div class="a-actItem">
+					      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+								<div class="a-item a-phone-searchContainer">
+									<img src="img/a_002.jpg" alt="" class="rwd-img">
+									<p class="a-text">墾丁南十字觀星露營</p>
+									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+									<p class="a-text-content">名額：16人</p>
+									<p class="a-text-content">發起人：Leo S</p>
+								</div></a>
+					      	</div>
+								
+					      </li>
+					      <li>9</li>
+					      <li>10</li>
+					      <li>11</li>
+					      <li>12</li>
+					      <li>13</li>
+					      <li>14</li>
+					      <li>15</li>
+					      <li>16</li>
+					      <li>17</li>
+					      <li>18</li>
+					      <li>19</li>
+					      <li>20</li>
+					      <li>21</li>
+					      <li>22</li>
+					      <li>23</li>
+					      <li>24</li>
+					      <li>25</li>
+					      <li>26</li>
+					      <li>27</li>
+					      <li>28</li>
+					      <li>29</li>
+					    </ul>
+					  </div>
+					<div class="scrollbar">
+					    <div class="handle">
+					      <div class="mousearea"></div>
+					    </div>
+					  </div>
+					  <ul class="pages"></ul>
+
+					  <div class="controls center">
+					    <button class="btn prevPage"><i class="icon-chevron-left"></i><i class="icon-chevron-left"></i> page</button>
+					    <button class="btn prev"><i class="icon-chevron-left"></i> item</button>
+					    <button class="btn backward"><i class="icon-chevron-left"></i> move</button>
+
+					    <div class="btn-group">
+					      <button class="btn toStart">toStart</button>
+					      <button class="btn toCenter">toCenter</button>
+					      <button class="btn toEnd">toEnd</button>
+					    </div>
+
+					    <div class="btn-group">
+					      <button class="btn toStart" data-item="10"><strong>10</strong> toStart</button>
+					      <button class="btn toCenter" data-item="10"><strong>10</strong> toCenter</button>
+					      <button class="btn toEnd" data-item="10"><strong>10</strong> toEnd</button>
+					    </div>
+
+					    <div class="btn-group">
+					      <button class="btn add"><i class="icon-plus-sign"></i></button>
+					      <button class="btn remove"><i class="icon-minus-sign"></i></button>
+					    </div>
+
+					    <button class="btn forward">move <i class="icon-chevron-right"></i></button>
+					    <button class="btn next">item <i class="icon-chevron-right"></i></button>
+					    <button class="btn nextPage">page <i class="icon-chevron-right"></i><i class="icon-chevron-right"></i></button>
+					  </div>
+					</div>
+				
+					<a class="a-phone-control" href="activity_phone_map.html">
+						<div class="a-phone-btn btn-lg btn-blue" id="a-phone-mapBtn">
+							地圖搜尋
+						</div>
+					</a>
+
+				
+			</main>
+        </div><!-- fullpage	 -->
+
+
+	<!-- 活動開始 -->
+  <div id="a-popup-act" class="white-popup mfp-with-anim mfp-hide">
+  	<div class="a-lb-act">
+		<div class="container">
+			<div class="row">
+				<div class="table">
+				<div class="tr">
+						<div class="td">
+							<img src="img/a_011.jpg" alt="" class="rwd-img">
+							<i class="fa fa-times a-x"></i>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="a-text">
+								<p>墾丁南十字星觀星露營</p>
+								<span>主辦人　<i class="fa fa-user-circle-o" aria-hidden="true"></i>Leo S </span>
+							</div>
+							
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="a-text">
+								活動日期：2017-05-01(週一) 8:00~2017-05-02(週二)16:00
+							</div>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="a-text">
+								活動地點：屏東縣恆春鎮100號(貓鼻頭國家公園)
+							</div>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="a-text">
+								活動類型：
+							</div>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="a-text">
+								活動費用：3000元
+							</div>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="a-text">
+								活動介紹 留言詢問 <span><i class="fa fa-star-o" aria-hidden="true"></i>save　<i class="fa fa-share-square-o" aria-hidden="true"></i>share</span>
+							</div>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="a-text">
+								<p>活動介紹</p>
+								時序漸入夏，落山風遠離了恆春半島，5月的墾丁在春雨澆淋下，大地重披翠綠青衫，天地一片明淨。為讓遊客們親近墾丁國家公園明淨的天空、認識春夏星空及屬於南半球的南十字星座，墾管處將於6月1日晚間舉辦「南十字星光之旅」觀星活動，一起感受兼具知性與感性的夜空。
+				<br><br>
+				墾丁地區視野開闊、無空氣污染、天空淨朗且少光害，是夜觀星斗的極佳去處。而屬於南半球的南十字星，在台灣平地更只有墾丁地區可以清楚看見。南十字星座在墾丁出現的時間是4至6月，又以5月的觀賞條件最佳。
+				
+				夜觀星斗，特別是觀看，墾管處建議，最好能尋找一個視野開闊、無空氣污染，亦無光害的所在，高山夜晚溫度低，氣候溫暖、海風徐拂的5月墾丁，正是觀賞南十字星的理想去處。
+				<br><br>
+				夜觀星斗，特別是觀看南十字星座，墾管處建議，最好能尋找一個視野開闊、無空氣污染，亦無光害的所在，高山夜晚溫度低，氣候溫暖、海風徐拂的5月墾丁，正是觀賞南十字星的理想去處
+							<div class="btn-lg btn-blue">我要報名</div>
+							</div>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="a-text">
+								Comment
+								<span>Login<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+							</div>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="a-text">
+								<i class="fa fa-star-o" aria-hidden="true"></i>save　<i class="fa fa-share-square-o" aria-hidden="true"></i>share
+								<div class="a-user">
+									<i class="fa fa-user-circle-o" aria-hidden="true"></i><textarea name="" placeholder="Start the discussion"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">
+							<div class="a-text">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+<!-- 活動結束   -->
+
+	<!-- add活動開始 -->
+<div id="test-popup" class="white-popup mfp-with-anim mfp-hide">
+	<div class="a-lb-add">
+		<div class="container">
+			<div class="row">
+				<div class="table">
+				
+					<div class="tr">
+						<div class="td">
+							新增活動
+							<div class="fa fa-times a-x"></div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="table">
+					
+					<div class="tr">
+						<div class="td">活動名稱</div>
+						<div class="td">
+							<input type="text" name="">
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">活動地點</div>
+						<div class="td">
+							<input type="text" name="">
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">活動日期</div>
+						<div class="td">
+							<input type="date" name="">
+							<p class="a-text">到</p>
+							<input type="date" name="">
+				
+							<p class="a-text">共計兩天一夜</p>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">活動類型</div>
+						<div class="td">
+							<input type="text" name="">
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">活動費用</div>
+						<div class="td">
+							<input type="text" name="">
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">活動人數</div>
+						<div class="td">
+							<input type="text" name="">
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">活動介紹</div>
+						<div class="td">
+							<textarea name=""></textarea>
+						</div>
+					</div>
+					<div class="tr">
+						<div class="td">活動圖檔</div>
+						<div class="td">
+							<input type="file" value="選擇檔案">
+							<div class="btn btn-blue"><a href="">上傳</a></div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="table">
+					<div class="tr">
+						<div class="td">
+							<input type="submit" name="" value="確定送出" class="btn-lg btn-blue">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+</div>
+<!-- add活動結束 -->
+
+		<!-- <footer>
+	Copyright@2017 by Zero Gravity
+</footer> -->
+
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtYAguCIykzC-F3lBBYbxLEbQAPqUhFvo&libraries=places&callback=initAutocomplete"></script>
+
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoawYvLTgMObeyY-Ng0r4-f-vLhWoZZxQ&libraries=places&callback=initAutocomplete"
+         async defer></script> -->
+</body>
+
+</html>
