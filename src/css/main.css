@@ -780,9 +780,6 @@ footer {
   line-height: 50px;
   font-size: 14px; }
 
-body, html {
-  font-family: "微軟正黑體"; }
-
 .table {
   display: table;
   border-collapse: collapse; }
@@ -805,6 +802,8 @@ body, html {
   display: table-cell; }
 
 .a-banner {
+  height: 100vh;
+  z-index: 20;
   text-align: center;
   background: url(../img/a_010.jpg);
   background-size: cover;
@@ -817,12 +816,11 @@ body, html {
 .a-panel {
   position: relative;
   text-align: left;
-  border-radius: 50%;
   width: 100%;
   box-sizing: border-box;
   height: 0;
-  padding: 50%;
-  background: url("../img/a_013.jpg");
+  height: 600px;
+  background: url("../img/a_015.jpg");
   background-size: 100% 100%;
   background-position: center center; }
   .a-panel input {
@@ -1008,8 +1006,6 @@ body, html {
     .a-phone-control .a-phone-btn {
       color: #f3f7f7;
       line-height: 38px; }
-  .a-banner {
-    display: none; }
   #a-popups {
     margin-top: 100px; }
   .a-tab {
@@ -1056,7 +1052,9 @@ body, html {
       text-align: left;
       display: none;
       font-size: 32px;
-      color: #888; } }
+      color: #888; }
+  .wrap {
+    display: none; } }
 
 .a-btn-recommend {
   margin: auto;
@@ -1160,11 +1158,6 @@ body, html {
 #a-slide-4 {
   background-image: url("../img/a_004.jpg");
   transform: translate(100%, 200%); }
-
-html, body {
-  margin: 0;
-  padding: 10px;
-  -webkit-backface-visibility: hidden; }
 
 /* text-based popup styling */
 .white-popup {

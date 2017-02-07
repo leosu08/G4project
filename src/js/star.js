@@ -3,7 +3,7 @@
 
 function doFirst(){
 
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById('a-canvas');
   ctx = canvas.getContext("2d"),
   w = canvas.width = window.innerWidth,
   h = canvas.height = window.innerHeight,
@@ -61,7 +61,7 @@ var Star = function() {
   this.orbitX = w / 2;
   this.orbitY = h / 2;
   this.timePassed = random(0, maxStars);
-  this.speed = random(this.orbitRadius) / 50000;
+  this.speed = random(this.orbitRadius) / 200000;
   this.alpha = random(2, 10) / 10;
 
   count++;
