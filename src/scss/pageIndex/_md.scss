@@ -1,5 +1,578 @@
 @include respones(md) {
-	//在此輸入內容
+	#icanvas{
+		position: fixed;
+		top: 40%;
+		right:0px;
+		z-index: 1000;
+	}
+	.sideBarGroup{
+		position: fixed;
+		display: block;
+		width: 100px;
+		height: 250px;
+		top:40%;
+		right: 20px;
+		z-index: 1000;
+		.sideBar{
+			position: absolute;
+			width: 100px;
+			height: 22px;
+			line-height: 22px;
+			letter-spacing: 1px;
+			font-size: $fz-p;
+			left:0;
+			text-align: center;
+			color:$light-grey;
+			cursor: pointer;
+			span{
+				padding-right:15px;
+				// display: none;
+			}
+			&.sideBar1{
+				top:-5px;
+			}
+			&.sideBar2{
+				top:50px;
+			}
+			&.sideBar3{
+				top:110px;
+			}
+			&.sideBar4{
+				top:170px;
+			}
+			&.sideBar5{
+				top:230px;
+			}
+		}
+	}
+	#i-wrapper {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		transform: translate(0%,-5067px);
+		// overflow: hidden;
+		#i-bgc {
+			position: absolute;
+			background-image: url('../img/i-bgc2.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: auto;
+			height: 5991px;
+			width: 100vh;
+			left: 0;
+			right: 0;
+		}
+		.section {
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		.section01 {
+			bottom: -4841px;
+
+			#i-ground {
+				position: absolute;
+				bottom: 0;
+			}
+
+			#i-people {
+				position: absolute;
+				left: 450px;
+				bottom: 45px;
+			}
+
+			#i-telescop {
+				position: absolute;
+				left: 480px;
+				bottom: 25px;
+			}
+
+			h1 {
+				color: $white;
+				font-size: $fz-h1;
+				text-align: center;
+				margin-top: 350px;
+			}
+
+			.scroller {
+				width: 55px;
+				height: 55px;
+				border: 1px solid $green-blue;
+				border-radius: 50%;
+				text-align: center;
+				margin: auto;
+				position: relative;
+				top: 330px;
+
+				img {
+					display: block;
+					position: absolute;
+					top: 0;
+					right: 0;
+					left: 0;
+					bottom: 0;
+					margin: auto;
+					width: 20px;
+				}
+
+				:first-child {
+					top: -5px;
+					animation: scrolDown 1.5s infinite;
+				}
+
+				:last-child {
+					top: 15px;
+					animation: scrolDown 1.5s 0.5s infinite;
+				}
+			}
+
+			p {
+				color: $green-blue;
+				font-size: $fz-p;
+				font-weight: 700;
+				text-align: center;
+				position: relative;
+				top: 345px;
+			}
+		}
+		//section01
+		.section02 {
+			bottom: -4061px;
+
+			#cloud1 {
+				position: absolute;
+				bottom: -300px;
+				right: -300px;
+				transform: scale(0.9);
+			}
+
+			#cloud2 {
+				position: absolute;
+				bottom: -250px;
+				left: -900px;
+				transform: scale(0.8);
+			}
+
+			.activity {
+				position: relative;
+
+				#layer01 {
+					position: absolute;
+					top: -1000px;
+					left: 0;
+					right: 0;
+					margin: auto;
+					width: 700px;
+					height: 1700px;
+					// border:1px #fff solid;
+				}
+
+				.act {
+					position: absolute;
+					// outline: red solid 1px;
+					width: 840px;
+					top: -270px;
+					left: 0;
+					right: 0;
+					perspective: 800px;
+					margin: auto;
+					transition: 1s;
+
+					h3 {
+						font-size: $fz-h3;
+						color: $black;
+						padding: 10px 0;
+					}
+
+					p {
+						font-size: $fz-p;
+						color: $black;
+					}
+
+					img {
+						width: 100%;
+					}
+
+					.pic {
+						position: relative;
+						width: 740px;
+						height: 415px;
+						overflow: hidden;
+						// outline:red solid 1px;
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+
+					.content {
+						position: absolute;
+						right: 30px;
+						bottom: -80px;
+						z-index: 3;
+						cursor: pointer;
+					}
+
+					.img-collection {
+						position: absolute;
+						display: block;
+						width: 896px;
+						height: 650px;
+						margin: auto;
+						z-index: 2;
+
+						&.img-collection1 {
+							transform: scale(1.4);
+							top: 20px;
+							left: 0;
+						}
+
+						&.img-collection2 {
+							transform: scale(1.3);
+							top: -48px;
+							left: -28px;
+						}
+					}
+				}
+			}
+		}
+		//scetion02
+		.section03 {
+			bottom: -2500px;
+			// border: 1px red solid;
+			// text-align: center;
+
+			.forum:hover {
+				background-color: $green-blue;
+				cursor: pointer;
+			}
+
+			.forum {
+				position: absolute;
+				color: $white;
+				width: 320px;
+				height: 80px;
+				// outline:red solid 1px;
+				margin: auto;
+				background-color: $o-black;
+
+				.content {
+					padding: 20px 5px 5px 35px;
+
+					h4 {
+						font-size: $fz-h4;
+					}
+				}
+
+				.pic {
+					position: absolute;
+					left: -30px;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					width: 60px;
+					height: 60px;
+					background-color: transparent;
+
+					img {
+						width: 100%;
+					}
+				}
+
+				.memberId {
+					float: left;
+					padding: 5px;
+					text-align: left;
+				}
+
+				.count {
+					float: right;
+					padding: 5px;
+					text-align: right;
+					font-size: 12px;
+
+					span {
+						padding-right: 15px;
+					}
+				}
+
+				&.forum1 {
+					transform: translate(0) scale(0.8);
+				}
+
+				&.forum2 {
+					transform: scale(1.3);
+				}
+
+				&.forum3 {
+					transform: scale(0.9);
+				}
+
+				&.forum4 {
+					transform: scale(1.2);
+				}
+
+				&.forum5 {
+					transform: scale(1.4);
+				}
+
+				&.forum6 {
+					transform: scale(0.8);
+					display: none;
+				}
+
+				&.forum7 {
+					transform: scale(0.9);
+				}
+
+				&.forum8 {
+					transform: scale(1);
+				}
+
+				&.forum9 {
+					transform: scale(1.3);
+				}
+
+				&.forum10 {
+					transform: scale(0.7);
+					display: none;
+				}
+
+				&.forum11 {
+					transform: scale(1);
+				}
+
+				&.forum12 {
+					transform: scale(1.4);
+				}
+
+				&.forum13 {
+					transform: scale(0.9);
+				}
+
+				&.forum14 {
+					transform: scale(0.6);
+					display: none;
+				}
+			}
+		}
+		.section04{
+			#photowall{
+				position: relative;
+				z-index: 100;
+			}
+		}
+		.section05 {
+			.accordion {
+				position: absolute;
+				left: 0px;
+				right: 0;
+				top: 300px;
+			}
+			.accordion .fakeCover:before{
+				content: '';
+				background-color: $o-black;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top:0;
+				left: 0;
+				z-index: 2;
+				display: block;
+			}
+			.accordion li {
+				float: left;
+				width: 220px;
+				height: 480px;
+				display: block;
+				background-repeat: no-repeat;
+				background-position: center center;
+				position: relative;
+				overflow: hidden;
+				cursor: pointer;
+				box-shadow: 2px 3px 3px 1px $o-black;
+				transition: 0.8s;
+				z-index: 0;
+				&.know1 {
+					background-image: url("../img/i-know01.png");
+				}
+
+				&.know2 {
+					background-image: url("../img/i-know02.png");
+				}
+
+				&.know3 {
+					background-image: url("../img/i-know03.png");
+				}
+
+				&.know4 {
+					background-image: url("../img/i-know04.png");
+				}
+				&.know5 {
+					background-image: url("../img/i-know04.png");
+				}
+				.memberId{
+					position: absolute;
+					top: 25px;
+					left:70px;
+					color:$white;
+					display: none;
+				}
+				.pic{
+						position: absolute;
+						width: 40px;
+						height: 40px;
+						top:10px;
+						left:20px;
+						border-radius: 50%;
+						box-shadow: 0px 0px 10px 1px $white;
+						display: none;
+						img{
+							width: 100%;
+							height: 100%;
+						}
+				}
+				.heading {
+					background-color: #fff;
+					padding: 10px;
+					margin-top: 60px;
+					opacity: 0.9;
+					font-weight: bold;
+					letter-spacing: 1px;
+					font-size:$fz-p ;
+					color: $black;
+					text-align: center;
+					box-shadow: 3px 1px 1px  #888;
+					position: relative;
+					z-index: 3;
+				}
+				.description {
+					position: absolute;
+					width: 100%;
+					height: 175px;
+					bottom: 0px;
+					left: 0;
+					display: none;
+					h2 {
+						font-size: $fz-h2;
+						color: $black;
+						text-align: left;
+						margin: 0 0 10px 20px;
+						text-shadow: -1px -1px 1px $white;
+					}
+					p {
+						margin: 5px 20px;
+						font-size: $fz-p;
+						color:$black;
+						letter-spacing: 1px;
+						line-height: 1.5em;
+						text-align: justify;
+					}
+				}
+
+				.knowDescription {
+					// background:transparent url(../img/i-knowDescription.png) repeat-x top left;
+					background: linear-gradient(to bottom, rgba(255,255,255,0) 10%,rgba(255,255,255,1) 100%);
+					height: 400px;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					display: none;
+				}
+			}
+			// .knowledge{
+			// 	width: 410px;
+			// 	height: 530px;
+			// 	position: absolute;
+			// 	background-color: $white;
+			// 	top:300px;
+			// 	margin: auto;
+			// 	box-shadow: 2px 2px 2px $grey;
+			// 	&.knowledge01{
+			// 		left:150px;
+			// 		transform: scale(0.9);
+			// 		z-index: 9;
+			// 		opacity: 0.8;
+			// 	}
+			// 	&.knowledge02{
+			// 		left:350px;
+			// 		z-index: 10;
+			// 	}
+			// 	&.knowledge03{
+			// 		left:550px;
+			// 		transform: scale(0.9);
+			// 		z-index: 9;
+			// 		opacity: 0.8;
+			// 	}
+			// 	&.knowledge04{
+			// 		left:700px;
+			// 		transform: scale(0.8);
+			// 		z-index: 8;
+			// 		opacity: 0.8;
+			// 	}
+			// 	&.knowledge05{
+			// 		left:800px;
+			// 		transform: scale(0.7);
+			// 		z-index: 7;
+			// 		opacity: 0.8;
+			// 	}
+			// 	&.knowledge06{
+			// 		left:900px;
+			// 		transform: scale(0.6);
+			// 		z-index: 6;
+			// 		opacity: 0.8;
+			// 	}
+			// 	&.knowledge07{
+			// 		left:980px;
+			// 		transform: scale(0.5);
+			// 		z-index: 5;
+			// 		opacity: 0.8;
+			// 	}
+			// 	h3{
+			// 		font-size: $fz-h3;
+			// 		color:$black;
+			// 		padding: 15px;
+			// 		border-bottom: 1px $light-grey solid;
+			// 	}
+			// 	h4{
+			// 		font-size: $fz-h4;
+			// 		color:$black;
+			// 	}
+			// 	.content{
+			// 		color:$black;
+			// 		font-size: $fz-p;
+			// 		line-height: 1.5em;
+			// 		text-align: justify;
+			// 		letter-spacing: 1px;
+			// 		padding: 20px;
+			// 	}
+			// 	.pic{
+			// 		display: inline-block;
+			// 		width: 55px;
+			// 		height: 55px;
+			// 		margin: 10px;
+			// 		text-align: center;
+			// 		img{
+			// 			width: 100%;
+			// 		}
+			// 	}
+			// 	.detail{
+			// 		padding: 10px;
+			// 	}
+			// 	.info{
+			// 		display: inline-block;
+			// 		width: 280px;
+			// 	}
+			// }
+		}
+
+	}
 
 
 }

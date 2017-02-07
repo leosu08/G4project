@@ -94,7 +94,7 @@ gulp.task('html-replace', function() {
         .pipe(minifyHTML(opts))
         .pipe(gulp.dest('dist/'));
 });
- 
+
 gulp.task('imagemin', function() {
     gulp.src('src/img/*.{png,jpg,gif,ico}')
         .pipe(cache(imagemin({
