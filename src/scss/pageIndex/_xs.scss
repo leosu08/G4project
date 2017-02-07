@@ -340,13 +340,32 @@
 				}
 			}
 			.section04{
-				#photowall{
-					position: relative;
-					z-index: 100;
+				bottom: -1500px;
+				background-image: url('../img/i-bg.jpg');
+				background-size: cover;
+				.gallery {
+				  position:relative;
+				  perspective:2000px;
+				  perspective-origin: 0px 0px;
+				  width: 100%;
+				  height: 100%;
+				  overflow:hidden;
+				  transform-style: preserve-3d;
+				}
+				.gallery img{
+				  position:absolute;
+				  transform-style: preserve-3d;
+				  transform-origin: 50% 50%;
+				  top:50%;
+				  left:40%;
+				  max-width: 200px;
+				  max-height:200px;
+				  cursor:pointer;
 				}
 			}
 			.section05 {
 				// display: none;
+				top:0;
 				.accordion {
 					position: absolute;
 					left: 0px;
