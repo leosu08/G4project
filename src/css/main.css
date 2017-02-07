@@ -1022,12 +1022,28 @@ footer {
         #i-wrapper .section03 .forum.forum14 {
           display: none; }
     #i-wrapper .section04 {
-      bottom: -1500px; }
-      #i-wrapper .section04 #photowall {
+      bottom: -1500px;
+      background-image: url("../img/i-bg.jpg");
+      background-size: cover; }
+      #i-wrapper .section04 .gallery {
         position: relative;
-        z-index: 100; }
+        perspective: 2000px;
+        perspective-origin: 0px 0px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transform-style: preserve-3d; }
+      #i-wrapper .section04 .gallery img {
+        position: absolute;
+        transform-style: preserve-3d;
+        transform-origin: 50% 50%;
+        top: 50%;
+        left: 40%;
+        max-width: 200px;
+        max-height: 200px;
+        cursor: pointer; }
     #i-wrapper .section05 {
-      top: 0px; }
+      top: 0; }
       #i-wrapper .section05 .accordion {
         position: absolute;
         left: 0px;
@@ -1518,7 +1534,8 @@ footer {
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0; }
+    left: 0;
+    transform: translate(0%, -5067px); }
     #i-wrapper #i-bgc {
       position: absolute;
       background-image: url("../img/i-bgc2.png");
@@ -1529,7 +1546,6 @@ footer {
       right: 0; }
     #i-wrapper .section {
       position: absolute;
-      top: 0;
       left: 0;
       right: 0;
       height: 100%;
