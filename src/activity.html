@@ -22,16 +22,19 @@
 
      <!-- fullpage -->
      <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
-     <link rel="stylesheet" type="text/css" href="libs/fullpage.js/jquery.fullPage.css" />
+     <!-- <link rel="stylesheet" type="text/css" href="libs/fullpage.js/jquery.fullPage.css" /> -->
      <script type="text/javascript" src="libs/fullpage.js/vendors/scrolloverflow.min.js"></script>
 
 	<script type="text/javascript" src="libs/fullpage.js/jquery.fullPage.min.js"></script>
 
+	<!-- <script type="text/javascript" src="js/fullpage_extension.js"></script> -->
+	<!-- <script type="text/javascript" src="js/fullpage_overflowReset.js"></script> -->
+
 
 	<!-- sly -->
-	<script type="text/javascript" src="js/plugins.js"></script>
-	<script type="text/javascript" src="js/sly.js"></script>
-	<script type="text/javascript" src="js/a_slider.js"></script>
+	<!-- <script type="text/javascript" src="js/plugins.js"></script> -->
+	<!-- <script type="text/javascript" src="js/sly.js"></script> -->
+	<!-- <script type="text/javascript" src="js/a_slider.js"></script> -->
 
 
 	<script type="text/javascript">
@@ -248,13 +251,27 @@
 .scrollable-element{
             height: 100vh;
             width:100%;
-            overflow-y: scroll;
+            /*overflow-y: scroll;*/
             margin: 0 auto;
         }
 </style>
+<script type="text/javascript">
+// var top = $('#setion1').scrollTop();
+// if($(document).scroll()>top){
+// 	$.fn.fullpage.setAllowScrolling(false);
+// }
+$(function(){
+
+})
+
+// $.fn.fullpage.setAllowScrolling(false, 'down');
+// 	$('#a-oldSlider').fullpage({
+//     scrollOverflow: true
+// });
+</script>
 </head>
 
-<body>
+<body id="a-body">
 <!-- <canvas id="a-canvas">
 			
 
@@ -349,231 +366,129 @@
 				
 				<div class="a-map">
 					<div class="row">
-						<div class="col-xs-12 col-sm-4 col-md-4">
+						<div class="col-xs-12 col-sm-5 col-md-5 a-mR">
 							<div class="a-panel">
-									<input id="pac-input" class="controls" type="text" placeholder="搜尋">
-								<div class="a-panel-control">
-									<div class="a-panel-item">
-									
-										<p class="a-text">活動日期</p>
-										<input type="date" name="" value="" placeholder="">
-										<p class="a-text">到</p>
-										<input type="date" name="" value="" placeholder="">
-									</div>
-									<div class="a-panel-item">
-										<p class="a-text">活動類型</p>
-										<ul>
-											<li>全部</li>
-											<li>天文觀測</li>
-											<li>親子觀星</li>
-											<li>天文攝影</li>
-											<li>休閒聯誼</li>
-										</ul>
-									</div>
-									<div class="a-panel-item">
-										<p class="a-text">活動地點</p>
-										<ul>
-											<li>全部</li>
-											<li>北部地區</li>
-											<li>中部地區</li>
-											<li>南部地區</li>
-											<li>東部地區</li>
-										</ul>
-									</div>
-
-								</div>
-										<!-- wrap sly開始 -->
-											<div class="wrap" id="a-popups">
-												
-												  <div class="frame" id="basic">
-												    <ul class="clearfix">
-												      <li>
-												      	
-												      	<div class="a-actItem">
-												      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-															<div class="a-item a-phone-searchContainer">
-																<img src="img/a_002.jpg" alt="" class="rwd-img">
-																<p class="a-text">墾丁南十字觀星露營</p>
-																<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-																<p class="a-text-content">名額：16人</p>
-																<p class="a-text-content">發起人：Leo S</p>
-															</div></a>
-												      	</div>
-															
-												      </li>
-												      <li>
-												      	
-												      	<div class="a-actItem">
-												      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-															<div class="a-item a-phone-searchContainer">
-																<img src="img/a_002.jpg" alt="" class="rwd-img">
-																<p class="a-text">墾丁南十字觀星露營</p>
-																<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-																<p class="a-text-content">名額：16人</p>
-																<p class="a-text-content">發起人：Leo S</p>
-															</div></a>
-												      	</div>
-															
-												      </li>
-												      <li>
-												      	
-												      	<div class="a-actItem">
-												      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-															<div class="a-item a-phone-searchContainer">
-																<img src="img/a_002.jpg" alt="" class="rwd-img">
-																<p class="a-text">墾丁南十字觀星露營</p>
-																<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-																<p class="a-text-content">名額：16人</p>
-																<p class="a-text-content">發起人：Leo S</p>
-															</div></a>
-												      	</div>
-															
-												      </li>
-												      <li>
-												      	
-												      	<div class="a-actItem">
-												      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-															<div class="a-item a-phone-searchContainer">
-																<img src="img/a_002.jpg" alt="" class="rwd-img">
-																<p class="a-text">墾丁南十字觀星露營</p>
-																<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-																<p class="a-text-content">名額：16人</p>
-																<p class="a-text-content">發起人：Leo S</p>
-															</div></a>
-												      	</div>
-															
-												      </li>
-												      <li>
-												      	
-												      	<div class="a-actItem">
-												      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-															<div class="a-item a-phone-searchContainer">
-																<img src="img/a_002.jpg" alt="" class="rwd-img">
-																<p class="a-text">墾丁南十字觀星露營</p>
-																<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-																<p class="a-text-content">名額：16人</p>
-																<p class="a-text-content">發起人：Leo S</p>
-															</div></a>
-												      	</div>
-															
-												      </li>
-												      <li>
-												      	
-												      	<div class="a-actItem">
-												      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-															<div class="a-item a-phone-searchContainer">
-																<img src="img/a_002.jpg" alt="" class="rwd-img">
-																<p class="a-text">墾丁南十字觀星露營</p>
-																<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-																<p class="a-text-content">名額：16人</p>
-																<p class="a-text-content">發起人：Leo S</p>
-															</div></a>
-												      	</div>
-															
-												      </li>
-												      <li>
-												      	
-												      	<div class="a-actItem">
-												      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-															<div class="a-item a-phone-searchContainer">
-																<img src="img/a_002.jpg" alt="" class="rwd-img">
-																<p class="a-text">墾丁南十字觀星露營</p>
-																<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-																<p class="a-text-content">名額：16人</p>
-																<p class="a-text-content">發起人：Leo S</p>
-															</div></a>
-												      	</div>
-															
-												      </li>
-												      <li>
-												      	
-												      	<div class="a-actItem">
-												      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-															<div class="a-item a-phone-searchContainer">
-																<img src="img/a_002.jpg" alt="" class="rwd-img">
-																<p class="a-text">墾丁南十字觀星露營</p>
-																<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-																<p class="a-text-content">名額：16人</p>
-																<p class="a-text-content">發起人：Leo S</p>
-															</div></a>
-												      	</div>
-															
-												      </li>
-												      <li>
-												      	
-												      	<div class="a-actItem">
-												      		<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-															<div class="a-item a-phone-searchContainer">
-																<img src="img/a_002.jpg" alt="" class="rwd-img">
-																<p class="a-text">墾丁南十字觀星露營</p>
-																<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-																<p class="a-text-content">名額：16人</p>
-																<p class="a-text-content">發起人：Leo S</p>
-															</div></a>
-												      	</div>
-															
-												      </li>
-												      <li>9</li>
-												      <li>10</li>
-												      <li>11</li>
-												      <li>12</li>
-												      <li>13</li>
-												      <li>14</li>
-												      <li>15</li>
-												      <li>16</li>
-												      <li>17</li>
-												      <li>18</li>
-												      <li>19</li>
-												      <li>20</li>
-												      <li>21</li>
-												      <li>22</li>
-												      <li>23</li>
-												      <li>24</li>
-												      <li>25</li>
-												      <li>26</li>
-												      <li>27</li>
-												      <li>28</li>
-												      <li>29</li>
-												    </ul>
-												  </div>
-												<div class="scrollbar">
-												    <div class="handle">
-												      <div class="mousearea"></div>
-												    </div>
-												  </div>
-												  <ul class="pages"></ul>
-
-												  <div class="controls center">
-												    <button class="btn prevPage"><i class="icon-chevron-left"></i><i class="icon-chevron-left"></i> page</button>
-												    <button class="btn prev"><i class="icon-chevron-left"></i> item</button>
-												    <button class="btn backward"><i class="icon-chevron-left"></i> move</button>
-
-												    <div class="btn-group">
-												      <button class="btn toStart">toStart</button>
-												      <button class="btn toCenter">toCenter</button>
-												      <button class="btn toEnd">toEnd</button>
-												    </div>
-
-												    <div class="btn-group">
-												      <button class="btn toStart" data-item="10"><strong>10</strong> toStart</button>
-												      <button class="btn toCenter" data-item="10"><strong>10</strong> toCenter</button>
-												      <button class="btn toEnd" data-item="10"><strong>10</strong> toEnd</button>
-												    </div>
-
-												    <div class="btn-group">
-												      <button class="btn add"><i class="icon-plus-sign"></i></button>
-												      <button class="btn remove"><i class="icon-minus-sign"></i></button>
-												    </div>
-
-												    <button class="btn forward">move <i class="icon-chevron-right"></i></button>
-												    <button class="btn next">item <i class="icon-chevron-right"></i></button>
-												    <button class="btn nextPage">page <i class="icon-chevron-right"></i><i class="icon-chevron-right"></i></button>
-												  </div>
+									<div class="a-controls">
+										<div class="a-panel-top">
+											<div class="a-searchInput">
+												<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
+												<input id="pac-input" class="controls" type="text" placeholder="搜尋">
+											</div>
+												<p class="a-text">活動日期</p>
+												<div class="a-panel-date">
+													<input type="date" name="" value="" placeholder="">
+													<p class="a-text">到</p>
+													<input type="date" name="" value="" placeholder="">
 												</div>
-												<!-- sly -->
+											
+											<div class="a-panel-item">
+												<p class="a-text">活動類型</p>
+												<ul>
+													<a href="#" id="turnOff"><li>全部</li></a>
+													<a href="#"><li>天文觀測</li></a>
+													<a href="#"><li>親子觀星</li></a>
+													<a href="#"><li>天文攝影</li></a>
+													<a href="#"><li>休閒聯誼</li></a>
+												</ul>
+											</div>
+											<div class="a-panel-item">
+												<p class="a-text">活動地點</p>
+												<ul>
+													<a href="#"><li>全部</li></a>
+													<a href="#"><li>北部地區</li></a>
+													<a href="#"><li>中部地區</li></a>
+													<a href="#"><li>南部地區</li></a>
+													<a href="#"><li>東部地區</li></a>
+												</ul>
+											</div>
+										</div>
+										
+										<!-- oldslider -->
+									<div id="a-oldSlider">
+										<div class="row scrollable-element" id="a-popups">
+											<div class="col-xs-12 col-sm-12 col-md-12">
+												<div class="a-tab">
+													<div><p>最近時間</p></div>
+													<div><p>最高瀏覽</p></div>
+													<div><p>最多收藏</p></div>
+												</div>	
+											</div>
+											<div class="col-xs-12 col-md-12 col-lg-12 a-phone-search">
+												<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
+													<input id="a-phone-input_1" type="text" name="" value="" placeholder="　　　搜尋日期、類型、地點">
+													<i class="fa fa-chevron-up" aria-hidden="true"></i>
+													<i  class="a-phone-input fa fa-clock-o a-phone-icon-2" aria-hidden="true"></i>
+													<input type="text" class="a-phone-input" placeholder="　　　依日期">
+													<i  class="a-phone-input fa fa-star-o a-phone-icon-2" aria-hidden="true"></i>
+													<input type="text" class="a-phone-input" placeholder="　　　依類型">
+													<i  class="a-phone-input fa fa-globe a-phone-icon-2" aria-hidden="true"></i>
+													<input type="text" class="a-phone-input" placeholder="　　　依地點">
+											</div>
+											<a class="a-phone-control" href="activity_phone_map.html">
+											<div class="a-phone-btn btn-lg btn-blue" id="a-phone-mapBtn">
+												地圖搜尋
+											</div>
+										</a>
+											<div class="col-xs-12 col-sm-12 col-md-12 a-pReset">
+												<div class="col-xs-12 col-sm-6 col-md-6 ">
+
+													<a href="#a-popup-act" data-effect="mfp-3d-unfold">
+													<div class="a-item a-phone-searchContainer">
+														<img src="img/a_007.jpg" alt="" class="rwd-img">
+															<p class="a-text-title">墾丁南十字觀星露營</p>
+															<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+															<p class="a-text-content">名額：16人</p>
+															<p class="a-text-content">發起人：Leo S</p>
+													</div></a>
+												</div>
+
+											<div class="col-xs-12 col-sm-6 col-md-6 ">
+
+												<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+													<div class="a-item a-phone-searchContainer">
+														<img src="img/a_006.jpg" alt="" class="rwd-img">
+															<p class="a-text-title">墾丁南十字觀星露營</p>
+															<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+															<p class="a-text-content">名額：16人</p>
+															<p class="a-text-content">發起人：Leo S</p>
+													</div></a>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-12 col-md-12 a-pReset">
+
+											<div class="col-xs-12 col-sm-6 col-md-6 ">
+
+												<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+													<div class="a-item a-phone-searchContainer">
+														<img src="img/a_001.jpg" alt="" class="rwd-img">
+															<p class="a-text-title">墾丁南十字觀星露營</p>
+															<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+															<p class="a-text-content">名額：16人</p>
+															<p class="a-text-content">發起人：Leo S</p>
+													</div></a>
+												</div>
+
+										<div class="col-xs-12 col-sm-6 col-md-6 ">
+
+												<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+													<div class="a-item a-phone-searchContainer">
+														<img src="img/a_002.jpg" alt="" class="rwd-img">
+															<p class="a-text-title">墾丁南十字觀星露營</p>
+															<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+															<p class="a-text-content">名額：16人</p>
+															<p class="a-text-content">發起人：Leo S</p>
+													</div></a>
+												</div>
+										</div>
+									</div>
+									
+									</div>
+								</div>
+								
 							</div>
+
 						</div>
-						<div class="col-xs-12 col-sm-8 col-md-8 googleMap">
+						<div class="col-xs-12 col-sm-7 col-md-7 googleMap a-mL">
 							<div id="co">
 							        <p></p>
 							        
@@ -589,79 +504,11 @@
 
 
 
-				<!-- oldslider -->
-				<div class="container a-oldSlider">
-					<div class="row scrollable-element" id="a-popups">
-						<div class="col-xs-12 col-sm-12 col-md-12">
-							<div class="a-tab">
-								<div><p>最近時間</p></div>
-								<div><p>最高瀏覽</p></div>
-								<div><p>最多收藏</p></div>
-							</div>	
-						</div>
-						<div class="col-xs-12 a-phone-search">
-						<div class="a-phone-searchContainer">
-							<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
-								<input id="a-phone-input_1" type="text" name="" value="" placeholder="　　　搜尋日期、類型、地點">
-								<i class="fa fa-chevron-up" aria-hidden="true"></i>
-								<i  class="a-phone-input fa fa-clock-o a-phone-icon-2" aria-hidden="true"></i>
-								<input type="text" class="a-phone-input" placeholder="　　　依日期">
-								<i  class="a-phone-input fa fa-star-o a-phone-icon-2" aria-hidden="true"></i>
-								<input type="text" class="a-phone-input" placeholder="　　　依類型">
-								<i  class="a-phone-input fa fa-globe a-phone-icon-2" aria-hidden="true"></i>
-								<input type="text" class="a-phone-input" placeholder="　　　依地點">
-						</div>
-						</div>
-						<div class="col-xs-12 col-sm-3 col-md-3">
-								<a href="#a-popup-act" data-effect="mfp-3d-unfold">
-								<div class="a-item a-phone-searchContainer">
-									<img src="img/a_007.jpg" alt="" class="rwd-img">
-									<p class="a-text">墾丁南十字觀星露營</p>
-									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-									<p class="a-text-content">名額：16人</p>
-									<p class="a-text-content">發起人：Leo S</p>
-								</div></a>
-							</div>
-						<div class="col-xs-12 col-sm-3 col-md-3">
-							<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-								<div class="a-item a-phone-searchContainer">
-									<img src="img/a_006.jpg" alt="" class="rwd-img">
-									<p class="a-text">墾丁南十字觀星露營</p>
-									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-									<p class="a-text-content">名額：16人</p>
-									<p class="a-text-content">發起人：Leo S</p>
-								</div></a>
-							</div>
-						<div class="col-xs-12 col-sm-3 col-md-3">
-							<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-								<div class="a-item a-phone-searchContainer">
-									<img src="img/a_001.jpg" alt="" class="rwd-img">
-									<p class="a-text">墾丁南十字觀星露營</p>
-									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-									<p class="a-text-content">名額：16人</p>
-									<p class="a-text-content">發起人：Leo S</p>
-								</div></a>
-							</div>
-					<div class="col-xs-12 col-sm-3 col-md-3">
-							<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
-								<div class="a-item a-phone-searchContainer">
-									<img src="img/a_002.jpg" alt="" class="rwd-img">
-									<p class="a-text">墾丁南十字觀星露營</p>
-									<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-									<p class="a-text-content">名額：16人</p>
-									<p class="a-text-content">發起人：Leo S</p>
-								</div></a>
-							</div>
-					</div>
-				</div>
+				
 
 
 				
-					<a class="a-phone-control" href="activity_phone_map.html">
-						<div class="a-phone-btn btn-lg btn-blue" id="a-phone-mapBtn">
-							地圖搜尋
-						</div>
-					</a>
+					
 
 				
 			</main>

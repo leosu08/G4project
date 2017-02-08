@@ -7,18 +7,24 @@ $(function(){
 	// })	
 	$('#a-phone-input_1').focus(function(){
 		$('#a-phone-input_1').hide();
-		$('.fa-chevron-up').show(500).css({
+		$('.fa-chevron-up').slideDown(500).css({
 			'display':'block'
 		});
 
-		$('.a-phone-input').show();
+		$('.a-phone-input').slideDown();
 		$('.fa-search').hide();
 
 	})
 	$('.fa-chevron-up').click(function(){
 		$('.a-phone-input').hide();
 		$('.fa-chevron-up').hide();
-		$('#a-phone-input_1').show();
-		$('.fa-search').show();
+		$('#a-phone-input_1').slideDown();
+		$('.fa-search').slideDown();
 	})
+	$('#turnOff').click(function(){
+		console.log("click");
+		$.fn.fullpage.setAllowScrolling(false);
+  		
+	})
+	
 })

@@ -1,4 +1,53 @@
-//Ê≠§ËôïÁÇ∫ ÂÖ±Áî®Ë®≠ÂÆö
+#a-body{
+		::-webkit-scrollbar {
+	    width: 12px;
+	}
+	 
+	::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 3px rgba(255,255,255,255.5); 
+	    border-radius: 10px;
+	}
+	 
+	::-webkit-scrollbar-thumb {
+	    border-radius: 10px;
+	    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,.5); 
+	}
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: #353535;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  color: #353535;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  color: #353535;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  color: #353535;
+	}
+	input{
+		border:none;
+		background-color: rgba(255,255,255,0.5);
+	}
+	a{
+		text-decoration:none !important;
+
+		
+	}
+
+	*{
+		// outline: 1px solid #fa0;
+		outline: none;
+	}
+}//body END
+.a-pReset{
+	padding: 0;
+}
+.a-mR{
+	margin-right: -10px;
+}
+.a-mL{
+	margin-left: -10px;
+}
 .table{
 	display: table;
 	border-collapse: collapse; 
@@ -36,6 +85,49 @@
 		}
 	}
 }
+.a-searchInput{
+	position: relative;
+	// width: 320px;
+	// margin: auto;
+	i{
+		width: 20px;
+		font-size: 20px;
+		color:#353535;
+		position: absolute;
+		left: 5px;
+		top: 24px;
+		bottom: 0;
+		margin: 0;
+	}
+
+ #pac-input {
+        z-index: 10;
+        /*position: absolute;*/
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        // margin-left: 12px;
+        // padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+       width: 425px;
+       height: 30px;
+        text-align: left;
+        margin-top: 20px;
+        padding-left: 28px;
+      }
+	
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      .pac-container {
+        font-family: Roboto;
+      }
+}
+.a-panel-date{
+	margin-top: 20px;
+
+}
 .a-panel{
 	overflow:hidden;
 	position: relative;
@@ -48,23 +140,50 @@
 	// height: 600px;
 	height: 100vh;
 
-	background: url("../img/a_015.jpg");
+	background: url("http://cdn.allwallpaper.in/wallpapers/3200x2000/13325/outer-space-stars-galaxies-3200x2000-wallpaper.jpg");
 	background-size:100% 100%;
-	background-position: center center;
+	background-position:50% 80%;
+	background-repeat: no-repeat;
 
 
 	input{
 		width: 100px;
+
 	}
 	.a-panel-item{
 		margin-bottom: 30px;
+		input{
+			
+			padding: 0;
+			border:none;
+			height: 30px;
+			vertical-align: middle;
+		}
 	}
 	ul{
 		margin-top: 20px;
+		a:first-child{
+			
+			
+			background-color: #5694CD;
+		}
+		a{
+			display: inline-block;
+			padding:10px;
+			&:hover{
+
+				background-color: #5694CD;
+			}
+		}
 	}
 	li{
+		color:$white;
+		
 		display: inline-block;
-		color:#ddd;
+
+		
+		
+	
 	}
 }
 .a-title{
@@ -73,45 +192,163 @@
 	margin: 20px;
 }
 .a-panel-control{
-	width: 320px;
+	// width: 320px;
 	height: 200px;
-	position: absolute;
-			  top: 0;
-			  bottom: 0;
-			  left: 0;
-			  right: 0;
-			  margin: auto;
+	margin: auto;
+	
 }
 .a-text{
+	font-weight: bold;
 	font-size: $fz-p;
 	color:#fff;
 	display: inline-block;
+	vertical-align: middle;
+	text-shadow:2px 2px 5px #666;
+
 }
 .a-tab{
 
 	div{
 		margin: 40px 20px 20px 0;
-		border:1px solid $blue;
+		// border:1px solid #fff;
 		float: left;
 		p{
-			color:$light-blue;
+			color:#fff;
 			font-size: $fz-h5;
 		}
 	}
 }
 .a-item{
+	width: 100%;
 	line-height: 1.5;
+	position: relative;
+	.a-item-g{
+					position: absolute;
+							  top: 0;
+							  bottom: 0;
+							  left: 0;
+							  right: 0;
+							  margin: auto;
+					height: 50px;
+					text-align: center;
+				}
 
+}
+.a-text-title{
+	color:$white;
+	font-weight: bold;
+	text-shadow: 0px 0px 8px #666;
+	font-size: $fz-h4;
 }
 .a-text-content{
 	color:#fff;
 	font-size: $fz-h7;
 }
+.a-phone-control{
 
+	display: block;
+	// position: fixed;
+	// 		  bottom: 50px;
+	// 		  left: 0;
+	// 		  right: 0;
+	// 		  margin: auto;
+	text-align: center;
+	.a-phone-btn{
+		color:$white;
+		line-height: 38px;
+	}
+}
+// .a-banner{
+// 	display: none;
+// }
+#a-popups{
+	// margin-top: 100px;
+}
+.a-tab{
+	display: none;
+}
+.a-phone-searchContainer{
+	// width: 80%;
+	width: 100%;
+	// border-radius: 50%;
+	margin: auto;
+	// box-sizing:border-box;
+	position: relative;
+	padding: 20px;
+	background-color: rgba(255,255,255,0.3);
+	height: 330px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	// background:url(../img/a_006.jpg);
+	// background-size: cover;
+	// background-position: center center;
+	&:hover{
+		background-color: rgba(86,148,205,0.7);
+		box-shadow: 0px 0px 20px lightblue;
+	}
+	
+	img{
+		height: 200px;
+		// border-radius: 50%;
+	}
+}
+.a-phone-search{
+	display: block;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	// text-align: center;
+	width: 100%;
+	// background-color: rgba(255,255,255,.5);
+	#a-phone-input_1{
+		margin-top: 20px;
+	}
+	input{
+		
+		height: 30px;
+		width: 100%;
+		// text-align: center;
+		background-color: rgba(255,255,255,.5);
+		border:none;
+		font-size: 20px;
+		// box-shadow:2px 2px 1px rgba(0,0,0,0.5) inset;
+
+	}
+	.a-phone-icon{
+		position: absolute;
+				  top: 25px;
+				  left: 20px;
+				  margin: auto;
+		width: 30px;
+		font-size: 20px;
+	}
+	.a-phone-icon-2{
+		position: relative;
+				  top: 25px;
+				  left: 10px;
+				  margin: auto;
+		width: 30px;
+		font-size: 20px;
+	}
+	.a-phone-input{
+		display: none;
+	}
+	
+	.fa-chevron-up{
+		cursor: pointer;
+		position: relative;
+		top: 10px;
+		display: block;
+		text-align: left;
+		display: none;
+		font-size: $fz-h2;
+		color:#888;
+	}
+}
 
 
 /*=====================================
-            Â¢ûÂä†Ê¥ªÂãïÈ†ÅÈù¢
+            ‘ˆº”ªÓÑ”Ìì√Ê
     =======================================*/
 .a-lb-add{
 	background: url("../img/a_008.jpg");
@@ -188,14 +425,14 @@
 .a-x{
 	float: right;
 	font-size: $fz-h5;
-}//Â¢ûÂä†Ê¥ªÂãïÈ†ÅÈù¢ÁµêÊùü
+}//‘ˆº”ªÓÑ”Ìì√ÊΩY ¯
 
 
 
 
 
 /*=====================================
-            Ê¥ªÂãïË©≥Á¥∞È†ÅÈù¢
+            ªÓÑ”‘îºöÌì√Ê
     =======================================*/
 .a-lb-act{
 	background:url("../img/a_008.jpg");
@@ -210,6 +447,7 @@
 			color:$white;
 			.a-text{
 				position: relative;
+				
 			}
 		}	
 		.tr{
@@ -293,17 +531,20 @@
 		}
 	}
 
-}//Ê¥ªÂãïÁµêÊùü
+}//ªÓÑ”ΩY ¯
 
 
 .a-phone-control{
-	display: none;
 }
 .a-phone-search{
 	display: none;
 }
-.a-oldSlider{
-	display: none;
+#a-oldSlider{
+	// display: none;
+	overflow-y:scroll; 
+	margin: 0 -10px;
+	height: 50%;
+	// width: 100%+10;
 }
 
 

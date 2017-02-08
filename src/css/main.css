@@ -1995,6 +1995,52 @@ footer {
   position: absolute;
   z-index: 300; }
 
+#a-body ::-webkit-scrollbar {
+  width: 12px; }
+
+#a-body ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px white;
+  border-radius: 10px; }
+
+#a-body ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5); }
+
+#a-body ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #353535; }
+
+#a-body ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #353535; }
+
+#a-body :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #353535; }
+
+#a-body :-moz-placeholder {
+  /* Firefox 18- */
+  color: #353535; }
+
+#a-body input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5); }
+
+#a-body a {
+  text-decoration: none !important; }
+
+#a-body * {
+  outline: none; }
+
+.a-pReset {
+  padding: 0; }
+
+.a-mR {
+  margin-right: -10px; }
+
+.a-mL {
+  margin-left: -10px; }
+
 .table {
   display: table;
   border-collapse: collapse; }
@@ -2028,6 +2074,37 @@ footer {
     color: #86d4f5;
     font-size: 32px; }
 
+.a-searchInput {
+  position: relative; }
+  .a-searchInput i {
+    width: 20px;
+    font-size: 20px;
+    color: #353535;
+    position: absolute;
+    left: 5px;
+    top: 24px;
+    bottom: 0;
+    margin: 0; }
+  .a-searchInput #pac-input {
+    z-index: 10;
+    /*position: absolute;*/
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    width: 425px;
+    height: 30px;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 28px; }
+  .a-searchInput #pac-input:focus {
+    border-color: #4d90fe; }
+  .a-searchInput .pac-container {
+    font-family: Roboto; }
+
+.a-panel-date {
+  margin-top: 20px; }
+
 .a-panel {
   overflow: hidden;
   position: relative;
@@ -2036,18 +2113,31 @@ footer {
   box-sizing: border-box;
   height: 0;
   height: 100vh;
-  background: url("../img/a_015.jpg");
+  background: url("http://cdn.allwallpaper.in/wallpapers/3200x2000/13325/outer-space-stars-galaxies-3200x2000-wallpaper.jpg");
   background-size: 100% 100%;
-  background-position: center center; }
+  background-position: 50% 80%;
+  background-repeat: no-repeat; }
   .a-panel input {
     width: 100px; }
   .a-panel .a-panel-item {
     margin-bottom: 30px; }
+    .a-panel .a-panel-item input {
+      padding: 0;
+      border: none;
+      height: 30px;
+      vertical-align: middle; }
   .a-panel ul {
     margin-top: 20px; }
+    .a-panel ul a:first-child {
+      background-color: #5694CD; }
+    .a-panel ul a {
+      display: inline-block;
+      padding: 10px; }
+      .a-panel ul a:hover {
+        background-color: #5694CD; }
   .a-panel li {
-    display: inline-block;
-    color: #ddd; }
+    color: #f3f7f7;
+    display: inline-block; }
 
 .a-title {
   font-size: 32px;
@@ -2055,37 +2145,115 @@ footer {
   margin: 20px; }
 
 .a-panel-control {
-  width: 320px;
   height: 200px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin: auto; }
 
 .a-text {
+  font-weight: bold;
   font-size: 18px;
   color: #fff;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: middle;
+  text-shadow: 2px 2px 5px #666; }
 
 .a-tab div {
   margin: 40px 20px 20px 0;
-  border: 1px solid #4f9cdd;
   float: left; }
   .a-tab div p {
-    color: #95d3e4;
+    color: #fff;
     font-size: 20px; }
 
 .a-item {
-  line-height: 1.5; }
+  width: 100%;
+  line-height: 1.5;
+  position: relative; }
+  .a-item .a-item-g {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    text-align: center; }
+
+.a-text-title {
+  color: #f3f7f7;
+  font-weight: bold;
+  text-shadow: 0px 0px 8px #666;
+  font-size: 24px; }
 
 .a-text-content {
   color: #fff;
   font-size: 12px; }
 
+.a-phone-control {
+  display: block;
+  text-align: center; }
+  .a-phone-control .a-phone-btn {
+    color: #f3f7f7;
+    line-height: 38px; }
+
+.a-tab {
+  display: none; }
+
+.a-phone-searchContainer {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 330px;
+  margin-top: 10px;
+  margin-bottom: 20px; }
+  .a-phone-searchContainer:hover {
+    background-color: rgba(86, 148, 205, 0.7);
+    box-shadow: 0px 0px 20px lightblue; }
+  .a-phone-searchContainer img {
+    height: 200px; }
+
+.a-phone-search {
+  display: block;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  width: 100%; }
+  .a-phone-search #a-phone-input_1 {
+    margin-top: 20px; }
+  .a-phone-search input {
+    height: 30px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 20px; }
+  .a-phone-search .a-phone-icon {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    margin: auto;
+    width: 30px;
+    font-size: 20px; }
+  .a-phone-search .a-phone-icon-2 {
+    position: relative;
+    top: 25px;
+    left: 10px;
+    margin: auto;
+    width: 30px;
+    font-size: 20px; }
+  .a-phone-search .a-phone-input {
+    display: none; }
+  .a-phone-search .fa-chevron-up {
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+    display: block;
+    text-align: left;
+    display: none;
+    font-size: 32px;
+    color: #888; }
+
 /*=====================================
-            澧炲姞娲诲嫊闋侀潰
+            增加活動頁面
     =======================================*/
 .a-lb-add {
   background: url("../img/a_008.jpg");
@@ -2133,7 +2301,7 @@ footer {
   font-size: 20px; }
 
 /*=====================================
-            娲诲嫊瑭崇窗闋侀潰
+            活動詳細頁面
     =======================================*/
 .a-lb-act {
   background: url("../img/a_008.jpg");
@@ -2202,80 +2370,48 @@ footer {
       height: 50px;
       width: 85%; }
 
-.a-phone-control {
-  display: none; }
-
 .a-phone-search {
   display: none; }
 
-.a-oldSlider {
-  display: none; }
+#a-oldSlider {
+  overflow-y: scroll;
+  margin: 0 -10px;
+  height: 50%; }
 
 @media screen and (max-width: 767px) {
-  .a-map {
+  .a-map .googleMap {
     display: none; }
-  .a-phone-control {
-    display: block;
-    position: fixed;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center; }
-    .a-phone-control .a-phone-btn {
-      color: #f3f7f7;
-      line-height: 38px; }
-  #a-popups {
-    margin-top: 100px; }
-  .a-tab {
-    display: none; }
-  .a-phone-searchContainer {
-    width: 80%;
-    margin: auto; }
-  .a-phone-search {
-    display: block;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    width: 100%;
-    background-color: #444; }
-    .a-phone-search #a-phone-input_1 {
-      margin-top: 20px; }
-    .a-phone-search input {
-      height: 30px;
-      width: 100%;
-      background-color: #666;
-      border: none;
-      font-size: 20px; }
-    .a-phone-search .a-phone-icon {
-      position: absolute;
-      top: 25px;
-      left: 70px;
-      margin: auto;
-      width: 30px;
-      font-size: 20px; }
-    .a-phone-search .a-phone-icon-2 {
-      position: relative;
-      top: 25px;
-      left: 10px;
-      margin: auto;
-      width: 30px;
-      font-size: 20px; }
-    .a-phone-search .a-phone-input {
-      display: none; }
-    .a-phone-search .fa-chevron-up {
-      cursor: pointer;
-      position: relative;
-      top: 10px;
-      display: block;
-      text-align: left;
-      display: none;
-      font-size: 32px;
-      color: #888; }
   .wrap {
     display: none; }
-  .a-oldSlider {
-    display: block; } }
+  #a-oldSlider {
+    position: relative;
+    height: 1000px;
+    display: block; }
+  .a-phone-search {
+    display: block; }
+  .a-panel-top {
+    display: none; }
+  #a-phone-show {
+    height: 200px; } }
+
+@media screen and (min-width: 1280px) {
+  .a-searchInput {
+    width: 100%; }
+  .a-panel-item input {
+    width: 200px; }
+  .a-panel-control {
+    width: 510px; }
+  .a-controls {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 95%;
+    height: 95%;
+    overflow: hidden;
+    margin: auto;
+    border: 0.5px solid #fff;
+    padding: 20px 20px 10px 20px;
+    margin-top: 20px; }
+  .a-phone-control {
+    display: none; } }
 
 .a-btn-recommend {
   margin: auto;
