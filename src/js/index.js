@@ -1,10 +1,26 @@
 $(function() {
+    var gallery = $(".gallery"),
+    currdeg  = 0;
 
-    if($(document).width() < 768){
-      $('.act01').attr({'data-1000':'transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;','data-1160':'transform:scale(0.4) translate3d(0,0px,0);opacity:1;', 'data-1560':'transform:scale(0.6) translate3d(200px,0px,0);opacity:1', 'data-1660':'transform:scale(0.8) translate3d(300px,330px,0);opacity:0'});
-    }else{
-      $('.act01').attr({'data-1000':'transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;','data-1160':'transform:scale(1) translate3d(0,0px,0);opacity:1;', 'data-1560':'transform:scale(1.2) translate3d(200px,0px,0);opacity:1', 'data-1660':'transform:scale(1.4) translate3d(300px,330px,0);opacity:0'});
-    }
+  $(".next").on("click", { name: "next" }, rotate);
+  $(".prev").on("click", { name: "prev" }, rotate);
+
+  function rotate(e){
+  if(e.data.name=="next"){
+    currdeg = currdeg - 45;
+  }
+  if(e.data.name=="prev"){
+    currdeg = currdeg + 45;
+  }
+  gallery.css({
+    "transform": "rotateY("+currdeg+"deg)"
+  });
+  }
+    // if($(document).width() < 768){
+    //   $('.act01').attr({'data-1000':'transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;','data-1160':'transform:scale(0.4) translate3d(0,0px,0);opacity:1;', 'data-1560':'transform:scale(0.6) translate3d(200px,0px,0);opacity:1', 'data-1660':'transform:scale(0.8) translate3d(300px,330px,0);opacity:0'});
+    // }else{
+    //   $('.act01').attr({'data-1000':'transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;','data-1160':'transform:scale(1) translate3d(0,0px,0);opacity:1;', 'data-1560':'transform:scale(1.2) translate3d(200px,0px,0);opacity:1', 'data-1660':'transform:scale(1.4) translate3d(300px,330px,0);opacity:0'});
+    // }
 
     //漂浮
     if($(document).width()>= 768){

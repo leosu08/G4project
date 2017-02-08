@@ -70,62 +70,8 @@
               text-shadow: 1px 1px 10px $grey;
             }
     }
-
-    #navButton {
-        position: absolute;
-        top: 25px;
-        left: 15px;
-        width: 40px;
-        height: 40px;
-        background: #45484d;
-        color: #f2f2f2;
-        border-radius: 50%;
-        // display: none;
+    #navButton{
+      display: block;
     }
 
-    #navButton:after,
-    #navButton:before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 16px;
-        height: 2px;
-        background-color: #fff;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        transition: 0.8s;
-    }
-
-    #navButton:before {
-        box-shadow: 0 -6px 0 #fff;
-    }
-
-    #navButton:after {
-        box-shadow: 0 6px 0 #fff;
-    }
-
-    #navButtonHidden:checked ~ #navButton:before {
-        transform: rotate(45deg);
-        box-shadow: none;
-    }
-
-    #navButtonHidden:checked ~ #navButton:after {
-        transform: rotate(-45deg);
-        box-shadow: none;
-    }
-    #navButtonHidden:checked ~ .menu{
-      // top:150px;
-      // transform: scale(1);
-      // transition: .8s cubic-bezier(.13,.27,.06,.82);
-      animation: menuTrans 1.5s both;
-    }
-}
-@keyframes menuTrans {
-  0%{transform: scale(0);top:150px}
-  30%{transform: scale(0.1);top:-140px;left:50px}
-  50%{transform: scale(0.1);top:300px;left:200px}
-  100%{transform: scale(1);top:0px;left:-300px}
 }

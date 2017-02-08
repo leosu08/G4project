@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="js/skrollr.min.js"></script>
-<script src="js/modernizr-custom.js"></script>
-    <link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/86044/bisk8s_cdpn_base_201312_1.css'>
+<!-- <script src="js/modernizr-custom.js"></script> -->
+    <!-- <link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/86044/bisk8s_cdpn_base_201312_1.css'> -->
     <script src="js/index.js"></script>
     <title>ZeroGravity</title>
 </head>
@@ -216,30 +216,36 @@
         </section>
         <section class="section section04">
           <div class="gallery">
-            <img src="img/i-act01.jpg">
-            <img src="img/i-act02.jpg">
-            <img src="img/i-act03.jpg">
-            <img src="img/i-act04.jpg">
-            <img src="img/i-act05.jpg">
-            <img src="img/i-act01.jpg">
-            <img src="img/i-act02.jpg">
-            <img src="img/i-act01.jpg">
-            <img src="img/i-act02.jpg">
-            <img src="img/i-act03.jpg">
-            <img src="img/i-act04.jpg">
-            <img src="img/i-act05.jpg">
-            <img src="img/i-act01.jpg">
-            <img src="img/i-know01.png">
-            <img src="img/i-know02.png">
-            <img src="img/i-know03.png">
-            <img src="img/i-know04.png">
-            <img src="img/i-know04.png">
-            <img src="img/i-know01.png">
-            <img src="img/i-know02.png">
-            <img src="img/i-know03.png">
-            <img src="img/i-know04.png">
-            <img src="img/i-know04.png">
+            <div class="pic">
+                <img src="img/i-act01.jpg">
+            </div>
+            <div class="pic pic1">
+                <img src="img/i-act01.jpg">
+            </div>
+            <div class="pic pic2">
+                <img src="img/i-act01.jpg">
+            </div>
+            <div class="pic pic3">
+                <img src="img/i-act03.jpg">
+            </div>
+            <div class="pic pic4">
+                <img src="img/i-act01.jpg">
+            </div>
+            <div class="pic pic5">
+                <img src="img/i-act02.jpg">
+            </div>
+            <div class="pic pic6">
+                <img src="img/i-act03.jpg">
+            </div>
+            <div class="pic pic7">
+                <img src="img/i-act04.jpg">
+            </div>
+            <div class="pic pic8">
+                <img src="img/i-act05.jpg">
+            </div>  
           </div>
+          <div class="next">Next</div>
+          <div class="prev">Prev</div>
         </section>
         <section class="section section05">
             <ul class="accordion" id="accordion">
@@ -437,6 +443,7 @@
             $('#info').text(data.curTop);
         }
     });
+
 //     $('.gallery').mousemove(function(event){
 //   $(this).css({
 //     "perspective-origin":
@@ -444,34 +451,34 @@
 //     event.pageY+5000+"px "
 //   });
 // });
-var body = {value:1}
-function loop(){
-  $(body).animate(
-    {value: '+=1'}
-    ,{
-    duration:Math.pow(10,4),
-    easing:'linear',
-    complete:loop,
-    step:function(i){
-      $('.gallery img').each(function(j){
-        var b=(i+j);
-        var x=
-            (Math.sin(b)*
-            (window.innerWidth*.6));
-        var y= 5-(j*.5);
-        var z= (Math.cos(b)*20);
-        $(this).css({
-        'z-index': (z>0)?0:-1,
-        '-webkit-filter': 'blur('+(-z*.01)+'em)',
-        'transform':
-        'translate3d('+x+'px,'+y+'em,'+z+'em)'+
-        'rotateY('+(Math.cos(b)*180)+'deg) ',
-      });
-      })
-    }
-  })
-}
-loop();
+// var body = {value:1}
+// function loop(){
+//   $(body).animate(
+//     {value: '+=1'}
+//     ,{
+//     duration:Math.pow(10,4),
+//     easing:'linear',
+//     complete:loop,
+//     step:function(i){
+//       $('.gallery img').each(function(j){
+//         var b=(i+j);
+//         var x=
+//             (Math.sin(b)*
+//             (window.innerWidth*.6));
+//         var y= 5-(j*.5);
+//         var z= (Math.cos(b)*20);
+//         $(this).css({
+//         'z-index': (z>0)?0:-1,
+//         '-webkit-filter': 'blur('+(-z*.01)+'em)',
+//         'transform':
+//         'translate3d('+x+'px,'+y+'em,'+z+'em)'+
+//         'rotateY('+(Math.cos(b)*180)+'deg) ',
+//       });
+//       })
+//     }
+//   })
+// }
+// loop();
       // $(function() {
       //
       //     $('.section04').mousemove(function(e) {

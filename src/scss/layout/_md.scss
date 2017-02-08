@@ -22,7 +22,7 @@
                 display: block;
                 color: $white;
                 font-size: $fz-nav;
-                padding: 13px;
+                padding: 14px 10px;
                 letter-spacing: 1px;
             }
         }
@@ -35,10 +35,13 @@
                 font-size: $fz-nav - 2px;
                 color:$light-grey;
                 letter-spacing: 1px;
-                padding:14px 5px 12px 0px;
+                padding:16px 5px 12px 0px;
                 &:hover{
                   color:$white;
                 }
+            }
+            .fa{
+              display: none;
             }
         }
         // #signLeft a:after{
@@ -52,6 +55,10 @@
     }
 
     .menu a:hover {
-        border-bottom: 4px solid $blue-green;
+        border-bottom: 2px solid $blue-green;
+        text-shadow: 1px 1px 5px 10px $grey;
+    }
+    #navButton{
+      display: none;
     }
 }
