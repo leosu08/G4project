@@ -1,5 +1,36 @@
 @include respones(sm) {
 		//在此輸入內容
+.p-tabsearch{
+	.p-tab{
+		margin: 10px 0 10px 0;
+		text-align: center;
+	}
+	.p-tab a{
+ 		text-decoration: none;
+ 		color: #333;
+ 		font-size:16px;
+ 		float: left;
+		display: inline-block;
+		padding: 7px;
+		margin: 10px;
+	}
 
+	.p-tab a:hover{
+		border: 2px solid #7FC8E7;
+	}
 
 }
+.p-in-content{
+	.content{
+		padding-bottom:5px;
+		margin-bottom: 10px;
+		margin-left: 0px;
+		margin-right: 0px;
+
+
+		}
+	.message{
+		padding: 0px;
+	}
+	}
+} 

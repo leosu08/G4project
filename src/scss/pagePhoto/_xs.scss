@@ -1,13 +1,58 @@
 @include respones(xs) {
 	//在此輸入內容
+.p-tabsearch{
+	.p-tab{
+		margin: 10px 0 10px 0;
+		text-align: center;
+	}
+	.p-tab a{
+ 		text-decoration: none;
+ 		color: #333;
+ 		font-size:14px;
+		padding: 7px;
+		margin: 10px;	
+	}
+	.p-search{
+ 		margin-top: 10px;
+ 		margin-bottom: 10px;
+ 		
+ 	}
+ 	.input{
+ 		text-align: center;
+
+ 	}
+ 	.p-search input{
+ 		height: 30px;
+ 	}
+ 	.fa-search{
+ 		position: absolute;
+ 		top: 4px;
+ 		bottom: 0;
+ 		left: 15px;
+ 		right:260px;
+ 		margin: auto;
+ 		font-size: 22px;
+ 		z-index: 1;
+
+ 	}
+
+}
+.p-in-content{
+	.content{
+		padding-bottom:5px;
+		margin-bottom: 10px;
+		margin-left: 0px;
+		margin-right: 0px;
 
 
-
-
-
-
-
-
-
+		}
+	.message{
+		padding: 0px;
+	}
+	}
+.recommend{
+		text-align: center;
+		
+	}
 
 }

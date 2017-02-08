@@ -1,7 +1,396 @@
-@import "xs";
+//此處為 共用設定
+*{
+	// outline: 1px solid #fa0;
+	font-family: "微軟正黑體",Tahoma,Arial;
+}
+
+.p-bigpic{
+
+	background-image:url(../img/p_bigpic_001.jpg);
+	width: 100%;
+	height: 700px;
+	overflow: hidden;
+	position: relative;
+	background-position: center center;
+	background-size: cover;
+	
+	.h2{
+		position: absolute;
+		color: #FFF;
+		font-size: 30px;
+		top:70%;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: auto;
+		text-align: center;
+	}
+	a{
+		z-index: 11;
+		position: absolute;
+		color: #4f9cdd;
+		font-size: 24px;
+		top:78%;
+		bottom: 0;
+		right: 10px;
+		left: 0;
+		margin: auto;
+		text-align: center;
+		
+	}
+}
+ 
+ .p-tabsearch{
+	.p-tab{
+		margin: 20px 0 20px 0;
+		text-align: center;
+	}
+
+ 	.p-tab a{
+ 		text-decoration: none;
+ 		color: #333;
+ 		font-size:18px;
+		padding: 10px;
+		margin: 0px 20px 0px 0px;
+
+		
+ 	}
+ 	.p-tab a:hover{
+ 	
+		border: 2px solid #7FC8E7;
+		padding:5px;
+		
+ 	}
+ 	.p-search{
+ 		margin-top: 15px;
+ 		height: 100%;
+ 		
+ 	}
+ 	.input{
+ 		width: 100%;
+ 		position: relative;
+ 		text-align: right;
+
+ 	}
+ 	.p-search input{
+ 		font-size: 16px;
+ 		width:280px;
+ 		height: 40px;
+ 		background-color: #ddd;
+ 		border:1px solid #ccc;
+ 		padding-left: 40px;	
+ 		
+ 	}
+ 	.fa-search{
+ 		position: absolute;
+ 		top: 8px;
+ 		bottom: 0;
+ 		left: 0px;
+ 		right:260px;
+ 		margin: auto;
+ 		font-size: 22px;
+ 		z-index: 1;
+
+ 	}
+ }
+ .p-content{
+
+ 	background-color: #4A4A4A;
+
+ 	.item{
+
+ 	margin-top: 30px;
+ 	position: relative;
+ 	}
+ 	.box{
+ 		background-color: #fff;
+ 	}
+	.item .pic img{
+		width: 100%;
+		height: 100%;
+		
+	}
+	.user{
+		position: absolute;
+		top:20px;
+		left: 30px;
+	}
+	.user img{
+		width: 25%;
+		border-radius: 50%;
+		float: left;
+	}
+	.user p{
+		color: #fff;
+		float: left;
+		margin-top: 20px;
+		margin-left: 12px;
+		font-size: 14px;
+	}
+ 	.content p{
+ 		margin: 12px;
+ 		font-size:14px;
+ 	}
+ 	.tab{
+ 		border-bottom: 1px solid #aaa;
+ 		padding-bottom: 6px;
+ 		margin-left: 12px;
+ 		}
+ 	.tab a{
+		
+		font-size:12px;
+ 	}
+ 	.view p{
+ 		width: 45%;
+ 		margin: 0px 6px 6px 0px;
+ 		font-size: 12px;
+ 		display: inline-block;
+ 	}
+ 	.view p .fa{
+ 		padding-right:5px;
+ 	}
+ 	.view .icon{
+ 		width: 45%;
+ 		// margin: 6px;
+ 		text-align: right;
+ 		display: inline-block;
+ 	}
+ 	.view .fa{
+ 		color: #555;
+ 		padding-left: 12px;
+ 	}
+ 	.btnbox{
+ 		margin-top: 50px;
+ 		text-align: center;
+ 	}
+ }
+// 相片內頁
+.p-inside{
+	background-color:rgba(0,0,0,0.8);
+	margin-top: 0px;
+	.p-in-pic{
+		margin-top: 10px;
+
+		img{
+			width: 100%;
+		}
+	}
+	.p-in-content .container{
+		height: 800px;
+		background-color: #fff;
+
+	}
+}
+.p-in-content{
+	.user{
+	width: 100%;
+	height: 60px;
+	margin:20px 0 20px 0; 
+   
+	img{
+		width:60px;
+		border-radius: 50%;
+		float: left;
+	}
+	h5{
+		float: left;
+		margin-top: 20px;
+		margin-left: 10px;
+	}
+	}
+	.content{
+		border-bottom: 1px solid #888;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		margin-left: 60px;
+		margin-right: 60px;
+
+	h3{
+		font-size: 18px;
+		color: #4f9cdd
+	}
+	p{
+		font-size: 14px;
+		margin: 20px 0 20px 0;
+	}
+	}
+	.message{
+		margin: 20px 0px 0px 0px;
+		padding-left: 60px;
+		.ms-user{
+
+		img{
+			margin-top: 5px;
+			width: 40px;
+			height: 100%;
+			border-radius: 50%;
+			overflow: hidden;
+			float: left;
+
+		}
+		}
+		.ms-content{
+			float: left;
+		h5{
+			display:inline-block;
+			margin-left: 10px;
+			font-size: 12px;
+			color: #4f9cdd
+		}
+		h6{
+			display:inline-block;
+			margin-left: 10px;
+			font-size: 12px;
+		
+		}
+		p{
+			margin-top: 5px;
+			margin-left: 10px;
+			font-size: 10px;
+
+		}
+		}
+	}
+	.r-left{
+		height: 250px;
+	}
+	.right{
+		margin-top: 20px; 	
+	.adress{
+
+		h2{
+			font-size: 18px;
+		}
+		i{
+			font-size: 20px;
+			margin:15px 5px 0px 5px;
+			color: #4f9cdd;
+			display: inline-block;
+		}
+		h5{	
+			font-size: 14px;
+			display: inline-block;
+			color: #555;
+		}
+	}
+	.tag{
+		margin-top: 30px;
+		h2{
+			font-size: 18px;
+		}
+		p{
+			margin-top: 10px;
+		}
+		a{
+			font-size: 14px;
+		}
+	}
+	}	
+	.r-right{
+		height: 250px;
+	}
+	.icon{
+		text-align: right;
+		i{
+			font-size: 26px;
+			margin-left: 10px;
+			color:rgba(0,0,0,0.8);
+		}
+	}
+	.number{
+		margin-top: 60px;
+		text-align:right;
+		h5{
+			margin-bottom:10px; 
+			font-size: 12px;
+			color:rgba(0,0,0,0.6);
+		}
+		i{
+			margin-left: 10px;
+			color: rgba(0,0,0,0.8);
+		}
+	}
+	.recommend{
+		// text-align: center;
+		h2{
+			font-size:16px;
+		}
+		.item{
+			display: inline-block;
+			margin: 10px;
+		}
+		img{
+			width: 100px;
+			height: 100px;
+		}
+	}
+}
+// 上傳照片
+.upload{
+	
+	margin-top: 50px;
+	.container{
+		height: 850px;
+		background: url(../img/p_back_001.png);	
+	}
+	
+	.title{
+		h1{
+			width: 1000px;
+			border-bottom: 2px solid #FFF;
+			margin-left: 70px;
+			padding-top: 80px;
+			color: #FFF;
+		}
+	}
+	.table{
+		width: 1000px;
+		margin-left: 70px;
+		padding-top: 50px;
+		th{
+			border-bottom: 1px dotted rgba(255,255,255,0.6)
+		}
+		#tit{
+			width: 200px;
+			height: 80px;
+			font-size: 18px;
+			color: #fff;
+		}
+		#box{
+			width: 800px;
+			height: 80px;
+			text-align: left;
+			
+
+
+		}
+		textarea{
+			width: 800px;
+			height: 160px;
+			border-radius: 5px 5px;
+		}
+		#box p{
+			width: 100px;
+			background-color: #CCC;
+			padding-left: 10px;
+			margin-bottom: 10px;
+		}
+		input{
+			height: 22px;
+			border-radius: 3px 3px;
+			background: #fff;
+		}
+	}
+	.check{
+		width: 100%;
+		margin-top: 50px;
+		text-align: center;
+	}
+}
+
+
+
 @import "sm";
 @import "md";
 @import "lg";
-
-
-//此處為 共用設定
+@import "xs";

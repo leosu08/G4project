@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ZeroGravity</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	 <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+     <link rel="stylesheet" type="text/css" href="css/magnific.css">
+     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+     <script type="text/javascript" src="js/magnific.js"></script>
+     
+</head>
+
+<style>	
+		#star{
+				/*background-color: #ccc;*/
+				margin: auto;	
+				position: absolute;
+				top: 50px;	
+				right:0px;	
+				left: 0;		
+				stroke-dashoffset: 3000;
+    			stroke-dasharray: 3000;
+				animation: circle 10s linear both;
+				z-index: 10;
+			}
+			@keyframes circle{
+				100%{
+					stroke-dashoffset:0;
+				}
+				
+			}
+		#tit{
+			opacity: 0;
+			animation: fadeIn 5s both;
+		}
+		@keyframes fadeIn{
+			100%{
+				opacity: 1;
+			}
+		}
+		.a-btn{
+			position: absolute;
+			bottom: 20px;	
+			right: 0;	
+			left: 0;	
+			margin: auto;		
+			z-index: 10;
+		}
+	</style>
+
+<body>
+	
+	<!-- 大圖 -->
+	<div class="p-bigpic col-md-12 col-sm-12">
+	
+		<div class="bigpic col-md-12 col-sm-12">
+			<!-- <img src="img/p_001.jpg"> -->
+			</div>
+			<svg id="star" width="560" height="600" >
+			<g>
+			  <title>Layer 1</title>
+			  <polygon transform="rotate(-90 279.40002441406256,210.50000000000003) " id="svg_3" fill-opacity="0" stroke-width="5" stroke="#c3d5da" points="433.8207702636719,210.5 356.61041259765625,344.2323303222656 202.1896209716797,344.2323303222656 124.97923278808594,210.5 202.1896209716797,76.76766967773438 356.61041259765625,76.76766967773438 433.8207702636719,210.5 " strokeWidth="5" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" cy="210" cx="279.399994">
+			
+			
+			  
+			  <animateTransform attributeType="xml"
+			                    attributeName="transform"
+			                    type="rotate"
+			                    from="0 279.399994 210"
+			                    to="360 279.399994 210"
+			                    dur="40s"
+			                    repeatCount="indefinite"/>
+			 </polygon>
+			  <polygon fill-opacity="0" stroke-width="5" stroke="#0dd1d7" points="433.820775457056,210 356.6103846767702,343.7323197037026 202.1896031161986,343.7323197037026 124.97921233591276,210.00000000000003 202.1896031161985,76.26768029629739 356.6103846767702,76.26768029629739 433.820775457056,210 " strokeWidth="5" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" id="svg_1" cy="210" cx="279.399994">
+			  <animateTransform 
+			                    attributeName="transform"
+			                    type="rotate"
+			                    from="0 279.399994 210"
+			                    to="-360 279.399994 210"
+			                    dur="40s"
+			                    repeatCount="indefinite"/>
+			  </polygon>
+			  <text id=tit x="200" y="240" fill="#fff"  style="font:50px 微軟正黑體;font-weight: bold;">照片牆
+				  
+			  </text>
+			 
+			 </g>
+		</svg>
+			<div class="h2 col-md-12 col-sm-12">美麗星空照 歡迎分享</div>
+			<div class="pic" id="inline-upload">
+				<a class="btn-lg btn-blue1" href="#test-upload" data-effect="mfp-move-from-top">照片上傳</a>
+			</div>
+			
+			
+		<div class="clear"></div>
+	</div>
+	<!-- 標籤 -->
+	<div class="p-tabsearch">
+		<div class="container">
+			<div class="p-tab col-xs-12 col-sm-6 col-md-6">
+				<a href="#">最新照片</a>
+				<a href="#">熱門照片</a>
+				<a href="#">熱門標籤</a>
+			</div>
+			<div class="p-search col-xs-12 col-sm-6 col-md-6">
+				<div class="input col-xs-12">
+					<i class="fa fa-search fa-5x" aria-hidden="true"></i>
+					<input type="text" name="search" placeholder="找星空 搜尋一下" maxlength="15" size="15">
+				</div>
+			</div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<!-- 內文 -->
+	<!-- <div id="inline-popups">
+		<a href="#test-popup" data-effect="mfp-3d-unfold">3d unfold</a>
+	</div>	 -->
+	
+	<div class="p-content ">
+
+			<div class="container">
+			<div class="item col-xs-12 col-sm-6 col-md-4">
+				<div class="box">
+					<div class="pic" id="inline-popups">
+						<a  href="#test-in-content" data-effect="mfp-3d-unfold" >
+						<img  src="img/p_p_001.png">
+						</a>
+					</div>
+				<div class="user">
+					<img src="img/p_people.jpg">
+					<p>Allie213</p>
+				</div>
+				<div class="content">
+					<p>等待流星飛過</p>
+				</div>
+				<div class="tab">
+					<a href="#">#流星</a>
+					<a href="#">#大吉嶺</a>
+				</div>
+				<div class="view">
+					<p><i class="fa fa-eye" aria-hidden="true"></i>150 views</p>
+					<div class="icon">
+					<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					<i class="fa fa-heart-o" aria-hidden="true"></i>
+					<i class="fa fa-share" aria-hidden="true"></i>
+					</div>
+				</div>
+				
+				</div>
+			</div>
+			<div class="item col-xs-12 col-sm-6 col-md-4">
+				<div class="box">
+				<div class="pic">
+					<img src="img/p_p_002.png">
+				</div>
+				<div class="user">
+					<img src="img/p_people.jpg">
+					<p>Allie213</p>
+				</div>
+				<div class="content">
+					<p>等待流星飛過</p>
+				</div>
+				<div class="tab">
+					<a href="#">#流星</a>
+					<a href="#">#大吉嶺</a>
+				</div>
+				<div class="view">
+					<p><i class="fa fa-eye" aria-hidden="true"></i>150 views</p>
+					<div class="icon">
+					<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					<i class="fa fa-heart-o" aria-hidden="true"></i>
+					<i class="fa fa-share" aria-hidden="true"></i>
+					</div>
+				</div>
+				
+				</div>
+			</div>
+			<div class="item col-xs-12 col-sm-6 col-md-4">
+				<div class="box">
+				<div class="pic">
+					<img src="img/p_p_003.png">
+				</div>
+				<div class="user">
+					<img src="img/p_people.jpg">
+					<p>Allie213</p>
+				</div>
+				<div class="content">
+					<p>等待流星飛過</p>
+				</div>
+				<div class="tab">
+					<a href="#">#流星</a>
+					<a href="#">#大吉嶺</a>
+				</div>
+				<div class="view">
+					<p><i class="fa fa-eye" aria-hidden="true"></i>150 views</p>
+					<div class="icon">
+					<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					<i class="fa fa-heart-o" aria-hidden="true"></i>
+					<i class="fa fa-share" aria-hidden="true"></i>
+					</div>
+				</div>
+				
+				</div>
+			</div>
+			<div class="item col-xs-12 col-sm-6 col-md-4">
+				<div class="box">
+				<div class="pic">
+					<img src="img/p_p_004.png">
+				</div>
+				<div class="user">
+					<img src="img/p_people.jpg">
+					<p>Allie213</p>
+				</div>
+				<div class="content">
+					<p>等待流星飛過</p>
+				</div>
+				<div class="tab">
+					<a href="#">#流星</a>
+					<a href="#">#大吉嶺</a>
+				</div>
+				<div class="view">
+					<p><i class="fa fa-eye" aria-hidden="true"></i>150 views</p>
+					<div class="icon">
+					<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					<i class="fa fa-heart-o" aria-hidden="true"></i>
+					<i class="fa fa-share" aria-hidden="true"></i>
+					</div>
+				</div>
+				
+				</div>
+			</div>
+			<div class="item col-xs-12 col-sm-6 col-md-4">
+				<div class="box">
+				<div class="pic">
+					<img src="img/p_p_005.png">
+				</div>
+				<div class="user">
+					<img src="img/p_people.jpg">
+					<p>Allie213</p>
+				</div>
+				<div class="content">
+					<p>等待流星飛過</p>
+				</div>
+				<div class="tab">
+					<a href="#">#流星</a>
+					<a href="#">#大吉嶺</a>
+				</div>
+				<div class="view">
+					<p><i class="fa fa-eye" aria-hidden="true"></i>150 views</p>
+					<div class="icon">
+					<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					<i class="fa fa-heart-o" aria-hidden="true"></i>
+					<i class="fa fa-share" aria-hidden="true"></i>
+					</div>
+				</div>
+				
+				</div>
+			</div>
+			<div class="item col-xs-12 col-sm-6 col-md-4">
+				<div class="box">
+				<div class="pic">
+					<img src="img/p_p_006.png">
+				</div>
+				<div class="user">
+					<img src="img/p_people.jpg">
+					<p>Allie213</p>
+				</div>
+				<div class="content">
+					<p>等待流星飛過</p>
+				</div>
+				<div class="tab">
+					<a href="#">#流星</a>
+					<a href="#">#大吉嶺</a>
+				</div>
+				<div class="view">
+					<p><i class="fa fa-eye" aria-hidden="true"></i>150 views</p>
+					<div class="icon">
+					<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					<i class="fa fa-heart-o" aria-hidden="true"></i>
+					<i class="fa fa-share" aria-hidden="true"></i>
+					</div>
+				</div>
+					
+				</div>
+			</div>
+				<div class="btnbox col-xs-12 col-sm-12 col-md-12">
+				<div class="btn-lg btn-blue">
+					<a href="#">載入更多</a>
+				</div>
+				</div>
+			</div>
+		<div class="clear"></div>
+	</div>
+	<!-- 相片內頁 -->
+	<div class="p-inside white-p-inside mfp-with-anim mfp-hide" id="test-in-content" >
+		<!-- 照片 -->
+		<div class="p-in-pic ">
+			<div class="container ">
+			<div class="row">
+				<img src="img/p_bigpic_001.jpg">
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!-- 內文 -->
+		<div class="p-in-content ">
+			<div class="container">
+				<div class="row">
+				<div class="left col-xs-6 col-sm-6 col-md-6">
+					<div class="user">
+						<img src="img/p_people.jpg">
+						<h5>Allie213</h5>
+					</div>
+					<div class="content">
+						<h3>gone with the wind</h3>
+						<p>no sense. the image simply poped up in my mind.so not sooc. but most of the books are real. one more + behind the scene!Biggest thankyou to you, lovely, talented Kiara for the testimonial :) I was shocked out of joy when I saw it.tumblr or facebook or portfolio</p>
+					</div>
+					<div class="message col-xs-12 col-sm-12 col-md-12">
+						<div class="ms-user">
+							<img src="img/p_people2.jpg">
+							
+						</div>
+						<div class="ms-content">
+							<h5>supermanatee </h5>
+							<h6>一個月</h6>
+							<p>Beautiful gallery</p>
+						</div>
+					</div>
+					<div class="message col-xs-12 col-sm-12 col-md-12">
+						<div class="ms-user">
+							<img src="img/p_people3.jpg">
+							
+						</div>
+						<div class="ms-content">
+							<h5>Anthony Thomas </h5>
+							<h6>一個月</h6>
+							<p>Wow great capture, very nice picture!</p>
+						</div>
+					</div>
+					<div class="message col-xs-12 col-sm-12 col-md-12">
+						<div class="ms-user">
+							<img src="img/p_people4.jpg">
+							
+						</div>
+						<div class="ms-content">
+							<h5>yupicard</h5>
+							<h6>一個月</h6>
+							<p>Wonderful image!</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="right col-xs-6 col-sm-6 col-md-6">
+					<div class="r-left col-xs-6 col-sm-6 col-md-6">
+						<div class="adress">
+							<h2>Location</h2>
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+							<h5>Biarritz France January 20, 2017</h5>
+						</div>
+						<div class="tag">
+							<h2>Tag</h2>
+							<p><a href="#">#武嶺觀星團</a></p>
+						</div>
+					</div>
+					<div class="r-right col-xs-6 col-sm-6 col-md-6">
+						<div class="icon">
+							<i class="fa fa-heart-o" aria-hidden="true"></i>
+							<i class="fa fa-share" aria-hidden="true"></i>
+						</div>
+						<div class="number">
+							<h5>10000 like<i class="fa fa-heart-o" aria-hidden="true"></i></h5>
+							<h5>100000 views<i class="fa fa-eye" aria-hidden="true"></i></h5>
+						</div>
+					</div>
+					<div class="recommend col-xs-12 col-sm-12 col-md-12">
+						<h2>Recommend</h2>
+						<div class="item"><img src="img/p_p_001.png"></div>
+						<div class="item"><img src="img/p_p_002.png"></div>
+						<div class="item"><img src="img/p_p_003.png"></div>
+						<div class="item"><img src="img/p_p_004.png"></div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- 上傳頁面 -->
+	<div class="upload col-xs-12 col-sm-12 col-md-12 white-upload mfp-with-anim mfp-hide" id="test-upload">
+
+		<div class="container ">
+		
+			<div class="title">
+				<h1>上傳照片</h1>
+			</div>
+			<div class="table">
+			<table >
+				<tr>
+					<th id="tit">照片名稱</th>
+					<th id="box"><input type="text" name="photoname" maxlength="15" size="20"></th>
+				</tr>
+				<tr>
+					<th id="tit">照片地點</th>
+					<th id="box"><input type="text" name="photoname" maxlength="15" size="20"></th>
+				</tr>
+				<tr>
+					<th id="tit">照片標籤</th>
+					<th id="box"><input type="text" name="photoname" placeholder="#武嶺觀星團 #南十字星" maxlength="30" size="40"></th>
+				</tr>
+				<tr>
+					<th id="tit">照片描述</th>
+					<th id="box"><textarea name="Content" ></textarea>
+				</tr>
+				<tr>
+					<th id="tit">照片上傳</th>
+					<th id="box"><input Type="File" Name="YouFile">
+						<div class="btn btn-blue"><a href="#">上傳</a></div>
+					</th>
+				</tr>
+			</table>
+			</div>
+			<div class="check"><div class="btn-lg btn-blue"><a href="#">確認送出</a></div></div>
+		</div>
+	</div>
+</body>
+
+</html>
