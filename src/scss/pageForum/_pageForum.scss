@@ -19,14 +19,17 @@ html, body{
 
 
 	.f_section{
-		height: 100vh;
+		// height: 100vh;
 		width: 100%;
+		// background-color: #333;
 	}
 
 	#f_section1{
 			color: $white;
+			height: 100vh;
+			// background-color: #333;
 			// background: linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%); 
-			background-image: url(../img/forum/f_001.jpg);
+			// background-image: url(../img/forum/f_001.jpg);
 			background-repeat: no-repeat;
 			-webkit-background-size: cover;
 			background-size: cover;
@@ -34,14 +37,14 @@ html, body{
 			text-align: center;
 
 
-		&:before{
-			content: '';
-			display: inline-block;
-			height: 100%;
-			width: 0px;
-			background-color: #fff;
-			vertical-align: middle;
-		}
+		// &:before{
+		// 	content: '';
+		// 	display: inline-block;
+		// 	height: 100%;
+		// 	width: 5px;
+		// 	background-color: #fff;
+		// 	vertical-align: middle;
+		// }
 		// @keyframes titleshow{
 		// 	0% {opacity: 0.2;}
 		// 	50%{opacity: 0.5;}
@@ -50,17 +53,24 @@ html, body{
 		// }
 		.f_title{
 			width: 30%;
-			// height: 50%;
+			height: 10%;
 			text-align: center;
 			display: inline-block;
 			vertical-align: middle;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
 			// opacity: 0;
 			// transform:Scale(0.1);
 			// animation: titleshow 1s all;
+			// outline: 1px solid red;
 			
 			h1{
 				font-size: $fz-h1;
-				text-shadow:1px 1px 5px #000;
+				text-shadow:1px 10px 10px #000;
 			}
 		}
 
@@ -75,7 +85,7 @@ html, body{
 			margin:auto;
 
 			h3{
-				font-size: $fz-h3;
+				font-size: $fz-h4;
 				color: rgba(255,255,255,0.7);
 				margin-bottom: 10px;
 				text-shadow:1px 1px 2px #333;
@@ -86,7 +96,7 @@ html, body{
 				margin-top: 30px;
 				font-weight: 300;
 				animation:  m_float .8s linear 0s infinite alternate;
-				opacity: 0.6;
+				// opacity: 0.8;
 
 			}
 
@@ -96,7 +106,10 @@ html, body{
 
 	//forum content start
 	#f_section2{
-		height: 100vh;
+		// height: 100vh;
+		// background-color: #333;
+		// background-image: url(../img/forum/f_001.jpg);
+
 
 		#f_tab{
 			width: 45%;
@@ -154,12 +167,13 @@ html, body{
 		.f_posts{
 				// display: inline-block;
 				width: 90%;
-				height: 100%;
+				// height: 100%;
 				// background-color: rgba(255,255,255,0.5);
 				box-shadow: -1px -1px 2px #333 inset;
 				box-shadow: 1px -1px 5px #333 inset;
-				animation:  m_float 3s linear 0s infinite alternate;
+				// animation:  m_float 3s linear 0s infinite alternate;
 				margin: auto;
+
 
 				table{
 					width: 100%;
