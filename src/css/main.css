@@ -2024,13 +2024,20 @@ footer {
 
 #a-body input {
   border: none;
-  background-color: rgba(255, 255, 255, 0.5); }
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 30px;
+  padding-left: 28px;
+  z-index: 100; }
 
 #a-body a {
   text-decoration: none !important; }
 
 #a-body * {
   outline: none; }
+
+.a-relative {
+  height: 100%;
+  position: relative; }
 
 .a-pReset {
   padding: 0; }
@@ -2075,6 +2082,7 @@ footer {
     font-size: 32px; }
 
 .a-searchInput {
+  display: inline-block;
   position: relative; }
   .a-searchInput i {
     width: 20px;
@@ -2396,7 +2404,7 @@ footer {
 
 @media screen and (min-width: 1280px) {
   .a-searchInput {
-    width: 100%; }
+    width: 425px; }
   .a-panel-item input {
     width: 200px; }
   .a-panel-control {
@@ -2753,6 +2761,124 @@ footer {
   opacity: 0; }
 
 /* preview styles */
+.a-add-put {
+  width: 100%;
+  height: 90%;
+  border-radius: 20px;
+  background-color: rgba(100, 100, 100, 0.5); }
+
+.a-add-container {
+  width: 80%;
+  height: 90%; }
+
+.selected {
+  position: relative; }
+
+.calendar-dark {
+  margin: 80px 0px 0px 20px; }
+
+#a-pReset {
+  padding: 0 !important; }
+
+.a-add-item {
+  left: 0;
+  top: 0; }
+  .a-add-item:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .a-add-item textarea {
+    background-color: rgba(100, 100, 100, 0.5);
+    display: block;
+    width: 90%;
+    height: 300px; }
+  .a-add-item .a-add-drag {
+    background-color: rgba(100, 100, 100, 0.5);
+    width: 100%;
+    height: 300px; }
+
+.cd-horizontal-timeline {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10; }
+  .cd-horizontal-timeline .a-add-svg {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.2); }
+  .cd-horizontal-timeline .a-add-img {
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    border-radius: 50%; }
+
+.a-add-form {
+  margin: 20px 0; }
+
+.a-add-class {
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center; }
+
+.googleMap.a-mL {
+  height: 100vh; }
+
+.a-add-map {
+  margin-top: 10px; }
+  .a-add-map .calendar-dark {
+    width: 320px; }
+  .a-add-map #pac-input {
+    margin: 0; }
+  .a-add-map i {
+    top: 5px; }
+
+.a-add-mapControl {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(69, 93, 109, 0.5); }
+
+.events-content ol {
+  height: 100%; }
+  .events-content ol li {
+    height: 100%; }
+    .events-content ol li .a-add-item {
+      position: relative;
+      top: 5%;
+      height: 90%; }
+      .events-content ol li .a-add-item .row {
+        height: 100%; }
+        .events-content ol li .a-add-item .row .col-md-12 {
+          height: 100%; }
+
+.a-add-date {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .a-add-date .a-text {
+    font-size: 40px;
+    margin-bottom: 50px; }
+  .a-add-date .a-add-content {
+    line-height: 2;
+    font-size: 24px; }
+
 .btn-blue:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: #4f9cdd;

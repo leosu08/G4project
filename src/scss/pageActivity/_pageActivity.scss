@@ -27,6 +27,9 @@
 	input{
 		border:none;
 		background-color: rgba(255,255,255,0.5);
+		height: 30px;
+		padding-left:28px;
+		z-index: 100;
 	}
 	a{
 		text-decoration:none !important;
@@ -39,6 +42,10 @@
 		outline: none;
 	}
 }//body END
+.a-relative{
+	height: 100%;
+	position: relative;
+}
 .a-pReset{
 	padding: 0;
 }
@@ -86,6 +93,7 @@
 	}
 }
 .a-searchInput{
+	display: inline-block;
 	position: relative;
 	// width: 320px;
 	// margin: auto;
@@ -558,4 +566,5 @@
 @import "pageBranch/lg";
 @import "pageBranch/pageRecommend";
 @import "pageMain/maginic";
+@import "pageBranch/addACT";
 // @import "../layout/nav";
