@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Examples</title>
+<title>Activi</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link href="" rel="stylesheet">
@@ -27,11 +27,12 @@
 	<link rel="stylesheet" type="text/css" href="libs/pg-calendar/src/css/pignose.calendar.css" />
 <link type="text/css" href="libs/pg-calendar/dist/pignose.calendar.min.css">
 
+<!-- calendar -->
 <script type="text/javascript" src="libs/pg-calendar/demo/js/jquery.latest.min.js"></script>
 	<script type="text/javascript" src="libs/pg-calendar/demo/js/semantic.ui.min.js"></script>
 	<script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script>
 	<script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script>
-<script src="libs/pg-calendar/src/js/pignose.calendar.js"></script>
+	<script src="libs/pg-calendar/src/js/pignose.calendar.js"></script>
 
 
 <style type="text/css" media="screen">
@@ -40,7 +41,7 @@
 		  width: 100%;
 		  height: 100%;
 
-		  background: #11e8bb; /* Old browsers */
+		  background: ; /* Old browsers */
 		  background: -moz-radial-gradient(ellipse at center, #243D54 0%, rgb(29, 34, 60) 30%, #585858 50%); /* FF3.6-15 */
 		  background: -webkit-radial-gradient(ellipse at center, #243D54 0%, rgb(29, 34, 60) 30%, #585858 50%); /* Chrome10-25,Safari5.1-6 */
 		  background: radial-gradient(ellipse at center, #243D54 0%, rgb(29, 34, 60) 30%, #585858 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -117,28 +118,34 @@
 			<li><a href="#0" class="prev inactive">Prev</a></li>
 			<li><a href="#0" class="next">Next</a></li>
 		</ul>  -->
+
 	</div> <!-- .timeline -->
- 
+
 	<div class="events-content">
+		
 		<ol>
 			<li class="selected" data-date="16/01/2014">
 				<div class="a-add-item a-add-container" id="a-add-height">
-					<div class="row a-relative">
+				<div class="a-add-title">
+					<span>填寫活動名稱與位置</span>
+				</div>
+							<div class="row a-relative">
 						<div class="a-add-mapControl">
 							<div class="a-add-map">
 								<div class="a-text">	
 										填寫名稱
 								</div>
 								<input type="text" name="" value="" placeholder="輸入活動名稱">
-								
+								<i class="fa fa-check-circle" aria-hidden="true"></i>
 							
-								<div class="a-text">	
+								<div class="a-text a-pLeft-50" >	
 									填寫位置
 								</div>
 								<div class="a-searchInput">
 													<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
 													<input id="pac-input" class="controls" type="text" placeholder="輸入地址">
 												</div>
+								<i class="fa fa-check-circle" aria-hidden="true"></i>
 								<!-- <div class="calendar-dark"></div> -->
 							</div>
 							
@@ -171,6 +178,9 @@
 			<li id="a-pRset" data-date="28/02/2014">
 				<!-- event description here -->
 				<div class="a-add-item a-add-container">
+				<div class="a-add-title">
+					<span>選擇日期</span>
+				</div>
 					<!-- <h4>選擇日期</h4> -->
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-6">
@@ -193,32 +203,49 @@
 			<li data-date="05/04/2014">
 				<!-- event description here -->
 				<div class="a-add-item a-add-container">
+				<div class="a-add-title">
+					<span>選擇類型</span>
+				</div>
 					<h4>選擇類型</h4>
 
-					<div class="col-xs-12 col-sm-3 col-md-3">
-						<div class="a-add-class">
-							<img src="img/a_add_001.svg" alt="" class="a-add-svg">天文攝影
-							<img src="img/a_009.jpg" alt="" class="a-add-img">
+					<div class="col-xs-12 col-sm-3 col-md-3 a-relative">
+							<div class="a-add-class" id="a-add-q1">
+								<div class="a-add-cimg a-add-i1"></div>
+
+								<!-- <img src="img/a_add_001.svg" alt="" class="a-add-svg"> -->
+								<div class="a-add-cTitle">天文攝影</div>
+								<!-- <img src="img/a_009.jpg" alt="" class="a-add-img"> -->
+							</div>
+							<div class="a-add-class" id="a-add-q2">
+								<div class="a-add-cimg a-add-i2"></div>
+								<!-- <img src="img/a_add_002.svg" alt="" class="a-add-svg"> -->
+								<div class="a-add-cTitle">天文觀測</div>
+								<!-- <img src="img/a_011.jpg" alt="" class="a-add-img"> -->
+							</div>
 						</div>
-						<div class="a-add-class">
-							<img src="img/a_add_002.svg" alt="" class="a-add-svg">天文觀測
-							<img src="img/a_011.jpg" alt="" class="a-add-img">
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-3 col-md-3">
-						<div class="a-add-class">
-							<img src="img/a_add_003.svg" alt="" class="a-add-svg">親子觀星
-							<img src="img/a_012.jpg" alt="" class="a-add-img">
-						</div>
-						<div class="a-add-class">
-							<img src="img/a_add_004.svg" alt="" class="a-add-svg">休閒聯誼
-							<img src="img/a_013.jpg" alt="" class="a-add-img">
-						</div>
-					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3 a-relative">
+							<div class="a-add-class" id="a-add-q3">
+								<div class="a-add-cimg a-add-i3"></div>
+								<!-- <img src="img/a_add_003.svg" alt="" class="a-add-svg"> -->
+								<div class="a-add-cTitle">親子觀星</div>
+								<!-- <img src="img/a_012.jpg" alt="" class="a-add-img"> -->
+							</div>
+							<div class="a-add-class" id="a-add-q4">
+								<div class="a-add-cimg a-add-i4"></div>
+								<!-- <img src="img/a_add_004.svg" alt="" class="a-add-svg"> -->
+								<div class="a-add-cTitle">休閒聯誼</div>
+								<!-- <img src="img/a_013.jpg" alt="" class="a-add-img"> -->
+
+							</div>
 					
+						</div>
 					<div class="col-xs-12 col-sm-6 col-md-6 a-relative">
 						<div class="a-add-put">
-							
+							<div class="a-add-put-p1 a-add-p"></div>
+							<div class="a-add-put-p2 a-add-p"></div>
+							<div class="a-add-put-p3 a-add-p"></div>
+							<div class="a-add-put-p4 a-add-p"></div>
+
 						</div>
 					</div>
 					
@@ -232,12 +259,18 @@
 				<!-- event description here -->
 
 			<div class="a-add-item a-add-container">
+			<div class="a-add-title">
+					<span>填寫活動簡介</span>
+				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12">
 					<div class="col-xs-12 col-sm-6 col-md-6 a-add-form">
 						<div class="a-text">	
 									費用
 						</div>
 						<input type="text" name="" value="" placeholder="">
+						
+					</div>
+																	
 						<div class="a-text">	
 									
 						</div>

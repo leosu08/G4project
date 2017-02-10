@@ -12,7 +12,7 @@
 	<!-- maginic -->
 	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
      <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-     <!-- <link rel="stylesheet" type="text/css" href="css/magnific.css"> -->
+     
      <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
      <script type="text/javascript" src="js/magnific.js"></script>
 	
@@ -35,7 +35,21 @@
 	<!-- <script type="text/javascript" src="js/plugins.js"></script> -->
 	<!-- <script type="text/javascript" src="js/sly.js"></script> -->
 	<!-- <script type="text/javascript" src="js/a_slider.js"></script> -->
+	
+	<!-- calendar -->
+	<link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/semantic.ui.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/prism.css" />
+	<link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/calendar-style.css" />
+	<link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="libs/pg-calendar/src/css/pignose.calendar.css" />
+	<link type="text/css" href="libs/pg-calendar/dist/pignose.calendar.min.css">
 
+	
+	<script type="text/javascript" src="libs/pg-calendar/demo/js/semantic.ui.min.js"></script>
+	<script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script>
+	<script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script>
+	<script src="libs/pg-calendar/src/js/pignose.calendar.js"></script>
+	<script src="js/jquery.mobile.custom.min.js"></script>
 
 	<script type="text/javascript">
         $(document).ready(function() {
@@ -260,15 +274,33 @@
 // if($(document).scroll()>top){
 // 	$.fn.fullpage.setAllowScrolling(false);
 // }
+
 $(function(){
-
+	$('#multiple').hide();
+	// $(document).click(function(){
+	// 	$('#multiple').hide();
+	// })
+	
+	
+	
+	$('#a-date-control').focus(function(){
+		$('#multiple').show().css({
+			'position':'absolute',
+			'top':'30px',
+			'left':0,
+			'width':'320px',
+			'height':'320px',
+			'z-index':20
+		});
+	})
 })
-
 // $.fn.fullpage.setAllowScrolling(false, 'down');
 // 	$('#a-oldSlider').fullpage({
 //     scrollOverflow: true
 // });
+
 </script>
+
 </head>
 
 <body id="a-body">
@@ -378,9 +410,25 @@ $(function(){
 											</div>
 												<p class="a-text">活動日期</p>
 												<div class="a-panel-date">
-													<input type="date" name="" value="" placeholder="">
+												<div id="wrapper">
+													 <input type="text" id="a-date-control" />
+														<div id="multiple">
+											            <div class="calendar-dark"></div>
+														<div class="box" id="a-catch"></div>
+														<ul class="ui top pointing secondary menu">
+															<a href="#" role="presentation" class="item active" data-tab="html-multiple">HTML</a>
+															<a href="#" role="presentation" class="item" data-tab="javascript-multiple">Javascript</a>
+														</ul>
+														<div role="tabpanel" class="ui tab segment active" data-tab="html-multiple">
+														</div>
+														<div role="tabpanel" class="ui tab segment" data-tab="javascript-multiple">
+															
+														</div>
+													</div>			
+													</div>
+													<!-- <input type="date" name="" value="" placeholder="">
 													<p class="a-text">到</p>
-													<input type="date" name="" value="" placeholder="">
+													<input type="date" name="" value="" placeholder=""> -->
 												</div>
 											
 											<div class="a-panel-item">
@@ -719,3 +767,180 @@ $(function(){
 </body>
 
 </html>
+
+
+<script type="text/javascript">
+	$(function() {
+		$('#wrapper .version strong').text('v' + pignoseCalendar.VERSION);
+		function onClickHandler(date, obj) {
+			/**
+			 * @date is an array which be included dates(clicked date at first index)
+			 * @obj is an object which stored calendar interal data.
+			 * @obj.calendar is an element reference.
+			 * @obj.storage.activeDates is all toggled data, If you use toggle type calendar.
+			 */
+
+			var $calendar = obj.calendar;
+			var $box = $calendar.parent().siblings('.box').show();
+			text = '';
+
+			if(date[0] !== null) {
+				text += date[0].format('YYYY-MM-DD');
+			}
+
+			if(date[0] !== null && date[1] !== null) {
+				text += '~';
+			} else if(date[0] === null && date[1] == null) {
+				text += 'nothing';
+			}
+
+			if(date[1] !== null) {
+				text += date[1].format('YYYY-MM-DD');
+			}
+
+			$box.text(text);
+			console.log(text);
+			$('#a-date-control').val(text);
+		}
+
+		// Default Calendar
+		$('.calendar').pignoseCalendar({
+			select: onClickHandler
+		});
+
+		// Input Calendar
+		$('.input-calendar').pignoseCalendar({
+			buttons: true, // It means you can give bottom button controller to the modal which be opened when you click.
+		});
+
+		// Calendar modal
+		var $btn = $('.btn-calendar').pignoseCalendar({
+			modal: true, // It means modal will be showed when you click the target button.
+			buttons: true,
+			apply: function(date) {
+				$btn.next().show().text('You applied date ' + date + '.');
+			}
+		});
+
+		// Color theme type Calendar
+		$('.calendar-dark').pignoseCalendar({
+			theme: 'dark', // light, dark
+			select: onClickHandler,
+			lang: 'ch',
+			multiple: true,
+			select: function(dates, obj) {
+			console.log('toggle active dates', obj.storage.activeDates);
+			},
+			select: onClickHandler	
+		});
+
+		// Multiple picker type Calendar
+		$('.multi-select-calendar').pignoseCalendar({
+			multiple: true,
+			select: onClickHandler
+		});
+
+		// Toggle type Calendar
+		$('.toggle-calendar').pignoseCalendar({
+			toggle: true,
+			select: function(date, obj) {
+				var $target = obj.calendar.parent().next().show().html('You selected ' + 
+				(date[0] === null? 'null':date[0].format('YYYY-MM-DD')) + 
+				'.' +
+				'<br /><br />' +
+				'<strong>Active dates</strong><br /><br />' +
+				'<div class="active-dates"></div>');
+
+				for(var idx in obj.storage.activeDates) {
+					var date = obj.storage.activeDates[idx];
+					if(typeof date !== 'string') {
+						continue;
+					}
+					$target.find('.active-dates').append('<span class="ui label default">' + date + '</span>');
+				}
+			}
+		});
+
+		// Disabled date settings.
+		!(function() {
+			// IIFE Closure
+			var times = 30;
+			var disabledDates = [];
+			for(var i=0; i<times; /* Do not increase index */) {
+				var year = moment().year();
+				var month = 0;
+				var day = parseInt(Math.random() * 364 + 1);
+				var date = moment().year(year).month(month).date(day).format('YYYY-MM-DD');
+				if($.inArray(date, disabledDates) === -1) {
+					disabledDates.push(date);
+					i++;
+				}
+			}
+
+			disabledDates.sort();
+
+			var $dates = $('.disabled-dates-calendar').siblings('.guide').find('.guide-dates');
+			for (var idx in disabledDates) {
+				$dates.append('<span>' + disabledDates[idx] + '</span>');
+			}
+
+			$('.disabled-dates-calendar').pignoseCalendar({
+				select: onClickHandler,
+				disabledDates: disabledDates
+			});
+		} ());
+
+		// Disabled Weekdays Calendar.
+		$('.disabled-weekdays-calendar').pignoseCalendar({
+			select: onClickHandler,
+			disabledWeekdays: [0, 6]
+		});
+
+		// Disabled Range Calendar.
+		var minDate = moment().set('dates', Math.min(moment().day(), 2 + 1)).format('YYYY-MM-DD');
+		var maxDate = moment().set('dates', Math.max(moment().day(), 24 + 1)).format('YYYY-MM-DD');
+		$('.disabled-range-calendar').pignoseCalendar({
+			select: onClickHandler,
+			minDate: minDate,
+			maxDate: maxDate
+		});
+
+		// Multiple Week Select
+		$('.pick-weeks-calendar').pignoseCalendar({
+			pickWeeks: true,
+			multiple: true,
+			select: onClickHandler
+		});
+
+		// Disabled Ranges Calendar.
+		$('.disabled-ranges-calendar').pignoseCalendar({
+			select: onClickHandler,
+			disabledRanges: [
+				['2016-10-05', '2016-10-21'],
+				['2016-11-01', '2016-11-07'],
+				['2016-11-19', '2016-11-21'],
+				['2016-12-05', '2016-12-08'],
+				['2016-12-17', '2016-12-18'],
+				['2016-12-29', '2016-12-30'],
+				['2017-01-10', '2017-01-20'],
+				['2017-02-10', '2017-04-11'],
+				['2017-07-04', '2017-07-09'],
+				['2017-12-01', '2017-12-25'],
+				['2018-02-10', '2018-02-26'],
+				['2018-05-10', '2018-09-17'],
+			]
+		});
+
+		// I18N Calendar
+		$('.language-calendar').each(function() {
+			var $this = $(this);
+			var lang = $this.data('lang');
+			$this.pignoseCalendar({
+				lang: lang
+			});
+		});
+
+		// This use for DEMO page tab component.
+		$('.menu .item').tab();
+	});
+</script>
