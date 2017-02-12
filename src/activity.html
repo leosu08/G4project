@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ZeroGravity</title>
@@ -53,11 +54,7 @@
 
 	<script type="text/javascript">
         $(document).ready(function() {
-            $('#fullpage').fullpage({
-                verticalCentered: true,
-                anchors: ['anchor1', 'anchor2', 'anchor3'],
-                menu: '#menu'
-            });
+            
         });
     </script>
 	<style>
@@ -292,7 +289,24 @@ $(function(){
 			'height':'320px',
 			'z-index':20
 		});
-	})
+	});
+
+	// $('#multiple').not('#multiple').children().click(function(){
+	// 		console.log('hide');
+	// 		$('#multiple').hide();
+	// 	});
+
+	$('body').click(function(evt) {
+			console.log($(evt.target).parents("#multiple").length);
+            if($(evt.target).parents("#multiple").length==0 && 
+                evt.target.id != "a-date-control" && evt.target.class != "calendar-dark") {
+                $('#multiple').hide();
+
+            }
+        });
+		// $('#a-date-control').click(function(){
+		// 	$('.calendar-dark').show();
+		// });
 })
 // $.fn.fullpage.setAllowScrolling(false, 'down');
 // 	$('#a-oldSlider').fullpage({
@@ -412,18 +426,9 @@ $(function(){
 												<div class="a-panel-date">
 												<div id="wrapper">
 													 <input type="text" id="a-date-control" />
-														<div id="multiple">
+													<div id="multiple">
 											            <div class="calendar-dark"></div>
-														<div class="box" id="a-catch"></div>
-														<ul class="ui top pointing secondary menu">
-															<a href="#" role="presentation" class="item active" data-tab="html-multiple">HTML</a>
-															<a href="#" role="presentation" class="item" data-tab="javascript-multiple">Javascript</a>
-														</ul>
-														<div role="tabpanel" class="ui tab segment active" data-tab="html-multiple">
-														</div>
-														<div role="tabpanel" class="ui tab segment" data-tab="javascript-multiple">
-															
-														</div>
+														
 													</div>			
 													</div>
 													<!-- <input type="date" name="" value="" placeholder="">
@@ -454,7 +459,12 @@ $(function(){
 										</div>
 										
 										<!-- oldslider -->
-									<div id="a-oldSlider">
+									<div id="a-oldSlider" class="element2">
+										<a class="a-phone-control" href="activity_phone_map.html">
+											<div class="a-phone-btn btn-lg btn-blue" id="a-phone-mapBtn">
+												地圖搜尋
+											</div>
+										</a>
 										<div class="row scrollable-element" id="a-popups">
 											<div class="col-xs-12 col-sm-12 col-md-12">
 												<div class="a-tab">
@@ -474,11 +484,9 @@ $(function(){
 													<i  class="a-phone-input fa fa-globe a-phone-icon-2" aria-hidden="true"></i>
 													<input type="text" class="a-phone-input" placeholder="　　　依地點">
 											</div>
-											<a class="a-phone-control" href="activity_phone_map.html">
-											<div class="a-phone-btn btn-lg btn-blue" id="a-phone-mapBtn">
-												地圖搜尋
-											</div>
-										</a>
+										<div class="a-scrollArea">
+											
+										
 											<div class="col-xs-12 col-sm-12 col-md-12 a-pReset">
 												<div class="col-xs-12 col-sm-6 col-md-6 ">
 
@@ -530,6 +538,8 @@ $(function(){
 													</div></a>
 												</div>
 										</div>
+										</div><!-- scrollArea -->
+
 									</div>
 									
 									</div>
@@ -797,11 +807,12 @@ $(function(){
 			if(date[1] !== null) {
 				text += date[1].format('YYYY-MM-DD');
 			}
-
+			//操作區
 			$box.text(text);
 			console.log(text);
 			$('#a-date-control').val(text);
-		}
+		}//end
+
 
 		// Default Calendar
 		$('.calendar').pignoseCalendar({
@@ -833,7 +844,7 @@ $(function(){
 			},
 			select: onClickHandler	
 		});
-
+		
 		// Multiple picker type Calendar
 		$('.multi-select-calendar').pignoseCalendar({
 			multiple: true,
@@ -944,3 +955,94 @@ $(function(){
 		$('.menu .item').tab();
 	});
 </script>
+
+
+<script>
+	$(function(){
+		/*================================
+			fullpage
+	===================================*/
+	$('#turnOff').click(function(){
+		console.log("click");
+		$.fn.fullpage.setAllowScrolling(false);
+  		
+	})
+
+	$('#fullpage').fullpage({
+        //Navigation
+        menu: '#menu',
+        lockAnchors: false,
+        anchors:['firstPage', 'secondPage'],
+        navigation: false,
+        navigationPosition: 'right',
+        navigationTooltips: ['firstSlide', 'secondSlide'],
+        showActiveTooltip: false,
+        slidesNavigation: false,
+        slidesNavPosition: 'top',
+
+        //Scrolling
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        continuousHorizontal: false,
+        scrollHorizontally: false,
+        interlockedSlides: false,
+        dragAndMove: false,
+        offsetSections: false,
+        resetSliders: false,
+        fadingEffect: false,
+        normalScrollElements: '#element1, .element2',
+        scrollOverflow: true,
+        scrollOverflowReset: true,
+        scrollOverflowOptions: null,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 20,
+        bigSectionsDestination: top,
+
+        //Accessibility
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+
+        //Design
+        // controlArrows: true,
+        // verticalCentered: true,
+        // sectionsColor : ['#ccc', '#fff'],
+        // paddingTop: '3em',
+        // paddingBottom: '10px',
+        // fixedElements: '#header, .footer',
+        // responsiveWidth: 0,
+        // responsiveHeight: 0,
+        // responsiveSlides: false,
+
+        //Custom selectors
+        sectionSelector: '.section',
+        slideSelector: '.slide',
+
+        lazyLoading: true,
+
+        //events
+        onLeave: function(index, nextIndex, direction){
+        	// $.fn.fullpage.setAllowScrolling(false);
+        },
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterResponsive: function(isResponsive){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    });
+    //fullpageEnd
+	})
+
+</script>
+

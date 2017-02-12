@@ -1,5 +1,6 @@
 .pignose-calendar {
 	/*max-width: 360px;*/
+	max-height: 380px;
 	background-color: #ffffff;
 	border: 1px solid #d8d8d8;
 	font-size: 14px;
@@ -202,6 +203,7 @@
 
 .pignose-calendar.pignose-calendar-default .pignose-calendar-body .pignose-calendar-row .pignose-calendar-unit.pignose-calendar-unit-toggle-active a {
 	color: #cccccc;
+
 }
 
 .pignose-calendar.pignose-calendar-reverse .pignose-calendar-body .pignose-calendar-row .pignose-calendar-unit.pignose-calendar-unit-toggle-inactive a {

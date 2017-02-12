@@ -11,6 +11,7 @@ $('#inline-popups').magnificPopup({
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
 
+//活動頁
 $('#a-popups').magnificPopup({
   delegate: 'a',
   removalDelay: 1000, //delay removal by X to allow out-animation

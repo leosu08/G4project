@@ -189,7 +189,7 @@
 						<div class="col-xs-12 col-sm-6 col-md-6 a-relative">
 							<div class="a-add-date">
 								<div class="a-text">選擇的日期</div>
-								<div class="a-add-content">12月25日</div>
+								<div class="a-add-content" id="a-dateTime">12月25日</div>
 								<div class="a-add-content">晚上9:00</div>
 								<div class="clear"></div>
 							</div>
@@ -469,7 +469,7 @@ function animate() {
 
 			var $calendar = obj.calendar;
 			var $box = $calendar.parent().siblings('.box').show();
-			var text = 'You choose date ';
+			var text = '';
 
 			if(date[0] !== null) {
 				text += date[0].format('YYYY-MM-DD');
@@ -486,6 +486,8 @@ function animate() {
 			}
 
 			$box.text(text);
+			console.log(text);
+			$('#a-dateTime').text(text);
 		}
 
 		// Default Calendar
@@ -515,7 +517,9 @@ function animate() {
 			multiple: true,
 			select: function(dates, obj) {
 			console.log('toggle active dates', obj.storage.activeDates);
-			}	
+
+			},
+			select: onClickHandler		
 		});
 
 		// Multiple picker type Calendar

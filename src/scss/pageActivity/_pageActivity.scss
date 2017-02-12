@@ -132,9 +132,12 @@
         font-family: Roboto;
       }
 }
-.a-panel-date{
-	margin-top: 20px;
+// #a-panel-date{
+// 	margin-top: 20px;
 
+// }
+.a-date-control{
+	width: 200px
 }
 .a-panel{
 	overflow:hidden;
@@ -155,7 +158,7 @@
 
 
 	input{
-		width: 100px;
+		width: 230px;
 
 	}
 	.a-panel-item{
@@ -255,11 +258,12 @@
 .a-phone-control{
 
 	display: block;
-	// position: fixed;
-	// 		  bottom: 50px;
-	// 		  left: 0;
-	// 		  right: 0;
-	// 		  margin: auto;
+	position: fixed;
+			 	top:190%;
+			  left: 0;
+			  right: 0;
+			  margin: auto;
+			  z-index: 20;
 	text-align: center;
 	.a-phone-btn{
 		color:$white;
@@ -284,7 +288,7 @@
 	position: relative;
 	padding: 20px;
 	background-color: rgba(255,255,255,0.3);
-	height: 330px;
+	// height: 330px;
 	margin-top: 10px;
 	margin-bottom: 20px;
 	// background:url(../img/a_006.jpg);
@@ -549,10 +553,15 @@
 }
 #a-oldSlider{
 	// display: none;
-	overflow-y:scroll; 
+	// overflow-y:scroll; 
 	margin: 0 -10px;
 	height: 50%;
 	// width: 100%+10;
+}
+.a-scrollArea{
+	width: 100%;
+	height: 50vh;
+	overflow-y:scroll;
 }
 
 

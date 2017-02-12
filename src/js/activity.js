@@ -21,11 +21,9 @@ $(function(){
 		$('#a-phone-input_1').slideDown();
 		$('.fa-search').slideDown();
 	})
-	$('#turnOff').click(function(){
-		console.log("click");
-		$.fn.fullpage.setAllowScrolling(false);
-  		
-	})
+
+
+	
 
 	
 	// $('.a-add-put-p1').css('opacity','0');
