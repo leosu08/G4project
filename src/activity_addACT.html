@@ -33,7 +33,12 @@
 	<script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script>
 	<script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script>
 	<script src="libs/pg-calendar/src/js/pignose.calendar.js"></script>
+	
 
+	<!-- <link rel="stylesheet" type="text/css" href="css/wickedpicker.css">
+	<script type="text/javascript" src="js/wickedpicker.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.timepicker.css">
+	<script type="text/javascript" src="js/jquery.timepicker.js"></script>
 
 <style type="text/css" media="screen">
 
@@ -185,12 +190,14 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-6">
 							<div class="calendar-dark"></div>
+							<input type="text" id="a-timePicker" name="" value="" placeholder="">
+							<!-- <input type="text" class="timepicker"> -->
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-6 a-relative">
 							<div class="a-add-date">
 								<div class="a-text">選擇的日期</div>
 								<div class="a-add-content" id="a-dateTime">12月25日</div>
-								<div class="a-add-content">晚上9:00</div>
+								<div class="a-add-content" id="a-time">晚上9:00</div>
 								<div class="clear"></div>
 							</div>
 						</div>
@@ -630,5 +637,12 @@ function animate() {
 
 		// This use for DEMO page tab component.
 		$('.menu .item').tab();
+
+		$('#a-timePicker').timepicker({ 'timeFormat': 'h:i A' });
+		// $('#a-timePicker').timepicker('option', { useSelect: true });
+		$('#a-timePicker').val('09:00PM');
+		$('#a-timePicker').on('changeTime', function() {
+		    $('#a-time').text($(this).val());
+		});
 	});
 </script>
