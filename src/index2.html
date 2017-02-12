@@ -15,7 +15,7 @@
 </head>
 
 <body id="i-body">
-    <div id="info"></div>
+    <!-- <div id="info"></div> -->
     <canvas id="icanvas" width="100" height="400"></canvas>
     <div class="sideBarGroup">
         <div class="sideBar sideBar5" id="sideBar5"><span>星知識</span></div>
@@ -69,6 +69,8 @@
             <div class="ground">
                 <img src="img/index/bg-ground.png">
             </div>
+            <img id="cloud1" src="img/i-cloud.png" data-0="right:-300px;opacity:1;display:block" data-90p="right:-1000px;opacity:1;display:block" data-256p="right:-1000px;opacity:0;display:none">
+            <img id="cloud2" src="img/i-cloud.png" data-0="left:-900px;opacity:1;display:block" data-90p="left:-1100px;opacity:1;display:block" data-256p="left:-1100px;opacity:0;display:none">
         </section>
       <section class="section section02">
         <div id="part01" data-0="display:block"
@@ -77,8 +79,6 @@
                 <h1>觀星活動</h1>
                 <h4>多種有趣的活動任你挑</h4>
             </div>
-            <img id="cloud1" src="img/i-cloud.png" data-0="right:-300px;opacity:1" data-90p="right:-1000px;opacity:1" data-256p="right:-1000px;opacity:0">
-            <img id="cloud2" src="img/i-cloud.png" data-0="left:-900px;opacity:1" data-90p="left:-1100px;opacity:1" data-256p="left:-1100px;opacity:0">
             <div class="activity">
                 <div class="act act01" data-111p="transform:scale(0) translate3d(-10%,-730px,-350px);opacity:0;" data-129p="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-173p="transform:scale(0.8) translate3d(100px,0px,0);opacity:1" data-184p="transform:scale(0.8) translate3d(300px,330px,0);opacity:0">
                     <div class="pic">
@@ -138,8 +138,8 @@
           data-500p="display:block;opacity:1"
           data-504p="display:none;opacity:0">
             <div class="sectionTitle">
-                <h1>觀星活動</h1>
-                <h4>多種有趣的活動任你挑</h4>
+                <h1>星際論壇</h1>
+                <h4>關於星星的大小事，都在這裡</h4>
             </div>
             <div class="forumGroup">
             <article class="forum forum1">
@@ -403,6 +403,32 @@
         </div>
     </section>
     <section class="section section03">
+      <nav id="nav">
+        <div class="container relative">
+          <div class="row">
+            <input type="checkbox" id="navButtonHidden">
+            <label id="navButton" for="navButtonHidden"></label>
+            <div id="logo">
+              <a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
+            </div>
+            <ul class="mainMenu menu">
+              <li><a href="#">觀星活動</a></li>
+              <li><a href="#">星際論壇</a></li>
+              <li><a href="#">照&nbsp&nbsp片&nbsp&nbsp牆</a></li>
+              <li><a href="#">星&nbsp&nbsp知&nbsp&nbsp識</a></li>
+            </ul>
+            <ul class="mainMenu signArea">
+              <li id="signLeft">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                <span><a href="#">註冊</a></span>
+              </li>
+              <li id="signRight">
+                <span><a href="#">登入</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div class="star stars1"></div>
       <div class="star stars2"></div>
       <div class="star stars3"></div>
@@ -429,32 +455,6 @@
       </div>
     </section>
     </div>
-    <nav id="nav">
-      <div class="container relative">
-        <div class="row">
-          <input type="checkbox" id="navButtonHidden">
-          <label id="navButton" for="navButtonHidden"></label>
-          <div id="logo">
-            <a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
-          </div>
-          <ul class="mainMenu menu">
-            <li><a href="#">觀星活動</a></li>
-            <li><a href="#">星際論壇</a></li>
-            <li><a href="#">照&nbsp&nbsp片&nbsp&nbsp牆</a></li>
-            <li><a href="#">星&nbsp&nbsp知&nbsp&nbsp識</a></li>
-          </ul>
-          <ul class="mainMenu signArea">
-            <li id="signLeft">
-              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-              <span><a href="#">註冊</a></span>
-            </li>
-            <li id="signRight">
-              <span><a href="#">登入</a></span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 </body>
 
 </html>

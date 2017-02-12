@@ -3,7 +3,7 @@ $(function() {
     _windowHeight = $(window).height();
     console.log(_windowHeight);
 
-    if (_windowWidth >= 768) {
+    if (_windowWidth >= 992) {
         //論壇彈出
         forumPopup();
         //自動執行手風琴
@@ -134,51 +134,74 @@ $(function() {
           _sideMoved01 = 20;
           _sideBarPosY = 380;
           doFirst();
-          $('#sideBar1').css({
+          $('.sideBar1').css({
               'transform': 'translateX(-40px)'
           }).children('span').addClass('show');
-          $('#sideBar1').siblings().css('transform', 'translateX(0px)')
-              .children('span').removeClass('show').fadeOut(600);
+          $('.sideBar1').siblings().css('transform', 'translateX(0px)');
+              $('.sideBar1').siblings().children('span').removeClass('show').css('display','none');
         }else if (_scrollTop > 130 * _windowHeight / 100 && _scrollTop <= 454 * _windowHeight / 100) {
             clearCanvas();
             _sideMoved02 = 20;
               _sideBarPosY = 320;
             doFirst();
-            $('#sideBar2').css({
+            $('.sideBar2').css({
                 'transform': 'translateX(-40px)'
             }).children('span').addClass('show');
-            $('#sideBar2').siblings().css('transform', 'translateX(0px)').children('span').removeClass('show').fadeOut(600);
+            $('.sideBar2').siblings().css('transform', 'translateX(0px)');$('.sideBar2').siblings().children('span').removeClass('show').css('display','none');
         } else if(_scrollTop > 454 * _windowHeight / 100 && _scrollTop <= 504 * _windowHeight / 100) {
             clearCanvas();
             _sideMoved03 = 20;
               _sideBarPosY = 260;
             doFirst();
-            $('#sideBar3').css({
+            $('.sideBar3').css({
                 'transform': 'translateX(-40px)'
             }).children('span').addClass('show');
-            $('#sideBar3').siblings().css('transform', 'translateX(0px)')
-                .children('span').removeClass('show').fadeOut(600);
+            $('.sideBar3').siblings().css('transform', 'translateX(0px)');
+                  $('.sideBar3').siblings().children('span').removeClass('show').css('display','none');
         }else if( _scrollTop > 504 * _windowHeight / 100 && _scrollTop<=554 * _windowHeight / 100) {
             clearCanvas();
             _sideMoved04 = 20;
               _sideBarPosY = 200;
             doFirst();
-            $('#sideBar4').css({
+            $('.sideBar4').css({
                 'transform': 'translateX(-40px)'
             }).children('span').addClass('show');
-            $('#sideBar4').siblings().css('transform', 'translateX(0px)')
-                .children('span').removeClass('show').fadeOut(600);
+            $('.sideBar4').siblings().css('transform', 'translateX(0px)');
+                $('.sideBar4').siblings().children('span').removeClass('show').css('display','none');
         }else if( _scrollTop > 554 * _windowHeight / 100) {
             clearCanvas();
             _sideMoved05 = 20;
               _sideBarPosY = 145;
             doFirst();
-            $('#sideBar5').css({
+            $('.sideBar5').css({
                 'transform': 'translateX(-40px)'
             }).children('span').addClass('show');
-            $('#sideBar5').siblings().css('transform', 'translateX(0px)')
-                .children('span').removeClass('show').fadeOut(600);
+            $('.sideBar5').siblings().css('transform', 'translateX(0px)');
+                $('.sideBar5').siblings().children('span').removeClass('show').css('display','none');
         }
+      }else{
+        var _scrollTop = $(this).scrollTop();
+          if(_scrollTop <= 120 * _windowHeight / 100 + 1){
+            clearCanvas();
+            _sideBarPosY = 265;
+            doFirst();
+          }else if (_scrollTop > 130 * _windowHeight / 100 && _scrollTop <= 454 * _windowHeight / 100) {
+              clearCanvas();
+                _sideBarPosY = 235;
+              doFirst();
+          } else if(_scrollTop > 454 * _windowHeight / 100 && _scrollTop <= 504 * _windowHeight / 100) {
+              clearCanvas();
+              _sideBarPosY = 205;
+              doFirst();
+          }else if( _scrollTop > 504 * _windowHeight / 100 && _scrollTop<=554 * _windowHeight / 100) {
+              clearCanvas();
+                _sideBarPosY = 175;
+              doFirst();
+          }else if( _scrollTop > 554 * _windowHeight / 100) {
+              clearCanvas();
+                _sideBarPosY = 145;
+              doFirst();
+          }
       }
     });
 
@@ -214,8 +237,10 @@ $(function() {
         }
     }, function() {
         var $this = $(this);
-        if ($this.children('span').attr('class') != 'show') {
-            $('span', $this).stop(true, true).fadeOut(500);
+        if ($this.children('span').hasClass('show')) {
+          return;
+        }else{
+          $('span', $this).stop(true, true).fadeOut(500);
         }
 
     })
@@ -230,11 +255,11 @@ $(function() {
     $('.sideBar').click(function(e) {
         if (_windowWidth >= 768) {
             $(this).siblings().css('transform', 'translateX(0px)')
-                .children('span').removeClass('show').fadeOut(600);
+                .children('span').removeClass('show');
             $(this).css({
                 'transform': 'translateX(-35px)'
             }).children('span').addClass('show');
-
+          }
             var myHtml = $('html,body');
             console.log(myHtml.scrollTop());
             switch ($(this).attr('id')) {
@@ -284,7 +309,6 @@ $(function() {
                     // doFirst();
                     break;
             }
-        }
     })
 
 });
@@ -304,21 +328,21 @@ function forumPopup() {
         });
         if (i <= 3) {
             $('.forum' + i).css({
-                'top': rand(40, 90) + 'px',
-                'left': rand(50, 200) + (i - 1) * rand(470, 540) + 'px'
+                'top': rand(80, 90) + 'px',
+                'left': rand(10, 20) + (i - 1) * rand(420, 450) + 'px'
             });
         } else if (i > 3 && i <= 6) {
-            var _gap = rand(50, 200);
-            var _forTop = rand(160, 225);
-            var _forLeft = rand(510, 600);
+            var _gap = rand(32,40);
+            var _forTop = rand(160, 245);
+            var _forLeft = rand(410, 430);
             $('.forum' + i).css({
                 'top': _forTop + 'px',
                 'left': _gap + (i - 4) * _forLeft + 'px'
             });
         } else if (i > 6 && i <= 10) {
             $('.forum' + i).css({
-                'top': rand(350, 395) + 'px',
-                'left': rand(50, 60) + (i - 7) * rand(390, 420) + 'px'
+                'top': rand(330, 395) + 'px',
+                'left': rand(32, 40) + (i - 7) * rand(390, 420) + 'px'
             });
         } else {
             $('.forum' + i).css({
@@ -512,28 +536,28 @@ function clearCanvas() {
 }
 
 
-window.onscroll = function() {
-    var _scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-    if(_scrollTop <= 120 * _windowHeight / 100 + 1){
-      clearCanvas();
-      _sideBarPosY = 265;
-      doFirst();
-    }else if (_scrollTop > 130 * _windowHeight / 100 && _scrollTop <= 454 * _windowHeight / 100) {
-        clearCanvas();
-          _sideBarPosY = 235;
-        doFirst();
-    } else if(_scrollTop > 454 * _windowHeight / 100 && _scrollTop <= 504 * _windowHeight / 100) {
-        clearCanvas();
-        _sideBarPosY = 205;
-        doFirst();
-    }else if( _scrollTop > 504 * _windowHeight / 100 && _scrollTop<=554 * _windowHeight / 100) {
-        clearCanvas();
-          _sideBarPosY = 175;
-        doFirst();
-    }else if( _scrollTop > 554 * _windowHeight / 100) {
-        clearCanvas();
-          _sideBarPosY = 145;
-        doFirst();
-    };
-}
+// window.onscroll = function() {
+//     var _scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+//     if(_scrollTop <= 120 * _windowHeight / 100 + 1){
+//       clearCanvas();
+//       _sideBarPosY = 265;
+//       doFirst();
+//     }else if (_scrollTop > 130 * _windowHeight / 100 && _scrollTop <= 454 * _windowHeight / 100) {
+//         clearCanvas();
+//           _sideBarPosY = 235;
+//         doFirst();
+//     } else if(_scrollTop > 454 * _windowHeight / 100 && _scrollTop <= 504 * _windowHeight / 100) {
+//         clearCanvas();
+//         _sideBarPosY = 205;
+//         doFirst();
+//     }else if( _scrollTop > 504 * _windowHeight / 100 && _scrollTop<=554 * _windowHeight / 100) {
+//         clearCanvas();
+//           _sideBarPosY = 175;
+//         doFirst();
+//     }else if( _scrollTop > 554 * _windowHeight / 100) {
+//         clearCanvas();
+//           _sideBarPosY = 145;
+//         doFirst();
+//     };
+// }
 window.addEventListener('load', doFirst, false);

@@ -27,6 +27,7 @@
       text-align: center;
       color:$light-grey;
       cursor: pointer;
+      // outline: red 1px solid;
       span{
         padding-right:35px;
         display: none;
@@ -72,24 +73,45 @@
       // border:red solid 1px;
       // overflow: hidden;
       .sectionTitle{
-  			padding-top: 50px;
+  			padding-top: 30px;
         padding-left: 80px;
   			h1{
+          position: relative;
+          display: inline-block;
   				color:$white;
-  				font-size: $fz-h1;
-  				padding: 10px 20px;
+  				font-size: $fz-h2;
+  				padding: 10px 10px;
   				text-shadow: 1px 10px 10px $black;
+          z-index: 1;
+          &:after{
+            content:'';
+            display: block;
+            z-index: 0;
+            position: absolute;
+            top: 20px;left: 0px;
+            margin: auto;
+            width: 350px;
+            height: 50px;
+            background-image:url('../img/index/title-bg.png');
+            background-position:10%;
+            background-repeat: repeat-x;
+            background-size: cover;
+          }
   			}
   			h4{
+          position: relative;
+          z-index: 1;
+          display: inline-block;
   				color:$light-grey;
   				font-size: $fz-h4;
-  				padding: 10px 20px;
+  				padding: 5px 0px;
   			}
   		}
 		}
 		.section01{
       perspective: 800;
       top:200vh;
+      z-index: 1;
       // animation:animPageDown 5s both;
 			background:url('../img/index/bg-sky.jpg')
       50% 100% no-repeat;
@@ -105,7 +127,7 @@
         }
       }
       .title{
-        width: 60%;
+        width: 75%;z-index: 10;
         height: 50%;
         position: absolute;
         left: 0;top: 0;bottom: 0;right: 0;
@@ -135,8 +157,9 @@
 
         .i-searchBar{
           position: relative;
+          text-align: center;
           margin: 50px auto;
-          width: 90%;
+          width: 93%;
           height: 70px;
           line-height:70px;
           background-color: $o-black;
@@ -172,7 +195,7 @@
     						bottom:-150px;
     						left: 60px;right: 0;
     						display: none;
-                width: 77%;
+                width: 74%;
                 text-align: center;
                 &:hover{
                   display: block;;
@@ -198,9 +221,11 @@
     					}
     				}
             .button-square{
-              position: absolute;
-              top:0;bottom: 0;
-              margin: auto;
+              position: relative;
+              display: inline-block;
+              vertical-align: middle;
+
+              margin-left: 20px;
               right:8px;
               border-radius: 6px;
               width: 100px;
@@ -219,19 +244,31 @@
         top: 66%;
         left: 0;right: 0;
         margin: auto;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
         text-align: center;
         i{
           color:$light-blue;
-          font-size: 60px;
+          font-size: 40px;
         }
         img{
           position: absolute;
           top: 0;left: 0;
           width: 100%;
         }
+      }
+      #cloud1 {
+        position: absolute;
+        top: -720px;
+        right: -200px;
+        transform: scale(0.8);
+      }
+      #cloud2 {
+        position: absolute;
+        top: -850px;
+        left: -900px;
+        transform: scale(0.8);
       }
 		}//section01
     .section02{
@@ -241,24 +278,11 @@
       outline: 5px solid #111;
       top:100vh;
       #part01{
-        position: fixed;
+        position: relative;
+        z-index: 1;
         width: 100vw;
         height: 100vh;
         left: 0;right: 0;margin: auto;
-        #cloud1 {
-  				position: absolute;
-  				bottom: -500px;
-  				right: -300px;
-          // z-index: -100;
-  				transform: scale(0.8);
-  			}
-  			#cloud2 {
-  				position: absolute;
-  				bottom: -480px;
-  				left: -900px;
-          z-index: 0;
-  				transform: scale(0.8);
-  			}
   			.activity {
   				position: relative;
 
@@ -344,7 +368,7 @@
             position: absolute;
             margin: auto;
             left: 0;right: 0;
-            bottom: 100px;
+            bottom: 30px;
           }
         }
         .forum:hover {
@@ -401,7 +425,7 @@
   						padding-right: 15px;
   					}
   				}
-          &.forum1{
+          &.forum1,  &.forum10, &.forum14{
             display: none;
           }
   			}
@@ -412,11 +436,12 @@
         position: relative;
         perspective: 800px;
   			perspective-origin: center center;
+        z-index: 10;
         .gallery  {
   			  height:250px;
   			  width:300px;
   			  position: absolute;
-  				top:0;bottom: 0;
+  				top:10%;bottom: 0;
   				left: 0;right: 0;
           margin:auto;
   			  transform-style: preserve-3d;
@@ -482,7 +507,7 @@
           position: absolute;
           margin: auto;
           left: 0;right: 0;
-          bottom: 100px;
+          bottom: 30px;
         }
       }
       #part04{
@@ -490,9 +515,9 @@
         height: 100vh;
         .accordion {
   				position: absolute;
-  				left: 150px;
-  				right: 0;
-  				top: 180px;
+  				left: 80px;right: 0;
+          top:100px;
+          margin: auto;
   			}
   			.accordion .fakeCover:before{
   				content: '';
@@ -507,8 +532,8 @@
   			}
   			.accordion li {
   				float: left;
-  				width: 220px;
-  				height: 400px;
+  				width: 215px;
+  				height: 460px;
   				display: block;
   				background-repeat: no-repeat;
   				background-position: center center;
@@ -535,6 +560,7 @@
   				}
   				&.know5 {
   					background-image: url("../img/i-know04.png");
+            display: none;
   				}
   				.memberId{
   					position: absolute;
@@ -611,12 +637,12 @@
           position: absolute;
           margin: auto;
           left: 0;right: 0;
-          bottom: 100px;
+          bottom: 30px;
         }
       }
     }//section02
     .section03{
-      top:0;
+        top:0;
   			background: linear-gradient(to bottom, #020308 0%, #05172b 51%, #011428 84%, #012438 100%);
   			perspective: 1000;
   			overflow: hidden;
@@ -762,7 +788,7 @@
   				.expMem{
   					position:absolute;
   					left: 0;right: 0;
-  					top:200px;
+  					top:160px;
   					margin: auto;
   					text-align: center;
   					h1{
@@ -937,8 +963,8 @@
 	100%{transform: scale(1);}
 }
 @keyframes animUptoDwon {
-  0%{transform: translateY(-450px) rotateY(0);}
-	100%{transform: translateY(0) rotateY(270);}
+  0%{transform: translateY(-450px) rotateY(0deg);}
+	100%{transform: translateY(0) rotateY(270deg);}
 }
 #info {
 	background-color: $o-white;

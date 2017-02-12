@@ -14,16 +14,16 @@
     width: 100px;
     height: 400px;
     top:25%;
-    right: 40px;
+    right: 0px;
     z-index: 1000;
     .sideBar{
       position: absolute;
-      width: 120px;
+      width: 20px;
       height: 22px;
       line-height: 22px;
       letter-spacing: 1px;
       font-size: $fz-p;
-      left:0;
+      right:10px;
       text-align: center;
       color:$light-grey;
       cursor: pointer;
@@ -33,26 +33,21 @@
         a{
           color:$white;
         }
-        &.show{
-          color:$white;
-          display: block;
-        }
       }
       &.sideBar5{
         top:135px;
       }
       &.sideBar4{
-        top:189px;
+        top:165px;
       }
       &.sideBar3{
-        top:249px;
+        top:195px;
       }
       &.sideBar2{
-        top:309px;
+        top:225px;
       }
       &.sideBar1{
-        top:369px;
-        transform: translateX(-40px);
+        top:255px;
       }
     }
   }
@@ -92,6 +87,7 @@
 		.section01{
       top:200vh;
       // animation:animPageDown 5s both;
+      z-index: 2;
 			background:url('../img/index/bg-sky.jpg')
       50% 100% no-repeat;
       background-size: cover;
@@ -220,8 +216,22 @@
           width: 100%;
         }
       }
+      #cloud1 {
+        position: absolute;
+        top: -700px;
+        right: -300px;
+        // z-index: -100;
+        transform: scale(0.8);
+      }
+      #cloud2 {
+        position: absolute;
+        top: -680px;
+        left: -900px;
+        transform: scale(0.8);
+      }
 		}//section01
     .section02{
+      z-index: 1;
       background:url('../img/index/bg-sky.jpg')
       50% 0% repeat;
       background-size: cover;
@@ -232,20 +242,6 @@
         width: 100vw;
         height: 100vh;
         left: 0;right: 0;margin: auto;
-        #cloud1 {
-  				position: absolute;
-  				bottom: -500px;
-  				right: -300px;
-          // z-index: -100;
-  				transform: scale(0.8);
-  			}
-  			#cloud2 {
-  				position: absolute;
-  				bottom: -480px;
-  				left: -900px;
-          z-index: 0;
-  				transform: scale(0.8);
-  			}
   			.activity {
   				position: relative;
 
@@ -404,6 +400,7 @@
   			}
       }
       #part03{
+        z-index: 2;
         width: 100vw;
         height: 100vh;
         position: relative;
