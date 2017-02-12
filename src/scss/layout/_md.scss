@@ -22,27 +22,43 @@
                 display: block;
                 color: $white;
                 font-size: $fz-nav;
-                padding: 12px;
+                padding: 14px 10px;
                 letter-spacing: 1px;
-
-                span {
-                    font-size: $fz-nav + 4;
-                    font-weight: 900;
-                }
             }
         }
 
         &.signArea {
             width: 14%;
             text-align: right;
+            a {
+                display: block;
+                font-size: $fz-nav - 2px;
+                color:$light-grey;
+                letter-spacing: 1px;
+                padding:16px 5px 12px 0px;
+                &:hover{
+                  color:$white;
+                }
+            }
+            .fa{
+              display: none;
+            }
         }
-    }
-
-    .menu a:hover:after {
-        color: white;
+        // #signLeft a:after{
+        //   content: '|';
+        //   display: block;
+        //   position: absolute;
+        //   top:12px;
+        //   right:-5px;
+        //   color:$light-grey;
+        // }
     }
 
     .menu a:hover {
-        border-bottom: 4px solid $blue-green;
+        border-bottom: 2px solid $blue-green;
+        text-shadow: 1px 1px 5px 10px $grey;
+    }
+    #navButton{
+      display: none;
     }
 }

@@ -10,7 +10,7 @@
       theme: '',
       backgroundImage: false,
       overlayColor: "#000",
-      overlayOpacity: ".6"
+      overlayOpacity: ".5"
     }, options);
     return this.each(function() {
       ID.addClass(settings.theme);
@@ -33,7 +33,7 @@
       } else {
         ID.addClass("colorful-tab-background-image")
         var activeTabBg = activeTab.attr("tab-background");
-        ID.css("background", "linear-gradient( rgba(" + hex2rgb(settings.overlayColor, settings.overlayOpacity) + "), rgba(" + hex2rgb(settings.overlayColor, settings.overlayOpacity) + ") ),url(" + activeTabBg + ")");
+        // ID.css("background", "linear-gradient( rgba(" + hex2rgb(settings.overlayColor, settings.overlayOpacity) + "), rgba(" + hex2rgb(settings.overlayColor, settings.overlayOpacity) + ") ),url(" + activeTabBg + ")");
       }
       $(menuItemClick).click(function(e) {
         var activeTabId = $(this).attr("href");

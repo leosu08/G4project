@@ -52,6 +52,41 @@
 	// 	width: 
 	// }
 
+	.m_lightbox_area{
+		.lightbox_content{
+			width: 100%;
+			padding: 5px;
+
+			table{
+				width: 365px;
+			}
+
+			
+		}
+	}
+
+	#m_lightbox_activity{
+		.m_activity_table{
+			.m_act_box{
+				.m_act_photo{
+					width: 0%;
+				}
+				.m_act_info{
+					width: 100%;
+					text-align: center;
+				}
+			}
+			.f_btn{
+				text-align: center;
+				button{
+					font-size: 18px;
+				    width: 60px;
+				    height: 30px;
+				}
+			}
+		}
+	}
+
 
 
 	

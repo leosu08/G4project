@@ -37,6 +37,7 @@
 	}
 }
 .a-panel{
+	overflow:hidden;
 	position: relative;
 	text-align: left;
 	// border-radius: 50%;
@@ -44,7 +45,8 @@
 	box-sizing:border-box;
 	height: 0;
 	// padding: 50%;
-	height: 600px;
+	// height: 600px;
+	height: 100vh;
 
 	background: url("../img/a_015.jpg");
 	background-size:100% 100%;
@@ -300,7 +302,9 @@
 .a-phone-search{
 	display: none;
 }
-
+.a-oldSlider{
+	display: none;
+}
 
 
 @import "pageMain/xs";

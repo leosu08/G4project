@@ -26,7 +26,7 @@ html, body{
 
 	#f_section1{
 			color: $white;
-			height: 100vh;
+			height: 45vh;
 			// background-color: #333;
 			// background: linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%); 
 			// background-image: url(../img/forum/f_001.jpg);
@@ -106,14 +106,21 @@ html, body{
 
 	//forum content start
 	#f_section2{
-		// height: 100vh;
+		height: 100vh;
+		position: relative;
 		// background-color: #333;
 		// background-image: url(../img/forum/f_001.jpg);
-
+		#f_tab_area{
+			// background-color: #000;
+			width: 100%;
+			// padding-bottom: 20px;
+			z-index: 999;
+		}
 
 		#f_tab{
 			width: 45%;
 			float: left;
+
 		}
 		
 	}
@@ -201,7 +208,7 @@ html, body{
 								padding: 10px;
 								text-shadow: 1px 1px 1px #000;
 
-								.fa-sticky-note{
+								.fa-sticky-note, .fa-user-o{
 									background-color: rgb(31, 116, 119);
 									width: 40px;
 									height: 40px;
@@ -230,6 +237,7 @@ html, body{
 						
 							td{
 								padding: 10px;
+								vertical-align: middle;
 								// font-size: 20px;
 
 								.fa-commenting{
@@ -247,6 +255,8 @@ html, body{
 							}
 
 							.f_topic{
+								width: 70%;
+								padding-right: 10px;
 								h4, p{
 									display: inline-block;
 									letter-spacing: 0.05em;
@@ -265,6 +275,9 @@ html, body{
 							}
 
 							.f_response{
+								display: inline-block;
+								float: right;
+
 								p{
 									display: inline-block;
 									font-size: 14px;
@@ -286,9 +299,17 @@ html, body{
 							}
 
 							.f_user{
+								width: 30%;
 								font-size: 14px;
 								color: rgba(255,255,255,0.8);
 								text-shadow:1px 1px 1px #000;
+								text-align: center;
+
+
+								img{
+									// vertical-align: middle;
+									margin-right: 5px;
+								}
 								p{
 									padding-bottom: 5px;
 									font-family: Arial;
@@ -332,24 +353,25 @@ html, body{
 			
 		}
 
-	// #lightbox
-	#f_lightbox{
+	// 單篇post
+	#f_one_post{
 		width: 100%;
 		height: 100vh;
-		background-color: rgba(0,0,0,0.8);
-		// background-image: url(../img/forum/f_003.jpg);
-		color: #fff;
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		z-index: 9999;
-		overflow: hidden;
+		// background-color: rgba(0,0,0,0.8);
+		
+		// color: #fff;
+		// position: fixed;
+		// top: 0;
+		// bottom: 0;
+		// left: 0;
+		// right: 0;
+		// z-index: 9999;
+		// overflow: hidden;
+		box-shadow: none;
 
 		.f_lightbox_content{
-			width: 80%;
-			height: 80%;
+			width: 90%;
+			height: 90%;
 			// border: 1px solid #fff;
 			// background-color:  rgba(0,0,0,0.3);
 			position: absolute;
@@ -358,7 +380,7 @@ html, body{
 			left: 0;
 			right: 0;
 			margin: auto;
-			overflow: auto;
+			// overflow: auto;
 
 
 			.fa-times{
@@ -369,31 +391,95 @@ html, body{
 
 			table{
 				margin: auto;
-				margin-top: 60px;
+				// margin-top: 60px;
 				// padding:3px;
 				border: 1px solid rgba(255,255,255,0.5);
 				letter-spacing: 0.05em;
 				font-family: Arial;
 				color:  rgba(255,255,255,0.7);
 
-				th, td{
-					padding:15px; 
+				.social-icon{
+					display: inline-block;
+					float: right;
+					color: #fff;
+					font-size: 16px;
+
+					.fa{
+						margin-right: 5px;
+						margin-left: 10px;
+					}
 				}
 
-				td{
-					border-bottom: 1px solid #fff;
+				th, td{
+					padding:15px; 
+
 				}
 
 				th{
 					background-color: #1f4c74;
+					width: 100%;
+					padding:15px; 
+					text-align: left;
+
+					h5{
+						font-size: $fz-h5;
+						
+						text-shadow:1px 1px 1px #000;
+						color: #e8b08b;;
+
+						// span{
+						// 	font-size: 14px;
+						// 	float: right;
+						// 	color: rgba(255,255,255,0.5);
+						// }
+					}
+
+				}
+
+				td{
+					padding-left: 30px;
+					border-bottom: 3px double rgba(255,255,255,0.8);
 				}
 
 				td>p{
-					line-height: 1.5em;
+					// line-height: 1.5em;
+					display: inline-block;
+				}
+				.fa-sticky-note{
+						// background-color: rgb(31, 116, 119);
+						width: 40px;
+						height: 40px;
+						// border-radius:50%;
+						line-height: 40px;
+						text-align: center;
+						font-size: 20px;
+						// margin-right: 20px; 
+						// box-shadow: 1px 1px 2px #000 inset;
+					}
+				
+				.f_sub_user{
+					width: 95%;
+					font-size: 16px;
+					border-bottom: 1px solid rgba(255,255,255,0.5);
+					padding-bottom: 15px;
+					margin-bottom: 20px;
+					img{
+						vertical-align: middle;
+					}
+					.f_user_info{
+						display: inline-block;
+						margin-left: 15px;
+						vertical-align: middle;
+						padding-top: 10px;
+
+						p{
+							display: block;
+						}
+					}
 				}
 
 				.user_level{
-						
+						margin-left: 10px;
 						color: #877a5f;	
 				}
 
@@ -402,6 +488,8 @@ html, body{
 					height: 20px;
 					margin-top: 30px;
 					text-align: left;
+
+					
 
 					button{
 						width: 40px;
@@ -414,20 +502,25 @@ html, body{
 						float: right;
 						margin-left: 10px;
 
+						&:hover{
+							background-color: $purple;
+							color: $white;
+						}
+
 					}
+				
+
 				}	
-					
-
-				
+						
 			}
-
-				
-			
-
 
 		}
 
 	}
+
+// 個別貼文
+
+
 
 
 @import "xs";

@@ -6,10 +6,12 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link type="text/css" rel="stylesheet" href="css/reset.css">
 	<link type="text/css" rel="stylesheet" href="css/colorfulTab.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 
 	<title>welcome to Forum</title>
 
 	<script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
 	<!-- tweenmax -->
 	<script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
@@ -31,7 +33,7 @@
 		//h1進場動畫
 			var controller = new ScrollMagic.Controller();
 
-			var titleShow = new TimelineMax().staggerFromTo("#f_section1 .f_title",1,{
+			var titleShow = new TimelineMax().staggerFromTo("#f_section1 .f_title",1.5,{
 					opacity:0,
 					scale:0.1,	
 				},{
@@ -43,7 +45,7 @@
 				},0.1);
 
 			var scene = new ScrollMagic.Scene({
-				triggerElement: "#f_section1",
+				triggerElement: "#nav",
 				reverse: true,
 			})
 
@@ -54,7 +56,7 @@
 
 		//desc進場動畫
 
-		    // var controller = new ScrollMagic.Controller();
+		    
 
 			var descShow = new TimelineMax().staggerFromTo("#f_section1 .f_desc",10,{
 					opacity:0,
@@ -63,10 +65,10 @@
 				},{
 					opacity:1,
 					
-				},0.5);
+				},3);
 
 			var scene2 = new ScrollMagic.Scene({
-				triggerElement: "#f_section1",
+				triggerElement: "#nav",
 				reverse: true,
 			})
 
@@ -81,29 +83,30 @@
 		//換頁動畫
 
 
-		// var sectionOut = new TimelineMax().staggerFromTo("#f_section1 ",1,{
-		// 			'webkitFilter': 'blur(0px)',
+		var sectionOut = new TimelineMax().staggerFromTo(".colorful-tab-container",1,{
+					// 'webkitFilter': 'blur(0px)',
+					
 					
 						
-		// 		},{
-		// 			'webkitFilter': 'blur(15px)',
+				},{
+					// 'webkitFilter': 'blur(15px)',
 					
-		// 		},0.5);
+				},0.5);
 
 
 
-		// var scene3 = new ScrollMagic.Scene({
-		// 	triggerElement: ".f_desc",
-		// 	reverse:true,
+		var scene3 = new ScrollMagic.Scene({
+			triggerElement: "#f_section1",
+			reverse:true,
 
-		// })
+		})
 
-		// 	.setTween(sectionOut)
-		// 	.addIndicators()
-		// 	.addTo(controller);
+			.setTween(sectionOut)
+			.addIndicators()
+			.addTo(controller);
 
 
-		// })
+		})
 		
 	</script>
 
@@ -117,27 +120,33 @@
 	}
 		.f_bg_wrapper{
 			position: fixed;
+			/*height: 100vh;*/
 			top: 0;
-		  left: 0;
+		    left: 0;
+		    background-image: url(img/forum/f_001.jpg);background-size: cover;
+		    background-color: #333;
 		}
 
 		#f_bg1 {
 		  width: 100%;
 		  height: 100%;
-		  position: fixed;
+		  position: absolute;
 		  top: 0;
 		  left: 0;
-		  background: radial-gradient(ellipse at center, rgba(31, 76, 116, .6) 0%, rgba(21, 28, 60, .9) 30%, rgba(9, 10, 15, .9) 50%); 
+		  background: radial-gradient(ellipse at center, rgba(31, 76, 116, 1) 0%, rgba(21, 28, 60, 1) 30%, rgba(9, 10, 15, 0.9) 60%, rgba(0,0,0,1) 80%);
+
+		  /*.6 .9 .9*/
+
 		 
 		}
-
+		
 			
 
 	</style>
 </head>
 <body id="f_wrapper">
 	<!-- 導覽列 -->
-	<nav id="nav" style="z-index: 999999;background-color: rgba(0,0,0,0.2);">
+	<nav id="nav" style="background-color: rgba(0,0,0,0.8);">
 		<div class="container relative">
 			<div class="row">
 				<input type="checkbox" id="navButtonHidden">
@@ -146,19 +155,18 @@
 					<a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
 				</div>
 				<ul class="mainMenu menu">
-					<li><a href="activity.html"><span>A</span>ctivity</a></li>
-					<li><a href="#"><span>F</span>ourm</a></li>
-					<li><a href="#"><span>P</span>hoto</a></li>
-					<li><a href="#"><span>K</span>nowledge</a></li>
+					<li><a href="#">觀星活動</a></li>
+					<li><a href="#">星際論壇</a></li>
+					<li><a href="#">照&nbsp&nbsp片&nbsp&nbsp牆</a></li>
+					<li><a href="#">星&nbsp&nbsp知&nbsp&nbsp識</a></li>
 				</ul>
 				<ul class="mainMenu signArea">
 					<li id="signLeft">
-						<!-- <i class="fa fa-envelope-open" aria-hidden="true"></i> -->
-						<span class="btn btn-blue"><a href="#">註冊</a></span>
+						<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+						<span><a href="#">註冊</a></span>
 					</li>
 					<li id="signRight">
-						<!-- <a href="#"><img src="img/memberPhoto.png"></a> -->
-						<span class="btn btn-blue"><a href="#">登入</a></span>
+						<span><a href="#">登入</a></span>
 					</li>
 				</ul>
 			</div>
@@ -170,19 +178,21 @@
 <!-- fullpage開始 四個section-->
 <!-- <div id="fullpage">     -->
 	<!-- 第一區 header開始 -->
+	<div class="f_bg_wrapper" style="width:100%; height:100vh;">	
+		<!-- <div id="f_bg1">
+			<div id="canvas"></div>
+		</div> -->
+	</div>
+
 	<header class="f_section" id="f_section1" >
-		<div class="f_bg_wrapper" style="width:100%; height:100vh;background-image: url(img/forum/f_001.jpg);background-size: cover;">	
-			<div id="f_bg1">
-				<div id="canvas"></div>
-			</div>
-		</div>
+		
 		<div class="f_title">
 			<h1>星際論壇</h1>
 		</div>
 		<div class="f_desc">
 			<h3>找同好、聊天文、觀星象</h3>
-			<h3>加入討論</h3>
-			<i class="fa fa-angle-double-down" aria-hidden="true"></i>
+			<!-- <h3>加入討論</h3> -->
+			<!-- <i class="fa fa-angle-double-down" aria-hidden="true"></i> -->
 		</div>
 	
 	</header>
@@ -191,239 +201,142 @@
 
 	<!-- 第二區 論壇內容開始 -->
 	<section class="f_section" id="f_section2">
+		<div id="f_bg1">
+			<div id="canvas"></div>
+		</div>
 		<!-- 論壇內容選單 -->
-		<div class="colorful-tab-wrapper f_tab" id="colorful-background-image" style="width: 100vw; padding-top: 100px;">
+		<div class="colorful-tab-wrapper f_tab" id="colorful-background-image" style="width: 100vw; padding-top: 80px;">
 		<div class="container">
 		<div class="row">
 
-			<ul class="colorful-tab-menu" id="f_tab" style="float: left;">
-			  <li class="colorful-tab-menu-item active" tab-background=""><a href="#bg-0">綜合討論區</a></li>
-			  <li class="colorful-tab-menu-item" tab-background=""><a href="#bg-1">天文攝影區</a></li>
-			  <li class="colorful-tab-menu-item" tab-background=""><a href="#bg-2">觀星設備區</a></li>
-			 
-			</ul>
+			<div id="f_tab_area">
 
-			<div class="f_fn_area text-right" >
-				<button class="btn-lg btn-blue">
-				<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp發表文章</button>
-				<div class="f_search">
-					<input type="text" name="" placeholder="找你有興趣的天文主題...">
-					<i class="fa fa-search" aria-hidden="true"></i>
+				<ul class="colorful-tab-menu" id="f_tab" style="float: left;">
+				  <li class="colorful-tab-menu-item active" tab-background=""><a href="#bg-0">綜合討論區</a></li>
+				  <li class="colorful-tab-menu-item" tab-background=""><a href="#bg-1">天文攝影區</a></li>
+				  <li class="colorful-tab-menu-item" tab-background=""><a href="#bg-2">觀星設備區</a></li>
+				 
+				</ul>
+
+				<div class="f_fn_area text-right" >
+					<button class="btn-lg btn-blue">
+					<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp發表文章</button>
+					<div class="f_search">
+						<input type="text" name="" placeholder="找你有興趣的天文主題...">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</div>
+					<div class="clear"></div>
 				</div>
-				<div class="clear"></div>
 			</div>
 
-			<div class="colorful-tab-container" style="width: 100%; margin: auto; padding-top:20px;padding-bottom: 60px;overflow:auto;">  
+
+			<div class="colorful-tab-container" style="width: 100%;margin: auto; padding-top:50px;padding-bottom: 30px;overflow-y:auto;">  
 			  
 			  <div class="colorful-tab-content active" id="bg-0"">  
 				  <div class="f_posts">
 					<table class="text-left" cellspacing="5">
 						<thead>
 						<tr>
-							<th width="50%"><i class="fa fa-sticky-note" aria-hidden="true"></i>主題</th>
-							<th width="20%">瀏覽、回覆</th>
-							<th width="25%">作者</th>
+							<th><i class="fa fa-sticky-note" aria-hidden="true"></i>主題</th>
+							
+							<th class="text-center"><i class="fa fa-user-o" aria-hidden="true"></i>作者</th>
 						</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">star trek 50年了!</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
-									<i class="fa fa-eye" aria-hidden="true"></i>
-									<p>200</p>
-									<i class="fa fa-comment-o" aria-hidden="true"></i>
-									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
-									<i class="fa fa-eye" aria-hidden="true"></i>
-									<p>200</p>
-									<i class="fa fa-comment-o" aria-hidden="true"></i>
-									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
-									<i class="fa fa-eye" aria-hidden="true"></i>
-									<p>200</p>
-									<i class="fa fa-comment-o" aria-hidden="true"></i>
-									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
-									<i class="fa fa-eye" aria-hidden="true"></i>
-									<p>200</p>
-									<i class="fa fa-comment-o" aria-hidden="true"></i>
-									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+							
+							
+							
+							
 						</tbody>
 					</table>
 				  </div>
@@ -434,122 +347,102 @@
 					<table class="text-left" cellspacing="5">
 						<thead>
 						<tr>
-							<th width="50%"><i class="fa fa-sticky-note" aria-hidden="true"></i>主題</th>
-							<th width="20%">瀏覽、回覆</th>
-							<th width="25%">作者</th>
+							<th><i class="fa fa-sticky-note" aria-hidden="true"></i>主題</th>
+							
+							<th class="text-center"><i class="fa fa-user-o" aria-hidden="true"></i>作者</th>
 						</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
 						</tbody>
 					</table>
 				  </div>
@@ -560,122 +453,102 @@
 					<table class="text-left" cellspacing="5">
 						<thead>
 						<tr>
-							<th width="50%"><i class="fa fa-sticky-note" aria-hidden="true"></i>主題</th>
-							<th width="20%">瀏覽、回覆</th>
-							<th width="25%">作者</th>
+							<th><i class="fa fa-sticky-note" aria-hidden="true"></i>主題</th>
+							
+							<th class="text-center"><i class="fa fa-user-o" aria-hidden="true"></i>作者</th>
 						</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
-							<tr>
-								<td width="50%" class="f_topic">
-									<i class="fa fa-commenting" aria-hidden="true"></i>
-
-									<h4><a href="#" class="f_post_link">大家今年有要去追極光嗎？</a></h4>
-									<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
-									
-								</td>
-								<td width="20%" class="f_response">
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
+						<tr>
+							<td  class="f_topic">
+								<i class="fa fa-commenting" aria-hidden="true"></i><h4><a href="forum-post.html" class="f_post_link">star trek 50年了!</a></h4>
+								<!-- <p>聽說2017年是極光爆發的最後一年，喜愛天文的大家...</p> -->
+								<div class="f_response">
 									<i class="fa fa-eye" aria-hidden="true"></i>
 									<p>200</p>
 									<i class="fa fa-comment-o" aria-hidden="true"></i>
 									<p>20</p>
-
-
-								</td>
-								<td width="25%" class="f_user">
-									<img src="img/forum/f_004.png" width="20" height="20">
-									<p><a href="#">Katie918</a></p>
-									<p>2017.01.01發表</p>
-								</td>
-							</tr>
+								</div>
+							</td>
+								
+							<td class="f_user">
+								<img src="img/forum/f_004.png" width="20" height="20">
+								<p><a href="#">Katie918</a></p>
+								<p>2017.01.01發表</p>
+							</td>
+						</tr>
 						</tbody>
 					</table>
 				  </div>
@@ -693,85 +566,18 @@
 			
 		<!-- 論壇內容區塊end -->
 	</section>
+
 	<!-- 第二區結束 -->
-	<!-- </div> -->
+<!-- </div> -->
 
 	<!-- 第三區開始 -->
 
 <!-- </div> -->
 <!-- fullpage結束 -->
-<div id="f_lightbox" style="display: none;">
-<div class="container">
-	<div class="f_lightbox_content">
-		<div class="fa fa-times" aria-hidden="true" id="f_lightbox_close"></div>
 
-		<table border="0" width="80%" >
-			<thead>
-				<tr><th width="20%" >作者</th><th height="80%" class="text-left">主題：star trek 50年了</th></tr>
-			</thead>
-			<tbody>
-				<tr>
-				<td width="20%" style="background-color: #000" class="text-center" class="f_user">
-					<img src="img/forum/f_005.png" width="80" height="80">
-					<p>Allie213</p>
-					<p class="user_level">星際過客</p>
-				</td>
-				<td height="80%" class="text-left">
-					<p>《星艦奇航記》（Star Trek）50年 _日期就訂在50年前首播的9月，但票價和出席名單等細節都還未定。 這場影迷大會將舉辦在紐約曼哈頓的Javits會議中心，這也是New York Comic Con.的舉辦地點。</p>
-					<p>2016年是 Star Trek電視影集50周年紀念</p>
-					<p>Star Trek已經要50周年了，這禮拜的電影──《星際爭霸戰：浩瀚無垠》（Star Trek: Beyond）更是紀念這項盛舉的作品。</p>
-				<!-- 回覆&檢舉 -->
-					<div class="f_btn">
-						<button>檢舉</button>
-						<button>回覆</button>
-					</div>
-				<!-- 回覆&檢舉end -->
-				</td></tr>
-
-
-
-				<!-- 第三列開始 -->
-				<tr>
-				<td width="20%" style="background-color: #000" class="text-center" class="f_user">
-					<img src="img/forum/f_004.png" width="80" height="80">
-					<p>Katie918</p>
-					<p class="user_level">星際新手</p>
-				</td>
-				<td height="80%" class="text-left">
-					<p>最近mod有上架一系列的電影</p>
-					<p>看到睡著(揍扁)</p>
-					<p>啊~ID4加減看就好惹</p>
-				<!-- 回覆&檢舉 -->
-					<div class="f_btn">
-						<button>檢舉</button>
-						<button>回覆</button>
-					</div>
-				<!-- 回覆&檢舉end -->
-				
-				</td></tr>
-				<tr>
-				<td width="20%" style="background-color: #000" class="text-center" class="f_user">
-					<img src="img/forum/f_005.png" width="80" height="80">
-					<p>Allie213</p>
-					<p class="user_level">星際過客</p>
-				</td>
-				<td height="80%" class="text-left">
-					<p>裡面也有航海家號，不過看那樣子應該是依照最後一季最後一集裝了燒蝕船體裝甲的外型做的~~</p>
-				<!-- 回覆&檢舉 -->
-					<div class="f_btn">
-						<button>檢舉</button>
-						<button>回覆</button>
-					</div>
-				<!-- 回覆&檢舉end -->
-				</td></tr>
-
-				<!-- 第n列結束 -->
-			</tbody>
-		</table>
-	</div>
-</div>
-</div>
 <!-- lightbox測試 -->
+
+<footer></footer>
 
 
 	
@@ -795,9 +601,9 @@ $(document).ready(function(){
 	
 	$("#colorful-background-image").colorfulTab({
 		theme: "flatline",
-		backgroundImage: "true",
+		backgroundImage: "false",
 		// overlayColor: "#333333",
-		overlayOpacity: "0.5"
+		overlayOpacity: "0.1"
 	});   
 
 });
@@ -847,7 +653,7 @@ function init() {
     shading: THREE.FlatShading
   });
 
-  for (var i = 0; i < 150; i++) {
+  for (var i = 0; i < 130; i++) {
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
     mesh.position.multiplyScalar(90 + (Math.random() * 700));

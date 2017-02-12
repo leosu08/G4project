@@ -35,9 +35,75 @@
 		}
 
 		.f_posts{
-			width: 100%
+			width: 100%;
+
+			table{
+				thead{
+					th{
+
+						text-align: center;
+						.fa-sticky-note, .fa-user-o{
+							display: none;
+							
+						}
+					}
+				}
+
+				tbody{
+					tr{
+						td{
+							text-align: center;
+							.fa-commenting{
+								display: none;
+							}
+						}
+						.f_response{
+							float: none;
+
+						}
+
+						.f_topic{
+							width: 60%;
+						}
+
+						.f_user{
+							width: 40%;
+						}
+					}
+				}
+			}
+
+
 		}
 	}
+
+#f_one_post{
+	.f_lightbox_content{
+
+		table{
+			th{
+				text-align: center;
+				h5{
+					text-align: center;
+
+					
+				}
+			}
+
+			.social-icon{
+				float: none;
+			}
+
+			
+		}
+
+		
+
+		.f_user{
+			text-align: center;
+		}
+	}
+}
 
 
 
