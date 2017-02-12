@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,100 +8,143 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="js/skrollr.min.js"></script>
-<!-- <script src="js/modernizr-custom.js"></script> -->
-    <!-- <link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/86044/bisk8s_cdpn_base_201312_1.css'> -->
     <script src="js/index.js"></script>
     <title>ZeroGravity</title>
 </head>
+
 <body>
-    <canvas id="icanvas" width="80" height="360"></canvas>
+    <canvas id="icanvas" width="80" height="400"></canvas>
     <div class="sideBarGroup">
-        <div class="sideBar sideBar1" id="sideBar1"><span>Intro</span></div>
-        <div class="sideBar sideBar2" id="sideBar2"><span>Activity</span></div>
-        <div class="sideBar sideBar3" id="sideBar3"><span>Forum</span></div>
-        <div class="sideBar sideBar4" id="sideBar4"><span>Photo</span></div>
-        <div class="sideBar sideBar5" id="sideBar5"><span>Article</span></div>
+        <div class="sideBar sideBar5" id="sideBar5"><span><a href="#i-page05" class="page-scroll page-scroll05">星知識</a></span></div>
+        <div class="sideBar sideBar4" id="sideBar4"><span><a href="#i-page04" class="page-scroll page-scroll04">照片牆</a></span></div>
+        <div class="sideBar sideBar3" id="sideBar3"><span><a href="#i-page03" class="page-scroll page-scroll03">星際論壇</a></span></div>
+        <div class="sideBar sideBar2" id="sideBar2"><span><a href="#i-page02" class="page-scroll page-scroll02">觀星活動</a></span></div>
+        <div class="sideBar sideBar1" id="sideBar1"><span class="show"><a href="#i-page01" class="page-scroll page-scroll01">Intro</a></span></div>
     </div>
     <div id="info">0</div>
-    <div id="i-wrapper" data-0="transform:translate(0%,-4841px)" data-1160="transform:translate(0%,-3554px)" data-4060="transform:translate(0%,-3554px)" data-1000p="transform:translate(0%,0%)">
-    <!-- <div id="i-wrapper" data-0="transform:translate(0%,-4841px)" data-1160="transform:translate(0%,-3554px)" data-4060="transform:translate(0%,-3554px)"
+    <div id="i-wrapper" data-0="transform:translate(0%,-5041px)" data-1160="transform:translate(0%,-3554px)" data-4060="transform:translate(0%,-3554px)" data-1000p="transform:translate(0%,0%)">
+    <!-- <div id="i-wrapper" data-0="top:5041px"
+    data-1160="top:0px"> -->
+        <!-- data-8600="transform:translate(0%,-2664px)" -->
+
+
+        <!--  -->
+        <!-- <div id="i-wrapper" data-0="transform:translate(0%,-4841px)" data-1160="transform:translate(0%,-3554px)" data-4060="transform:translate(0%,-3554px)"
     data-800p="transform:translate(0%,-2220px)"
     data-850p="transform:translate(0%,-2220px)"
     data-890p="transform:translate(0%,-2000px)"> -->
         <div id="i-bgc"></div>
-        <section class="section section01">
+        <section class="section section01" id="i-page01">
+            <div class="star stars0"></div>
+            <div class="star stars1"></div>
+            <div class="star stars2"></div>
+            <div class="star stars3"></div>
             <h1>和我們一起探索星際去</h1>
+            <div class="i-searchBar">
+                <div class="searchBar">
+                    <input type="text" placeholder="活動搜尋">
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="searchDetail">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                    <div class="date">
+                        <span>日期</span>
+                        <input type="date">
+                    </div>
+                    <div class="loc">
+                        <span>地點</span>
+                        <input type="text">
+                    </div>
+                    <div class="type">
+                        <span>類型</span>
+                        <input type="text">
+                        <ul>
+                            <li>親子觀星</li>
+                            <li>親子觀星</li>
+                            <li>親子觀星</li>
+                            <li>親子觀星</li>
+                        </ul>
+                    </div>
+                    <div class="btn-search"><a href="#">搜尋活動</a></div>
+                </div>
+            </div>
             <div class="scroller"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
             <p>scroll down</p>
             <img id="i-ground" src="img/i-ground.png">
             <img id="i-people" src="img/i-people.png">
             <img id="i-telescop" src="img/i-telescop.png">
         </section>
-        <section class="section section02">
+        <section class="section section02" id="i-page02">
+            <div class="sectionTitle">
+                <h1>觀星活動</h1>
+                <h4>多種有趣的活動任你挑</h4>
+            </div>
+
             <img id="cloud1" src="img/i-cloud.png" data-0="right:-300px;opacity:1" data-810="right:-1000px;opacity:1" data-2310="right:-1000px;opacity:0">
             <img id="cloud2" src="img/i-cloud.png" data-0="left:-900px;opacity:1" data-810="left:-1100px;opacity:1" data-2310="left:-1100px;opacity:0">
             <div class="activity">
-                <div class="act act01" data-1000="transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;" data-1160="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-1560="transform:scale(1.2) translate3d(200px,330px,0);opacity:1" data-1660="transform:scale(1.4) translate3d(300px,530px,0);opacity:0">
+                <div class="act act01" data-1000="transform:scale(0) translate3d(-10%,-730px,-350px);opacity:0;" data-1160="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-1560="transform:scale(0.8) translate3d(100px,0px,0);opacity:1" data-1660="transform:scale(0.8) translate3d(300px,330px,0);opacity:0">
+                    <!-- <div class="act act01" data-1000="transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;" data-1160="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-1560="transform:scale(1.2) translate3d(200px,330px,0);opacity:1" data-1660="transform:scale(1.4) translate3d(300px,530px,0);opacity:0"> -->
                     <!-- <div class="act act01" data-1000="transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;" data-1160="transform:scale(0.4) translate3d(0,0px,0);opacity:1;" data-1560="transform:scale(0.6) translate3d(200px,0px,0);opacity:1" data-1660="transform:scale(0.8) translate3d(300px,330px,0);opacity:0"> -->
                     <div class="pic">
                         <img src="img/i-act01.jpg">
                     </div>
                     <img class="img-collection img-collection1" src="img/i-could2.png">
-                    <div class="content">
+                    <div class="content content1">
                         <h3>墾丁南十字星觀星露營</h3>
-                        <p>3天2夜觀星露營，有機會看到南十字星唷！</p>
+                        <p>3天2夜觀星露營</p>
                     </div>
                 </div>
-                <div class="act act02" id="i-act02" data-1600="transform:scale(0) translate3d(830px,-330px,-250px);opacity:0;" data-1760="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-2160="transform:scale(1.4) translate3d(0px,330px,0);opacity:1" data-2260="transform:scale(2) translate3d(-300px,-430px,0);opacity:0">
-                    <!-- <div class="act act02" data-1600="transform:scale(0) translate3d(830px,-330px,-250px);opacity:0;" data-1760="transform:scale(0.4) translate3d(0,0px,0);opacity:1;" data-2160="transform:scale(0.6) translate3d(0px,0px,0);opacity:1" data-2260="transform:scale(0.8) translate3d(-300px,-430px,0);opacity:0"> -->
+                <div class="act act02" id="i-act02" data-1600="transform:scale(0) translate3d(830px,-330px,-250px);opacity:0;" data-1760="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-2160="transform:scale(1) translate3d(0px,330px,0);opacity:1" data-2260="transform:scale(2) translate3d(-300px,-430px,0);opacity:0">
                     <div class="pic">
                         <img src="img/i-act02.jpg">
                     </div>
                     <img class="img-collection img-collection2" src="img/i-could3.png">
-                    <div class="content">
+                    <div class="content content2">
                         <h3>墾丁南十字星觀星露營</h3>
-                        <p>3天2夜觀星露營，有機會看到南十字星唷！</p>
+                        <p>3天2夜觀星露營</p>
                     </div>
                 </div>
-                <!-- <div class="act act03" data-2200="transform:scale(0) translate3d(-130px,-630px,-350px);opacity:0;" data-2360="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-2760="transform:scale(1.4) translate3d(200px,330px,0);opacity:1" data-2860="transform:scale(2) translate3d(200px,-430px,0);opacity:0"> -->
-                    <div class="act act03" data-2200="transform:scale(0) translate3d(-130px,-630px,-350px);opacity:0;" data-2360="transform:scale(0.4) translate3d(0,0px,0);opacity:1;" data-2760="transform:scale(0.6) translate3d(200px,330px,0);opacity:1" data-2860="transform:scale(0.8) translate3d(200px,-430px,0);opacity:0">
+                <div class="act act03" data-2200="transform:scale(0) translate3d(-130px,-630px,-350px);opacity:0;" data-2360="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-2760="transform:scale(1) translate3d(200px,330px,0);opacity:1" data-2860="transform:scale(2) translate3d(200px,-430px,0);opacity:0">
                     <div class="pic">
                         <img src="img/i-act03.jpg">
                     </div>
                     <img class="img-collection img-collection1" src="img/i-could2.png">
-                    <div class="content">
+                    <div class="content content3">
                         <h3>墾丁南十字星觀星露營</h3>
                         <p>3天2夜觀星露營，有機會看到南十字星唷！</p>
                     </div>
                 </div>
-                <!-- <div class="act act04" data-2800="transform:scale(0) translate3d(330px,-430px,-350px);opacity:0;" data-2960="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-3360="transform:scale(1.4) translate3d(0px,0px,0);opacity:1" data-3460="transform:scale(2) translate3d(0px,0px,0);opacity:0"> -->
-                    <div class="act act04" data-2800="transform:scale(0) translate3d(330px,-430px,-350px);opacity:0;" data-2960="transform:scale(0.4) translate3d(0,0px,0);opacity:1;" data-3360="transform:scale(0.6) translate3d(0px,0px,0);opacity:1"
-                data-3460="transform:scale(0.8) translate3d(0px,0px,0);opacity:0">
+                <div class="act act04" data-2800="transform:scale(0) translate3d(330px,-430px,-350px);opacity:0;" data-2960="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-3360="transform:scale(1) translate3d(0px,0px,0);opacity:1" data-3460="transform:scale(2) translate3d(0px,0px,0);opacity:0">
+                    <!-- <div class="act act04" data-2800="transform:scale(0) translate3d(330px,-430px,-350px);opacity:0;" data-2960="transform:scale(0.4) translate3d(0,0px,0);opacity:1;" data-3360="transform:scale(0.6) translate3d(0px,0px,0);opacity:1" data-3460="transform:scale(0.8) translate3d(0px,0px,0);opacity:0"> -->
                     <div class="pic">
                         <img src="img/i-act04.jpg">
                     </div>
                     <img class="img-collection img-collection2" src="img/i-could3.png">
-                    <div class="content">
+                    <div class="content content4">
                         <h3>墾丁南十字星觀星露營</h3>
                         <p>3天2夜觀星露營，有機會看到南十字星唷！</p>
                     </div>
                 </div>
-                <!-- <div class="act act05" data-3400="transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;" data-3560="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-3960="transform:scale(1.4) translate3d(0px,0px,0);opacity:1" data-4060="transform:scale(2) translate3d(200px,0px,0);opacity:0"> -->
-                    <div class="act act05" data-3400="transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;" data-3560="transform:scale(0.4) translate3d(0,0px,0);opacity:1;" data-3960="transform:scale(0.6) translate3d(0px,0px,0);opacity:1"
-                data-4060="transform:scale(0.8) translate3d(200px,0px,0);opacity:0">
+                <div class="act act05" data-3400="transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;" data-3560="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-3960="transform:scale(1) translate3d(0px,0px,0);opacity:1" data-4060="transform:scale(2) translate3d(200px,0px,0);opacity:0">
+                    <!-- <div class="act act05" data-3400="transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;" data-3560="transform:scale(0.4) translate3d(0,0px,0);opacity:1;" data-3960="transform:scale(0.6) translate3d(0px,0px,0);opacity:1" data-4060="transform:scale(0.8) translate3d(200px,0px,0);opacity:0"> -->
                     <div class="pic">
                         <img src="img/i-act05.jpg">
                     </div>
                     <img class="img-collection img-collection1" src="img/i-could2.png">
-                    <div class="content">
+                    <div class="content content3">
                         <h3>墾丁南十字星觀星露營</h3>
                         <p>3天2夜觀星露營，有機會看到南十字星唷！</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section section03">
-
+        <section class="section section03" id="i-page03">
+            <div class="sectionTitle">
+                <h1>觀星活動</h1>
+                <h4>多種有趣的活動任你挑</h4>
+            </div>
+            <div class="forumGroup">
             <article class="forum forum1">
                 <div class="pic"><img src="img/i-member2.png"></div>
                 <div class="content">
@@ -213,41 +257,60 @@
                     <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                 </div>
             </article>
-        </section>
-        <section class="section section04">
-          <div class="gallery">
-            <div class="pic">
-                <img src="img/i-act01.jpg">
-            </div>
-            <div class="pic pic1">
-                <img src="img/i-act01.jpg">
-            </div>
-            <div class="pic pic2">
-                <img src="img/i-act01.jpg">
-            </div>
-            <div class="pic pic3">
-                <img src="img/i-act03.jpg">
-            </div>
-            <div class="pic pic4">
-                <img src="img/i-act01.jpg">
-            </div>
-            <div class="pic pic5">
-                <img src="img/i-act02.jpg">
-            </div>
-            <div class="pic pic6">
-                <img src="img/i-act03.jpg">
-            </div>
-            <div class="pic pic7">
-                <img src="img/i-act04.jpg">
-            </div>
-            <div class="pic pic8">
-                <img src="img/i-act05.jpg">
-            </div>  
           </div>
-          <div class="next">Next</div>
-          <div class="prev">Prev</div>
+            <div class="section-btn"><a href="#">進入論壇</a></div>
         </section>
-        <section class="section section05">
+        <!-- <section class="section section04" id="i-page04"
+        data-8800="bottom:-1500px"
+        data-9030="bottom:-2668px"> -->
+        <section class="section section04" id="i-page04">
+            <div class="sectionTitle">
+                <h1>觀星活動</h1>
+                <h4>多種有趣的活動任你挑</h4>
+            </div>
+            <div class="gallery">
+                <div class="pic pic1">
+                    <img src="img/i-act01.jpg">
+                    <div class="detail">遇到好天氣</div>
+                </div>
+                <div class="pic pic2">
+                    <img src="img/i-act01.jpg">
+                    <div class="detail">我在露營天氣晴</div>
+                </div>
+                <div class="pic pic3">
+                    <img src="img/i-act03.jpg">
+                    <div class="detail">武嶺觀星去</div>
+                </div>
+                <div class="pic pic4">
+                    <img src="img/i-act01.jpg">
+                    <div class="detail">過年拍星星</div>
+                </div>
+                <div class="pic pic5">
+                    <img src="img/i-act02.jpg">
+                    <div class="detail">照片騙很大</div>
+                </div>
+                <div class="pic pic6">
+                    <img src="img/i-act03.jpg">
+                    <div class="detail">沒有很可以，但你惹不起</div>
+                </div>
+                <div class="pic pic7">
+                    <img src="img/i-act04.jpg">
+                    <div class="detail">遇到難得的奇景</div>
+                </div>
+                <div class="pic pic8">
+                    <img src="img/i-act05.jpg">
+                    <div class="detail">伸手摘星</div>
+                </div>
+            </div>
+            <div class="section-btn"><a href="#">進入照片牆</a></div>
+        </section>
+        <!-- <section class="section section05" id="i-page05" data-9230="bottom:-1500px;opacity:0"
+        data-9460="bottom:-2668px;opacity:1"> -->
+        <section class="section section05" id="i-page05">
+            <div class="sectionTitle">
+                <h1>觀星活動</h1>
+                <h4>多種有趣的活動任你挑</h4>
+            </div>
             <ul class="accordion" id="accordion">
                 <li class="know know1 fakeCover">
                     <div class="pic">
@@ -327,111 +390,53 @@
                     </div>
                 </li>
             </ul>
-            <!-- <article class="knowledge knowledge01">
-            <h3>大家今年有要去追極光嗎？</h3>
-            <div class="detail">
-              <div class="pic"><img src="img/i-member.png"></div>
-              <div class="info">
-              <h4 class="memberId">Allie</h4>
-              <h4 class="date">2017.01.01</h4>
-              </div>
+            <div class="section-btn"><a href="#">進入星知識</a></div>
+        </section>
+        <section class="section section06">
+            <nav id="nav">
+                <div class="container relative">
+                    <div class="row">
+                        <input type="checkbox" id="navButtonHidden">
+                        <label id="navButton" for="navButtonHidden"></label>
+                        <div id="logo">
+                            <a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
+                        </div>
+                        <ul class="mainMenu menu">
+                            <li><a href="#">觀星活動</a></li>
+                            <li><a href="#">星際論壇</a></li>
+                            <li><a href="#">照&nbsp&nbsp片&nbsp&nbsp牆</a></li>
+                            <li><a href="#">星&nbsp&nbsp知&nbsp&nbsp識</a></li>
+                        </ul>
+                        <ul class="mainMenu signArea">
+                            <li id="signLeft">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                <span><a href="#">註冊</a></span>
+                            </li>
+                            <li id="signRight">
+                                <span><a href="#">登入</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="star stars1"></div>
+            <div class="star stars2"></div>
+            <div class="star stars3"></div>
+            <div class="horizon">
+                <div class="glow"></div>
             </div>
-            <div class="content">
-              <p>聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-              聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-            聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!</p>
+            <div class="earth"></div>
+            <div class="title">
+                Zero Gravity
             </div>
-          </article>
-          <article class="knowledge knowledge02">
-            <h3>大家今年有要去追極光嗎？</h3>
-            <div class="detail">
-              <div class="pic"><img src="img/i-member.png"></div>
-              <div class="info">
-              <h4 class="memberId">Allie</h4>
-              <h4 class="date">2017.01.01</h4>
-              </div>
+            <div class="join">
+                <div class="expMem">
+                    <h1>和我們一起去探索星際吧</h1>
+                    <h4>歡迎加入會員，體驗更多功能</h4>
+                    <div class="section-btn"><a href="#">使用體驗帳號登入</a></div>
+                </div>
+
             </div>
-            <div class="content">
-              <p>聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-              聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-            聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!</p>
-            </div>
-          </article>
-          <article class="knowledge knowledge03">
-            <h3>大家今年有要去追極光嗎？</h3>
-            <div class="detail">
-              <div class="pic"><img src="img/i-member.png"></div>
-              <div class="info">
-              <h4 class="memberId">Allie</h4>
-              <h4 class="date">2017.01.01</h4>
-              </div>
-            </div>
-            <div class="content">
-              <p>聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-              聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-            聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!</p>
-            </div>
-          </article>
-          <article class="knowledge knowledge04">
-            <h3>大家今年有要去追極光嗎？</h3>
-            <div class="detail">
-              <div class="pic"><img src="img/i-member.png"></div>
-              <div class="info">
-              <h4 class="memberId">Allie</h4>
-              <h4 class="date">2017.01.01</h4>
-              </div>
-            </div>
-            <div class="content">
-              <p>聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-              聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-            聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!</p>
-            </div>
-          </article>
-          <article class="knowledge knowledge05">
-            <h3>大家今年有要去追極光嗎？</h3>
-            <div class="detail">
-              <div class="pic"><img src="img/i-member.png"></div>
-              <div class="info">
-              <h4 class="memberId">Allie</h4>
-              <h4 class="date">2017.01.01</h4>
-              </div>
-            </div>
-            <div class="content">
-              <p>聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-              聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-            聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!</p>
-            </div>
-          </article>
-          <article class="knowledge knowledge06">
-            <h3>大家今年有要去追極光嗎？</h3>
-            <div class="detail">
-              <div class="pic"><img src="img/i-member.png"></div>
-              <div class="info">
-              <h4 class="memberId">Allie</h4>
-              <h4 class="date">2017.01.01</h4>
-              </div>
-            </div>
-            <div class="content">
-              <p>聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-              聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-            聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!</p>
-            </div>
-          </article>
-          <article class="knowledge knowledge07">
-            <h3>大家今年有要去追極光嗎？</h3>
-            <div class="detail">
-              <div class="pic"><img src="img/i-member.png"></div>
-              <div class="info">
-              <h4 class="memberId">Allie</h4>
-              <h4 class="date">2017.01.01</h4>
-              </div>
-            </div>
-            <div class="content">
-              <p>聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-              聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!
-            聽說2017年是近十年極光爆發的最 後一年，熱愛天文的小夥伴們，有計 畫把握今年去追極光嗎?聽說2017 年是近十年極光爆發的!</p>
-            </div>
-          </article> -->
         </section>
     </div>
 </body>
@@ -443,132 +448,4 @@
             $('#info').text(data.curTop);
         }
     });
-
-//     $('.gallery').mousemove(function(event){
-//   $(this).css({
-//     "perspective-origin":
-//     event.pageX+"px "+
-//     event.pageY+5000+"px "
-//   });
-// });
-// var body = {value:1}
-// function loop(){
-//   $(body).animate(
-//     {value: '+=1'}
-//     ,{
-//     duration:Math.pow(10,4),
-//     easing:'linear',
-//     complete:loop,
-//     step:function(i){
-//       $('.gallery img').each(function(j){
-//         var b=(i+j);
-//         var x=
-//             (Math.sin(b)*
-//             (window.innerWidth*.6));
-//         var y= 5-(j*.5);
-//         var z= (Math.cos(b)*20);
-//         $(this).css({
-//         'z-index': (z>0)?0:-1,
-//         '-webkit-filter': 'blur('+(-z*.01)+'em)',
-//         'transform':
-//         'translate3d('+x+'px,'+y+'em,'+z+'em)'+
-//         'rotateY('+(Math.cos(b)*180)+'deg) ',
-//       });
-//       })
-//     }
-//   })
-// }
-// loop();
-      // $(function() {
-      //
-      //     $('.section04').mousemove(function(e) {
-      //         var _height = e.clientY - $(this).offset().top + 598;
-      //         $('#info').text(e.clientX - 598 + ',' + _height);
-      //         // alert(EX);
-      //     });
-      // });
 </script>
-<!-- <script type="text/javascript">
-    /* ==== start script ==== */
-    onresize = tv.resize;
-    tv.init();
-</script> -->
-<!-- <script type="text/javascript">
-    $(function() {
-        $('#accordion > li').hover(
-            function () {
-                closeKnowTrans();
-                clearInterval(knowClockOn);
-                var $this = $(this);
-                $this.removeClass('fakeCover');
-                $this.stop().animate({
-                    'width': '480px'
-                }, 500).css({
-                    'transform': 'scale(1.4)',
-                    'z-index':'2'
-                });
-                $('.heading', $this).stop(true, true).fadeOut();
-                $('.knowDescription', $this).stop(true, true).slideDown(500);
-                $('.pic', $this).stop(true, true).fadeIn();
-                $('.description', $this).stop(true, true).fadeIn();
-                $('.memberId', $this).stop(true, true).fadeIn(800);
-            },
-            function() {
-                knowClockOn = setInterval(autoKnowTrans,3000);
-                var $this = $(this);
-                $this.addClass('fakeCover');
-                $this.stop().animate({
-                    'width': '215px'
-                }, 500).css({
-                    'transform': 'scale(1)',
-                    'z-index':'0'
-                });
-                $('.heading', $this).stop(true, true).fadeIn();
-                $('.pic', $this).stop(true, true).fadeOut();
-                $('.description', $this).stop(true, true).fadeOut(500);
-                $('.knowDescription', $this).stop(true, true).slideUp(700);
-                $('.memberId', $this).stop(true, true).fadeOut();
-            }
-        );
-    });
-
-
-
-      var knowClockOn = setInterval(autoKnowTrans,3000);
-      var _knowTransTimes = 1;
-
-      function autoKnowTrans(){
-        closeKnowTrans();
-        if(_knowTransTimes>5){
-          _knowTransTimes=1;
-        }
-        $('.know'+_knowTransTimes).removeClass('fakeCover');
-          $('.know'+_knowTransTimes).stop().animate({
-            'width': '480px'
-        }, 500).css({
-            'transform': 'scale(1.4)',
-            'z-index':'2'
-        });
-        $('.heading', '.know'+_knowTransTimes).stop(true, true).fadeOut();
-        $('.knowDescription', '.know'+_knowTransTimes).stop(true, true).slideDown(500);
-        $('.pic', '.know'+_knowTransTimes).stop(true, true).fadeIn();
-        $('.description', '.know'+_knowTransTimes).stop(true, true).fadeIn();
-        $('.memberId', '.know'+_knowTransTimes).stop(true, true).fadeIn(800);
-    };
-
-    function closeKnowTrans(){
-        $('.know'+_knowTransTimes).addClass('fakeCover');
-          $('.know'+_knowTransTimes).stop().animate({
-            'width': '215px'
-        }, 500).css({
-            'transform': 'scale(1)',
-            'z-index':'0'
-        });
-        $('.heading', '.know'+_knowTransTimes).stop(true, true).fadeIn();
-        $('.pic', '.know'+_knowTransTimes).stop(true, true).fadeOut();
-        $('.description', '.know'+_knowTransTimes).stop(true, true).fadeOut(500);
-        $('.knowDescription', '.know'+_knowTransTimes).stop(true, true).slideUp(700);
-        $('.memberId', '.know'+_knowTransTimes).stop(true, true).fadeOut();
-        _knowTransTimes ++;
-    }
-</script> -->

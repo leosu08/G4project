@@ -299,9 +299,7 @@
 					span {
 						padding-right: 15px;
 					}
-				}
-
-				&.forum1 {
+				}&.forum1 {
 					transform: translate(0) scale(0.8);
 				}
 
@@ -323,7 +321,7 @@
 
 				&.forum6 {
 					transform: scale(0.8);
-					display: none;
+					// display: none;
 				}
 
 				&.forum7 {
@@ -357,7 +355,7 @@
 
 				&.forum14 {
 					transform: scale(0.6);
-					display: none;
+					// display: none;
 				}
 			}
 		}
