@@ -2027,13 +2027,21 @@ footer {
   background-color: rgba(255, 255, 255, 0.5);
   height: 30px;
   padding-left: 28px;
-  z-index: 100; }
+  z-index: 100;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  text-overflow: ellipsis; }
 
 #a-body a {
   text-decoration: none !important; }
 
 #a-body * {
   outline: none; }
+
+.a-main-map {
+  margin-top: 8vh;
+  height: 92vh; }
 
 .a-relative {
   height: 100%;
@@ -2082,7 +2090,7 @@ footer {
     font-size: 32px; }
 
 .a-searchInput {
-  display: inline-block;
+  display: block;
   position: relative; }
   .a-searchInput i {
     width: 20px;
@@ -2090,59 +2098,74 @@ footer {
     color: #353535;
     position: absolute;
     left: 5px;
-    top: 24px;
+    top: 4px;
     bottom: 0;
     margin: 0; }
   .a-searchInput #pac-input {
     z-index: 10;
     /*position: absolute;*/
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 300;
-    text-overflow: ellipsis;
-    width: 425px;
+    margin: 0;
+    width: 318px;
     height: 30px;
     text-align: left;
-    margin-top: 20px;
     padding-left: 28px; }
   .a-searchInput #pac-input:focus {
     border-color: #4d90fe; }
   .a-searchInput .pac-container {
     font-family: Roboto; }
 
+.a-btn {
+  margin-top: 20px; }
+  .a-btn .btn-lg {
+    margin: 20px  30px 0px 30px; }
+
 .a-date-control {
-  width: 200px; }
+  width: 318px; }
 
 .a-panel {
   overflow: hidden;
   position: relative;
   text-align: left;
-  margin-top: 70px;
+  margin-top: 8vh;
   width: 100%;
   box-sizing: border-box;
   height: 0;
-  height: 100vh;
+  height: 92vh;
   background: url("http://cdn.allwallpaper.in/wallpapers/3200x2000/13325/outer-space-stars-galaxies-3200x2000-wallpaper.jpg");
   background-size: 100% 100%;
   background-position: 50% 80%;
   background-repeat: no-repeat; }
+  .a-panel .a-text {
+    display: block;
+    margin: 10px 0; }
   .a-panel input {
-    width: 230px; }
+    width: 318px; }
   .a-panel .a-panel-item input {
     padding: 0;
     border: none;
     height: 30px;
     vertical-align: middle; }
   .a-panel ul a:first-child {
-    background-color: #5694CD; }
+    background-color: #DCAE26; }
   .a-panel ul a {
     display: inline-block;
     padding: 10px; }
     .a-panel ul a:hover {
-      background-color: #5694CD; }
+      background-color: #DCAE26; }
   .a-panel li {
     color: #f3f7f7;
     display: inline-block; }
+
+#wrapper {
+  position: relative; }
+  #wrapper .fa-clock-o {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    margin: auto;
+    font-size: 22px;
+    line-height: 30px; }
 
 .a-title {
   font-size: 32px;
@@ -2435,7 +2458,9 @@ footer {
   height: 40px;
   border-radius: 5px;
   border: 1px solid #fa0;
-  line-height: 40px; }
+  line-height: 40px;
+  background-color: #C89A3D;
+  cursor: pointer; }
 
 #a-slide-container {
   overflow: hidden; }
@@ -2452,6 +2477,9 @@ footer {
   width: 200%;
   height: 200%; }
 
+.content li {
+  cursor: pointer; }
+
 .a-slide {
   position: absolute;
   top: 0;
@@ -2462,6 +2490,7 @@ footer {
   .a-slide ul {
     margin-top: 50px; }
   .a-slide li {
+    cursor: pointer;
     text-align: center;
     font-size: 24px;
     color: #fff;
@@ -2507,7 +2536,8 @@ footer {
   #a-slide-1 #svg_6 {
     animation: circle 2s 1.3s linear both; }
   #a-slide-1 li {
-    display: inline-block; }
+    display: block;
+    cursor: pointer; }
 
 #a-slide-2 {
   background-image: url("../img/a_004.jpg");
@@ -3285,8 +3315,8 @@ footer {
     top: 0;
     left: 0; }
 
-.googleMap.a-mL {
-  height: 100vh; }
+.a-add-google .googleMap {
+  height: 100%; }
 
 .a-add-title {
   font-size: 32px;

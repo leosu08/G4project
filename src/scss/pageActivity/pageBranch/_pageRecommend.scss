@@ -5,6 +5,8 @@
   border-radius: 5px;
   border:1px solid #fa0;
   line-height: 40px;
+  background-color: #C89A3D;
+  cursor: pointer;
 }
 
 #a-slide-container {
@@ -21,7 +23,11 @@
   left: 0;
   width: 200%;
   height: 200%; }
-
+.content{
+  li{
+    cursor: pointer;
+  }
+}
 .a-slide {
   position: absolute;
   top: 0;
@@ -32,7 +38,8 @@
         ul{
           margin-top: 50px;  
         }
-        li{
+        li{ 
+            cursor: pointer;
             text-align: center;
             font-size: $fz-h4;
             color:#fff;
@@ -47,7 +54,12 @@
   .a-slide .content {
     text-align: center;
     color: #fff;
-    font-size: 30px; }
+    font-size: 30px; 
+
+
+
+
+  }
 
       @keyframes circle{
         100%{
@@ -90,7 +102,8 @@
     animation: circle 2s 1.3s linear both;
   }
   li{
-    display: inline-block;
+    display: block;
+    cursor:pointer;
   }
 
 }

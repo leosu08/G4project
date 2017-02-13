@@ -320,9 +320,12 @@
 // 		background-size: 200%;
 // 	}
 // }
-.googleMap.a-mL{
-	height: 100vh;
+.a-add-google{
+	.googleMap{
+		height: 100%;
+	}
 }
+
 .a-add-title{
 	// padding-bottom: 10px;
 	font-size: $fz-h2;
