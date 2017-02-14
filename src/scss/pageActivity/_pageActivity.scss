@@ -306,6 +306,215 @@
 	display: none;
 }
 
+//單則活動開始
+#a_1activity_wrapper{
+
+
+	.aa_banner{
+		width: 90%;
+		height: 600px;
+		background-image: url(../img/i-act04.jpg);
+		background-size: cover;
+		position: relative;
+		overflow: hidden;
+		margin: auto;
+		box-shadow: 1px 1px 12px #fff;
+		margin-top: 120px;
+
+		.aa_info{
+			width: 70%;
+			height: 70%;
+			// border: 2px solid $white;
+			// background-color: rgba(0,0,0,.8);
+			// background-image: linear-gradient(to top, rgba(48, 207, 208, .5) 0%, rgba(51, 8, 103, .3) 100%);
+			background-image: linear-gradient(to bottom, rgba(67, 67, 67, .6) 0%, rgba(0,0,0,0.9) 100%);
+			// background-image: linear-gradient(to top, rgba(9, 32, 63, .5) 0%, #537895 100%);
+			color: #fff;
+			position: absolute;
+			top: 100px;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+			box-shadow: 1px 1px 5px #fff;
+			box-shadow: -1px -1px 5px #fff;
+			padding: 20px 50px;
+			letter-spacing: 0.05em;
+
+			h3{
+				font-size: $fz-h3;
+				font-weight: 800;
+				text-align: center;
+				width: 90%;
+				margin: auto;
+				margin-bottom: 20px;
+			}
+
+			p{
+				font-size: 16px;
+				padding-bottom: 20px;
+				margin-bottom: 10px;
+				border-bottom: 2px solid rgba(255,255,255,.6);
+				color: rgba(255,255,255,.7);
+				font-weight: 400;
+				text-align: justify;
+			}
+
+			span{
+				
+				display: block;
+				padding-bottom: 10px;
+				font-size: 16px;
+				width: 100%;
+				margin: auto;
+				color:rgba(255,255,255,.9);
+				padding-left: 50px;
+			}
+
+			.cost{
+				border-bottom: 2px solid rgba(255,255,255,.9);
+				padding-bottom: 20px;
+				margin-bottom: 10px;
+
+			}
+
+			.btn-lg{
+				display: block;
+			    line-height: 38px;
+			    margin: 20px auto;
+			    font-size: 16px;
+			    background-color: #daaf73;
+			    border: 1px solid #daaf73;
+			    text-shadow:1px 1px 1px #000;
+			    margin-bottom: 10px;
+
+			    a{
+			    	&:hover{
+			    		color: #daaf73;
+			    	}
+			    }
+			    
+
+			    &:hover{
+			    	background-color:transparent;
+			    	border: 1px solid #daaf73;;
+			    	
+			    	box-shadow: 1px 1px 2px #333;
+
+			    }
+			}
+
+			.fa{
+				margin-right: 5px;
+				display: inline-block;
+				// border: 1px solid red;
+				width: 20px;
+				text-align: center;
+			}
+
+			.fa-money{
+				// margin-right: 5px;
+			}
+		}
+	}
+
+	.aa_comments{
+		width: 100%;
+		padding-top: 50px;
+		letter-spacing: 0.1em;
+		padding-bottom: 100px;
+
+		h4{
+			color: $white;
+			font-size: $fz-h4;
+			font-weight: 500;
+			margin-bottom: 50px;
+		}
+
+		.comment{
+			width: 70%;
+			margin: auto;
+			// border: 1px solid #fff;
+			position: relative;
+			margin-bottom: 60px;
+
+			.user{
+				width: 15%;
+				height: 100%;
+				// position: absolute;
+				display: inline-block;
+				vertical-align: middle;
+				// border: 1px solid red;
+				text-align: center;
+				float: left;
+
+				.user-pic{
+					width: 100%;
+
+					img{
+						width: 100%;
+					}
+				}
+
+				.user-info{
+					a{
+						color: #7fc8e7;
+						font-size: 16px;
+						display: block;
+						margin-top: 5px;
+					}
+				}
+			}
+
+			.ct-content{
+				width: 80%;
+				padding: 10px 30px;
+				float: right;
+				font-size: 16px;
+				display: inline-block;
+				color: #fff;
+				border: 1px solid #fff;
+				vertical-align: middle;
+
+				p:nth-child(1){
+					margin-bottom: 20px;
+					font-size: 18px;
+					color: rgba(255,255,255,.7);
+					padding-bottom: 10px;
+					border-bottom: 3px double rgba(255,255,255,.3);
+				}
+
+				p:nth-child(2){
+					margin-bottom: 20px;
+					// padding-left: 30px;
+				}
+
+				p:nth-child(3){
+					text-align: right;
+					padding-top: 5px;
+					color: rgba(255,255,255,.5);
+					// border-top: 1px solid rgba(255,255,255,.3);
+				}
+
+
+
+				.ct-stars{
+					float: right;
+					color: #daaf73;
+
+					.fa:nth-child(5){
+						color:$grey;
+					}
+
+
+				}
+			}
+		}
+	}
+}
+
+//單則活動結束
+
 
 @import "pageMain/xs";
 @import "pageMain/sm";

@@ -7,9 +7,10 @@ $(document).ready(function(){
 			var pinSubNav = new ScrollMagic.Scene({
 				triggerElement:'#f_section2',
 				triggerHook:0,
+			
 			})
 
-			.setPin('#f_section2')
+			.setPin('#f_bg1')
 			.addTo(controller);
 
 			var aaTop = $('#f_section2').offset().top;

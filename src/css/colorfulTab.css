@@ -87,7 +87,9 @@
       display: block;
       text-decoration: none;
       font-family: "Montserrat";
-      color: #4f9cdd;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #0ce3ec;
       text-align: center;
       padding: 20px 0;
       font-size: 18px;
@@ -153,7 +155,7 @@
     .colorful-tab-wrapper.flatline .colorful-tab-menu-item.active a {
       background: none;
       opacity: 1;
-      box-shadow: 0 -2px 0 #4f9cdd inset; }
+      box-shadow: 0 -2px 0 #0ce3ec inset; }
 
 /*@media (max-width: 767px) {
   .colorful-tab-menu {

@@ -2211,6 +2211,137 @@ footer {
 .a-oldSlider {
   display: none; }
 
+#a_1activity_wrapper .aa_banner {
+  width: 90%;
+  height: 600px;
+  background-image: url(../img/i-act04.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 1px 1px 12px #fff;
+  margin-top: 120px; }
+  #a_1activity_wrapper .aa_banner .aa_info {
+    width: 70%;
+    height: 70%;
+    background-image: linear-gradient(to bottom, rgba(67, 67, 67, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%);
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 1px 1px 5px #fff;
+    box-shadow: -1px -1px 5px #fff;
+    padding: 20px 50px;
+    letter-spacing: 0.05em; }
+    #a_1activity_wrapper .aa_banner .aa_info h3 {
+      font-size: 28px;
+      font-weight: 800;
+      text-align: center;
+      width: 90%;
+      margin: auto;
+      margin-bottom: 20px; }
+    #a_1activity_wrapper .aa_banner .aa_info p {
+      font-size: 16px;
+      padding-bottom: 20px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 400;
+      text-align: justify; }
+    #a_1activity_wrapper .aa_banner .aa_info span {
+      display: block;
+      padding-bottom: 10px;
+      font-size: 16px;
+      width: 100%;
+      margin: auto;
+      color: rgba(255, 255, 255, 0.9);
+      padding-left: 50px; }
+    #a_1activity_wrapper .aa_banner .aa_info .cost {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+      padding-bottom: 20px;
+      margin-bottom: 10px; }
+    #a_1activity_wrapper .aa_banner .aa_info .btn-lg {
+      display: block;
+      line-height: 38px;
+      margin: 20px auto;
+      font-size: 16px;
+      background-color: #daaf73;
+      border: 1px solid #daaf73;
+      text-shadow: 1px 1px 1px #000;
+      margin-bottom: 10px; }
+      #a_1activity_wrapper .aa_banner .aa_info .btn-lg a:hover {
+        color: #daaf73; }
+      #a_1activity_wrapper .aa_banner .aa_info .btn-lg:hover {
+        background-color: transparent;
+        border: 1px solid #daaf73;
+        box-shadow: 1px 1px 2px #333; }
+    #a_1activity_wrapper .aa_banner .aa_info .fa {
+      margin-right: 5px;
+      display: inline-block;
+      width: 20px;
+      text-align: center; }
+
+#a_1activity_wrapper .aa_comments {
+  width: 100%;
+  padding-top: 50px;
+  letter-spacing: 0.1em;
+  padding-bottom: 100px; }
+  #a_1activity_wrapper .aa_comments h4 {
+    color: #f3f7f7;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px; }
+  #a_1activity_wrapper .aa_comments .comment {
+    width: 70%;
+    margin: auto;
+    position: relative;
+    margin-bottom: 60px; }
+    #a_1activity_wrapper .aa_comments .comment .user {
+      width: 15%;
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      float: left; }
+      #a_1activity_wrapper .aa_comments .comment .user .user-pic {
+        width: 100%; }
+        #a_1activity_wrapper .aa_comments .comment .user .user-pic img {
+          width: 100%; }
+      #a_1activity_wrapper .aa_comments .comment .user .user-info a {
+        color: #7fc8e7;
+        font-size: 16px;
+        display: block;
+        margin-top: 5px; }
+    #a_1activity_wrapper .aa_comments .comment .ct-content {
+      width: 80%;
+      padding: 10px 30px;
+      float: right;
+      font-size: 16px;
+      display: inline-block;
+      color: #fff;
+      border: 1px solid #fff;
+      vertical-align: middle; }
+      #a_1activity_wrapper .aa_comments .comment .ct-content p:nth-child(1) {
+        margin-bottom: 20px;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+        padding-bottom: 10px;
+        border-bottom: 3px double rgba(255, 255, 255, 0.3); }
+      #a_1activity_wrapper .aa_comments .comment .ct-content p:nth-child(2) {
+        margin-bottom: 20px; }
+      #a_1activity_wrapper .aa_comments .comment .ct-content p:nth-child(3) {
+        text-align: right;
+        padding-top: 5px;
+        color: rgba(255, 255, 255, 0.5); }
+      #a_1activity_wrapper .aa_comments .comment .ct-content .ct-stars {
+        float: right;
+        color: #daaf73; }
+        #a_1activity_wrapper .aa_comments .comment .ct-content .ct-stars .fa:nth-child(5) {
+          color: #3e3e43; }
+
 @media screen and (max-width: 767px) {
   .a-map {
     display: none; }
@@ -2275,7 +2406,49 @@ footer {
   .wrap {
     display: none; }
   .a-oldSlider {
-    display: block; } }
+    display: block; }
+  #a_1activity_wrapper .aa_banner {
+    height: 750px;
+    width: 100%;
+    margin-top: 0px; }
+    #a_1activity_wrapper .aa_banner .aa_info {
+      width: 95%;
+      padding: 10px; }
+      #a_1activity_wrapper .aa_banner .aa_info span {
+        padding-left: 35px;
+        padding-right: 35px; }
+  #a_1activity_wrapper .aa_comments h4 {
+    text-align: center; }
+  #a_1activity_wrapper .aa_comments .comment {
+    width: 90%;
+    margin-bottom: 30px; }
+    #a_1activity_wrapper .aa_comments .comment .user {
+      width: 100%;
+      text-align: center; }
+      #a_1activity_wrapper .aa_comments .comment .user .user-pic {
+        width: 20%;
+        margin: auto; }
+    #a_1activity_wrapper .aa_comments .comment .ct-content {
+      width: 100%;
+      padding: 10px;
+      padding-top: 80px;
+      position: relative;
+      top: -50px;
+      z-index: -1; } }
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  #a_1activity_wrapper .aa_banner {
+    height: 650px;
+    width: 100%;
+    margin-top: 0px; }
+    #a_1activity_wrapper .aa_banner .aa_info {
+      width: 80%;
+      padding: 30px; }
+      #a_1activity_wrapper .aa_banner .aa_info span {
+        padding-left: 35px;
+        padding-right: 35px; }
+  #a_1activity_wrapper .aa_comments h4 {
+    text-align: center; } }
 
 .a-btn-recommend {
   margin: auto;
@@ -2649,7 +2822,8 @@ footer {
     margin: auto; }
     #f_section1 .f_title h1 {
       font-size: 40px;
-      text-shadow: 1px 10px 10px #000; }
+      text-shadow: 1px 10px 10px #000;
+      font-weight: 800; }
   #f_section1 .f_desc {
     width: 70%;
     height: 30%;
@@ -3311,6 +3485,19 @@ footer {
     padding: 0px; }
   .recommend {
     text-align: center; } }
+
+#kn_wrapper .kn_content {
+  color: #fff;
+  width: 100%;
+  font-size: 16px; }
+  #kn_wrapper .kn_content .kn_posts {
+    width: 100%; }
+    #kn_wrapper .kn_content .kn_posts li {
+      width: 45%;
+      padding: 20px;
+      float: left; }
+    #kn_wrapper .kn_content .kn_posts .kn-p:nth-child(even) {
+      float: right; }
 
 #m_body {
   background-image: url(../img/forum/f_003.jpg);

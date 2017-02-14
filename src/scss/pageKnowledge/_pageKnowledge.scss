@@ -1,3 +1,27 @@
+#kn_wrapper{
+	.kn_content{
+		color: #fff;
+		width: 100%;
+		font-size: 16px;
+
+		.kn_posts{
+			width: 100%;
+
+			li{
+				width: 45%;
+				padding: 20px;
+				float: left;
+			}
+
+			.kn-p:nth-child(even){
+				float: right;
+			}
+		}
+	}
+		
+}
+
+
 @import "xs";
 @import "sm";
 @import "md";
