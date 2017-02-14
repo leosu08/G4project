@@ -114,8 +114,8 @@
   .a-r-star{
     // stroke-dashoffset:2000;
     // stroke-dasharray:2000;
-    top: 111px;
-    left:1px;
+    top: 210px;
+    left:3px;
   }
   #svg_4{
     animation: circle 5s  linear both;
@@ -136,4 +136,33 @@
 #a-slide-4 {
   background-image: url("../img/a_004.jpg");
   transform: translate(100%, 200%) ;
+}
+.a-r-t1{
+  padding-top: 200px; 
+}
+.a-r-t2{
+  padding-top: 150px; 
+}
+
+.a-r-t3{
+  padding-top: 200px; 
+}
+
+.a-r-t4{
+  margin-bottom: 50px;  
+  // padding-top: 200px; 
+}
+.a-shuttleCover{
+  animation:wave 3s linear alternate infinite;
+}
+@keyframes wave{
+  0%{
+    transform: translate(random(40)+px,random(40)+px);
+  }
+   50%{
+    transform: translate(random(40)+px,random(40)+px);
+  }
+  100%{
+    transform: translate(random(40)+px,random(40)+px);
+  }
 }
