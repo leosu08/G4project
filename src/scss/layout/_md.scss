@@ -3,6 +3,7 @@
         float: left;
         width: 12%;
         padding-top: 15px;
+        padding-left: 50px;
     }
 
     .mainMenu {
@@ -30,6 +31,7 @@
         &.signArea {
             width: 14%;
             text-align: right;
+            padding-right: 50px;
             a {
                 display: block;
                 font-size: $fz-nav - 2px;
