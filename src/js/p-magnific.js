@@ -22,23 +22,7 @@ $('#inline-content').magnificPopup({
   },
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
-<<<<<<< HEAD
 
-=======
-//test
-
-// 上傳
-$('#n-article').magnificPopup({
-  delegate: 'a',
-  removalDelay: 500, //delay removal by X to allow out-animation
-  callbacks: {
-    beforeOpen: function() {
-       this.st.mainClass = this.st.el.attr('data-effect');
-    }
-  },
-  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-});
->>>>>>> 3a394e96c3e6c98934d40d5a1cfef1e424ec68c5
 
 
 // Image popups
