@@ -14,6 +14,7 @@
      <script type="text/javascript" src="js/magnific.js"></script>
      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
 </head>
 
 <style type="text/css" media="screen">
@@ -93,6 +94,32 @@ body{
 </script>
 
 <body>
+<nav id="nav">
+    <div class="relative">
+      <div class="row">
+        <input type="checkbox" id="navButtonHidden">
+        <label id="navButton" for="navButtonHidden"></label>
+        <div id="logo">
+          <a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
+        </div>
+        <ul class="mainMenu menu">
+          <li><a href="activity.html" class="onThisPage">觀星活動</a></li>
+          <li><a href="forum.html">星際論壇</a></li>
+          <li><a href="photo.html">照片牆</a></li>
+          <li><a href="article.html">星知識</a></li>
+        </ul>
+        <ul class="mainMenu signArea">
+          <li id="signLeft">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            <span><a href="#">註冊</a></span>
+          </li>
+          <li id="signRight">
+            <span><a href="#">登入</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <section id="page-section">
         <div id="a-slide-container">
             <div id="a-slides">
