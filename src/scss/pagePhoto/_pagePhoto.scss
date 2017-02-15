@@ -4,219 +4,316 @@
 	font-family: "微軟正黑體",Tahoma,Arial;
 }
 
-.p-bigpic{
-
-	background-image:url(../img/p_bigpic_001.jpg);
-	width: 100%;
-	height: 700px;
-	overflow: hidden;
-	position: relative;
-	background-position: center center;
-	background-size: cover;
-	
-	.h2{
-		position: absolute;
-		color: #FFF;
-		font-size: 30px;
-		top:70%;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		margin: auto;
-		text-align: center;
-	}
-	a{
-		z-index: 11;
-		position: absolute;
-		color: #4f9cdd;
-		font-size: 24px;
-		top:78%;
-		bottom: 0;
-		right: 10px;
-		left: 0;
-		margin: auto;
-		text-align: center;
-		
-	}
+#p-body{
+	background: linear-gradient(to bottom, #020308 0%, #05172b 51%, #011428 84%, #012438 100%);
+	background-repeat: no-repeat;
 }
- 
  .p-tabsearch{
-	.p-tab{
-		margin: 20px 0 20px 0;
-		text-align: center;
-	}
-
- 	.p-tab a{
- 		text-decoration: none;
- 		color: #333;
- 		font-size:18px;
-		padding: 10px;
-		margin: 0px 20px 0px 0px;
-
-		
- 	}
- 	.p-tab a:hover{
+	margin-top: 150px;
+ 	height: 80px;
+ 	z-index: 999;
+ 	position: relative;
+ 	margin-bottom: 20px;
  	
-		border: 2px solid #7FC8E7;
-		padding:5px;
-		
+ 	// background-color: rgba(255,255,255,0.2);
+	// background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.4));
+	
+ 	.container{
+ 		border-bottom: 2px solid #555;
+
  	}
  	.p-search{
- 		margin-top: 15px;
- 		height: 100%;
- 		
- 	}
- 	.input{
- 		width: 100%;
- 		position: relative;
- 		text-align: right;
+ 		margin: 25px 0 15px 0px;
+ 		padding-left: 15px;
+ 		.camera{
+			border: 0px;
+ 			float:left;
+			i{
+				color: #fff;
+				font-size: 30px;
+				transition:0.5s;
+			}
+			i:hover{
+				color: #7FC8E7;
+				transition:0.5s;
+				
+			}
+  		}
+		.input{
+			float:left;
+			margin-left: 10px;
+			position: relative;
+			width: 80%;
+			input{
+				width: 100%;
+				height: 30px;
+				border:1px solid #999;
+				border-radius:5px 5px;
+				padding-left: 30px;
+				outline: none;
+				}
+			.fa-search{
+				position: absolute;
+				top:7px;
+				left: 10px;
+				color: #999;
+				font-size: 16px;
+			}
 
- 	}
- 	.p-search input{
- 		font-size: 16px;
- 		width:280px;
- 		height: 40px;
- 		background-color: #ddd;
- 		border:1px solid #ccc;
- 		padding-left: 40px;	
- 		
- 	}
- 	.fa-search{
- 		position: absolute;
- 		top: 8px;
- 		bottom: 0;
- 		left: 0px;
- 		right:260px;
- 		margin: auto;
- 		font-size: 22px;
- 		z-index: 1;
+		}
 
- 	}
+		
+	}
+	.p-tab{
+
+		height: 60px;
+		text-align:right;
+		.label{
+			margin-top: 30px;
+			a{
+				margin-right: 20px;
+				padding: 8px;
+				font-size: 18px;
+				color: #fff;
+				transition:0.5s;
+
+			}
+			a:hover{
+				font-size: 22px;
+				font-weight: bolder;
+				padding:8px;
+				color: #7FC8E7;
+				transition:0.8s;
+
+			}
+		}
+		
+				
+	}
+
  }
- .p-content{
+ 
+ // .p-new-content{
+ // 	margin-top: 50px;
 
- 	background-color: #4A4A4A;
+ // 	.p-n-pic{
+ // 		padding: 10px 20px 10px 20px;
+ // 		position: relative;
+		
+ // 		img{
+ // 			width: 100%;
+ // 			border-radius: 5px 5px;
 
- 	.item{
+ // 		}
+ // 		.user{
+ // 			width: 94.5%;
+ // 			margin: auto;
+ // 			opacity: 0;
+ // 			position: absolute;
+ // 			top:80%;
+ // 			left: 10px;
+ // 			background-color: rgba(0,0,0,0.1);
+	// 		padding: 8px 0px 8px 15px;
+	// 		transition:0.5s;
+ // 			img{
+ // 				width: 15%;
+ // 				border-radius: 50%;
+ // 				float: left;
+ // 			}
+ // 			p{
+ // 				margin-top: 15px;
+ // 				margin-left: 10px;
+ // 				font-size: 14px;
+ // 				color: rgba(255,255,255,0.8);
+ // 				float: left;
+ // 			}
+ // 		}
+ // 		.p-n-icon{
+ // 			opacity: 0;
+ // 			width:94.5%;
+ // 			height: 15%;
+ // 			position:  absolute;
+ // 			top:3%;
+ // 			// padding-left:60%;
+	// 		padding-top: 8px;
+	// 		background-color: rgba(0,0,0,0.1);
+	// 		transition:0.5s;
+			
+ // 			.a{
+ // 				width: 80px;
+ // 				height: 30px;
+ // 				float: left;
+ // 				background-color: rgba(255,255,255,0.7);
+ // 				border-radius: 5px 5px;
+ // 				margin-right: 10px;
+ // 				margin-bottom: 16px;
+ // 				top: 10px;
+ // 				bottom: 0;
+ // 				left: 60%;
+ // 				right: 0;
+ // 				position: absolute;
 
- 	margin-top: 30px;
- 	position: relative;
- 	}
- 	.box{
- 		background-color: #fff;
- 	}
-	.item .pic img{
+ // 				.fa-heart{
+	// 				margin-top: 7px;
+	// 				margin-left:8px;
+	// 				font-size:18px;
+	// 				color: #F15151;
+ // 				}
+ // 				h5{
+ // 					display: inline-block;
+ // 					margin-left: 10px;
+ // 					color: #555;
+ // 				}
+ // 			}
+ // 			.b{
+ // 				float: left;
+ // 				width: 40px;
+ // 				height: 30px;
+ // 				background-color: rgba(255,255,255,0.7);
+ // 				border-radius: 5px 5px;
+ // 				position: absolute;
+ // 				top: 10px;
+ // 				bottom: 0;
+ // 				left: 85%;
+ // 				right: 0;
+ // 				.fa-share{
+ // 					font-size: 18px;
+ // 					margin-top: 8px;
+	// 				margin-left: 10px;
+	// 				color: #888;
+ // 				}
+ // 			}
+ 			
+ // 		}
+ // 	}
+ // 	.p-n-pic :hover{
+
+ // 		.user,.p-n-icon{
+	// 		transition:0.5s;
+ // 			opacity: 1;
+
+ // 		}
+		
+ // 	}
+ // }
+
+ 
+// 相片內頁
+		
+		
+.p-inside{
+	margin-top: 50px;
+	width: 100%;
+	background-color: #fff;
+	.p-in-pic{
+		width: 100%;
+		height:920px;
+		position: relative;
+		background-position: center;
+		background-image: url(../img/p_bigpic_001.jpg);
+		background-repeat: no-repeat;
+	.p-in-icon{
+ 			position: absolute;
+ 			top:94%;
+ 			left: 1%;
+ 			.a{
+ 				width: 80px;
+ 				height: 32px;
+ 				float: left;
+ 				background-color: rgba(255,255,255,0.8);
+ 				border-radius: 5px 5px;
+ 				margin-right: 18px;
+ 				margin-bottom: 16px;
+ 			
+ 				.fa-heart{
+					margin-top: 8px;
+					margin-left:8px;
+					font-size:16px;
+					color: #F15151;
+ 				}
+ 				h5{
+ 					display: inline-block;
+ 					margin-left: 10px;
+ 					font-size: 14px;
+ 					color: #555;
+ 				}
+ 			}
+ 			.b{
+ 				float: left;
+ 				width: 46px;
+ 				height: 32px;
+ 				background-color: rgba(255,255,255,0.8);
+ 				border-radius: 5px 5px;
+ 				.fa-share{
+ 					font-size: 16px;
+ 					margin-top: 9px;
+					margin-left: 13px;
+					color: #666;
+ 				}
+ 			}
+ 			
+ 		}
+	 }
+	
+.p-in-content{
+	.container{
+		height: 1600px;
+		background-color: #fff;
+	}
+	.left{
+		width: 100%;
+	
+	.mid{
 		width: 100%;
 		height: 100%;
-		
-	}
-	.user{
-		position: absolute;
-		top:20px;
-		left: 30px;
-	}
-	.user img{
-		width: 25%;
-		border-radius: 50%;
-		float: left;
-	}
-	.user p{
-		color: #fff;
-		float: left;
-		margin-top: 20px;
-		margin-left: 12px;
-		font-size: 14px;
-	}
- 	.content p{
- 		margin: 12px;
- 		font-size:14px;
- 	}
- 	.tab{
- 		border-bottom: 1px solid #aaa;
- 		padding-bottom: 6px;
- 		margin-left: 12px;
- 		}
- 	.tab a{
-		
-		font-size:12px;
- 	}
- 	.view p{
- 		width: 45%;
- 		margin: 0px 6px 6px 0px;
- 		font-size: 12px;
- 		display: inline-block;
- 	}
- 	.view p .fa{
- 		padding-right:5px;
- 	}
- 	.view .icon{
- 		width: 45%;
- 		// margin: 6px;
- 		text-align: right;
- 		display: inline-block;
- 	}
- 	.view .fa{
- 		color: #555;
- 		padding-left: 12px;
- 	}
- 	.btnbox{
- 		margin-top: 50px;
- 		text-align: center;
- 	}
- }
-// 相片內頁
-.p-inside{
-	background-color:rgba(0,0,0,0.8);
-	margin-top: 0px;
-	.p-in-pic{
-		margin-top: 10px;
-
-		img{
-			width: 100%;
-		}
-	}
-	.p-in-content .container{
-		height: 800px;
-		background-color: #fff;
+		margin: auto;
+		margin-top: 60px;
 
 	}
-}
-.p-in-content{
 	.user{
 	width: 100%;
-	height: 60px;
-	margin:20px 0 20px 0; 
-   
-	img{
-		width:60px;
-		border-radius: 50%;
-		float: left;
+   	text-align: center;
+		img{
+			width:100px;
+			border-radius: 50%;
+		
+		}
+		h5{
+			display:block;	
+			margin-top: 5px;
+		}
 	}
-	h5{
-		float: left;
-		margin-top: 20px;
-		margin-left: 10px;
-	}
-	}
+    }
+
 	.content{
-		border-bottom: 1px solid #888;
 		padding-bottom: 10px;
-		margin-bottom: 20px;
-		margin-left: 60px;
-		margin-right: 60px;
+		margin-top: 20px;
 
 	h3{
-		font-size: 18px;
+		margin-top: 40px;
+		font-size: 22px;
+		text-align: center;
 		color: #4f9cdd
 	}
-	p{
+	p{	
+		width: 60%;
 		font-size: 14px;
-		margin: 20px 0 20px 0;
+		margin:auto;
+		margin-top: 10px;
+		line-height: 24px;
+		padding: 5px;
 	}
-	}
+ }
+.messagebox{
+	margin-top: 60px;
+	margin-bottom:180px;
+		
+	
 	.message{
-		margin: 20px 0px 0px 0px;
-		padding-left: 60px;
+		margin:auto;
+		margin-top: 10px;
+
+		padding-left:40%;
 		.ms-user{
 
 		img{
@@ -244,94 +341,158 @@
 		
 		}
 		p{
-			margin-top: 5px;
+			margin-top: 10px;
 			margin-left: 10px;
 			font-size: 10px;
 
 		}
 		}
+		textarea{
+			width: 200px;
+			margin-top: 5px;
+			margin-left: 10px;
+		}
 	}
-	.r-left{
-		height: 250px;
 	}
-	.right{
-		margin-top: 20px; 	
+	}
+	
+.r-left{
+	height: 100%;
+	margin-bottom: 210px;	
 	.adress{
-
+		text-align: center;
 		h2{
 			font-size: 18px;
+			display: inline-block;
+
 		}
 		i{
 			font-size: 20px;
-			margin:15px 5px 0px 5px;
 			color: #4f9cdd;
-			display: inline-block;
+			padding-right:10px;
 		}
 		h5{	
-			font-size: 14px;
-			display: inline-block;
+			padding: 10px 0px 10px 0px;
+			font-size: 22px;
 			color: #555;
+
 		}
 	}
 	.tag{
-		margin-top: 30px;
+		text-align: center;
 		h2{
 			font-size: 18px;
+			display: inline-block;
 		}
-		p{
-			margin-top: 10px;
+		i{
+			font-size: 18px;
+			color: #4f9cdd;
+			padding-right:8px;
 		}
 		a{
 			font-size: 14px;
+			line-height:20px;
+			padding:0 5px 0 5px;
+			direction: none;
+			color: #4f9cdd;
 		}
-	}
-	}	
-	.r-right{
-		height: 250px;
+		p{
+			padding: 12px 0px 10px 0px;
+		}
+
 	}
 	.icon{
-		text-align: right;
+		text-align: center;
+		h2{
+			font-size: 18px;
+			display: inline-block;
+		}
 		i{
-			font-size: 26px;
-			margin-left: 10px;
-			color:rgba(0,0,0,0.8);
+			font-size: 17px;
+			color: #4f9cdd;
+			padding-right:10px;
+		}
+		h5{	
+			padding: 10px 0px 10px 0px;
+			font-size: 22px;
+			color: #555;
 		}
 	}
 	.number{
-		margin-top: 60px;
-		text-align:right;
-		h5{
-			margin-bottom:10px; 
-			font-size: 12px;
-			color:rgba(0,0,0,0.6);
+		text-align: center;
+		h2{
+			font-size: 18px;
+			display: inline-block;
 		}
 		i{
-			margin-left: 10px;
-			color: rgba(0,0,0,0.8);
+			font-size: 20px;
+			color: #4f9cdd;
+			padding-right:10px;
+		}
+		h5{	
+			padding: 10px 0px 10px 0px;
+			font-size: 22px;
+			color: #555;
 		}
 	}
+}	
 	.recommend{
-		// text-align: center;
 		h2{
+			margin-left: 28px;
 			font-size:16px;
 		}
+		.itembox{
+			text-align: center;
 		.item{
 			display: inline-block;
 			margin: 10px;
 		}
 		img{
-			width: 100px;
-			height: 100px;
+			width:250px;
+			height: 250px;
+			border-radius: 10px 10px;
+			opacity: 0.8;
+			transition:0.5s;
+		}
+		img:hover{
+			opacity:1;
+			transition:0.5s;
+		}
+		}
+	}
+	.back{
+		margin-top: 100px;
+		margin-bottom: 100px;
+		text-align: center;
+		h2{
+			cursor: pointer;
+			font-size: 28px;
+			display: inline-block;
+			color: #999;
+			transition:0.5s;
+		}
+		h2:hover{
+			color: #000;
+			transition:0.5s;
+		}
+		.fa{
+			
+			font-size:22px;
+			color: #999;
+			margin-right: 20px;
+
 		}
 	}
 }
 // 上傳照片
-.upload{
+.p-upload{
 	
-	margin-top: 50px;
+	
 	.container{
-		height: 850px;
-		background: url(../img/p_back_001.png);	
+		margin-top: 140px;
+		margin-bottom: 100px;
+		height: 750px;
+		background: url(../../img/p_back_001.png);	
 	}
 	
 	.title{
@@ -340,7 +501,9 @@
 			border-bottom: 2px solid #FFF;
 			margin-left: 70px;
 			padding-top: 80px;
+			padding-bottom: 30px;
 			color: #FFF;
+			font-size: 26px;
 		}
 	}
 	.table{
@@ -351,15 +514,18 @@
 			border-bottom: 1px dotted rgba(255,255,255,0.6)
 		}
 		#tit{
+
 			width: 200px;
 			height: 80px;
 			font-size: 18px;
 			color: #fff;
+			vertical-align: middle;
 		}
 		#box{
 			width: 800px;
 			height: 80px;
 			text-align: left;
+			vertical-align: middle;
 			
 
 
@@ -388,9 +554,67 @@
 	}
 }
 
+// 星星
+@import "star";
+.star1 {
+width: 1px;
+height: 1px;
+background: transparent;
+animation: animStar 50s linear infinite;
+box-shadow: $shadows-small;
+}
+.star1:after {
+content: " ";
+position: absolute;
+top:2000px;
+width: 1px;
+height: 1px;
+box-shadow: $shadows-small;
+background: transparent;
+}
+.star2 {
+width: 2px;
+height: 2px;
+background: transparent;
+animation: animStar 100s linear infinite;
+box-shadow: $shadows-medium;
+}
+.star2:after {
+content: " ";
+position: absolute;
+top: 2000px;
+width: 2px;
+height: 2px;
+background: transparent;
+box-shadow: $shadows-medium;
+}
+.star3 {
+width: 3px;
+height: 3px;
+background: transparent;
+animation: animStar 150s linear infinite;
+box-shadow: $shadows-big;
+}
+.star3:after {
+content: " ";
+position: absolute;
+top: 2000px;
+width: 3px;
+height: 3px;
+background: transparent;
+box-shadow: $shadows-big;
+}
 
+@keyframes animStar {
+from {
+transform: translateY(0px);
+}
+to {
+transform: translateY(-1000px);
+}
+}
 
-@import "sm";
-@import "md";
 @import "lg";
+@import "md";
+@import "sm";
 @import "xs";
