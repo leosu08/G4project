@@ -20,7 +20,7 @@
 	<!-- scrollmagic -->
 	<script type="text/javascript" src="libs/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js"></script>
 	<script type="text/javascript" src="libs/ScrollMagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-	<script type="text/javascript" src="libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+	<!-- <script type="text/javascript" src="libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> -->
 	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 	<!-- this page's js -->
@@ -50,7 +50,7 @@
 			})
 
 			.setTween(titleShow)
-			.addIndicators()
+			// .addIndicators()
 			.addTo(controller);
 
 
@@ -73,7 +73,7 @@
 			})
 
 			.setTween(descShow)
-			.addIndicators()
+			// .addIndicators()
 			.addTo(controller);
 
 
@@ -117,6 +117,7 @@
 
 	*{
 		/*outline: 1px solid red;*/
+		/*font-family: 微軟正黑體!important;*/
 	}
 		.f_bg_wrapper{
 			position: fixed;
@@ -155,10 +156,10 @@
 					<a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
 				</div>
 				<ul class="mainMenu menu">
-					<li><a href="#">觀星活動</a></li>
-					<li><a href="#">星際論壇</a></li>
-					<li><a href="#">照&nbsp&nbsp片&nbsp&nbsp牆</a></li>
-					<li><a href="#">星&nbsp&nbsp知&nbsp&nbsp識</a></li>
+					<li><a href="activity.html">觀星活動</a></li>
+					<li><a href="forum.html">星際論壇</a></li>
+					<li><a href="photo.html">照片牆</a></li>
+					<li><a href="article.html">星知識</a></li>
 				</ul>
 				<ul class="mainMenu signArea">
 					<li id="signLeft">
@@ -653,7 +654,7 @@ function init() {
     shading: THREE.FlatShading
   });
 
-  for (var i = 0; i < 130; i++) {
+  for (var i = 0; i < 100; i++) {
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
     mesh.position.multiplyScalar(90 + (Math.random() * 700));
@@ -689,7 +690,7 @@ lights[0] = new THREE.DirectionalLight( 0xffffff, 1 );
 lights[0].position.set( 1, 0, 0 );
 lights[1] = new THREE.DirectionalLight( 0x11E8BB, 1 );
 lights[1].position.set( 0.75, 1, 0.5 );
-lights[2] = new THREE.DirectionalLight( 0x8200C9, 1 );
+lights[2] = new THREE.DirectionalLight( 0x7FC8E7, 1 );
 lights[2].position.set( -0.75, -1, 0.5 );
 scene.add( lights[0] );
 scene.add( lights[1] );

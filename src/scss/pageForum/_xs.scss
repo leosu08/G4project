@@ -79,7 +79,7 @@
 
 #f_one_post{
 	.f_lightbox_content{
-
+		width: 100%;
 		table{
 			th{
 				text-align: center;
@@ -94,8 +94,32 @@
 				float: none;
 			}
 
+			.f_sub_user{
+				width: 100%;
+				border-right: none;
+				 padding-top: 20px;
+				 float: none;
+				 text-align: center;
+				 border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+				 img{
+				 	width: 55px;
+				 	height: 55px;
+				 }
+
+				 .f_user_info{
+				 	padding-top: 0px;
+				 }
+			}
+			.f_post_text{
+				width: 100%;
+				 padding: 10px;
+			    padding-left: 10px;
+			}
+
 			
 		}
+		
 
 		
 

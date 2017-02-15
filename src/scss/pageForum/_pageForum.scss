@@ -313,7 +313,7 @@ html, body{
 								}
 								p{
 									padding-bottom: 5px;
-									font-family: Arial;
+									// font-family: Arial;
 									letter-spacing: 0.05em;
 
 									&:nth-child(1){
@@ -396,7 +396,7 @@ html, body{
 				// padding:3px;
 				border: 1px solid rgba(255,255,255,0.5);
 				letter-spacing: 0.05em;
-				font-family: Arial;
+				// font-family: Arial;
 				color:  rgba(255,255,255,0.7);
 
 				.social-icon{
@@ -411,7 +411,7 @@ html, body{
 					}
 				}
 
-				th, td{
+				th{
 					padding:15px; 
 
 				}
@@ -438,7 +438,7 @@ html, body{
 				}
 
 				td{
-					padding-left: 30px;
+					// padding-left: 30px;
 					border-bottom: 3px double rgba(255,255,255,0.8);
 				}
 
@@ -459,12 +459,19 @@ html, body{
 					}
 				
 				.f_sub_user{
-					width: 95%;
-					font-size: 16px;
-					border-bottom: 1px solid rgba(255,255,255,0.5);
-					padding-bottom: 15px;
-					margin-bottom: 20px;
+					width: 20%;
+				    height: 100%;
+				    font-size: 15px;
+				    border-right: 1px solid rgba(255, 255, 255, 0.3);
+				    padding-top: 20px;
+				    // padding: 50px 10px 20px;
+				    margin-top: 10px;
+				    text-align: center;
+				    float: left;
+				    vertical-align: middle;
+
 					img{
+						
 						vertical-align: middle;
 					}
 					.f_user_info{
@@ -479,6 +486,17 @@ html, body{
 					}
 				}
 
+				.f_post_text{
+				    width: 70%;
+				    float: left;
+				    // padding: 30px;
+				    padding-left: 50px;
+				    text-align: justify;
+				    // background-color: #000;
+				    margin-top: 15px;
+				    vertical-align: middle;
+				}
+
 				.user_level{
 						margin-left: 10px;
 						color: #877a5f;	
@@ -487,25 +505,33 @@ html, body{
 				.f_btn{
 					width: 100%;
 					height: 20px;
-					margin-top: 30px;
+					// margin-top: 15%;
+					margin-bottom: 20px;
+					padding-right: 30px;
 					text-align: left;
+					font-weight: 800;
+					clear: both;
 
 					
 
 					button{
-						width: 40px;
-						height: 25px;
+						width: 60px;
+						height: 30px;
 						border-radius: 5px;
-						border: 1px solid $purple;
+						border: 1px solid #86d4f5;
 						background-color: rgba(0,0,0,0.3);
-						color: $purple;
+						color: #86d4f5;
 						text-shadow:1px 1px 1px #000;
 						float: right;
 						margin-left: 10px;
+						font-weight: 900;
+						font-size: 16px;
+						box-shadow: 1px 1px 1px #999;
 
 						&:hover{
-							background-color: $purple;
+							background-color: #86d4f5;
 							color: $white;
+							box-shadow: -1px 1px 1px #999;
 						}
 
 					}
