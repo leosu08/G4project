@@ -122,8 +122,9 @@
                     position: relative;
                     z-index: 1;
                     display: inline-block;
-                    color: $light-grey;
+                    color: #ccc;
                     font-size: $fz-h4;
+                    font-weight: 700;
                     padding: 5px 0;
                 }
             }
@@ -154,14 +155,14 @@
                 height: 50%;
                 position: absolute;
                 left: 0;
-                top: 20%;
+                top: 28%;
                 right: 0;
                 margin: auto;
 
                 h1 {
                     color: $white;
                     font-size: $fz-h1;
-                    padding: 20px;
+                    padding:10px 20px 15px;
                     text-shadow: 1px 10px 10px $black;
                     text-align: center;
                     z-index: 200;
@@ -171,7 +172,7 @@
                         display: block;
                         z-index: -2;
                         position: absolute;
-                        top: 40px;
+                        top: 70px;
                         left: 0;
                         right: 0;
                         margin: auto;
@@ -183,26 +184,36 @@
                         background-size: cover;
                     }
                 }
-
+                h2{
+                  font-size: $fz-h2;
+                  color:#ddd;
+                  text-align: center;
+                }
                 .i-searchBar {
                     position: relative;
                     text-align: center;
                     margin: 30px auto;
-                    width: 93%;
+                    width: 90%;
                     height: 70px;
                     line-height: 70px;
                     background-color: $o-black;
                     color: $white;
                     font-size: $fz-p;
                     letter-spacing: 2px;
-                    border-radius: 5px;
-                    box-shadow: 1px 1px 15px 1px $black;
+                    // border-radius: 5px;
+                    // box-shadow: 1px 1px 15px 1px $black;
 
                     .date,
                     .loc,
                     .type {
                         display: inline-block;
                         position: relative;
+                        i{
+                          position: absolute;
+                          top:28px;right: 12px;
+                          margin: auto;
+                          color:$grey;
+                        }
 
                         #i-date-control {
                             width: 195px;
@@ -241,7 +252,7 @@
                             }
                             height: 30px;
                             font-size: 16px;
-                            line-height: 16px;
+                            line-height: 30px;
                             border-radius: 5px;
                             color: $black;
                             border: $white;
@@ -332,14 +343,14 @@
                 left: 0;
                 right: 0;
                 margin: auto;
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
+                width: 45px;
+                height: 45px;
+                line-height: 50px;
                 text-align: center;
 
                 i {
                     color: $light-blue;
-                    font-size: 25px;
+                    font-size: 40px;
                     animation: animScrollSign 1s infinite alternate linear;
                 }
 
@@ -397,7 +408,7 @@
 
                         &:hover h3,
                         &:hover p {
-                            color: $green-blue;
+                            color: rgba(218,175,115,1);
                         }
 
                         h3 {
@@ -491,7 +502,7 @@
                 }
 
                 .forum:hover {
-                    background-color: $green-blue;
+                    background-color: rgba(218,175,115,1);
                     cursor: pointer;
                 }
 
@@ -661,7 +672,7 @@
                     position: absolute;
                     left: 100px;
                     right: 0;
-                    top: 140px;
+                    top: 300px;
                     margin: auto;
                 }
 
@@ -709,7 +720,7 @@
 
                     &.know5 {
                         background-image: url("../img/i-know04.png");
-                        display: none;
+                        display: block;
                     }
 
                     .memberId {
@@ -959,7 +970,7 @@
                 position: absolute;
                 left: 0;
                 right: 0;
-                top: 120px;
+                top: 400px;
                 margin: auto;
                 text-align: center;
 
@@ -996,14 +1007,14 @@
             }
 
             .button-square .button {
-                width: 122px;
+                width: 132px;
                 height: 40px;
                 line-height: 42px;
                 // border-radius: 5px;
             }
 
             .button-square {
-                width: 130px;
+                width: 140px;
                 height: 48px;
                 overflow: hidden;
                 position: relative;
@@ -1023,7 +1034,7 @@
             }
 
             .gradient {
-                animation: 8s animBtn linear infinite;
+                animation: 6s animBtn linear infinite;
             }
 
             .gradient:after {
@@ -1052,10 +1063,12 @@
                 width: 100%;
                 height: 100%;
                 z-index: 0;
+                display: none;
                 .i-lightboxBg{
                   width: 100%;
                   height: 100%;
                   background-color: $o-black;
+
                 }
                 #loginConfirmPsw,#loginMemName{
                   display: none;
@@ -1088,6 +1101,7 @@
                         border-radius: 5px;
                         margin: 10px auto;
                         font-size: 16px;
+                        padding: 0px 15px;
 
                         &:active,
                         &:focus {

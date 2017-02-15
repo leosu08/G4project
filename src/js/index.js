@@ -24,6 +24,7 @@ $(function() {
       $('.login').css({'display':'block'});
       $('#nav').stop().slideUp(600);
       $('#icanvas').stop().slideUp(600);
+      $('body').css({'overflow':'hidden'});
     })
 
     $('.i-lightboxBg').click(function(){
@@ -31,43 +32,48 @@ $(function() {
       $('.login').css({'display':'none'});
       $('#nav').stop().fadeIn(600);
       $('#icanvas').stop().slideDown(600);
+      $('body').css({'overflow':'visible'});
     })
 
     $('.logOn').click(function(){
       if($(this).text()=='我要登入'){
         $(this).text('按此註冊會員');
+        $('.login h4').text('會員登入');
         $('#i-loginBtn a').text('登入');
-        $('#loginConfirmPsw').stop().slideUp(800);
-        $('#loginMemName').stop().slideUp(800);
+        $('#loginConfirmPsw').stop().slideUp(400);
+        $('#loginMemName').stop().slideUp(400);
       }else{
         $(this).text('我要登入');
+        $('.login h4').text('會員註冊');
         $('#i-loginBtn a').text('註冊');
-        $('#loginConfirmPsw').stop().slideDown(800);
-        $('#loginMemName').stop().slideDown(800);
+        $('#loginConfirmPsw').stop().fadeIn(400);
+        $('#loginMemName').stop().fadeIn(400);
       }
 
     })
 
-    if (_windowWidth >= 992) {
+    if(_windowWidth >= 992){
+      //自動執行手風琴
+      knowClockOn = setInterval(autoKnowTrans, 3000);
+      _knowTransTimes = 1;
+
+      //導覽列
+
+      $(document).scroll(function(){
+        var _scrollTop = $(this).scrollTop();
+        if(_scrollTop > 564 * _windowHeight / 100){
+          $('#i-body #nav').stop().slideDown(500);
+        }else{
+          $('#i-body #nav').stop().slideUp(500);
+        }
+      })
+    }
+
+    if (_windowWidth >= 992 && _windowWidth < 1280) {
         //論壇彈出
         forumPopup();
-        //自動執行手風琴
-        knowClockOn = setInterval(autoKnowTrans, 3000);
-        _knowTransTimes = 1;
 
-        //導覽列
-
-        $(document).scroll(function(){
-          var _scrollTop = $(this).scrollTop();
-          if(_scrollTop > 564 * _windowHeight / 100){
-            $('#i-body #nav').stop().slideDown(500);
-          }else{
-            $('#i-body #nav').stop().slideUp(500);
-          }
-        })
-
-
-    }else{
+    }else if( _windowWidth < 992){
       forumMove();
       $('#searchBarMobile').focus(function() {
         $('.searchDetail').stop().slideDown(400);
@@ -77,6 +83,8 @@ $(function() {
         $('.searchDetail').stop().slideUp(400);
         $('#nav').slideDown(600);
       })
+    }else{
+      forumPopupBiger();
     }
 
 
@@ -448,6 +456,45 @@ function forumPopup() {
    }
  }
 
+
+//大論壇
+function forumPopupBiger() {
+    var _forumLength = $('.forum').length;
+    for (var i = 1; i <= _forumLength; i++) {
+        $('.forum' + i).css({
+            'animation': ' animForumPop' + rand(1, 3) + ' 1s ' + rand(0, 3) + 's both'
+        });
+        if (i <= 2) {
+            $('.forum' + i).css({
+                'top': rand(30, 90) + 'px',
+                'left': rand(720, 830) + (i - 1) * rand(340, 440) + 'px'
+            });
+        } else if (i >= 3 && i <= 6) {
+            var _gap = rand(50,90);
+            var _forTop = rand(180, 365);
+            var _forLeft = rand(390, 430);
+            $('.forum' + i).css({
+                'top': _forTop + 'px',
+                'left': _gap + (i - 3) * _forLeft + 'px'
+            });
+        } else if (i > 6 && i <= 10) {
+            $('.forum' + i).css({
+                'top': rand(480, 530) + 'px',
+                'left': rand(50, 90) + (i - 7) * rand(390, 410) + 'px'
+            });
+        } else {
+            $('.forum' + i).css({
+                'top': rand(630, 735) + 'px',
+                'left': rand(30, 90) + (i - 11) * rand(350, 390) + 'px'
+            });
+        }
+    }
+}
+
+
+
+
+//結束
 
 
 
