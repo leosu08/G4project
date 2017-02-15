@@ -1,6 +1,6 @@
 .pignose-calendar {
 	/*max-width: 360px;*/
-	max-height: 380px;
+	max-height: 100%;
 	background-color: #ffffff;
 	border: 1px solid #d8d8d8;
 	font-size: 14px;

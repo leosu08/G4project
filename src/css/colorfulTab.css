@@ -5,7 +5,7 @@
 .colorful-tab-wrapper {
   width: 90%;
   /*margin: 30px auto;*/
-  background: #aaa;
+  /*background: #aaa;*/
   padding: 20px;
   box-sizing: border-box;
   overflow: hidden;
@@ -66,12 +66,12 @@
     left: 0;
     opacity: 0;
     top: 0;
-    background: #000; }
+    background: #fff; }
   .colorful-tab-background-image.active {
     background-image: none; }
     .colorful-tab-background-image.active:after {
       width: 100%;
-      opacity:.6; }
+      opacity:.1; }
 
 .colorful-tab-menu {
   display: flex;
@@ -87,6 +87,8 @@
       display: block;
       text-decoration: none;
       font-family: "Montserrat";
+      font-weight: 800;
+      letter-spacing: 0.05em;
       color: #fff;
       text-align: center;
       padding: 20px 0;

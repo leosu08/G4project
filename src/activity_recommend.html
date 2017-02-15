@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>activity_recommend</title>
+    <title>Zero Gravity</title>
    
     <!-- <link rel="stylesheet" type="text/css" href="css/skrollr_1.css"> -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -14,6 +14,7 @@
      <script type="text/javascript" src="js/magnific.js"></script>
      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
 </head>
 
 <style type="text/css" media="screen">
@@ -93,6 +94,32 @@ body{
 </script>
 
 <body>
+<nav id="nav">
+    <div class="relative">
+      <div class="row">
+        <input type="checkbox" id="navButtonHidden">
+        <label id="navButton" for="navButtonHidden"></label>
+        <div id="logo">
+          <a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
+        </div>
+        <ul class="mainMenu menu">
+          <li><a href="activity.html" class="onThisPage">觀星活動</a></li>
+          <li><a href="forum.html">星際論壇</a></li>
+          <li><a href="photo.html">照片牆</a></li>
+          <li><a href="article.html">星知識</a></li>
+        </ul>
+        <ul class="mainMenu signArea">
+          <li id="signLeft">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            <span><a href="#">註冊</a></span>
+          </li>
+          <li id="signRight">
+            <span><a href="#">登入</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <section id="page-section">
         <div id="a-slide-container">
             <div id="a-slides">
@@ -119,7 +146,7 @@ body{
   <line stroke="#0dd1d7" style="vector-effect:non-scaling-stroke;" id="svg_5" y2="129.793476" x2="191.250019" y1="0.000007" x1="191.250019" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="none"/>
                                      </g>
                                 </svg>
-                                <p class="a-r-title">你對天文的了解程度是?</p>
+                                <p class="a-r-title a-r-t1">你對天文的了解程度是?</p>
                                 <p class="content">
                                 <ul>
                                     <li><div class="a-btn-recommend a-r-p1">初入門者</div></li>
@@ -138,7 +165,7 @@ body{
                 <div id="a-slide-2" class="a-slide" data-0="transform:translate(0%,-100%)"  data-150p="transform:translate(0%,0%)"  data-250p="transform:translate(-100%,100%)">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
                             <svg class="a-r-star" width="330" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
                                  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
                                  <g>
@@ -148,7 +175,7 @@ body{
                                  </g>
                                 </svg>
                                 
-                                 <p class="a-r-title">以下哪種情景最能打動你的心(圖片)</p>
+                                 <p class="a-r-title a-r-t2">以下哪種情景最能打動你的心(圖片)</p>
                                     <p class="content">
                                         <ul>
                                             <li><div class="a-btn-recommend a-r-p2">看流星劃過天際</div></li>
@@ -161,8 +188,8 @@ body{
                     </div>
                    
                 </div>
-                <div id="a-slide-3" class="a-slide" data-0="transform:translate(100%,-100%)" data-150p="transform:translate(50%,-50%)" data-250p="transform:translate(0,0%)" data-350p="transform:translate(0,300%)">
-                    <p class="a-r-title">參加觀星活動，你最想帶什麼?</p>
+                <div id="a-slide-3" class="a-slide" data-0="transform:translate(100%,-100%)" data-150p="transform:translate(100%,-100%)" data-250p="transform:translate(0,0%)" data-350p="transform:translate(0,300%)">
+                    <p class="a-r-title a-r-t3">參加觀星活動，你最想帶什麼?</p>
                     <p class="content">
                         <ul>
                             <li><div class="a-btn-recommend a-r-p3">帶家裡的小朋友</div></li>
@@ -172,8 +199,8 @@ body{
                         </ul>
                     </p>
                 </div>
-                <div id="a-slide-4" class="a-slide" data-0="transform:translate(-100%,-200%)" data-150p="transform:translate(100%,-200%)" data-250p="transform:translate(0%,-50%)" data-350p="transform:translate(0,0%)">
-                    <p class="a-r-title">為您推薦以下活動</p>
+                <div id="a-slide-4" class="a-slide" data-0="transform:translate(-100%,-200%)" data-150p="transform:translate(100%,-200%)" data-250p="transform:translate(0%,-100%)" data-350p="transform:translate(0,0%)">
+                    <p class="a-r-title a-r-t4">為您推薦以下活動</p>
                     <p class="content">
                         <div class="container">
             <div class="row" id="a-popups">
@@ -217,7 +244,9 @@ body{
             </div>
         </div>
                     </p>
-                <img src="img/a-space-shuttle.svg" id="a-shuttle" alt="" width="400" data-0="transform:translate(350%,600%);" data-150p="transform:translate(-400%,600%)"  data-250p="transform:translate(-100%,100%)" data-350p="transform:translate(0%,0%)">
+                <div class="a-shuttleCover">
+                  <img src="img/a-space-shuttle.svg" id="a-shuttle" alt="" width="400" data-0="transform:translate(350%,600%);" data-150p="transform:translate(-350%,600%)"  data-250p="transform:translate(-100%,250%)" data-350p="transform:translate(0%,0%)">
+                </div>
                 </div>
 
             </div>
