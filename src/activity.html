@@ -274,12 +274,7 @@
 
 $(function(){
 	$('#multiple').hide();
-	// $(document).click(function(){
-	// 	$('#multiple').hide();
-	// })
-	
-	
-	
+
 	$('#a-date-control').focus(function(){
 		$('#multiple').show().css({
 			'position':'absolute',
@@ -290,24 +285,25 @@ $(function(){
 			'z-index':20
 		});
 	});
+	$('body').click(function(evt) {
+				console.log($(evt.target).parents("#multiple").length);
+	            if($(evt.target).parents("#multiple").length==0 && 
+	                evt.target.id != "a-date-control" && evt.target.class != "calendar-dark") {
+	                $('#multiple').hide();
 
+	            }
+	        });
+})
 	// $('#multiple').not('#multiple').children().click(function(){
 	// 		console.log('hide');
 	// 		$('#multiple').hide();
 	// 	});
 
-	$('body').click(function(evt) {
-			console.log($(evt.target).parents("#multiple").length);
-            if($(evt.target).parents("#multiple").length==0 && 
-                evt.target.id != "a-date-control" && evt.target.class != "calendar-dark") {
-                $('#multiple').hide();
-
-            }
-        });
+	
 		// $('#a-date-control').click(function(){
 		// 	$('.calendar-dark').show();
 		// });
-})
+
 // $.fn.fullpage.setAllowScrolling(false, 'down');
 // 	$('#a-oldSlider').fullpage({
 //     scrollOverflow: true
@@ -332,9 +328,9 @@ $(function(){
 				</div>
 				<ul class="mainMenu menu">
 					<li><a href="activity.html">觀星活動</a></li>
-					<li><a href="#">星際論壇</a></li>
-					<li><a href="#">照&nbsp&nbsp片&nbsp&nbsp牆</a></li>
-					<li><a href="#">星&nbsp&nbsp知&nbsp&nbsp識</a></li>
+					<li><a href="forum.html">星際論壇</a></li>
+					<li><a href="photo.html">照片牆</a></li>
+					<li><a href="article.html">星知識</a></li>
 				</ul>
 				<ul class="mainMenu signArea">
 					<li id="signLeft">
@@ -359,7 +355,7 @@ $(function(){
 						<svg id="a-star">
 							<g>
 							  <title>Layer 1</title>
-							  <polygon transform="rotate(0 279.40002441406256,210.50000000000003) " id="svg_3" fill-opacity="0" stroke-width="1" stroke="#c3d5da" points="433.8207702636719,210.5 356.61041259765625,344.2323303222656 202.1896209716797,344.2323303222656 124.97923278808594,210.5 202.1896209716797,76.76766967773438 356.61041259765625,76.76766967773438 433.8207702636719,210.5 " strokeWidth="1" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" cy="210" cx="279.399994">
+							  <polygon transform="rotate(0 279.40002441406256,210.50000000000003) " id="svg_3" fill-opacity="0" stroke-width="2" stroke="#c3d5da" points="433.8207702636719,210.5 356.61041259765625,344.2323303222656 202.1896209716797,344.2323303222656 124.97923278808594,210.5 202.1896209716797,76.76766967773438 356.61041259765625,76.76766967773438 433.8207702636719,210.5 " strokeWidth="1" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" cy="210" cx="279.399994">
 							
 							
 							  
@@ -371,7 +367,7 @@ $(function(){
 							                    dur="40s"
 							                    repeatCount="indefinite"/>
 							 </polygon>
-							  <polygon fill-opacity="0" stroke-width="1" stroke="#0dd1d7" points="433.820775457056,210 356.6103846767702,343.7323197037026 202.1896031161986,343.7323197037026 124.97921233591276,210.00000000000003 202.1896031161985,76.26768029629739 356.6103846767702,76.26768029629739 433.820775457056,210 " strokeWidth="1" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" id="svg_1" cy="210" cx="279.399994">
+							  <polygon fill-opacity="0" stroke-width="2" stroke="#0dd1d7" points="433.820775457056,210 356.6103846767702,343.7323197037026 202.1896031161986,343.7323197037026 124.97921233591276,210.00000000000003 202.1896031161985,76.26768029629739 356.6103846767702,76.26768029629739 433.820775457056,210 " strokeWidth="1" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" id="svg_1" cy="210" cx="279.399994">
 							  <animateTransform 
 							                    attributeName="transform"
 							                    type="rotate"
@@ -380,7 +376,7 @@ $(function(){
 							                    dur="40s"
 							                    repeatCount="indefinite"/>
 							  </polygon>
-							  <text id=tit x="170" y="230" fill="#fff"  style="font:55px 微軟正黑體;font-weight: bold;">觀星活動
+							  <text id=tit x="170" y="230" fill="#fff"  style="font:48px 微軟正黑體;font-weight: bold;">觀星活動
 								  
 							  </text>
 							  <!-- <text x="200" y="200" fill="none" stroke="red" style="font:70px 標楷體;writing-mode:tb;">你好!?</text> -->
@@ -417,14 +413,18 @@ $(function(){
 							<div class="a-panel">
 									<div class="a-controls">
 										<div class="a-panel-top">
+											<p class="a-text">地點搜尋</p>
 											<div class="a-searchInput">
+
 												<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
+
 												<input id="pac-input" class="controls" type="text" placeholder="搜尋">
 											</div>
 												<p class="a-text">活動日期</p>
 												<div class="a-panel-date">
 												<div id="wrapper">
-													 <input type="text" id="a-date-control" />
+													<i class="fa fa-clock-o" aria-hidden="true"></i>
+													<input type="text" id="a-date-control" placeholder="選擇日期" />
 													<div id="multiple">
 											            <div class="calendar-dark"></div>
 														
@@ -464,7 +464,7 @@ $(function(){
 												地圖搜尋
 											</div>
 										</a>
-										<div class="row scrollable-element" id="a-popups">
+										<div class="row scrollable-element" id="">
 											<div class="col-xs-12 col-sm-12 col-md-12">
 												<div class="a-tab">
 													<div><p>最近時間</p></div>
@@ -489,7 +489,7 @@ $(function(){
 											<div class="col-xs-12 col-sm-12 col-md-12 a-pReset">
 												<div class="col-xs-12 col-sm-6 col-md-6 ">
 
-													<a href="#a-popup-act" data-effect="mfp-3d-unfold">
+													<a href="activity_one.activity.html" data-effect="mfp-3d-unfold">
 													<div class="a-item a-phone-searchContainer">
 														<img src="img/a_007.jpg" alt="" class="rwd-img">
 															<p class="a-text-title">墾丁南十字觀星露營</p>
@@ -501,7 +501,7 @@ $(function(){
 
 											<div class="col-xs-12 col-sm-6 col-md-6 ">
 
-												<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+												<a href="activity_one.activity.html"  data-effect="mfp-3d-unfold">
 													<div class="a-item a-phone-searchContainer">
 														<img src="img/a_006.jpg" alt="" class="rwd-img">
 															<p class="a-text-title">墾丁南十字觀星露營</p>
@@ -515,7 +515,7 @@ $(function(){
 
 											<div class="col-xs-12 col-sm-6 col-md-6 ">
 
-												<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+												<a href="activity_one.activity.html"  data-effect="mfp-3d-unfold">
 													<div class="a-item a-phone-searchContainer">
 														<img src="img/a_001.jpg" alt="" class="rwd-img">
 															<p class="a-text-title">墾丁南十字觀星露營</p>
@@ -527,7 +527,7 @@ $(function(){
 
 										<div class="col-xs-12 col-sm-6 col-md-6 ">
 
-												<a href="#a-popup-act"  data-effect="mfp-3d-unfold">
+												<a href="activity_one.activity.html"  data-effect="mfp-3d-unfold">
 													<div class="a-item a-phone-searchContainer">
 														<img src="img/a_002.jpg" alt="" class="rwd-img">
 															<p class="a-text-title">墾丁南十字觀星露營</p>
@@ -547,7 +547,7 @@ $(function(){
 							</div>
 
 						</div>
-						<div class="col-xs-12 col-sm-7 col-md-7 googleMap a-mL">
+						<div class="col-xs-12 col-sm-7 col-md-7 googleMap a-mL a-main-map">
 							<div id="co">
 							        <p></p>
 							        
@@ -707,8 +707,10 @@ $(function(){
 						</div>
 					</div>
 					<div class="tr">
+
 						<div class="td">活動日期</div>
 						<div class="td">
+
 							<input type="date" name="">
 							<p class="a-text">到</p>
 							<input type="date" name="">
