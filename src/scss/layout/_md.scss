@@ -28,6 +28,9 @@
                 padding: 14px 10px;
                 letter-spacing: 1px;
                 font-weight: 800;
+                &:hover{
+                  color:#86d4f5;
+                }
                 &:before{
             			content: '';
             		    width: 0%;
@@ -54,6 +57,9 @@
             		    bottom: 0;
             		    right: 0;
             		    margin: auto;
+                }
+                &.onThisPage{
+                  color:$blue-green;
                 }
                 &:hover:before{
                   width: 80%;
