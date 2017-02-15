@@ -2,7 +2,8 @@
 #nav {
     height: 80px;
     width: 100%;
-    background-color: $o-black;
+    background: linear-gradient(to right, #0c3458 0%, rgba(29, 34, 60,.8) 40%, rgba(21, 22, 31, 0.7) 80%);
+		box-shadow: 1px 1px 30px #000;
     position: fixed;
     top: 0;
     left: 0;
@@ -17,54 +18,49 @@
     background: #45484d;
     color: #f2f2f2;
     border-radius: 50%;
-    // display: none;
+    display: none;
 }
 
-#navButton:after,
-#navButton:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 16px;
-    height: 2px;
-    background-color: #fff;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    transition: 0.8s;
-}
-
-#navButton:before {
-    box-shadow: 0 -6px 0 #fff;
-}
-
-#navButton:after {
-    box-shadow: 0 6px 0 #fff;
-}
-
-#navButtonHidden:checked ~ #navButton:before {
-    transform: rotate(45deg);
-    box-shadow: none;
-}
-
-#navButtonHidden:checked ~ #navButton:after {
-    transform: rotate(-45deg);
-    box-shadow: none;
-}
-#navButtonHidden:checked ~ .menu{
-  // top:150px;
-  // transform: scale(1);
-  transition: 1.2s cubic-bezier(.13,.27,.06,.82);
-  animation: menuTrans 0.8s both;
-}
+// #navButton:after,
+// #navButton:before {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     width: 16px;
+//     height: 2px;
+//     background-color: #fff;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     margin: auto;
+//     transition: 0.8s;
+// }
+//
+// #navButton:before {
+//     box-shadow: 0 -6px 0 #fff;
+// }
+//
+// #navButton:after {
+//     box-shadow: 0 6px 0 #fff;
+// }
+//
+// #navButtonHidden:checked ~ #navButton:before {
+//     transform: rotate(45deg);
+//     box-shadow: none;
+// }
+//
+// #navButtonHidden:checked ~ #navButton:after {
+//     transform: rotate(-45deg);
+//     box-shadow: none;
+// }
+// #navButtonHidden:checked ~ .menu{
+//   top:150px;
+//   transform: scale(1);
+//   transition: 1.2s cubic-bezier(.13,.27,.06,.82);
+// }
 #navButtonHidden {
     position: absolute;
-    left: -1000px;
-}
-@keyframes menuTrans {
-  0%{transform: scale(0);opacity: 0}
-  50%{transform: scale(0.1);top:400px;left:-100px}
-  100%{transform: scale(1);opacity:1;top:150;left:-300px;}
+    left: 0px;
+    display: none;
 }
