@@ -1,8 +1,36 @@
 @include respones(lg) {
 		//在此輸入內容
 
+.a-searchInput{
+	// width: 100%;
+	// width: 425px;
+	#pac-input{
+		
+		
+		}
+	}
+.a-panel-item{
+	input{
+		width: 200px;
 
-
-
-
+	}
 }
+.a-panel-control{
+	width: 510px;
+}
+.a-controls{
+	background-color: rgba(0,0,0,0.3);
+	width: 95%;
+	// box-sizing:border-box;
+	height: 95%;
+	overflow: hidden;
+	margin: auto;
+	border:0.5px solid #fff;
+	padding: 20px 20px 10px 20px;
+	margin-top: 20px;
+}
+.a-phone-control{
+	display: none;
+}
+
+}//lg結束

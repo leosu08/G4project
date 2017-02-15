@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>activity_recommend</title>
+    <title>Zero Gravity</title>
    
     <!-- <link rel="stylesheet" type="text/css" href="css/skrollr_1.css"> -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -12,6 +12,8 @@
      <!-- <link rel="stylesheet" type="text/css" href="css/magnific.css"> -->
      <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
      <script type="text/javascript" src="js/magnific.js"></script>
+     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
 </head>
 
 <style type="text/css" media="screen">
@@ -26,67 +28,132 @@
     }
     html, body, #a-slide-container, #a-a-slides {
   width: 100%;
-  height: 100%; }
-
-
-
+  height: 100%; 
+}
+body{
+    /*overflow: hidden;*/
+}
+    #a-slide-1{
+        background:none;
+    }
+    #a-slide-2{
+        /*position: absolute;
+        top:100%;*/
+        background: none;
+    }
+    #a-slide-3{
+        /*position: absolute;
+        top:100%;*/
+        background: none;
+    }
+    #a-slide-4{
+        /*position: absolute;
+        top:100%;*/
+        background: none;
+    }
+    .a-slide{
+        background: none;
+    }
+    #a-slides{
+        /*background:url(img/a_007.jpg);*/
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: top left;
+    }
+    #a-shuttle{
+         
+        z-index: 100;
+    }
 </style>
+<script type="text/javascript">
+    $(function(){
+        $('.a-r-p1').click(function(){
+             var myHtml = $('html,body');
+                _windowHeight = $(window).height();
+                myHtml.animate({
+                        scrollTop: 150 * _windowHeight / 100 + 1
+                    }, 2000);
+        })
+        $('.a-r-p2').click(function(){
+             var myHtml = $('html,body');
+                _windowHeight = $(window).height();
+                myHtml.animate({
+                        scrollTop: 250 * _windowHeight / 100 + 1
+                    }, 2000);
+        })
+        $('.a-r-p3').click(function(){
+             var myHtml = $('html,body');
+                _windowHeight = $(window).height();
+                myHtml.animate({
+                        scrollTop: 350 * _windowHeight / 100 + 1
+                    }, 2000);
+        })
+       
+    })
+</script>
+
 <body>
     <section id="page-section">
         <div id="a-slide-container">
-            <div id="a-slides"
-            	data-0="transform:translate(0%,0%)"
+            <div id="a-slides">
+            	<!-- data-0="transform:translate(0%,0%)"
 				data-150p="transform:translate(0%,-50%)"
 				data-200p=""
 				data-250p="transform:translate(-50%,-50%)"
 				data-300p=""
 				data-350p="transform:translate(-50%,-100%)"
 				data-400p=""
-            	 >
-                <div id="a-slide-1" class="a-slide">
+            	 > -->
+                <div id="a-slide-1" class="a-slide" data-0="transform:translate(0%,0%)" data-150p="transform:translate(0%,100%)"
+                data-200p="">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 a-r-cover">
-                                <svg class="a-r-star" width="330" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                                 <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
-                                 <g>
-                                  <title>Layer 1</title>
-                                  <polygon id="svg_2" fill="none" points="351.5682067871094,191 258.78411865234375,351.706787109375 73.21590423583984,351.706787109375 -19.568199157714844,191 73.21590423583984,30.293228149414062 258.78411865234375,30.293228149414062 351.5682067871094,191 " stroke="#0dd1d7" stroke-width="5" transform="rotate(90 166,191.0000152587891) "/>
-                                  <line id="svg_6" y2="480.043475" x2="165.500019" y1="376.500003" x1="165.500019" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#0dd1d7" fill="none"/>
-                                 </g>
-                                </svg>
-                                <p class="a-r-title">你對天文的了解程度是?</p>
-                                <p class="content">
-                                <ul>
-                                    <li><div class="a-btn-recommend">初入門者</div></li>
-                                    <li><div class="a-btn-recommend">資深天文迷</div></li>
-                                </ul>
 
-                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div id="a-slide-2" class="a-slide">
-                    <div class="container">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 a-r-cover">
                                 <svg class="a-r-star" width="380" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" stroke="null" style="vector-effect: non-scaling-stroke;">
                                      <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
                                      <g stroke="null">
                                       <title stroke="null">Layer 1</title>
-  <polygon stroke="#0dd1d7" transform="rotate(-180 189.90588378906253,291.550537109375) " id="svg_4" fill="none" points="374.6300048828125,291.5505676269531 282.2679443359375,451.5262756347656 97.54381561279297,451.5262756347656 5.181756973266602,291.5505676269531 97.54381561279297,131.57479858398438 282.2679443359375,131.57479858398438 374.6300048828125,291.5505676269531 " stroke-width="5"/>
-  <line stroke="#0dd1d7" style="vector-effect: non-scaling-stroke;" id="svg_5" y2="129.793476" x2="191.250019" y1="0.000007" x1="191.250019" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+  <polygon stroke="#0dd1d7" transform="rotate(-180 189.90588378906253,291.550537109375) " id="svg_4" fill="none" points="374.6300048828125,291.5505676269531 282.2679443359375,451.5262756347656 97.54381561279297,451.5262756347656 5.181756973266602,291.5505676269531 97.54381561279297,131.57479858398438 282.2679443359375,131.57479858398438 374.6300048828125,291.5505676269531 " stroke-width="2"/>
+  <line stroke="#0dd1d7" style="vector-effect:non-scaling-stroke;" id="svg_5" y2="129.793476" x2="191.250019" y1="0.000007" x1="191.250019" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="none"/>
                                      </g>
                                 </svg>
-                                 <p class="a-r-title">以下哪種情景最能打動你的心(圖片)</p>
+                                <p class="a-r-title a-r-t1">你對天文的了解程度是?</p>
+                                <p class="content">
+                                <ul>
+                                    <li><div class="a-btn-recommend a-r-p1">初入門者</div></li>
+                                    <li><div class="a-btn-recommend a-r-p1">資深天文迷</div></li>
+                                </ul>
+
+                                 </p>
+                                 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <img src="img/a-star3.svg" alt="" width="1000" data-0="transform:translate(0%,-100%);"> -->
+                    
+                </div>
+                    
+                <div id="a-slide-2" class="a-slide" data-0="transform:translate(0%,-100%)"  data-150p="transform:translate(0%,0%)"  data-250p="transform:translate(-100%,100%)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <svg class="a-r-star" width="330" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                 <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+                                 <g>
+                                  <title>Layer 1</title>
+                                  <polygon id="svg_2" fill="none" points="351.5682067871094,191 258.78411865234375,351.706787109375 73.21590423583984,351.706787109375 -19.568199157714844,191 73.21590423583984,30.293228149414062 258.78411865234375,30.293228149414062 351.5682067871094,191 " stroke="#0dd1d7" stroke-width="2" transform="rotate(90 166,191.0000152587891) "/>
+                                  <line id="svg_6" y2="480.043475" x2="165.500019" y1="376.500003" x1="165.500019" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" stroke="#0dd1d7" fill="none"/>
+                                 </g>
+                                </svg>
+                                
+                                 <p class="a-r-title a-r-t2">以下哪種情景最能打動你的心(圖片)</p>
                                     <p class="content">
                                         <ul>
-                                            <li><div class="a-btn-recommend">看流星劃過天際</div></li>
-                                            <li><div class="a-btn-recommend">找到天空中的各星座</div></li>
-                                            <li><div class="a-btn-recommend">難得一見的月蝕奇景</div></li>
+                                            <li><div class="a-btn-recommend a-r-p2">看流星劃過天際</div></li>
+                                            <li><div class="a-btn-recommend a-r-p2">找到天空中的各星座</div></li>
+                                            <li><div class="a-btn-recommend a-r-p2">難得一見的月蝕奇景</div></li>
                                         </ul>
                                     </p>
                             </div>
@@ -94,19 +161,19 @@
                     </div>
                    
                 </div>
-                <div id="a-slide-3" class="a-slide">
-                    <p class="a-r-title">參加觀星活動，你最想帶什麼?</p>
+                <div id="a-slide-3" class="a-slide" data-0="transform:translate(100%,-100%)" data-150p="transform:translate(100%,-100%)" data-250p="transform:translate(0,0%)" data-350p="transform:translate(0,300%)">
+                    <p class="a-r-title a-r-t3">參加觀星活動，你最想帶什麼?</p>
                     <p class="content">
                         <ul>
-                            <li><div class="a-btn-recommend">帶家裡的小朋友</div></li>
-                            <li><div class="a-btn-recommend">只帶自己來</div></li>
-                            <li><div class="a-btn-recommend">帶觀星望遠鏡</div></li>
-                            <li><div class="a-btn-recommend">帶全幅相機與鏡頭</div></li>
+                            <li><div class="a-btn-recommend a-r-p3">帶家裡的小朋友</div></li>
+                            <li><div class="a-btn-recommend a-r-p3">只帶自己來</div></li>
+                            <li><div class="a-btn-recommend a-r-p3">帶觀星望遠鏡</div></li>
+                            <li><div class="a-btn-recommend a-r-p3">帶全幅相機與鏡頭</div></li>
                         </ul>
                     </p>
                 </div>
-                <div id="a-slide-4" class="a-slide">
-                    <p class="a-r-title">為您推薦以下活動</p>
+                <div id="a-slide-4" class="a-slide" data-0="transform:translate(-100%,-200%)" data-150p="transform:translate(100%,-200%)" data-250p="transform:translate(0%,-100%)" data-350p="transform:translate(0,0%)">
+                    <p class="a-r-title a-r-t4">為您推薦以下活動</p>
                     <p class="content">
                         <div class="container">
             <div class="row" id="a-popups">
@@ -145,11 +212,16 @@
                             <p class="a-text-content">名額：16人</p>
                             <p class="a-text-content">發起人：Leo S</p>
                         </div>
+
                     </div></a>
             </div>
         </div>
                     </p>
+                <div class="a-shuttleCover">
+                  <img src="img/a-space-shuttle.svg" id="a-shuttle" alt="" width="400" data-0="transform:translate(350%,600%);" data-150p="transform:translate(-350%,600%)"  data-250p="transform:translate(-100%,250%)" data-350p="transform:translate(0%,0%)">
                 </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -158,4 +230,174 @@
 </html>
 <script type="text/javascript">
 var s = skrollr.init();
+</script>
+<script>
+(function() {
+  'use strict';
+  /*  'To actually be able to display anything with Three.js, we need three things:
+    A scene, a camera, and a renderer so we can render the scene with the camera.' 
+        
+        - http://threejs.org/docs/#Manual/Introduction/Creating_a_scene     */
+
+  var scene, camera, renderer;
+
+  /* We need this stuff too */
+  var container, aspectRatio,
+    HEIGHT, WIDTH, fieldOfView,
+    nearPlane, farPlane,
+    mouseX, mouseY, windowHalfX,
+    windowHalfY, stats, geometry,
+    starStuff, materialOptions, stars;
+
+  init();
+  animate();
+
+  function init() {
+    container = document.createElement('div');
+    document.body.appendChild( container );
+    // document.body.style.overflow = 'hidden';
+
+    HEIGHT = 4500;
+    WIDTH = innerWidth;
+    console.log(HEIGHT);
+    aspectRatio = WIDTH / HEIGHT;
+    fieldOfView = 75;
+    nearPlane = 1;
+    farPlane = 1000;
+    mouseX = 0;
+    mouseY = 0;
+
+    windowHalfX = WIDTH / 2;
+    windowHalfY = HEIGHT / 2;
+
+  /*  fieldOfView — Camera frustum vertical field of view.
+      aspectRatio — Camera frustum aspect ratio.
+      nearPlane — Camera frustum near plane.
+      farPlane — Camera frustum far plane.  
+
+      - http://threejs.org/docs/#Reference/Cameras/PerspectiveCamera
+
+      In geometry, a frustum (plural: frusta or frustums) 
+      is the portion of a solid (normally a cone or pyramid) 
+      that lies between two parallel planes cutting it. - wikipedia.    */
+
+    camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
+
+    //Z positioning of camera
+
+    camera.position.z = farPlane / 2;
+    
+    scene = new THREE.Scene({antialias:true});
+    scene.fog = new THREE.FogExp2( 0x000000, 0.0003 );
+
+    // The wizard's about to get busy.
+    starForge();
+    
+    //check for browser Support
+    if (webGLSupport()) {
+      //yeah?  Right on...
+      renderer = new THREE.WebGLRenderer({alpha: true});
+
+    } else {
+      //No?  Well that's okay.
+      renderer = new THREE.CanvasRenderer();
+    }
+
+    renderer.setClearColor(0x000011, 1);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize( WIDTH, HEIGHT);
+    container.appendChild(renderer.domElement);
+
+    stats = new Stats();
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.top = '0px';
+    stats.domElement.style.right = '0px';
+    container.appendChild( stats.domElement );
+
+    window.addEventListener( 'resize', onWindowResize, false );
+    document.addEventListener( 'mousemove', onMouseMove, false );
+    
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    render();
+    stats.update();
+  }
+
+
+  function render() {
+    camera.position.x += ( mouseX - camera.position.x ) * 0.0001;
+    camera.position.y += ( - mouseY - camera.position.y ) * 0.0001;
+    camera.lookAt( scene.position );
+    renderer.render(scene, camera);
+  }
+
+  function webGLSupport() {
+    /*  The wizard of webGL only bestows his gifts of power
+      to the worthy.  In this case, users with browsers who 'get it'.   */
+
+    try {
+      var canvas = document.createElement('canvas');
+      return !!(window.WebGLRenderingContext && (
+        canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
+      );
+    } catch(e) {
+      // console.warn('Hey bro, for some reason we\'re not able to use webGL for this.  No biggie, we\'ll use canvas.');
+      return false;
+    }
+  }
+
+  function onWindowResize() {
+
+    // Everything should resize nicely if it needs to!
+      var WIDTH = window.innerWidth,
+        HEIGHT = 4500;
+
+      camera.aspect = aspectRatio;
+      camera.updateProjectionMatrix();
+      renderer.setSize(WIDTH, HEIGHT);
+  }
+
+  function starForge() {
+    /*  Yep, it's a Star Wars: Knights of the Old Republic reference,
+      are you really surprised at this point? 
+                          */
+    var starQty = 45000;
+      geometry = new THREE.SphereGeometry(10, 35, 50);
+
+        materialOptions = {
+          size: 0.2, //I know this is the default, it's for you.  Play with it if you want.
+          transparency: true, 
+          opacity: 0.4
+        };
+
+        starStuff = new THREE.PointCloudMaterial(materialOptions);
+
+    // The wizard gaze became stern, his jaw set, he creates the cosmos with a wave of his arms
+
+    for (var i = 0; i < starQty; i++) {   
+
+      var starVertex = new THREE.Vector3();
+      starVertex.x = Math.random() * 2000 - 1000;
+      starVertex.y = Math.random() * 2000 - 1000;
+      starVertex.z = Math.random() * 2000 - 1000;
+
+      geometry.vertices.push(starVertex);
+
+    }
+
+
+    stars = new THREE.PointCloud(geometry, starStuff);
+    scene.add(stars);
+  }
+
+  function onMouseMove(e) {
+
+    mouseX = e.clientX - windowHalfX;
+    mouseY = e.clientY - windowHalfY;
+  } 
+
+})();
+
 </script>

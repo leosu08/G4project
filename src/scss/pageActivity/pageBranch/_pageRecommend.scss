@@ -5,6 +5,8 @@
   border-radius: 5px;
   border:1px solid #fa0;
   line-height: 40px;
+  background-color: #C89A3D;
+  cursor: pointer;
 }
 
 #a-slide-container {
@@ -21,7 +23,11 @@
   left: 0;
   width: 200%;
   height: 200%; }
-
+.content{
+  li{
+    cursor: pointer;
+  }
+}
 .a-slide {
   position: absolute;
   top: 0;
@@ -32,7 +38,8 @@
         ul{
           margin-top: 50px;  
         }
-        li{
+        li{ 
+            cursor: pointer;
             text-align: center;
             font-size: $fz-h4;
             color:#fff;
@@ -47,7 +54,12 @@
   .a-slide .content {
     text-align: center;
     color: #fff;
-    font-size: 30px; }
+    font-size: 30px; 
+
+
+
+
+  }
 
       @keyframes circle{
         100%{
@@ -62,7 +74,7 @@
     z-index: -1;
     opacity: 0.8;
     position: absolute;
-          top: 200px;
+          top: -60px;
           bottom: 0px;
           left: 0;
           right: 0;
@@ -80,8 +92,8 @@
   background-image: url("../img/a_004.jpg");
   transform: translate(0, 0); 
   .a-r-star{
-    stroke-dashoffset: 3000;
-    stroke-dasharray: 3000;
+    // stroke-dashoffset:1000;
+    // stroke-dasharray: 1000;
   }
   #svg_2{
     animation: circle 2s linear both;
@@ -90,7 +102,8 @@
     animation: circle 2s 1.3s linear both;
   }
   li{
-    display: inline-block;
+    display: block;
+    cursor:pointer;
   }
 
 }
@@ -99,9 +112,10 @@
   background-image: url("../img/a_004.jpg");
   transform: translate(0, 100%); 
   .a-r-star{
-    stroke-dashoffset:5000;
-    stroke-dasharray:5000;
-    top: -70px;
+    // stroke-dashoffset:2000;
+    // stroke-dasharray:2000;
+    top: 210px;
+    left:3px;
   }
   #svg_4{
     animation: circle 5s  linear both;
@@ -122,4 +136,33 @@
 #a-slide-4 {
   background-image: url("../img/a_004.jpg");
   transform: translate(100%, 200%) ;
+}
+.a-r-t1{
+  padding-top: 200px; 
+}
+.a-r-t2{
+  padding-top: 150px; 
+}
+
+.a-r-t3{
+  padding-top: 200px; 
+}
+
+.a-r-t4{
+  margin-bottom: 50px;  
+  // padding-top: 200px; 
+}
+.a-shuttleCover{
+  animation:wave 3s linear alternate infinite;
+}
+@keyframes wave{
+  0%{
+    transform: translate(random(40)+px,random(40)+px);
+  }
+   50%{
+    transform: translate(random(40)+px,random(40)+px);
+  }
+  100%{
+    transform: translate(random(40)+px,random(40)+px);
+  }
 }

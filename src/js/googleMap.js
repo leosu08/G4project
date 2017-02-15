@@ -17,7 +17,7 @@ function initAutocomplete() {
                       "elementType": "geometry.fill",
                       "stylers": [
                           {
-                              "color": "#343434"
+                              "color": "#65798E"
                           }
                       ]
                   }
