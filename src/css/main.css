@@ -2573,11 +2573,11 @@ footer {
 
 @keyframes wave {
   0% {
-    transform: translate(31px, 19px); }
+    transform: translate(29px, 5px); }
   50% {
-    transform: translate(10px, 10px); }
+    transform: translate(37px, 27px); }
   100% {
-    transform: translate(16px, 31px); } }
+    transform: translate(25px, 32px); } }
 
 /* text-based popup styling */
 .white-popup {
