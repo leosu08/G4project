@@ -10,11 +10,13 @@ html, body{
 		// padding: 0px;
 	}
 .btn-blue:hover{
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.5);
 	color: #4f9cdd;
-	margin-top: 1px;
+	// margin-top: 1px;
 	text-shadow:1px 1px 1px #000;
-	box-shadow: 1px 5px 10px #000;
+	box-shadow: 1px 1px 3px rgba(129,169,199,0.3);
+	// border: 1px solid #4f9cdd;
+	font-weight: 700;
 }
 
 

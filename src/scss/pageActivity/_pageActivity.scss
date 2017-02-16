@@ -26,7 +26,7 @@
 	}
 	input{
 		border:none;
-		background-color: rgba(255,255,255,0.5);
+		background-color: rgba(243,247,247,1);
 		height: 30px;
 		padding-left:28px;
 		z-index: 100;
@@ -44,6 +44,10 @@
 	*{
 		// outline: 1px solid #fa0;
 		outline: none;
+	}
+
+	main{
+		padding-top: 50px;
 	}
 }//body END
 .a-main-map{
@@ -97,11 +101,17 @@
 	background-position: bottom center;
 	.a-down{
 
-		i{
-			margin: 20px;
-			color:$blue-green;
-			font-size: $fz-h2;
-		}
+		.fa-angle-double-down{
+				font-size: 50px;
+				color:#fff;
+				opacity: .6;
+				margin-top: 30px;
+				font-weight: 300;
+				animation:  m_float .8s linear 0s infinite alternate;
+				// opacity: 0.8;
+
+			}
+
 	}
 }
 .a-searchInput{
@@ -125,11 +135,14 @@
         z-index: 10;
         /*position: absolute;*/
         margin: 0;
-       width: 318px;
-       height: 30px;
+        width: 318px;
+        // height: 38px;
         text-align: left;
         // margin-top: 20px;
         padding-left: 28px;
+        // padding-top: 5px;
+        font-size: 16px;
+        color: rgba(0,0,0,.5);
       }
 	
       #pac-input:focus {
@@ -141,15 +154,48 @@
       }
 }
 .a-btn{
-	margin-top: 20px;
+	margin-top: 30px;
 	.btn-lg{
-		margin: 20px  30px 0px 30px;
+		margin: 20px  10px;
+		box-shadow: 1px 2px 5px #333;
+		border: 2px solid rgba(79, 156, 221, 1);
+
+
+		a{
+			text-shadow:1px 1px 1px #333;
+			font-size: 18px;
+			// color: #f3f7f7;
+			letter-spacing: 0.02em;
+			// font-weight: 700;
+
+			
+		}
+	}
+	.btn-lg:nth-child(1){
+		// border: 2px solid #4f9cdd;
+		background-color: rgba(79, 156, 221, .8);
+		&:hover {
+			background-color: rgba(0,0,0,.1);
+		}
+	}
+
+	.btn-lg:nth-child(2){
+		background-color: rgba(255,255,255,0);
+		// border: 2px solid #4f9cdd;
+
+		a{
+			color: #4f9cdd;
+			font-weight: 700;
+		}
+		
 	}
 }
 // #a-panel-date{
 // 	margin-top: 20px;
 
 // }
+
+
 .a-date-control{
 	width: 318px
 }
@@ -168,15 +214,59 @@
 	// height: 600px;
 	height: 92vh;
 
-	background: url("http://cdn.allwallpaper.in/wallpapers/3200x2000/13325/outer-space-stars-galaxies-3200x2000-wallpaper.jpg");
+	// background: url("http://cdn.allwallpaper.in/wallpapers/3200x2000/13325/outer-space-stars-galaxies-3200x2000-wallpaper.jpg");
 	background-size:100% 100%;
 	background-position:50% 80%;
 	background-repeat: no-repeat;
 
+	.a-panel-top{
+		
+		.a-text{
+			display: inline-block;
+			margin-right: 10px;
+			letter-spacing: 0.1em;
+
+			.fa{
+				margin-right: 10px;
+				font-size: 20px;
+			}
+		}
+		.a-searchInput{
+			display: block;
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+			#pac-input{
+				
+			}
+		}
+
+		.aa-date{
+			// display: block;
+
+		}
+
+		.a-panel-date{
+			display: inline-block;
+		}
+
+		.aa-date{
+			.fa-calendar-o{
+				font-size: 16px;
+				margin-right: 5px;
+			}
+		}
+
+		
+	}
+
+	
+
 	.a-text{
-		display: block;
+		// display: block;
 		margin: 10px 0;
 	}
+	
 	input{
 		width: 318px;
 
@@ -187,7 +277,7 @@
 			
 			padding: 0;
 			border:none;
-			height: 30px;
+			height: 38px;
 			vertical-align: middle;
 		}
 	}
@@ -231,9 +321,29 @@
 	}
 }
 .a-title{
-	font-size: $fz-h2;
-	color:$white;
-	margin: 20px;
+	font-size: $fz-h3;
+	color:rgba(255,255,255,.7);
+	margin-top: -10px;
+	text-shadow:1px 1px 5px #000;
+	font-weight: 700;
+	position: relative;
+	width: 28%;
+	margin: auto;
+
+
+	.fa{
+		font-size: 20px;
+		position: absolute;
+	}
+	.fa-quote-left{
+		left: -10px;
+	}
+
+	.fa-quote-right{
+		right: -10px;
+	}
+
+
 }
 .a-panel-control{
 	// width: 320@#ppx;
@@ -355,7 +465,7 @@
 		height: 30px;
 		width: 100%;
 		// text-align: center;
-		background-color: rgba(255,255,255,.5);
+		background-color: rgba(255,255,255,.8);
 		border:none;
 		font-size: 20px;
 		// box-shadow:2px 2px 1px rgba(0,0,0,0.5) inset;
@@ -395,7 +505,7 @@
 
 
 /*=====================================
-            ���ӻ�����
+            Ôö¼Ó»î„Óí“Ãæ
     =======================================*/
 .a-lb-add{
 	background: url("../img/a_008.jpg");
@@ -472,14 +582,14 @@
 .a-x{
 	float: right;
 	font-size: $fz-h5;
-}//���ӻ�����Y��
+}//Ôö¼Ó»î„Óí“Ãæ½YÊø
 
 
 
 
 
 /*=====================================
-            ���Ԕ�����
+            »î„ÓÔ”¼ší“Ãæ
     =======================================*/
 .a-lb-act{
 	background:url("../img/a_008.jpg");
@@ -578,7 +688,7 @@
 		}
 	}
 
-}//��ӽY��
+}//»î„Ó½YÊø
 
 
 .a-phone-control{
@@ -599,7 +709,7 @@
 	overflow-y:scroll;
 }
 
-//單則活動開始
+//å–®å‰‡æ´»å‹•é–‹å§‹
 #a_1activity_wrapper{
 
 
@@ -805,8 +915,12 @@
 		}
 	}
 }
+// 0216修改
 
-//單則活動結束
+
+
+
+//å–®å‰‡æ´»å‹•çµæŸ
 
 
 @import "pageMain/xs";

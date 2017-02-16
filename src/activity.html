@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ZeroGravity</title>
@@ -75,18 +73,17 @@
 		}
 		
 		
-			#a-star{
-				width: 450px;
-				margin:auto;	
-				margin-top: 80px;
-				margin-left: -90px;
-				/*background-color: #fff;		*/
-				stroke-dashoffset: 3000;
-    			stroke-dasharray: 3000;
-				animation: circle 10s linear both;
-				/*z-index: 10;*/
-				height: 40vh;
-			}
+		#a-star{
+			width: 450px;
+			margin:auto;	
+			margin-top: 90px;
+			margin-bottom: 20px;
+			margin-left: -90px;
+			stroke-dashoffset: 3000;
+			stroke-dasharray: 3000;
+			animation: circle 10s linear both;
+			height: 45vh;
+		}
 
 			@keyframes circle{
 				100%{
@@ -105,7 +102,7 @@
 		}
 		.a-btn{
 			
-			margin: auto;		
+			/*margin: auto;		*/
 			z-index: 10;
 		}
 		nav{
@@ -346,55 +343,54 @@ $(function(){
 	</nav>
 <div id="fullpage">
 	<div class="section" id="section0">
-	<header id="header" class="">
-        
+	<header id="header" class=""> 
 		<div class="col-xs-12  col-sm-12 col-md-12  a-banner">
 		<div class="container ">
 			<div class="row">
-				
-						<svg id="a-star">
-							<g>
-							  <title>Layer 1</title>
-							  <polygon transform="rotate(0 279.40002441406256,210.50000000000003) " id="svg_3" fill-opacity="0" stroke-width="2" stroke="#c3d5da" points="433.8207702636719,210.5 356.61041259765625,344.2323303222656 202.1896209716797,344.2323303222656 124.97923278808594,210.5 202.1896209716797,76.76766967773438 356.61041259765625,76.76766967773438 433.8207702636719,210.5 " strokeWidth="1" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" cy="210" cx="279.399994">
-							
-							
-							  
-							  <animateTransform attributeType="xml"
-							                    attributeName="transform"
-							                    type="rotate"
-							                    from="0 279.399994 210"
-							                    to="360 279.399994 210"
-							                    dur="40s"
-							                    repeatCount="indefinite"/>
-							 </polygon>
-							  <polygon fill-opacity="0" stroke-width="2" stroke="#0dd1d7" points="433.820775457056,210 356.6103846767702,343.7323197037026 202.1896031161986,343.7323197037026 124.97921233591276,210.00000000000003 202.1896031161985,76.26768029629739 356.6103846767702,76.26768029629739 433.820775457056,210 " strokeWidth="1" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" id="svg_1" cy="210" cx="279.399994">
-							  <animateTransform 
-							                    attributeName="transform"
-							                    type="rotate"
-							                    from="0 279.399994 210"
-							                    to="-360 279.399994 210"
-							                    dur="40s"
-							                    repeatCount="indefinite"/>
-							  </polygon>
-							  <text id=tit x="170" y="230" fill="#fff"  style="font:48px 微軟正黑體;font-weight: bold;">觀星活動
-								  
-							  </text>
-							  <!-- <text x="200" y="200" fill="none" stroke="red" style="font:70px 標楷體;writing-mode:tb;">你好!?</text> -->
+			<!-- h1＋svg動畫開始 -->
+				<svg id="a-star">
+					<g>
+					  <title>Layer 1</title>
+					  <polygon transform="rotate(0 279.40002441406256,210.50000000000003) " id="svg_3" fill-opacity="0.1" stroke-width="3" stroke="rgba(195, 213, 218, .7)" points="433.8207702636719,210.5 356.61041259765625,344.2323303222656 202.1896209716797,344.2323303222656 124.97923278808594,210.5 202.1896209716797,76.76766967773438 356.61041259765625,76.76766967773438 433.8207702636719,210.5 " strokeWidth="1" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" cy="210" cx="279.399994">
+					  <animateTransform attributeType="xml"
+					                    attributeName="transform"
+					                    type="rotate"
+					                    from="0 279.399994 210"
+					                    to="360 279.399994 210"
+					                    dur="40s"
+					                    repeatCount="indefinite"/>
+					 </polygon>
+					  <polygon fill-opacity="0" stroke-width="3" stroke="rgba(13, 209, 215, .8)" points="433.820775457056,210 356.6103846767702,343.7323197037026 202.1896031161986,343.7323197037026 124.97921233591276,210.00000000000003 202.1896031161985,76.26768029629739 356.6103846767702,76.26768029629739 433.820775457056,210 " strokeWidth="1" strokecolor="#000000" fill="#000000" edge="154.420782" orient="x" sides="6" shape="regularPoly" id="svg_1" cy="210" cx="279.399994">
+					  <animateTransform 
+		                    attributeName="transform"
+		                    type="rotate"
+		                    from="0 279.399994 210"
+		                    to="-360 279.399994 210"
+		                    dur="40s"
+		                    repeatCount="indefinite"/>
+					  </polygon>
+					  <text id=tit x="200" y="230" fill="#fff"  style="font:40px 微軟正黑體;font-weight: 800; text-shadow: 1px 10px 10px #000">觀星活動
+						  
+					  </text>
+					  <!-- <text x="200" y="200" fill="none" stroke="red" style="font:70px 標楷體;writing-mode:tb;">你好!?</text> -->
 
-							 </g>
-						</svg>
-						<p class="a-title">
-							一起欣賞天文的浩瀚與美麗
-						</p>
-						<div class="a-btn">
-							<div class="btn-lg btn-blue"><a href="activity_recommend.html">推薦活動</a></div>
+					 </g>
+				</svg>
+		    <!-- h1的svg動畫結束 -->
+				<p class="a-title">
+					<i class="fa fa-quote-left" aria-hidden="true"></i>體驗觀星的感性與知性<i class="fa fa-quote-right" aria-hidden="true"></i>
+				</p>
+				<div class="a-btn">
+					<div class="btn-lg btn-blue"><a href="activity_recommend.html">推薦活動</a>
+					</div>
 
-							<div class="btn-lg btn-blue">
-									<a href="activity_addACT.html">新增活動</a>
-							</div><div class="a-down">
-								<i class="fa fa-angle-double-down" aria-hidden="true"></i>
-							</div>
-						</div>
+					<div class="btn-lg btn-blue">
+						<a href="activity_addACT.html">新增活動</a>
+					</div>
+					<div class="a-down">
+						<i class="fa fa-angle-double-down" aria-hidden="true"></i>
+					</div>
+				</div>
 				</div>
 				<div class="clear"></div>		
 			</div>
@@ -405,173 +401,175 @@ $(function(){
 	
 
 	<div class="section" id="section1">
+	<!-- <div class="container"> -->
           <main>
-				
 				<div class="a-map">
 					<div class="row">
-						<div class="col-xs-12 col-sm-5 col-md-5 a-mR">
-							<div class="a-panel">
-									<div class="a-controls">
-										<div class="a-panel-top">
-											<p class="a-text">地點搜尋</p>
-											<div class="a-searchInput">
-
-												<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
-
-												<input id="pac-input" class="controls" type="text" placeholder="搜尋">
-											</div>
-												<p class="a-text">活動日期</p>
-												<div class="a-panel-date">
-												<div id="wrapper">
-													<i class="fa fa-clock-o" aria-hidden="true"></i>
-													<input type="text" id="a-date-control" placeholder="選擇日期" />
-													<div id="multiple">
-											            <div class="calendar-dark"></div>
-														
-													</div>			
-													</div>
-													<!-- <input type="date" name="" value="" placeholder="">
-													<p class="a-text">到</p>
-													<input type="date" name="" value="" placeholder=""> -->
-												</div>
+<!-- right 活動區塊 -->
+					<div class="col-xs-12 col-sm-7 col-md-7 a-mR">
+						<div class="a-panel">
+							<div class="a-controls">
+								<div class="a-panel-top">
+								
+								<div class="aa-date">
+									<p class="a-text aa-date"><i class="fa fa-calendar-o" aria-hidden="true"></i>活動日期</p>
+									<div class="a-panel-date">
+									<div id="wrapper">
+										<i class="fa fa-clock-o" aria-hidden="true"></i>
+										<input type="text" id="a-date-control" placeholder="選擇日期" />
+										<div id="multiple">
+								            <div class="calendar-dark"></div>
 											
-											<div class="a-panel-item">
-												<p class="a-text">活動類型</p>
-												<ul>
-													<a href="#" id="turnOff"><li>全部</li></a>
-													<a href="#"><li>天文觀測</li></a>
-													<a href="#"><li>親子觀星</li></a>
-													<a href="#"><li>天文攝影</li></a>
-													<a href="#"><li>休閒聯誼</li></a>
-												</ul>
-											</div>
-											<div class="a-panel-item">
-												<p class="a-text">活動地點</p>
-												<ul>
-													<a href="#"><li>全部</li></a>
-													<a href="#"><li>北部地區</li></a>
-													<a href="#"><li>中部地區</li></a>
-													<a href="#"><li>南部地區</li></a>
-													<a href="#"><li>東部地區</li></a>
-												</ul>
-											</div>
+										</div>			
 										</div>
-										
-										<!-- oldslider -->
-									<div id="a-oldSlider" class="element2">
-										<a class="a-phone-control" href="activity_phone_map.html">
-											<div class="a-phone-btn btn-lg btn-blue" id="a-phone-mapBtn">
-												地圖搜尋
-											</div>
-										</a>
-										<div class="row scrollable-element" id="">
-											<div class="col-xs-12 col-sm-12 col-md-12">
-												<div class="a-tab">
-													<div><p>最近時間</p></div>
-													<div><p>最高瀏覽</p></div>
-													<div><p>最多收藏</p></div>
-												</div>	
-											</div>
-											<div class="col-xs-12 col-md-12 col-lg-12 a-phone-search">
-												<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
-													<input id="a-phone-input_1" type="text" name="" value="" placeholder="　　　搜尋日期、類型、地點">
-													<i class="fa fa-chevron-up" aria-hidden="true"></i>
-													<i  class="a-phone-input fa fa-clock-o a-phone-icon-2" aria-hidden="true"></i>
-													<input type="text" class="a-phone-input" placeholder="　　　依日期">
-													<i  class="a-phone-input fa fa-star-o a-phone-icon-2" aria-hidden="true"></i>
-													<input type="text" class="a-phone-input" placeholder="　　　依類型">
-													<i  class="a-phone-input fa fa-globe a-phone-icon-2" aria-hidden="true"></i>
-													<input type="text" class="a-phone-input" placeholder="　　　依地點">
-											</div>
-										<div class="a-scrollArea">
-											
-										
-											<div class="col-xs-12 col-sm-12 col-md-12 a-pReset">
-												<div class="col-xs-12 col-sm-6 col-md-6 ">
+										<!-- <input type="date" name="" value="" placeholder="">
+										<p class="a-text">到</p>
+										<input type="date" name="" value="" placeholder=""> -->
+									</div>
+								</div>
+									
+									<div class="a-panel-item">
+										<p class="a-text"><i class="fa fa-tags" aria-hidden="true"></i>活動類型</p>
+										<ul>
+											<a href="#" id="turnOff"><li>全部</li></a>
+											<a href="#"><li>天文觀測</li></a>
+											<a href="#"><li>親子觀星</li></a>
+											<a href="#"><li>天文攝影</li></a>
+											<a href="#"><li>休閒聯誼</li></a>
+										</ul>
+									</div>
 
-													<a href="activity_one.activity.html" data-effect="mfp-3d-unfold">
-													<div class="a-item a-phone-searchContainer">
-														<img src="img/a_007.jpg" alt="" class="rwd-img">
-															<p class="a-text-title">墾丁南十字觀星露營</p>
-															<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-															<p class="a-text-content">名額：16人</p>
-															<p class="a-text-content">發起人：Leo S</p>
-													</div></a>
-												</div>
+									<div class="a-panel-item">
+										<p class="a-text"><i class="fa fa-map-marker" aria-hidden="true"></i>活動地點</p>
+										<ul>
+											<a href="#"><li>全部</li></a>
+											<a href="#"><li>北部地區</li></a>
+											<a href="#"><li>中部地區</li></a>
+											<a href="#"><li>南部地區</li></a>
+											<a href="#"><li>東部地區</li></a>
+										</ul>
+									</div>
 
+									<div class="aa-location">
+									<!-- <p class="a-text">地點搜尋</p> -->
+									<div class="a-searchInput">
+
+										<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
+
+										<input id="pac-input" class="controls" type="text" placeholder="搜尋">
+									</div>
+								</div>
+
+								</div>
+									
+									<!-- oldslider -->
+								<div id="a-oldSlider" class="element2">
+									<a class="a-phone-control" href="activity_phone_map.html">
+										<div class="a-phone-btn btn-lg btn-blue" id="a-phone-mapBtn">
+											地圖搜尋
+										</div>
+									</a>
+									<div class="row scrollable-element" id="">
+										<div class="col-xs-12 col-sm-12 col-md-12">
+											<div class="a-tab">
+												<div><p>最近時間</p></div>
+												<div><p>最高瀏覽</p></div>
+												<div><p>最多收藏</p></div>
+											</div>	
+										</div>
+										<div class="col-xs-12 col-md-12 col-lg-12 a-phone-search">
+											<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
+												<input id="a-phone-input_1" type="text" name="" value="" placeholder="　　　搜尋日期、類型、地點">
+												<i class="fa fa-chevron-up" aria-hidden="true"></i>
+												<i  class="a-phone-input fa fa-clock-o a-phone-icon-2" aria-hidden="true"></i>
+												<input type="text" class="a-phone-input" placeholder="　　　依日期">
+												<i  class="a-phone-input fa fa-star-o a-phone-icon-2" aria-hidden="true"></i>
+												<input type="text" class="a-phone-input" placeholder="　　　依類型">
+												<i  class="a-phone-input fa fa-globe a-phone-icon-2" aria-hidden="true"></i>
+												<input type="text" class="a-phone-input" placeholder="　　　依地點">
+										</div>
+									<div class="a-scrollArea">
+										
+									
+										<div class="col-xs-12 col-sm-12 col-md-12 a-pReset">
 											<div class="col-xs-12 col-sm-6 col-md-6 ">
 
-												<a href="activity_one.activity.html"  data-effect="mfp-3d-unfold">
-													<div class="a-item a-phone-searchContainer">
-														<img src="img/a_006.jpg" alt="" class="rwd-img">
-															<p class="a-text-title">墾丁南十字觀星露營</p>
-															<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-															<p class="a-text-content">名額：16人</p>
-															<p class="a-text-content">發起人：Leo S</p>
-													</div></a>
-												</div>
+												<a href="activity_one.activity.html" data-effect="mfp-3d-unfold">
+												<div class="a-item a-phone-searchContainer">
+													<img src="img/a_007.jpg" alt="" class="rwd-img">
+														<p class="a-text-title">墾丁南十字觀星露營</p>
+														<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+														<p class="a-text-content">名額：16人</p>
+														<p class="a-text-content">發起人：Leo S</p>
+												</div></a>
 											</div>
-											<div class="col-xs-12 col-sm-12 col-md-12 a-pReset">
-
-											<div class="col-xs-12 col-sm-6 col-md-6 ">
-
-												<a href="activity_one.activity.html"  data-effect="mfp-3d-unfold">
-													<div class="a-item a-phone-searchContainer">
-														<img src="img/a_001.jpg" alt="" class="rwd-img">
-															<p class="a-text-title">墾丁南十字觀星露營</p>
-															<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-															<p class="a-text-content">名額：16人</p>
-															<p class="a-text-content">發起人：Leo S</p>
-													</div></a>
-												</div>
 
 										<div class="col-xs-12 col-sm-6 col-md-6 ">
 
-												<a href="activity_one.activity.html"  data-effect="mfp-3d-unfold">
-													<div class="a-item a-phone-searchContainer">
-														<img src="img/a_002.jpg" alt="" class="rwd-img">
-															<p class="a-text-title">墾丁南十字觀星露營</p>
-															<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
-															<p class="a-text-content">名額：16人</p>
-															<p class="a-text-content">發起人：Leo S</p>
-													</div></a>
-												</div>
+											<a href="activity_one.activity.html"  data-effect="mfp-3d-unfold">
+												<div class="a-item a-phone-searchContainer">
+													<img src="img/a_006.jpg" alt="" class="rwd-img">
+														<p class="a-text-title">墾丁南十字觀星露營</p>
+														<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+														<p class="a-text-content">名額：16人</p>
+														<p class="a-text-content">發起人：Leo S</p>
+												</div></a>
+											</div>
 										</div>
-										</div><!-- scrollArea -->
+										<div class="col-xs-12 col-sm-12 col-md-12 a-pReset">
 
+										<div class="col-xs-12 col-sm-6 col-md-6 ">
+
+											<a href="activity_one.activity.html"  data-effect="mfp-3d-unfold">
+												<div class="a-item a-phone-searchContainer">
+													<img src="img/a_001.jpg" alt="" class="rwd-img">
+														<p class="a-text-title">墾丁南十字觀星露營</p>
+														<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+														<p class="a-text-content">名額：16人</p>
+														<p class="a-text-content">發起人：Leo S</p>
+												</div></a>
+											</div>
+
+									<div class="col-xs-12 col-sm-6 col-md-6 ">
+
+											<a href="activity_one.activity.html"  data-effect="mfp-3d-unfold">
+												<div class="a-item a-phone-searchContainer">
+													<img src="img/a_002.jpg" alt="" class="rwd-img">
+														<p class="a-text-title">墾丁南十字觀星露營</p>
+														<p class="a-text-content">時間：2017-05-02至2017-05-06</p>
+														<p class="a-text-content">名額：16人</p>
+														<p class="a-text-content">發起人：Leo S</p>
+												</div></a>
+											</div>
 									</div>
-									
-									</div>
+									</div><!-- scrollArea -->
+
 								</div>
 								
+								</div>
 							</div>
+							
+						</div>
 
+					</div>
+<!-- left googleMap -->
+					<div class="col-xs-12 col-sm-5 col-md-5 googleMap a-mL a-main-map">
+						<div id="co">
+						        <p></p>
+						        
 						</div>
-						<div class="col-xs-12 col-sm-7 col-md-7 googleMap a-mL a-main-map">
-							<div id="co">
-							        <p></p>
-							        
-							</div>
-							<div id="zero"></div>
-						      <div id="map">
-						      	
-						      </div>
-							<!-- <img src="img/a_014.jpg" alt="" class="rwd-img"> -->
-						</div>
+						<div id="zero"></div>
+					      <div id="map">
+					      	
+					      </div>
+						<!-- <img src="img/a_014.jpg" alt="" class="rwd-img"> -->
 					</div>
 				</div>
-
-
-
-				
-
-
-				
-					
-
-				
-			</main>
-        </div><!-- fullpage	 -->
+			</div>
+		<!-- </div> -->
+			
+		</main>
+    </div><!-- fullpage	 -->
 
 
 	<!-- 活動開始 -->
