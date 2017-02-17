@@ -5,54 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/semantic.ui.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/semantic.ui.min.css">
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/calendar-style.css" />
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/style.css" />
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/src/css/pignose.calendar.css" />
-    <link type="text/css" href="libs/pg-calendar/dist/pignose.calendar.min.css">
+    <link type="text/css" href="libs/pg-calendar/dist/pignose.calendar.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
     <script src="js/skrollr.min.js"></script>
-    <script type="text/javascript" src="libs/pg-calendar/demo/js/semantic.ui.min.js"></script>
-    <script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script>
-    <script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script>
-    <script src="libs/pg-calendar/src/js/pignose.calendar.js"></script>
-    <script src="js/jquery.mobile.custom.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
+    <!-- <script type="text/javascript" src="libs/pg-calendar/demo/js/semantic.ui.min.js"></script> -->
+    <!-- <script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script> -->
+    <!-- <script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script> -->
+    <!-- <script src="libs/pg-calendar/src/js/pignose.calendar.js"></script> -->
+    <!-- <script src="js/jquery.mobile.custom.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
     <script src="js/index.js"></script>
     <title>ZeroGravity</title>
 </head>
 
 <body id="i-body">
-  <nav id="nav">
-		<div class="relative">
-			<div class="row">
-				<!-- <input type="checkbox" id="navButtonHidden"> -->
-				<div id="navButton"><i class="fa fa-bars"></i></div>
-				<div id="logo">
-					<a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
-				</div>
-				<ul class="mainMenu menu">
-					<li><a href="activity.html">觀星活動</a></li>
-					<li><a href="forum.html">星際論壇</a></li>
-					<li><a href="photo.html">照片牆</a></li>
-					<li><a href="article.html">星知識</a></li>
-				</ul>
-				<ul class="mainMenu signArea">
-					<li id="signLeft">
-						<i class="fa fa-user-circle-o" aria-hidden="true"></i>
-						<span><a href="#">註冊</a></span>
-					</li>
-					<li id="signRight">
-						<span><a href="#">登入</a></span>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+    <nav id="nav">
+        <div class="relative">
+            <div class="row">
+                <!-- <input type="checkbox" id="navButtonHidden"> -->
+                <div id="navButton"><i class="fa fa-bars"></i></div>
+                <div id="logo">
+                    <a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
+                </div>
+                <ul class="mainMenu menu">
+                    <li><a href="activity.html">觀星活動</a></li>
+                    <li><a href="forum.html">星際論壇</a></li>
+                    <li><a href="photo.html">照片牆</a></li>
+                    <li><a href="article.html">星知識</a></li>
+                </ul>
+                <ul class="mainMenu signArea">
+                    <li id="signLeft">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span><a href="#">註冊</a></span>
+                    </li>
+                    <li id="signRight">
+                        <span><a href="#">登入</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- <div id="info"></div> -->
     <canvas id="icanvas" width="100" height="400"></canvas>
     <div class="sideBarGroup">
@@ -64,6 +65,7 @@
     </div>
     <div id="i-wrapper" data-0="transform:translate(0%,-200vh)" data-100p="transform:translate(0%,-100vh)" data-600p="transform:translate(0%,-100vh)" data-700p="transform:translate(0,0)">
         <section class="section section01" data-0p="transform:scale(1)" data-20p="transform:scale(1)">
+            <div class="shootingStar"></div>
             <div class="title">
                 <h2>ZeroGravity</h2>
                 <h1>和我們一起探索星際去</h1>
@@ -107,10 +109,11 @@
             <div class="ground">
                 <img src="img/index/bg-ground.png">
             </div>
-            <img id="cloud1" src="img/i-cloud.png" data-0="right:-300px;opacity:1;display:block" data-90p="right:-1000px;opacity:1;display:block" data-256p="right:-1000px;opacity:0;display:none">
-            <img id="cloud2" src="img/i-cloud.png" data-0="left:-900px;opacity:1;display:block" data-90p="left:-1100px;opacity:1;display:block" data-256p="left:-1100px;opacity:0;display:none">
         </section>
         <section class="section section02">
+            <img id="cloud1" src="img/i-cloud.png" data-0="right:-300px;opacity:1;display:block" data-90p="right:-1000px;opacity:1;display:block" data-256p="right:-1000px;opacity:0;display:none">
+            <img id="cloud2" src="img/i-cloud.png" data-0="left:-900px;opacity:1;display:block" data-90p="left:-1100px;opacity:1;display:block" data-256p="left:-1100px;opacity:0;display:none">
+            <div class="section-bgc"></div>
             <div id="part01" data-0="display:block" data-454p="display:none">
                 <div class="sectionTitle">
                     <h1><a href="#">觀星活動</a></h1>
@@ -175,6 +178,80 @@
                     <h4>關於星星的大小事，都在這裡</h4>
                 </div>
                 <div class="forumGroup">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum1">
+                        <div class="pic"><img src="img/i-member.png"></div>
+                        <div class="content">
+                            <h4>大家今年要去看極光嗎？</h4>
+                            <p class="memberId">Allie213</p>
+                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum2">
+                        <div class="pic"><img src="img/i-member2.png"></div>
+                        <div class="content">
+                            <h4>大家今年要去看極光嗎？</h4>
+                            <p class="memberId">Allie213</p>
+                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum3">
+                        <div class="pic"><img src="img/i-member.png"></div>
+                        <div class="content">
+                            <h4>大家今年要去看極光嗎？</h4>
+                            <p class="memberId">Allie213</p>
+                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum4">
+                        <div class="pic"><img src="img/i-member.png"></div>
+                        <div class="content">
+                            <h4>大家今年要去看極光嗎？</h4>
+                            <p class="memberId">Allie213</p>
+                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum5">
+                        <div class="pic"><img src="img/i-member2.png"></div>
+                        <div class="content">
+                            <h4>大家今年要去看極光嗎？</h4>
+                            <p class="memberId">Allie213</p>
+                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum6">
+                        <div class="pic"><img src="img/i-member3.png"></div>
+                        <div class="content">
+                            <h4>大家今年要去看極光嗎？</h4>
+                            <p class="memberId">Allie213</p>
+                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum7">
+                        <div class="pic"><img src="img/i-member3.png"></div>
+                        <div class="content">
+                            <h4>大家今年要去看極光嗎？</h4>
+                            <p class="memberId">Allie213</p>
+                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum8">
+                        <div class="pic"><img src="img/i-member2.png"></div>
+                        <div class="content">
+                            <h4>大家今年要去看極光嗎？</h4>
+                            <p class="memberId">Allie213</p>
+                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum9">
+                        <div class="pic"><img src="img/i-member3.png"></div>
+                        <div class="content">
+                            <h4>大家今年要去看極光嗎？</h4>
+                            <p class="memberId">Allie213</p>
+                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!--  <div class="forumGroup">
                     <article class="forum forum1">
                         <div class="pic"><img src="img/i-member2.png"></div>
                         <div class="content">
@@ -287,7 +364,7 @@
                             <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                         </div>
                     </article>
-                </div>
+                </div> -->
             </div>
             <div id="part03" data-0="display:none;opacity:0" data-504p="display:block;opacity:1" data-550p="display:block;opacity:1" data-554p="display:none;opacity:0">
                 <div class="sectionTitle">
@@ -329,16 +406,16 @@
                     </div>
                 </div>
                 <div class="photoBar">
-                  <div class="photoBarHidden">
-                    <img src="">
-                    <img src="">
-                    <img src="">
-                    <img src="">
-                    <img src="">
-                    <img src="">
-                    <img src="">
-                    <img src="">
-                  </div>
+                    <div class="photoBarHidden">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                        <img src="">
+                    </div>
                 </div>
             </div>
             <div id="part04" data-0="display:none;opacity:0" data-554p="display:block;opacity:1" data-600p="display:block;opacity:1" data-660p="display:block;opacity:0">
@@ -376,7 +453,6 @@
                             <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
                             </p>
                         </div>
-
                     </li>
                     <li class="know know3 fakeCover">
                         <div class="pic">
@@ -392,7 +468,6 @@
                             <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
                             </p>
                         </div>
-
                     </li>
                     <li class="know know4 fakeCover">
                         <div class="pic">
@@ -449,30 +524,30 @@
                 </div>
             </div>
             <div class="loginPopup">
-              <div class="i-lightboxBg"></div>
-        <div class="login">
-          <h4>會員登入</h4>
-          <input id="loginAccount" type="Email" placeholder="*帳號(Email)">
-          <input id="loginPsw" type="password" placeholder="*密碼(4~8個字元)">
-          <input id="loginConfirmPsw" type="password" placeholder="*確認密碼">
-            <input id="loginMemName" type="text" placeholder="*暱稱(2~12個字元)">
-          <div class="searchBar-btn" id="i-loginBtn">
-              <a href="#">登入</a>
-          </div>
-          <div class="logOn">
-            按此註冊會員
-          </div>
-        </div>
-      </div>
+                <div class="i-lightboxBg"></div>
+                <div class="login">
+                    <h4>會員登入</h4>
+                    <input id="loginAccount" type="Email" placeholder="*帳號(Email)">
+                    <input id="loginPsw" type="password" placeholder="*密碼(4~8個字元)">
+                    <input id="loginConfirmPsw" type="password" placeholder="*確認密碼">
+                    <input id="loginMemName" type="text" placeholder="*暱稱(2~12個字元)">
+                    <div class="searchBar-btn" id="i-loginBtn">
+                        <a href="#">登入</a>
+                    </div>
+                    <div class="logOn">
+                        按此註冊會員
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </body>
 
 </html>
 <script type="text/javascript">
-    var s = skrollr.init({
-        render: function(data) {
-            $('#info').text(data.curTop);
-        }
-    });
+var s = skrollr.init({
+    render: function(data) {
+        $('#info').text(data.curTop);
+    }
+});
 </script>

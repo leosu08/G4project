@@ -133,10 +133,26 @@
         .section01 {
             perspective: 800;
             top: 200vh;
-            z-index: 1;
+            // z-index: 1;
             background: url('../img/index/bg-sky.jpg') 50% 100% no-repeat;
             background-size: cover;
-
+            // overflow: hidden;
+            .shootingStar{
+                overflow: hidden;
+                position:absolute;
+                width: 100%;
+                height: 100%;
+                transform:rotate(40deg);
+                // border: red 1px solid;
+                .shoot{
+                    background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,0.2) ), to(rgba(255,255,255,0.6))  );
+                    width:1px;
+                    height:89px;
+                    position: absolute;
+                    bottom:200px;
+                    opacity:1;
+                }
+            }
             .ground {
                 position: absolute;
                 bottom: 0;
@@ -193,7 +209,7 @@
                     position: relative;
                     text-align: center;
                     margin: 30px auto;
-                    width: 90%;
+                    width: 80%;
                     height: 70px;
                     line-height: 70px;
                     background-color: $o-black;
@@ -362,19 +378,6 @@
                 }
             }
 
-            #cloud1 {
-                position: absolute;
-                top: -720px;
-                right: -200px;
-                transform: scale(0.8);
-            }
-
-            #cloud2 {
-                position: absolute;
-                top: -850px;
-                left: -900px;
-                transform: scale(0.8);
-            }
         }
         //section01
         .section02 {
@@ -382,6 +385,32 @@
             background-size: cover;
             outline: 5px solid #111;
             top: 100vh;
+            // z-index: 2;
+            #cloud1 {
+                position: absolute;
+                top: 200px;
+                right: -200px;
+                transform: scale(0.8);
+            }
+
+            #cloud2 {
+                position: absolute;
+                top: 150px;
+                left: -900px;
+                transform: scale(0.8);
+            }
+          .section-bgc{
+            position: absolute;
+            top: 0;bottom: 0;right: 0;left: 0;
+            margin: auto;
+            width: 48%;
+            height: 32%;
+            border-radius: 650px/300px;
+            background: #B0DAFF;
+            -webkit-filter: blur(80px) brightness(50%);
+            box-shadow: 0px 0px 100px 30px blue,0px 0px 140px 100px $blue-green,0px 0px 200px 100px $green-blue;
+            opacity: 0.5;
+          }
 
             #part01 {
                 position: relative;
@@ -415,6 +444,7 @@
                             font-size: 30px;
                             color: $black;
                             padding: 10px 0;
+                            font-weight: 300;
                         }
 
                         p {
@@ -490,15 +520,9 @@
                 height: 100vh;
 
                 .forumGroup {
-                    padding-top: 100px;
-
-                    .button-square {
-                        position: absolute;
-                        margin: auto;
-                        left: 0;
-                        right: 0;
-                        bottom: 30px;
-                    }
+                    // padding-top: 10px;
+                    padding-left: 60px;
+                    position:relative;
                 }
 
                 .forum:hover {
@@ -507,23 +531,26 @@
                 }
 
                 .forum {
-                    position: absolute;
+                    position: relative;
                     color: $white;
-                    width: 320px;
-                    height: 65px;
+                    // width: 320px;
+                    max-width: 420px;
+                    height: 70px;
                     letter-spacing: 1px;
-                    margin: auto;
+                    margin:60px 20px;
                     background-color: $o-black;
+                    // padding:20px;
                     // display: none;
-                    transform: scale(0);
-                    animation: animForumPop1 5s 0.5s both;
+                    // transform: scale();
+                    // animation: animForumPop1 5s 0.5s both;
 
                     .content {
-                        padding: 10px 5px 5px 35px;
+                        padding:10px 25px;
+                        line-height: 25px;
 
                         h4 {
                             font-size: $fz-h4;
-                            padding-bottom: 3px;
+                            // padding-bottom: 3px;
                         }
                     }
 
@@ -564,8 +591,7 @@
                     }
 
                     &.forum1,
-                    &.forum10,
-                    &.forum14 {
+                    &.forum10 {
                         display: none;
                     }
                 }
@@ -720,7 +746,7 @@
 
                     &.know5 {
                         background-image: url("../img/i-know04.png");
-                        display: block;
+                        display: none;
                     }
 
                     .memberId {
@@ -1254,7 +1280,9 @@
         transform: translateY(6px);
     }
 }
-
+@keyframes fall {
+    100%{margin-top:900px;opacity:0}
+}
 #info {
     background-color: $o-white;
     color: $black;

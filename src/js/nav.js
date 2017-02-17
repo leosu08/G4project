@@ -12,3 +12,4 @@ $(function(){
       $('#navButton').children('i').attr('class', 'fa fa-times');
     }
 })
+  })

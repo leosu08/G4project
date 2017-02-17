@@ -1,3 +1,79 @@
 @include respones(lg) {
-	
-}
+    #i-wrapper {
+        section {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            // border:red solid 1px;
+            // overflow: hidden;
+            .sectionTitle {
+                padding-top: 130px;
+                padding-left: 80px;
+                h1 {
+                    display: inline-block;
+                    font-size: $fz-h1;
+                    font-weight: 600;
+                    &:after {
+                        width: 450px;
+                    }
+                 }
+
+                    h4 {
+                        position: relative;
+                        z-index: 1;
+                        display: inline-block;
+                        color: #ccc;
+                        font-size: $fz-h3;
+                        font-weight: 700;
+                        padding: 5px 0;
+                    }
+            }
+        }
+        .section01 .title {
+            h1 {
+                font-size: 48px;
+            }
+            .i-searchBar {
+                width: 65%;
+            }
+        }
+        #part01 {
+            .activity {
+                .act {
+                    h3 {
+                        font-weight: 300;
+                    }
+                    p {
+                        font-size: $fz-p;
+                        color: $black;
+                    }
+                    .content {
+                        position: absolute;
+                        right: 60px;
+                        bottom: -80px;
+                        z-index: 3;
+                        cursor: pointer;
+                    }
+                    .content2 {
+                        right: 200px;
+                        bottom: -100px;
+                    }
+                    .content4 {
+                        right: 100px;
+                        bottom: -100px;
+                    }
+                    .content5 {
+                        right: 80px;
+                        bottom: -50px;
+                    }
+                }
+            }
+        }
+        #part02 .forumGroup{
+			outline:1px solid red;
+        }
+        .section02 #part04 .accordion li.know5 {
+            display: block;
+        }
+    } //wraper
+} //media
