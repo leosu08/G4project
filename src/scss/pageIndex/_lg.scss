@@ -7,7 +7,7 @@
             // border:red solid 1px;
             // overflow: hidden;
             .sectionTitle {
-                padding-top: 130px;
+                padding-top: 100px;
                 padding-left: 80px;
                 h1 {
                     display: inline-block;
@@ -70,7 +70,10 @@
             }
         }
         #part02 .forumGroup{
-			outline:1px solid red;
+			// outline:1px solid red;
+        }
+        .section02 #part04 .accordion{
+            left:300px; 
         }
         .section02 #part04 .accordion li.know5 {
             display: block;

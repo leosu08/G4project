@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/semantic.ui.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/semantic.ui.min.css">
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/calendar-style.css" />
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/style.css" />
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/src/css/pignose.calendar.css" />
-    <link type="text/css" href="libs/pg-calendar/dist/pignose.calendar.min.css"> -->
+    <link type="text/css" href="libs/pg-calendar/dist/pignose.calendar.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
     <script src="js/skrollr.min.js"></script>
     <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
-    <!-- <script type="text/javascript" src="libs/pg-calendar/demo/js/semantic.ui.min.js"></script> -->
-    <!-- <script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script> -->
-    <!-- <script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script> -->
-    <!-- <script src="libs/pg-calendar/src/js/pignose.calendar.js"></script> -->
-    <!-- <script src="js/jquery.mobile.custom.min.js"></script> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+    <script type="text/javascript" src="libs/pg-calendar/demo/js/semantic.ui.min.js"></script>
+    <script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script>
+    <script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script>
+    <script src="libs/pg-calendar/src/js/pignose.calendar.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/index.js"></script>
     <title>ZeroGravity</title>
 </head>
@@ -48,7 +48,7 @@
                         <span><a href="#">註冊</a></span>
                     </li>
                     <li id="signRight">
-                        <span><a href="#">登入</a></span>
+                        <span><a href="#" id="navLogin">登入</a></span>
                     </li>
                 </ul>
             </div>
@@ -178,329 +178,328 @@
                     <h4>關於星星的大小事，都在這裡</h4>
                 </div>
                 <div class="forumGroup">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum1">
-                        <div class="pic"><img src="img/i-member.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forumBox">
+                        <div class="forum forum1">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
+                        </div>
+                        <div class="forum forumBack1">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
+                        </div>
+                        <div class="forum forumBack2">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum2">
-                        <div class="pic"><img src="img/i-member2.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                        <!-- <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="forumFront forum2">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
+                            <div class="forumBack">
+                                <div class="backBox">
+                                    <div class="pic"><img src="img/i-member.png"></div>
+                                    <div class="content">
+                                        <h4>大家今年要去看極光嗎？</h4>
+                                        <p class="memberId">Allie213</p>
+                                        <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum3">
-                        <div class="pic"><img src="img/i-member.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="forumFront forum3">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
+                            <div class="forumBack">
+                                <div class="backBox">
+                                    <div class="pic"><img src="img/i-member.png"></div>
+                                    <div class="content">
+                                        <h4>大家今年要去看極光嗎？</h4>
+                                        <p class="memberId">Allie213</p>
+                                        <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum4">
-                        <div class="pic"><img src="img/i-member.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="forumFront forum4">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
+                            <div class="forumBack">
+                                <div class="backBox">
+                                    <div class="pic"><img src="img/i-member.png"></div>
+                                    <div class="content">
+                                        <h4>大家今年要去看極光嗎？</h4>
+                                        <p class="memberId">Allie213</p>
+                                        <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum5">
-                        <div class="pic"><img src="img/i-member2.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="forumFront forum5">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
+                            <div class="forumBack">
+                                <div class="backBox">
+                                    <div class="pic"><img src="img/i-member.png"></div>
+                                    <div class="content">
+                                        <h4>大家今年要去看極光嗎？</h4>
+                                        <p class="memberId">Allie213</p>
+                                        <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum6">
-                        <div class="pic"><img src="img/i-member3.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="forumFront forum6">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
+                            <div class="forumBack">
+                                <div class="backBox">
+                                    <div class="pic"><img src="img/i-member.png"></div>
+                                    <div class="content">
+                                        <h4>大家今年要去看極光嗎？</h4>
+                                        <p class="memberId">Allie213</p>
+                                        <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum7">
-                        <div class="pic"><img src="img/i-member3.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="forumFront forum7">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
+                            <div class="forumBack">
+                                <div class="backBox">
+                                    <div class="pic"><img src="img/i-member.png"></div>
+                                    <div class="content">
+                                        <h4>大家今年要去看極光嗎？</h4>
+                                        <p class="memberId">Allie213</p>
+                                        <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum8">
-                        <div class="pic"><img src="img/i-member2.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="forumFront forum8">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
+                            <div class="forumBack">
+                                <div class="backBox">
+                                    <div class="pic"><img src="img/i-member.png"></div>
+                                    <div class="content">
+                                        <h4>大家今年要去看極光嗎？</h4>
+                                        <p class="memberId">Allie213</p>
+                                        <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 forum forum9">
-                        <div class="pic"><img src="img/i-member3.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="forumFront forum9">
+                            <div class="pic"><img src="img/i-member.png"></div>
+                            <div class="content">
+                                <h4>大家今年要去看極光嗎？</h4>
+                                <p class="memberId">Allie213</p>
+                                <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                            </div>
+                            <div class="forumBack">
+                                <div class="backBox">
+                                    <div class="pic"><img src="img/i-member.png"></div>
+                                    <div class="content">
+                                        <h4>大家今年要去看極光嗎？</h4>
+                                        <p class="memberId">Allie213</p>
+                                        <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div id="part03" data-0="display:none;opacity:0" data-504p="display:block;opacity:1" data-550p="display:block;opacity:1" data-554p="display:none;opacity:0">
+                    <div class="sectionTitle">
+                        <h1><a href="#">照片牆</a></h1>
+                        <h4>分享你所見的美麗</h4>
+                    </div>
+                    <div class="gallery">
+                        <div class="pic pic1">
+                            <img src="img/a_009.jpg">
+                            <div class="detail">遇到好天氣</div>
+                        </div>
+                        <div class="pic pic2">
+                            <img src="img/a_013.jpg">
+                            <div class="detail">我在露營天氣晴</div>
+                        </div>
+                        <div class="pic pic3">
+                            <img src="img/a_012.jpg">
+                            <div class="detail">武嶺觀星去</div>
+                        </div>
+                        <div class="pic pic4">
+                            <img src="img/a_007.jpg">
+                            <div class="detail">過年拍星星</div>
+                        </div>
+                        <div class="pic pic5">
+                            <img src="img/p_bigpic_001.jpg">
+                            <div class="detail">照片騙很大</div>
+                        </div>
+                        <div class="pic pic6">
+                            <img src="img/index/i-gallery.jpg">
+                            <div class="detail">沒有很可以，但你惹不起</div>
+                        </div>
+                        <div class="pic pic7">
+                            <img src="img/i-act04.jpg">
+                            <div class="detail">遇到難得的奇景</div>
+                        </div>
+                        <div class="pic pic8">
+                            <img src="img/i-act05.jpg">
+                            <div class="detail">伸手摘星</div>
+                        </div>
+                    </div>
+                    <div class="photoBar">
+                        <div class="photoBarHidden">
+                            <img src="">
+                            <img src="">
+                            <img src="">
+                            <img src="">
+                            <img src="">
+                            <img src="">
+                            <img src="">
+                            <img src="">
                         </div>
                     </div>
                 </div>
-                <!--  <div class="forumGroup">
-                    <article class="forum forum1">
-                        <div class="pic"><img src="img/i-member2.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum2">
-                        <div class="pic"><img src="img/i-member.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum3">
-                        <div class="pic"><img src="img/i-member.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum4">
-                        <div class="pic"><img src="img/i-member.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum5">
-                        <div class="pic"><img src="img/i-member2.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum6">
-                        <div class="pic"><img src="img/i-member3.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum7">
-                        <div class="pic"><img src="img/i-member2.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum8">
-                        <div class="pic"><img src="img/i-member.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum9">
-                        <div class="pic"><img src="img/i-member3.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum10">
-                        <div class="pic"><img src="img/i-member.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum11">
-                        <div class="pic"><img src="img/i-member3.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum12">
-                        <div class="pic"><img src="img/i-member.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum13">
-                        <div class="pic"><img src="img/i-member2.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                    <article class="forum forum14">
-                        <div class="pic"><img src="img/i-member.png"></div>
-                        <div class="content">
-                            <h4>大家今年要去看極光嗎？</h4>
-                            <p class="memberId">Allie213</p>
-                            <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
-                        </div>
-                    </article>
-                </div> -->
-            </div>
-            <div id="part03" data-0="display:none;opacity:0" data-504p="display:block;opacity:1" data-550p="display:block;opacity:1" data-554p="display:none;opacity:0">
-                <div class="sectionTitle">
-                    <h1><a href="#">照片牆</a></h1>
-                    <h4>分享你所見的美麗</h4>
+                <div id="part04" data-0="display:none;opacity:0" data-554p="display:block;opacity:1" data-600p="display:block;opacity:1" data-660p="display:block;opacity:0">
+                    <div class="sectionTitle">
+                        <h1><a href="#">星知識</a></h1>
+                        <h4>精選專欄，給求知若渴的你</h4>
+                    </div>
+                    <ul class="accordion" id="accordion">
+                        <li class="know know1 fakeCover">
+                            <div class="pic">
+                                <img src="img/i-member.png">
+                            </div>
+                            <div class="memberId">
+                                天邊一朵雲
+                            </div>
+                            <div class="heading">喜歡太空的孩子</div>
+                            <div class="knowDescription"></div>
+                            <div class="description">
+                                <h2>喜歡太空的孩子</h2>
+                                <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
+                                </p>
+                            </div>
+                        </li>
+                        <li class="know know2 fakeCover">
+                            <div class="pic">
+                                <img src="img/i-member3.png">
+                            </div>
+                            <div class="memberId">
+                                天邊一朵雲
+                            </div>
+                            <div class="heading">流星花園</div>
+                            <div class="knowDescription"></div>
+                            <div class="description">
+                                <h2>流星花園</h2>
+                                <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
+                                </p>
+                            </div>
+                        </li>
+                        <li class="know know3 fakeCover">
+                            <div class="pic">
+                                <img src="img/i-member2.png">
+                            </div>
+                            <div class="memberId">
+                                天邊一朵雲
+                            </div>
+                            <div class="heading">關於觀星露營的大小事</div>
+                            <div class="knowDescription"></div>
+                            <div class="description">
+                                <h2>關於觀星露營的大小事</h2>
+                                <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
+                                </p>
+                            </div>
+                        </li>
+                        <li class="know know4 fakeCover">
+                            <div class="pic">
+                                <img src="img/i-member2.png">
+                            </div>
+                            <div class="memberId">
+                                沙漠裡的魚
+                            </div>
+                            <div class="heading">今年你們要去看極光嗎</div>
+                            <div class="knowDescription"></div>
+                            <div class="description">
+                                <h2>今年你們要去看極光嗎</h2>
+                                <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
+                                </p>
+                            </div>
+                        </li>
+                        <li class="know know5 fakeCover">
+                            <div class="pic">
+                                <img src="img/i-member3.png">
+                            </div>
+                            <div class="memberId">
+                                沙漠裡的魚
+                            </div>
+                            <div class="heading">北極星的美麗與哀愁</div>
+                            <div class="knowDescription"></div>
+                            <div class="description">
+                                <h2>北極星的美麗與哀愁</h2>
+                                <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="gallery">
-                    <div class="pic pic1">
-                        <img src="img/i-act01.jpg">
-                        <div class="detail">遇到好天氣</div>
-                    </div>
-                    <div class="pic pic2">
-                        <img src="img/i-act01.jpg">
-                        <div class="detail">我在露營天氣晴</div>
-                    </div>
-                    <div class="pic pic3">
-                        <img src="img/i-act03.jpg">
-                        <div class="detail">武嶺觀星去</div>
-                    </div>
-                    <div class="pic pic4">
-                        <img src="img/i-act01.jpg">
-                        <div class="detail">過年拍星星</div>
-                    </div>
-                    <div class="pic pic5">
-                        <img src="img/i-act02.jpg">
-                        <div class="detail">照片騙很大</div>
-                    </div>
-                    <div class="pic pic6">
-                        <img src="img/i-act03.jpg">
-                        <div class="detail">沒有很可以，但你惹不起</div>
-                    </div>
-                    <div class="pic pic7">
-                        <img src="img/i-act04.jpg">
-                        <div class="detail">遇到難得的奇景</div>
-                    </div>
-                    <div class="pic pic8">
-                        <img src="img/i-act05.jpg">
-                        <div class="detail">伸手摘星</div>
-                    </div>
-                </div>
-                <div class="photoBar">
-                    <div class="photoBarHidden">
-                        <img src="">
-                        <img src="">
-                        <img src="">
-                        <img src="">
-                        <img src="">
-                        <img src="">
-                        <img src="">
-                        <img src="">
-                    </div>
-                </div>
-            </div>
-            <div id="part04" data-0="display:none;opacity:0" data-554p="display:block;opacity:1" data-600p="display:block;opacity:1" data-660p="display:block;opacity:0">
-                <div class="sectionTitle">
-                    <h1><a href="#">星知識</a></h1>
-                    <h4>精選專欄，給求知若渴的你</h4>
-                </div>
-                <ul class="accordion" id="accordion">
-                    <li class="know know1 fakeCover">
-                        <div class="pic">
-                            <img src="img/i-member.png">
-                        </div>
-                        <div class="memberId">
-                            天邊一朵雲
-                        </div>
-                        <div class="heading">喜歡太空的孩子</div>
-                        <div class="knowDescription"></div>
-                        <div class="description">
-                            <h2>喜歡太空的孩子</h2>
-                            <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
-                            </p>
-                        </div>
-                    </li>
-                    <li class="know know2 fakeCover">
-                        <div class="pic">
-                            <img src="img/i-member3.png">
-                        </div>
-                        <div class="memberId">
-                            天邊一朵雲
-                        </div>
-                        <div class="heading">流星花園</div>
-                        <div class="knowDescription"></div>
-                        <div class="description">
-                            <h2>流星花園</h2>
-                            <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
-                            </p>
-                        </div>
-                    </li>
-                    <li class="know know3 fakeCover">
-                        <div class="pic">
-                            <img src="img/i-member2.png">
-                        </div>
-                        <div class="memberId">
-                            天邊一朵雲
-                        </div>
-                        <div class="heading">關於觀星露營的大小事</div>
-                        <div class="knowDescription"></div>
-                        <div class="description">
-                            <h2>關於觀星露營的大小事</h2>
-                            <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
-                            </p>
-                        </div>
-                    </li>
-                    <li class="know know4 fakeCover">
-                        <div class="pic">
-                            <img src="img/i-member2.png">
-                        </div>
-                        <div class="memberId">
-                            沙漠裡的魚
-                        </div>
-                        <div class="heading">今年你們要去看極光嗎</div>
-                        <div class="knowDescription"></div>
-                        <div class="description">
-                            <h2>今年你們要去看極光嗎</h2>
-                            <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
-                            </p>
-                        </div>
-                    </li>
-                    <li class="know know5 fakeCover">
-                        <div class="pic">
-                            <img src="img/i-member3.png">
-                        </div>
-                        <div class="memberId">
-                            沙漠裡的魚
-                        </div>
-                        <div class="heading">北極星的美麗與哀愁</div>
-                        <div class="knowDescription"></div>
-                        <div class="description">
-                            <h2>北極星的美麗與哀愁</h2>
-                            <p>如何幫孩子選購入門望遠鏡？ 孩子都喜歡太空。如果你打算買一支望遠鏡給孩子，可以找便宜、堅固的小型望遠鏡。雖然有許多給小孩用的入門望遠鏡（有些還不到新臺幣3000元）孩子都喜歡太空...
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
         </section>
         <section class="section section03">
             <div class="star stars1"></div>
@@ -523,24 +522,24 @@
                     </div>
                 </div>
             </div>
-            <div class="loginPopup">
-                <div class="i-lightboxBg"></div>
-                <div class="login">
-                    <h4>會員登入</h4>
-                    <input id="loginAccount" type="Email" placeholder="*帳號(Email)">
-                    <input id="loginPsw" type="password" placeholder="*密碼(4~8個字元)">
-                    <input id="loginConfirmPsw" type="password" placeholder="*確認密碼">
-                    <input id="loginMemName" type="text" placeholder="*暱稱(2~12個字元)">
-                    <div class="searchBar-btn" id="i-loginBtn">
-                        <a href="#">登入</a>
-                    </div>
-                    <div class="logOn">
-                        按此註冊會員
-                    </div>
+        </section>
+        </div>
+        <div class="loginPopup">
+            <div class="i-lightboxBg"></div>
+            <div class="login">
+                <h4>會員登入</h4>
+                <input id="loginAccount" type="Email" value="guest">
+                <input id="loginPsw" type="password" value="guest">
+                <input id="loginConfirmPsw" type="password" placeholder="*確認密碼">
+                <input id="loginMemName" type="text" placeholder="*暱稱(2~12個字元)">
+                <div class="searchBar-btn" id="i-loginBtn">
+                    <a href="#">登入</a>
+                </div>
+                <div class="logOn">
+                    按此註冊會員
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
 </body>
 
 </html>

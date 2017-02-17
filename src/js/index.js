@@ -51,10 +51,32 @@ $(function() {
     })
 
     //體驗帳號彈窗
-    $('.join .button-square').click(function() {
+    $('#navLogin').click(function(){
+        onLogin();
+        $('.activity').fadeOut();
+        $('#accordion').fadeOut();
+        $('#accordion').fadeOut();
+        $('.title').fadeOut();
+        $('.forumGroup').fadeOut();
+        $('.gallery').css('display','none');
+    });
+      $('.i-lightboxBg').click(function(){
+        $('.activity').fadeIn(500);
+        $('#accordion').fadeIn(500);
+        $('#accordion').fadeIn(500);
+        $('.title').fadeIn(500);
+        $('.forumGroup').fadeIn(500);
+        $('.gallery').css('display','block');
+      })
+
+    $('.join .button-square').click(onLogin);
+
+    
+    function onLogin() {
         $('.loginPopup').css({
             'display': 'block'
         });
+        $('.join').fadeOut(100);
         $('.login').css({
             'display': 'block'
         });
@@ -63,12 +85,17 @@ $(function() {
         $('body').css({
             'overflow': 'hidden'
         });
-    })
+        $('#loginAccount').val('guest');
+        $('#loginPsw').val('guest');
+    }
+
+
 
     $('.i-lightboxBg').click(function() {
         $('.loginPopup').css({
             'display': 'none'
         });
+        $('.join').stop().fadeIn();
         $('.login').css({
             'display': 'none'
         });
@@ -79,19 +106,23 @@ $(function() {
         });
     })
 
-    $('.logOn').click(function() {
+    $('.logOn').click(function () {
         if ($(this).text() == '我要登入') {
             $(this).text('按此註冊會員');
             $('.login h4').text('會員登入');
             $('#i-loginBtn a').text('登入');
             $('#loginConfirmPsw').stop().slideUp(400);
             $('#loginMemName').stop().slideUp(400);
+             $('#loginAccount').attr('placeholder','*帳號(Email)');
+              $('#loginPsw').attr('placeholder','*密碼(4~8個字元)');
         } else {
             $(this).text('我要登入');
             $('.login h4').text('會員註冊');
             $('#i-loginBtn a').text('註冊');
             $('#loginConfirmPsw').stop().fadeIn(400);
             $('#loginMemName').stop().fadeIn(400);
+            $('#loginAccount').attr('placeholder','*帳號(Email)').val('');
+            $('#loginPsw').attr('placeholder','*密碼(4~8個字元)').val('');
         }
 
     })
@@ -104,18 +135,22 @@ $(function() {
         _knowTransTimes = 1;
 
         //導覽列
-
-        $(document).scroll(function() {
-            var _scrollTop = $(this).scrollTop();
-            if (_scrollTop > 600 * _windowHeight / 100) {
-                $('#i-body #nav').stop().slideDown(500);
-
-            } else {
-                $('#i-body #nav').slideUp(100);
-                // $('#i-body #nav').animate({'top':'0'},600);
-            }
-        })
     }
+
+    (function(){
+    jQuery(window).bind('scrollstart', function(){
+        console.log("start");
+        $('#i-body #nav').stop(true,false).animate({'top':'-100px','opacity':0},500);
+    });
+ 
+    jQuery(window).bind('scrollstop', function(e){
+        console.log("end");
+        $('#i-body #nav').stop(true,false).animate({'top':'0px','opacity':1},1000);
+    });
+ 
+})();
+
+
 
     if (_windowWidth >= 992 && _windowWidth < 1280) {
         //論壇彈出
@@ -217,17 +252,17 @@ $(function() {
 
     //mobile
     $('.photoBar img').click(function() {
-        var _movePos = $(this).index();
-        var _moveDist = _movePos - _currPos;
-        _currdeg = _currdeg - _moveDist * 45;
-        _currPos = _movePos;
-        gallery.css({
-            "transform": "rotateY(" + _currdeg + "deg)"
-        });
-        $(this).siblings().children('img').removeClass('shadow');
-        $(this).children('img').addClass('shadow');
-    })
-    //.......mobile end
+            var _movePos = $(this).index();
+            var _moveDist = _movePos - _currPos;
+            _currdeg = _currdeg - _moveDist * 45;
+            _currPos = _movePos;
+            gallery.css({
+                "transform": "rotateY(" + _currdeg + "deg)"
+            });
+            $(this).siblings().children('img').removeClass('shadow');
+            $(this).children('img').addClass('shadow');
+        })
+        //.......mobile end
 
     $(".gallery .pic").click(function() {
         var _movePos = $(this).index();
@@ -240,12 +275,32 @@ $(function() {
         $(this).siblings().children('img').removeClass('shadow');
         $(this).children('img').addClass('shadow');
     })
+
+var galleryTt = setInterval(autoRotateGallery,3000);
+    function autoRotateGallery(){
+        if( _currPos >= 7){
+            _currPos = 0 ;
+        }else{
+            _currPos +=1;
+        }
+       
+        _currdeg = _currPos * -45; 
+          gallery.css({
+            "transform": "rotateY(" + _currdeg + "deg)"
+        });
+        $('.gallery .pic:eq('+ _currPos +')').siblings().children('img').removeClass('shadow');
+        $('.gallery .pic:eq('+ _currPos +')').children('img').addClass('shadow');   
+    }
+
+
     $(".gallery .pic").hover(function() {
+        clearInterval(galleryTt);
         $(this).css({
             'box-shadow': '0px 0px 12px 2px #f1f1f1'
         });
         $(this).children('.detail').slideDown(400);
     }, function() {
+        galleryTt = setInterval(autoRotateGallery,3000);
         $(this).children('.detail').slideUp(200);
         $(this).css({
             'box-shadow': 'none'
@@ -514,14 +569,14 @@ function forumMove() {
 function forumPopupBiger() {
     var _forumLength = $('.forum').length;
     $('.forum' + i).css({
-            'animation': ' animForumPop' + rand(1, 3) + ' 1s ' + rand(0, 3) + 's both'
-        });
-    for(var i = 1 ; i<= _forumLength; i++){
-            $('.forum' + i).css({
-                'top': rand(0, 100) + 'px',
-                'left': rand(0, 30)+ 'px'
-            },8000,forumPopupBiger);
-}
+        'animation': ' animForumPop' + rand(1, 3) + ' 1s ' + rand(0, 3) + 's both'
+    });
+    for (var i = 1; i <= _forumLength; i++) {
+        $('.forum' + i).css({
+            'top': rand(0, 100) + 'px',
+            'left': rand(0, 30) + 'px'
+        }, 8000, forumPopupBiger);
+    }
 
 
 
@@ -993,4 +1048,77 @@ $(function() {
             });
         });
     });
+})();
+
+
+
+
+(function(){
+ 
+    var special = jQuery.event.special,
+        uid1 = 'D' + (+new Date()),
+        uid2 = 'D' + (+new Date() + 1);
+ 
+    special.scrollstart = {
+        setup: function() {
+ 
+            var timer,
+                handler =  function(evt) {
+ 
+                    var _self = this,
+                        _args = arguments;
+ 
+                    if (timer) {
+                        clearTimeout(timer);
+                    } else {
+                        evt.type = 'scrollstart';
+                        jQuery.event.dispatch.apply(_self, _args);
+                    }
+ 
+                    timer = setTimeout( function(){
+                        timer = null;
+                    }, special.scrollstop.latency);
+ 
+                };
+ 
+            jQuery(this).bind('scroll', handler).data(uid1, handler);
+ 
+        },
+        teardown: function(){
+            jQuery(this).unbind( 'scroll', jQuery(this).data(uid1) );
+        }
+    };
+ 
+    special.scrollstop = {
+        latency: 300,
+        setup: function() {
+ 
+            var timer,
+                    handler = function(evt) {
+ 
+                    var _self = this,
+                        _args = arguments;
+ 
+                    if (timer) {
+                        clearTimeout(timer);
+                    }
+ 
+                    timer = setTimeout( function(){
+ 
+                        timer = null;
+                        evt.type = 'scrollstop';
+                        jQuery.event.dispatch.apply(_self, _args);
+ 
+                    }, special.scrollstop.latency);
+ 
+                };
+ 
+            jQuery(this).bind('scroll', handler).data(uid2, handler);
+ 
+        },
+        teardown: function() {
+            jQuery(this).unbind( 'scroll', jQuery(this).data(uid2) );
+        }
+    };
+ 
 })();
