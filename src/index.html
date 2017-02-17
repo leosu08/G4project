@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/semantic.ui.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/semantic.ui.min.css">
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/calendar-style.css" />
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/demo/css/style.css" />
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/src/css/pignose.calendar.css" />
-    <link type="text/css" href="libs/pg-calendar/dist/pignose.calendar.min.css">
+    <link type="text/css" href="libs/pg-calendar/dist/pignose.calendar.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
     <script src="js/skrollr.min.js"></script>
-    <script type="text/javascript" src="libs/pg-calendar/demo/js/semantic.ui.min.js"></script>
-    <script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script>
-    <script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script>
-    <script src="libs/pg-calendar/src/js/pignose.calendar.js"></script>
-    <script src="js/jquery.mobile.custom.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
+    <!-- <script type="text/javascript" src="libs/pg-calendar/demo/js/semantic.ui.min.js"></script> -->
+    <!-- <script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script> -->
+    <!-- <script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script> -->
+    <!-- <script src="libs/pg-calendar/src/js/pignose.calendar.js"></script> -->
+    <!-- <script src="js/jquery.mobile.custom.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
     <script src="js/index.js"></script>
     <title>ZeroGravity</title>
 </head>
@@ -64,6 +65,7 @@
     </div>
     <div id="i-wrapper" data-0="transform:translate(0%,-200vh)" data-100p="transform:translate(0%,-100vh)" data-600p="transform:translate(0%,-100vh)" data-700p="transform:translate(0,0)">
         <section class="section section01" data-0p="transform:scale(1)" data-20p="transform:scale(1)">
+            <div class="shootingStar"></div>
             <div class="title">
                 <h2>ZeroGravity</h2>
                 <h1>和我們一起探索星際去</h1>
@@ -107,10 +109,14 @@
             <div class="ground">
                 <img src="img/index/bg-ground.png">
             </div>
-            <img id="cloud1" src="img/i-cloud.png" data-0="right:-300px;opacity:1;display:block" data-90p="right:-1000px;opacity:1;display:block" data-256p="right:-1000px;opacity:0;display:none">
-            <img id="cloud2" src="img/i-cloud.png" data-0="left:-900px;opacity:1;display:block" data-90p="left:-1100px;opacity:1;display:block" data-256p="left:-1100px;opacity:0;display:none">
         </section>
         <section class="section section02">
+          <div id="outerSpace" style="width: 100%; max-width: 1400px; height: 705px;">
+             <canvas id="pixie" width="1400" height="705"></canvas>
+        </div>
+          <img id="cloud1" src="img/i-cloud.png" data-0="right:-300px;opacity:1;display:block" data-90p="right:-1000px;opacity:1;display:block" data-256p="right:-1000px;opacity:0;display:none">
+          <img id="cloud2" src="img/i-cloud.png" data-0="left:-900px;opacity:1;display:block" data-90p="left:-1100px;opacity:1;display:block" data-256p="left:-1100px;opacity:0;display:none">
+          <div class="section-bgc"></div>
             <div id="part01" data-0="display:block" data-454p="display:none">
                 <div class="sectionTitle">
                     <h1><a href="#">觀星活動</a></h1>
