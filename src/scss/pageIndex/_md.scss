@@ -1,56 +1,68 @@
 @include respones(md) {
     #icanvas {
         position: fixed;
-        top: 25%;
+        top: 40%;
         right: 0;
         z-index: 1000;
+        transform:scale(1);//md
     }
     .sideBarGroup {
         position: fixed;
         display: block;
         width: 100px;
-        height: 400px;
-        top: 25%;
-        right: 40px;
+        height: 200px;
+        top: 40%;
+        right: 10px;
         z-index: 1000;
+        transform:scale(1);//md
         .sideBar {
             position: absolute;
-            width: 120px;
-            height: 22px;
-            line-height: 22px;
+            width:100%;
+            height: 20px;
+            line-height: 20px;
             letter-spacing: 1px;
-            font-size: $fz-p;
+            font-size: 14px;
             left: 0;
-            text-align: center;
-            color: $light-grey;
+            text-align: left;
+            color: $white;
+            font-weight: 700;
             cursor: pointer;
-            // outline: red 1px solid;
-            span {
-                padding-right: 35px;
-                display: none;
-                a {
-                    color: $white;
+            span{
+                opacity:0;
+                &.show{
+                    opacity:1;
                 }
-                &.show {
-                    color: $white;
-                    display: block;
+            }
+            &.sideBar6 {
+                top: 15px;
+                span{
+                    padding-left: 20px;
                 }
             }
             &.sideBar5 {
-                top: 135px;
+                top: 45px;
+                span{
+                    padding-left: 15px;
+                }
             }
             &.sideBar4 {
-                top: 189px;
+                top: 75px;
+                span{
+                    padding-left: 15px;
+                }
             }
             &.sideBar3 {
-                top: 249px;
+                top: 105px;
             }
             &.sideBar2 {
-                top: 309px;
+                top: 135px;
             }
             &.sideBar1 {
-                top: 369px;
-                transform: translateX(-40px);
+                top: 165px;
+                transform: translateX(-25px);
+                span{
+                    padding-left: 15px;
+                }
             }
         }
     }
@@ -59,10 +71,12 @@
         width: 100%;
         height: 100%;
         z-index: 1000;
-        top:0;
-        left: 0;right: 0;bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         margin: auto;
-        // display: none;
+        display: none;
         .i-lightboxBg {
             width: 100%;
             height: 100%;
@@ -106,10 +120,7 @@
             }
             .searchBar-btn {
                 display: inline-block;
-                @include btn(90px,
-                34px,
-                5px,
-                18px);
+                @include btn(90px, 34px, 5px, 18px);
                 background-color: $blue;
                 box-shadow: 1px 2px 5px #111;
                 position: relative;
@@ -149,7 +160,7 @@
             // border:red solid 1px;
             // overflow: hidden;
             .sectionTitle {
-                padding-top: 30px;
+                padding-top: 100px;//md
                 padding-left: 80px;
                 h1 {
                     position: relative;
@@ -215,7 +226,7 @@
             }
             .ground {
                 position: absolute;
-                bottom: 0;
+                bottom: -100px;//md
                 left: 0;
                 right: 0;
                 margin: auto;
@@ -423,15 +434,17 @@
             // z-index: 2;
             #cloud1 {
                 position: absolute;
-                top: 200px;
+                top: 100px;
                 right: -200px;
                 transform: scale(0.8);
+                z-index: 3;
             }
             #cloud2 {
                 position: absolute;
-                top: 150px;
+                top: 100px;
                 left: -900px;
                 transform: scale(0.8);
+                z-index: 3;
             }
             .section-bgc {
                 position: absolute;
@@ -448,9 +461,20 @@
                 box-shadow: 0px 0px 100px 30px blue, 0px 0px 140px 100px $blue-green, 0px 0px 200px 100px $green-blue;
                 opacity: 0.5;
             }
+            .starfield {
+                position: absolute;
+                width: 100%;
+                height: 90%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                z-index: 0;
+            }
             #part01 {
                 position: relative;
-                z-index: 1;
+                z-index: 2;
                 width: 100vw;
                 height: 100vh;
                 left: 0;
@@ -461,7 +485,7 @@
                     .act {
                         position: absolute;
                         width: 840px;
-                        top: 100px;
+                        top: 20px;//md
                         left: 0;
                         right: 0;
                         perspective: 800px;
@@ -471,6 +495,7 @@
                         &:hover h3,
                         &:hover p {
                             color: rgba(218, 175, 115, 1);
+                            font-weight: 900;
                         }
                         h3 {
                             font-size: 30px;
@@ -498,8 +523,8 @@
                         }
                         .content {
                             position: absolute;
-                            right: 60px;
-                            bottom: -80px;
+                            right: 80px;
+                            bottom: -60px;
                             z-index: 3;
                             cursor: pointer;
                         }
@@ -539,109 +564,157 @@
             #part02 {
                 width: 100vw;
                 height: 100vh;
+                z-index: 2;
                 .forumGroup {
-                    padding-top: 100px;
-                    padding-left: 60px;
+                    width: 100%;//md
+                    margin-top: 100px;
                     position: relative;
-                    .forumBox{
-                        transform-style:preserve-3d;
-                        perspective:600px;
-                    }  
-                }
-                .forumFront:hover {
-                    background-color: rgba(218, 175, 115, 1);
-                    cursor: pointer;
-                }
-                .forum {
-                    position: absolute;
-                    top: 0;right: 0;left: 0;bottom: 0;
                     margin: auto;
-                    color: $white;
-                    // width: 320px;
-                    max-width: 420px;
-                    height: 70px;
-                    letter-spacing: 1px;
-                    // margin:60px 40px;
-                    background-color: $o-black;
-                    // transform: rotateX(-90deg);
-                    backface-visibility: hidden;
-                    &.forumBack1{
-                        transform-origin:center top;
-                        transform:rotateX(-60deg);
-                    }
-                     &.forumBack2{
-                        transform-origin:center top;
-                        transform:rotateX(60deg);
-                    }
-                    .content {
-                        padding: 10px 25px;
-                        line-height: 25px;
-                        h4 {
-                            font-size: $fz-h4;
-                            // padding-bottom: 3px;
+                    padding:20px 40px;//md
+                    perspective: 800px;
+                    perspective-origin: center center;
+                    // outline:solid red 1px;
+                    .forumBox {
+                        position: relative;
+                        margin: 40px 0px 30px 40px;//md
+                        width: 300px;//md
+                        height: 80px;//md
+                        transform-style: preserve-3d;
+                        transition: .8s;
+                        cursor: pointer;
+                        // animation:boxRotate 2s;
+                        &:hover {
+                            transform: rotateX(-180deg);
+                            transition: .6s;
                         }
-                    }
-                    .pic {
-                        position: absolute;
-                        left: -20px;
-                        top: 0;
-                        bottom: 0;
-                        margin: auto;
-                        width: 40px;
-                        height: 40px;
-                        background-color: transparent;
-                        img {
+                        &.rotate {
+                            transform: rotateX(-180deg);
+                            transition: .6s;
+                        }
+                        // animation:boxRotate 5s infinite linear;
+                        .forum {
+                            position: relative;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+                            margin: auto;
+                            color: $white;
                             width: 100%;
+                            height: 100%;
+                            letter-spacing: 1px;
+                            background-color: rgba(0, 0, 0, 0.2);
+                            box-shadow: 0px 0px 3px $white;
+                            backface-visibility: hidden;
+                            transform: translateZ(40px);
+                            .content {
+                                padding: 15px 25px;
+                                line-height: 25px;
+                                h4 {
+                                    font-size: 20px;//md
+                                    padding-bottom: 3px;
+                                }
+                            }
+                            .pic {
+                                position: absolute;
+                                left: -20px;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto;
+                                width: 40px;//md
+                                height: 40px;//md
+                                background-color: transparent;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .memberId {
+                                float: left;
+                                padding-left: 5px;
+                                text-align: left;
+                                color: #ccd;
+                            }
+                            .count {
+                                float: right;
+                                padding-left: 5px;
+                                text-align: right;
+                                font-size: 14px;
+                                color: #ccd;
+                                i {
+                                    padding-right: 3px;
+                                }
+                                span {
+                                    padding-right: 18px;
+                                }
+                            }
+                        }
+                        .forumBack {
+                            position: absolute;
+                            transform: rotateX(180deg) translateZ(40px);//md
+                            background-color: rgba(0, 0, 0, 0.3);
+                            margin: auto;
+                            box-shadow: 0px 0px 3px $white;
+                            .contentMore p {
+                                font-size: 14px;//md
+                                line-height: 1.2em;
+                                letter-spacing: 0.8px;
+                                padding: 12px;
+                            }
+                        }
+                        .top,
+                        .bot {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0.2);
+                            box-shadow: 0px 0px 3px $white;
+                            transform: rotateX(90deg) translateZ(40px);//md
+                        }
+                        .bot {
+                            background-color: rgba(0, 0, 0, 0.2);
+                            transform: rotateX(-90deg) translateZ(40px);//md
+                        }
+                        .right,
+                        .left {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            margin: auto;
+                            width: 80px;//md
+                            height: 80px;//md
+                            background-color: rgba(0, 0, 0, 0.3);
+                            box-shadow: 0px 0px 3px $white;
+                            transform: rotateY(90deg) translateZ(150px);//md
+                        }
+                        .left {
+                            transform: rotateY(-90deg) translateZ(150px);//md
                         }
                     }
-                    .memberId {
-                        float: left;
-                        padding-left: 5px;
-                        text-align: left;
-                    }
-                    .count {
-                        float: right;
-                        padding-left: 5px;
-                        text-align: right;
-                        font-size: 14px;
-                        i {
-                            padding-right: 3px;
-                        }
-                        span {
-                            padding-right: 18px;
-                        }
-                    }
-                }
-                .forumBack{
-                    position:absolute;
-                    top: 0;left: 0;
-                    margin: auto;
-                    width: 100%;
-                    height: 100%;
-                    color:#fa0;
-                    background-color: #fff;
-                    // transform: rotateX(-90deg);
                 }
             }
             #part03 {
                 width: 100vw;
                 height: 100vh;
                 position: relative;
-                perspective: 800px;
+                perspective: 1200px;//md
                 perspective-origin: center center;
                 z-index: 10;
                 .gallery {
                     height: 250px;
                     width: 300px;
                     position: absolute;
-                    top: 10%;
+                    top: 15%;//md
                     bottom: 0;
                     left: 0;
                     right: 0;
                     margin: auto;
                     transform-style: preserve-3d;
                     transition: 1s;
-                    animation: animUptoDwon 1.4s linear;
+                    animation: animUptoDwon 1.4s;
                 }
                 .pic {
                     display: block;
@@ -653,28 +726,68 @@
                     transition: 0.6s;
                     // box-shadow: 0px 0px 12px 2px $white;
                     cursor: pointer;
-                    img {
-                        transition: 0.2s;
-                        width: 100%;
-                        &.shadow {
-                            transform:scale(1.5);
-                            transition: 1s;
-                            -webkit-box-reflect: below 0 -webkit-linear-gradient(top, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0) 20%, rgba(250, 250, 250, 0.2));
-                        }   
+                    a {
+                        display: none;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: auto;
+                        z-index: 100;
                     }
-                    .detail {
+                    img {
+                        width: 100%;
+                    }
+                    .picContainer{
+                         &.shadow {
+                            transform: scale(1.4);
+                            transition: .4s;
+                            -webkit-box-reflect: below 0 -webkit-linear-gradient(top, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0) 20%, rgba(250, 250, 250, 0.2));
+                        }
+                    }
+                    .memInfo {
                         position: absolute;
                         bottom: 0;
                         left: 0;
                         right: 0;
                         width: 100%;
-                        height: 30px;
-                        line-height: 30px;
-                        background-color: $o-black;
-                        font-size: $fz-p -2px;
+                        height: 25px;
+                        line-height: 25px;
+
+                        span {
+                            font-size: 4px;
+                            font-weight: 100;
+                            color: $white;
+                            padding-left: 5px;
+                            letter-spacing: .5px;
+                            vertical-align: middle;
+                        }
+                        img {
+                            margin-left: 5px;
+                            margin-bottom: 5px;
+                            vertical-align: middle;
+                            line-height: 30px;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            text-align: left;
+                        }
+                    }
+                    .detail {
+                        position: absolute;
+                        bottom: 0;
+                        top: 0;
+                        left: 0;
+                        right: 0;
                         text-align: center;
+                        margin: auto;
+                        width:100%;
+                        height: 25px;
+                        line-height: 25px;
+                        font-size: 4px;
                         color: $white;
-                        display: none;
+                        opacity:0;
                     }
                 }
                 .pic1 {
@@ -708,16 +821,16 @@
             #part04 {
                 width: 100vw;
                 height: 100vh;
+                z-index: 2;
                 .accordion {
-                    position: absolute;
+                    position: relative;
                     left: 100px;
-                    right: 0;
-                    top: 300px;
-                    margin: auto;
+                    margin:30px auto;
+                    perspective:800px;//md
                 }
                 .accordion .fakeCover:before {
                     content: '';
-                    background-color: $o-black;
+                    background-color: black;
                     width: 100%;
                     height: 100%;
                     position: absolute;
@@ -725,6 +838,7 @@
                     left: 0;
                     z-index: 2;
                     display: block;
+                    opacity: 0.2;
                 }
                 .accordion li {
                     float: left;
@@ -974,13 +1088,14 @@
                 background: linear-gradient(white, #dbdde0, #38495a);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                display: none;
                 animation: animGravity 2s both;
             }
             .expMem {
                 position: absolute;
                 left: 0;
                 right: 0;
-                top: 400px;
+                top: 250px;
                 margin: auto;
                 text-align: center;
                 h1 {
@@ -998,6 +1113,7 @@
             }
             .join {
                 animation: animJoin 1s 2s both;
+                display: none;
             }
             .button {
                 background: #1d1d1d;
@@ -1048,151 +1164,3 @@
 .inlineBlock {
     display: inline-block;
 }
-
-
-@keyframes abcc{
-    0%{transform:rotateX(-90deg)}
-    100%{transform:rotateX(0deg)}
-}
-// @keyframes animBtn {
-//     0% {
-//         transform: translateX(0px);
-//     }
-//     100% {
-//         transform: translateX(-400px);
-//     }
-// }
-
-// @keyframes animPageDown {
-//     0% {
-//         transform: translateY(0px);
-//     }
-//     100% {
-//         transform: translateY(100vh);
-//     }
-// }
-
-// @keyframes animForumPop1 {
-//     0% {
-//         transform: scale(0);
-//         opacity: 0;
-//     }
-//     100% {
-//         transform: scale(1.1);
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes animForumPop2 {
-//     0% {
-//         transform: scale(0);
-//         opacity: 0;
-//     }
-//     100% {
-//         transform: scale(0.8);
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes animForumPop3 {
-//     0% {
-//         transform: scale(0);
-//         opacity: 0;
-//     }
-//     100% {
-//         transform: scale(1);
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes animForumPop4 {
-//     0% {
-//         transform: scale(0.7);
-//         opacity: 0;
-//     }
-//     100% {
-//         transform: scale(1);
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes animStar {
-//     from {
-//         transform: translateY(0px);
-//     }
-//     to {
-//         transform: translateY(-2000px);
-//     }
-// }
-
-// @keyframes animRotate {
-//     0% {
-//         transform: rotate(0deg);
-//     }
-//     100% {
-//         transform: rotate(60deg);
-//     }
-// }
-
-// @keyframes animGravity {
-//     0% {
-//         transform: translateY(-26px);
-//         opacity: 0;
-//     }
-//     80% {
-//         letter-spacing: 10px;
-//         padding-left: 40px;
-//         transform: translateY(0px);
-//         opacity: 1;
-//     }
-//     100% {
-//         letter-spacing: 10px;
-//         padding-left: 35px;
-//         transform: translateY(-4px);
-//         opacity: 0;
-//     }
-// }
-
-// @keyframes animJoin {
-//     0% {
-//         transform: scale(0);
-//     }
-//     100% {
-//         transform: scale(1);
-//     }
-// }
-
-// @keyframes animUptoDwon {
-//     0% {
-//         transform: translateY(-450px) rotateY(0deg);
-//     }
-//     100% {
-//         transform: translateY(0) rotateY(270deg);
-//     }
-// }
-
-// @keyframes animScrollSign {
-//     0% {
-//         transform: translateY(2px);
-//     }
-//     100% {
-//         transform: translateY(6px);
-//     }
-// }
-
-// @keyframes fall {
-//     100% {
-//         margin-top: 900px;
-//         opacity: 0
-//     }
-// }
-
-// #info {
-//     background-color: $o-white;
-//     color: $black;
-//     position: fixed;
-//     top: 20px;
-//     left: 20px;
-//     z-index: 999;
-//     padding: 20px;
-// }

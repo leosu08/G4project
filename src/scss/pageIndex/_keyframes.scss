@@ -1,3 +1,24 @@
+
+
+
+@keyframes aa{
+    0%{
+        transform:translateZ(-1200px);
+    }
+    100%{
+        transform:translateZ(0px);
+    }
+}
+
+@keyframes boxRotate {
+    0% {
+        transform:translateZ(-1200px) rotateX(0deg);
+    }
+    100% {
+        transform:translateZ(0px) rotateX(360deg);
+    }
+}
+
 @keyframes animBtn {
     0% {
         transform: translateX(0px);
@@ -107,9 +128,18 @@
         transform: scale(1);
     }
 }
+// @keyframes animUptoDwon {
+//     0% {
+//         transform: translateY(-450px) rotateY(0deg);
+//     }
+
+//     100% {
+//         transform: translateY(0) rotateY(270deg);
+//     }
+// }
 @keyframes animUptoDwon {
     0% {
-        transform: translateY(-450px) rotateY(0deg);
+        transform: translateZ(-850px) rotateY(0deg);
     }
 
     100% {
