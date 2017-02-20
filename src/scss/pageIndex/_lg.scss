@@ -964,7 +964,7 @@
 					position: absolute;
 					left: 0;
 					right: 0;
-					top: 240px;
+					top: 200px;
 					margin: auto;
 					text-align: center;
 
@@ -1044,7 +1044,7 @@
 					bottom: 0;
 					left: 0;
 					right: 0;
-					margin: auto;
+					// margin:20px;
 					vertical-align: middle;
 
 					a {
@@ -1073,12 +1073,14 @@
 					}
 
 					.login {
-						background-color: $grey;
+						// background-color: none;
+						background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 						position: absolute;
-						top: 50%;
+						top: 300px;
 						left: 50%;
-						transform: translate(-100%,-50%);
-						margin: auto;
+						// bottom: 0;
+						// transform: translate(-100%,-50%);
+						margin:100px auto;
 						padding: 10px;
 						width: 400px;
 						height: auto;
