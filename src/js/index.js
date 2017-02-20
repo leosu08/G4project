@@ -6,8 +6,6 @@ $(function() {
     shootingStar();
 
 
-
-
     function shootingStar() {
         var srDrop = 45;
         for (i = 1; i < srDrop; i++) {
@@ -106,7 +104,7 @@ $(function() {
         if ($(this).text() == '我要登入') {
             $(this).text('按此註冊會員');
             $('.login h4').text('會員登入');
-            $('#i-loginBtn a').text('登入');
+            $('#i-loginBtn').val('登入');
             $('#loginConfirmPsw').stop().slideUp(400);
             $('#loginMemName').stop().slideUp(400);
              $('#loginAccount').attr('placeholder','*帳號(Email)');
@@ -114,7 +112,7 @@ $(function() {
         } else {
             $(this).text('我要登入');
             $('.login h4').text('會員註冊');
-            $('#i-loginBtn a').text('註冊');
+            $('#i-loginBtn').val('註冊');
             $('#loginConfirmPsw').stop().fadeIn(400);
             $('#loginMemName').stop().fadeIn(400);
             $('#loginAccount').attr('placeholder','*帳號(Email)').val('');
@@ -325,8 +323,8 @@ for(var i=0;i<=_accordion.length;i++){
 
 
     //桌機
-    $(document).scroll(function() {
-        if (_windowWidth >= 768) {          
+    $(window).scroll(function() {
+        // if (_windowWidth >= 768) {          
             var _scrollTop = $(this).scrollTop();
             if (_scrollTop <= 100 * _windowHeight / 100 + 1) {
                 clearCanvas();
@@ -384,30 +382,30 @@ for(var i=0;i<=_accordion.length;i++){
                 });
                 $('.sideBar6').siblings().css('transform', 'translateX(0px)');
             }
-        } else {
-            var _scrollTop = $(this).scrollTop();
-            if (_scrollTop <= 120 * _windowHeight / 100 + 1) {
-                clearCanvas();
-                _sideBarPosY = 265;
-                doFirst();
-            } else if (_scrollTop > 130 * _windowHeight / 100 && _scrollTop <= 454 * _windowHeight / 100) {
-                clearCanvas();
-                _sideBarPosY = 235;
-                doFirst();
-            } else if (_scrollTop > 454 * _windowHeight / 100 && _scrollTop <= 504 * _windowHeight / 100) {
-                clearCanvas();
-                _sideBarPosY = 205;
-                doFirst();
-            } else if (_scrollTop > 504 * _windowHeight / 100 && _scrollTop <= 554 * _windowHeight / 100) {
-                clearCanvas();
-                _sideBarPosY = 175;
-                doFirst();
-            } else if (_scrollTop > 554 * _windowHeight / 100) {
-                clearCanvas();
-                _sideBarPosY = 145;
-                doFirst();
-            }
-        }
+        // } else {
+        //     var _scrollTop = $(this).scrollTop();
+        //     if (_scrollTop <= 120 * _windowHeight / 100 + 1) {
+        //         clearCanvas();
+        //         _sideBarPosY = 265;
+        //         doFirst();
+        //     } else if (_scrollTop > 130 * _windowHeight / 100 && _scrollTop <= 454 * _windowHeight / 100) {
+        //         clearCanvas();
+        //         _sideBarPosY = 235;
+        //         doFirst();
+        //     } else if (_scrollTop > 454 * _windowHeight / 100 && _scrollTop <= 504 * _windowHeight / 100) {
+        //         clearCanvas();
+        //         _sideBarPosY = 205;
+        //         doFirst();
+        //     } else if (_scrollTop > 504 * _windowHeight / 100 && _scrollTop <= 554 * _windowHeight / 100) {
+        //         clearCanvas();
+        //         _sideBarPosY = 175;
+        //         doFirst();
+        //     } else if (_scrollTop > 554 * _windowHeight / 100) {
+        //         clearCanvas();
+        //         _sideBarPosY = 145;
+        //         doFirst();
+        //     }
+        // }
     });
 
 
