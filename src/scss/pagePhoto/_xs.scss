@@ -1,410 +1,58 @@
 @include respones(xs) {
 	//在此輸入內容
 .p-tabsearch{
-	.container{
-		height:120px ;
-	}
- 	.p-search{
- 		// margin: 15px 0 15px 0px;
- 		.inpunt{
- 			input{
- 				width: 100px;
- 			}
- 		}
-	}
 	.p-tab{
-
-		height: 60px;
-		text-align:center;
-		.label{
-			margin-top: 10px;
-			a{
-				margin-right: 3px;
-				font-size:16px;
-				color: #fff;
-				
-
-			}
-			a:hover{
-				font-size: 16px;
-			}
-		}
-		
-				
+		margin: 10px 0 10px 0;
+		text-align: center;
 	}
-
-}
-#f_bg1{
-	display: none;
-}
-// 內文
-.p-new-content{
-	margin-top: 50px;
-
- .p-n-pic{
- 		padding: 10px 20px 10px 20px;
- 		margin-top: 20px;
- 		img{
- 			width: 100%;
- 			border-radius: 5px 5px;
-
- 		}
- 		.user{
-			padding: 10px 10px 10px 10px;
- 			img{
- 				width:40px;
- 				height: 40px;
- 				border-radius: 50%;
- 				float: left;
- 			}
- 			p{
- 				margin-top: 15px;
- 				margin-left: 10px;
- 				font-size: 12px;
- 				color:#000;
- 				float: left;
- 			}
- 		}
- 		.p-n-icon{
-			padding: 10px 10px 10px 10px;
- 			.a{
- 				width: 80px;
- 				height: 30px;
- 				float: left;
- 				background-color: #eee;
- 				border: 1px solid #ddd;
- 				border-radius: 2px 2px;
- 				margin-right: 10px;
- 				margin-bottom: 16px;
- 				top: 10px;
- 				bottom: 0;
- 				left: 60%;
- 				right: 0;
-
- 				.fa-heart{
-					margin-top: 8px;
-					margin-left:8px;
-					font-size:14px;
-					color: #F15151;
- 				}
- 				h5{
- 					display: inline-block;
- 					margin-left: 10px;
- 					color: #555;
- 					font-size: 14px;
- 				}
- 			}
- 			.b{
- 				width: 40px;
- 				height: 30px;
- 				float: left;
- 				background-color:#eee;
- 				border: 1px solid #ddd;
- 				border-radius: 5px 5px;
- 				top: 10px;
- 				bottom: 0;
- 				left: 85%;
- 				right: 0;
- 				.fa-share{
- 					font-size: 14px;
- 					margin-top: 9px;
-					margin-left: 12px;
-					color: #888;
- 				}
- 			}
- 			
- 		}
+	.p-tab a{
+ 		text-decoration: none;
+ 		color: #333;
+ 		font-size:14px;
+		padding: 7px;
+		margin: 10px;	
+	}
+	.p-search{
+ 		margin-top: 10px;
+ 		margin-bottom: 10px;
+ 		
  	}
+ 	.input{
+ 		text-align: center;
+
+ 	}
+ 	.p-search input{
+ 		height: 30px;
+ 	}
+ 	.fa-search{
+ 		position: absolute;
+ 		top: 4px;
+ 		bottom: 0;
+ 		left: 15px;
+ 		right:260px;
+ 		margin: auto;
+ 		font-size: 22px;
+ 		z-index: 1;
+
+ 	}
+
 }
-// 相片內頁
-.p-inside{
-	
-	.p-in-pic{
-		width: 100%;
-		height: 900px;
-		position: relative;
-		overflow: hidden;
-		background-image: url(../img/p_bigpic_001.jpg);
-		background-position: center;
-		background-repeat: no-repeat;
-		z-index: 99;
-		
-	.p-in-icon{
- 			position: absolute;
- 			top:94%;
- 			left: 1%;
- 			.a{
- 				width: 80px;
- 				height: 32px;
- 				float: left;
- 				background-color: rgba(255,255,255,0.8);
- 				border-radius: 5px 5px;
- 				margin-right: 18px;
- 				margin-bottom: 16px;
- 			
- 				.fa-heart{
-					margin-top: 8px;
-					margin-left:8px;
-					font-size:16px;
-					color: #F15151;
- 				}
- 				h5{
- 					display: inline-block;
- 					margin-left: 10px;
- 					font-size: 14px;
- 					color: #555;
- 				}
- 			}
- 			.b{
- 				float: left;
- 				width: 46px;
- 				height: 32px;
- 				background-color: rgba(255,255,255,0.8);
- 				border-radius: 5px 5px;
- 				.fa-share{
- 					font-size: 16px;
- 					margin-top: 9px;
-					margin-left: 13px;
-					color: #666;
- 				}
- 			}
- 			
- 		}
-	 }
-	.p-in-content .container{
-		height: 1600px;
-		background-color: #fff;
-
-	}
-
 .p-in-content{
-	.left{
-		width: 100%;
-	
-	.mid{
-		width: 100%;
-		height: 100%;
-		
-		margin-top: 60px;
-
-	}
-	.user{
-	width: 100%;
-   	text-align: center;
-		img{
-			width:100px;
-			border-radius: 50%;
-		
-		}
-		h5{
-			display:block;	
-			margin-top: 5px;
-		}
-	}
-    }
-
 	.content{
-		padding-bottom: 10px;
-		margin-top: 20px;
+		padding-bottom:5px;
+		margin-bottom: 10px;
+		margin-left: 0px;
+		margin-right: 0px;
 
-	h3{
-		margin-top: 40px;
-		font-size: 22px;
-		text-align: center;
-		color: #4f9cdd
-	}
-	p{	
-		width: 100%;
-		font-size: 14px;
-		margin:auto;
-		margin-top: 10px;
-		line-height: 24px;
-		padding: 5px;
-	}
- }
-.messagebox{
-	margin-top: 60px;
-	margin-bottom:180px;
-		
-	
+
+		}
 	.message{
-		margin:auto;
-		margin-top: 10px;
-
-		padding-left:0%;
-		.ms-user{
-
-		img{
-			margin-top: 5px;
-			width: 30px;
-			height: 100%;
-			border-radius: 50%;
-			overflow: hidden;
-			float: left;
-
-		}
-		}
-		.ms-content{
-			width: 160px;
-			float: left;
-		h5{
-			display:inline-block;
-			margin-left: 5px;
-			font-size: 10px;
-			color: #4f9cdd
-		}
-		h6{
-			display:inline-block;
-			margin-left: 5px;
-			font-size: 10px;
+		padding: 0px;
+	}
+	}
+.recommend{
+		text-align: center;
 		
-		}
-		p{
-			margin-top: 10px;
-			margin-left: 5px;
-			font-size:8px;
+	}
 
-		}
-		}
-		textarea{
-			width: 140px;
-			margin-top: 5px;
-			margin-left: 10px;
-		}
-	}
-	}
-	}
-	
-.r-left{
-	height: 100%;
-	margin-bottom: 210px;	
-	.adress{
-
-		text-align: center;
-		h2{
-			font-size: 18px;
-			display: inline-block;
-
-		}
-		i{
-			font-size: 20px;
-			color: #4f9cdd;
-			padding-right:10px;
-		}
-		h5{	
-			padding: 10px 0px 10px 0px;
-			font-size: 22px;
-			color: #555;
-
-		}
-	}
-	.tag{
-		margin-top: 20px;
-		text-align: center;
-		h2{
-			font-size: 18px;
-			display: inline-block;
-		}
-		i{
-			font-size: 18px;
-			color: #4f9cdd;
-			padding-right:8px;
-		}
-		a{
-			font-size: 14px;
-			line-height:20px;
-			padding:0 5px 0 5px;
-			direction: none;
-			color: #4f9cdd;
-		}
-		p{
-			padding: 12px 0px 10px 0px;
-		}
-
-	}
-	.icon{
-		margin-top: 20px;
-		text-align: center;
-		h2{
-			font-size: 18px;
-			display: inline-block;
-		}
-		i{
-			font-size: 17px;
-			color: #4f9cdd;
-			padding-right:10px;
-		}
-		h5{	
-			padding: 10px 0px 10px 0px;
-			font-size: 22px;
-			color: #555;
-		}
-	}
-	.number{
-		margin-top: 20px;
-		text-align: center;
-		h2{
-			font-size: 18px;
-			display: inline-block;
-		}
-		i{
-			font-size: 20px;
-			color: #4f9cdd;
-			padding-right:10px;
-		}
-		h5{	
-			padding: 10px 0px 10px 0px;
-			font-size: 22px;
-			color: #555;
-		}
-	}
-}	
-	.recommend{
-		h2{
-			margin-left: 28px;
-			font-size:16px;
-		}
-		.itembox{
-			text-align: center;
-		.item{
-			display: inline-block;
-			margin: 10px;
-		}
-		img{
-			width:250px;
-			height: 250px;
-			border-radius: 10px 10px;
-			opacity: 0.8;
-			transition:0.5s;
-		}
-		img:hover{
-			opacity:1;
-			transition:0.5s;
-		}
-		}
-	}
-	.back{
-		margin-top: 100px;
-		margin-bottom: 100px;
-		text-align: center;
-		h2{
-			cursor: pointer;
-			font-size: 28px;
-			display: inline-block;
-			color: #999;
-			transition:0.5s;
-		}
-		h2:hover{
-			color: #000;
-			transition:0.5s;
-		}
-		.fa{
-			
-			font-size:22px;
-			color: #999;
-			margin-right: 20px;
-
-		}
-	}
-}
 }

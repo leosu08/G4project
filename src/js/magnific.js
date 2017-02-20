@@ -1,6 +1,29 @@
 $(function(){
   // Inline popups
-$('#inline-inside-popups').magnificPopup({
+$('#inline-popups').magnificPopup({
+  delegate: 'a',
+  removalDelay: 1000, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+//活動頁
+$('#a-popups').magnificPopup({
+  delegate: 'a',
+  removalDelay: 1000, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+// 相片上傳
+$('#inline-upload').magnificPopup({
   delegate: 'a',
   removalDelay: 500, //delay removal by X to allow out-animation
   callbacks: {
@@ -10,23 +33,10 @@ $('#inline-inside-popups').magnificPopup({
   },
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
-
-
-$('#inline-content').magnificPopup({
-  delegate: 'a',
-  removalDelay: 500, //delay removal by X to allow out-animation
-  callbacks: {
-    beforeOpen: function() {
-       this.st.mainClass = this.st.el.attr('data-effect');
-    }
-  },
-  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-});
-
 
 //test
 
-// 上傳
+// 專欄文章
 $('#n-article').magnificPopup({
   delegate: 'a',
   removalDelay: 500, //delay removal by X to allow out-animation
@@ -37,6 +47,19 @@ $('#n-article').magnificPopup({
   },
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
+
+// 活動
+$('#aa-activities').magnificPopup({
+  delegate: 'a',
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
 
 
 
