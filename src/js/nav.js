@@ -10,5 +10,6 @@ $(function(){
       $('.mainMenu.menu').stop().animate({'left':'0'},400).addClass('open');
       $('body').css('overflow','hidden');
       $('#navButton').children('i').attr('class', 'fa fa-times');
-    }
+      }
+    })
 })
