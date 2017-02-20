@@ -39,7 +39,7 @@
     var COMPLETELY_SEL =        '.' + COMPLETELY;
 
     // section
-    var SECTION_DEFAULT_SEL =   '.f_section';
+    var SECTION_DEFAULT_SEL =   '.section';
     var SECTION =               'fp-section';
     var SECTION_SEL =           '.' + SECTION;
     var SECTION_ACTIVE_SEL =    SECTION_SEL + ACTIVE_SEL;

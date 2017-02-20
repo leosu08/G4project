@@ -372,53 +372,69 @@ $(function(){
 					<!-- 上方選單 -->
 						<div class="a-panel-top">
 
-							<div class="aa-location">
+							<!-- <div class="aa-location">
 								<div class="a-searchInput">
 									<i class="fa fa-search a-phone-icon" aria-hidden="true" ></i>
 									<input id="pac-input" class="controls" type="text" placeholder="找活動搜尋一下！">
 								</div>
-
+							</div> -->
+							<!-- 說明 -->
+							<div class="aa-desc col-sm-12 col-md-12 col-lg-12">
+								<h3><i class="fa fa-hand-o-right" aria-hidden="true"></i>找尋你喜歡的觀星活動，可以這樣做！</h3>
+								<ul>
+									<li>方法1：直接在<span>地圖</span>上進行搜尋</li>
+									<li>方法2：使用下方<span>篩選條件</span>進行搜尋</li>
+								</ul>
+								
 							</div>
 
 
 							<!-- date -->
-						    <div class="aa-date">
-								<p class="a-text aa-date"><i class="fa fa-calendar-o" aria-hidden="true"></i>活動日期</p>
-								<div class="a-panel-date">
-									<div id="wrapper">
-										<input type="text" id="a-date-control" placeholder="選擇可參加活動期間" />
-										<div id="multiple">
-								            <div class="calendar-dark"></div>
-										</div>			
+							<div class="aa-search-area  col-sm-12 col-md-12 col-lg-12">
+							    <div class="a-panel-item aa-date col-sm-4 col-md-4 col-lg-4">
+							    <div class="aa-test aa-test1">
+									<p class="a-text aa-date"><i class="fa fa-calendar-o" aria-hidden="true"></i>選擇活動日期</p>
+									<div class="a-panel-date">
+										<div id="wrapper">
+											<input type="text" id="a-date-control" placeholder="選擇可參加活動期間" />
+											<div id="multiple">
+									            <div class="calendar-dark"></div>
+											</div>			
+										</div>
 									</div>
 								</div>
-							</div>
-							<!-- date end -->
-							<!-- type -->
-							<div class="a-panel-item">
-								<p class="a-text"><i class="fa fa-tags" aria-hidden="true"></i>活動類型</p>
-								<ul>
-									<a href="#" id="turnOff"><li>全部</li></a>
-									<a href="#"><li>天文觀測</li></a>
-									<a href="#"><li>親子觀星</li></a>
-									<a href="#"><li>天文攝影</li></a>
-									<a href="#"><li>休閒聯誼</li></a>
-								</ul>
-							</div>
-							<!-- type end -->
+								</div>
+								<!-- date end -->
+								<!-- type -->
+								<div class="a-panel-item col-sm-4 col-md-4 col-lg-4">
+								 <div class="aa-test">
+									<p class="a-text"><i class="fa fa-tags" aria-hidden="true"></i>選擇活動類型</p>
+									<ul>
+										<a href="#" id="turnOff"><li>全部</li></a>
+										<a href="#"><li>天文觀測</li></a>
+										<a href="#"><li>親子觀星</li></a>
+										<a href="#"><li>天文攝影</li></a>
+										<a href="#"><li>休閒聯誼</li></a>
+									</ul>
+								</div>
+								</div>
+								<!-- type end -->
 
-							<!-- location -->
-							<div class="a-panel-item">
-								<p class="a-text"><i class="fa fa-map-marker" aria-hidden="true"></i>活動地點</p>
-								<ul>
-									<a href="#"><li>全部</li></a>
-									<a href="#"><li>北部地區</li></a>
-									<a href="#"><li>中部地區</li></a>
-									<a href="#"><li>南部地區</li></a>
-									<a href="#"><li>東部地區</li></a>
-								</ul>
+								<!-- location -->
+								<div class="a-panel-item col-sm-4 col-md-4 col-lg-4">
+								 <div class="aa-test">
+									<p class="a-text"><i class="fa fa-map-marker" aria-hidden="true"></i>選擇活動地點</p>
+									<ul>
+										<a href="#"><li>全部</li></a>
+										<a href="#"><li>北部地區</li></a>
+										<a href="#"><li>中部地區</li></a>
+										<a href="#"><li>南部地區</li></a>
+										<a href="#"><li>東部地區</li></a>
+									</ul>
+								</div>
+								</div>
+								<!-- location end -->
 							</div>
-							<!-- location end -->
 						</div>
 							
 					<!-- oldslider -->
@@ -991,8 +1007,8 @@ $(function(){
         offsetSections: false,
         resetSliders: false,
         fadingEffect: false,
-        normalScrollElements: '#element1, .element2',
-        scrollOverflow: true,
+        normalScrollElements: '#section1, .element2',
+        scrollOverflow: false,
         scrollOverflowReset: true,
         scrollOverflowOptions: null,
         touchSensitivity: 15,
