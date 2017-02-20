@@ -61,10 +61,12 @@ $(function() {
 
       $(document).scroll(function(){
         var _scrollTop = $(this).scrollTop();
-        if(_scrollTop > 564 * _windowHeight / 100){
+        if(_scrollTop > 600 * _windowHeight / 100){
           $('#i-body #nav').stop().slideDown(500);
+          // $('#i-body #nav').animate({'top':'100px'},600);
         }else{
-          $('#i-body #nav').stop().slideUp(500);
+          $('#i-body #nav').slideUp(100);
+          // $('#i-body #nav').animate({'top':'0'},600);
         }
       })
     }

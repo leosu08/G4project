@@ -33,9 +33,10 @@ $('#inline-upload').magnificPopup({
   },
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
+
 //test
 
-// 上傳
+// 專欄文章
 $('#n-article').magnificPopup({
   delegate: 'a',
   removalDelay: 500, //delay removal by X to allow out-animation
@@ -46,6 +47,20 @@ $('#n-article').magnificPopup({
   },
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
+
+// 活動
+$('#aa-activities').magnificPopup({
+  delegate: 'a',
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
 
 
 // Image popups
