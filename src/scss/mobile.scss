@@ -7,6 +7,8 @@
 @import "assets/grid";
 @import "../libs/font-awesome/css/font-awesome.min.css";
 @import "layout/layout";
+@import "pageIndex/star";
+
 
 @include respones(xs) {
     #i-body {
