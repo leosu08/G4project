@@ -89,7 +89,7 @@
       font-family: "Montserrat";
       font-weight: 800;
       letter-spacing: 0.05em;
-      color: #fff;
+      color: #0cbbc7;
       text-align: center;
       padding: 20px 0;
       font-size: 18px;
@@ -151,11 +151,12 @@
     box-shadow: 0 -2px 0 rgba(255, 255, 255, 0.2) inset; }
     .colorful-tab-wrapper.flatline .colorful-tab-menu-item a {
       transition: box-shadow .3s ease 0s, opacity .3s ease 0s;
-      opacity: .5; }
+      opacity: .5; 
+      font-size: 20px;}
     .colorful-tab-wrapper.flatline .colorful-tab-menu-item.active a {
       background: none;
       opacity: 1;
-      box-shadow: 0 -2px 0 #fff inset; }
+      box-shadow: 0 -2px 0 #0cbbc7 inset; }
 
 /*@media (max-width: 767px) {
   .colorful-tab-menu {
