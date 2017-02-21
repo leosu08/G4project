@@ -42,6 +42,7 @@
 		.content{
 			padding: 0px;
 			width: 100%;
+			padding-top: 80px;
 		}
 
 		.post-info, .social-icon{
@@ -56,6 +57,18 @@
 				width: 90%;
 			}
 		}
+
+		h3{
+			font-size: 18px;
+		}
+
+		.mfp-close{
+			top: 90px;
+		}
+	}
+
+	.white-popup{
+		max-width: 100%;
 	}
 }
 
