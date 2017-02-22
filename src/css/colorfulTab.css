@@ -3,10 +3,10 @@
     @knyttneve
 */
 .colorful-tab-wrapper {
-  width: 90%;
+  width: 100%;
   /*margin: 30px auto;*/
   /*background: #aaa;*/
-  padding: 20px;
+  /*padding: 20px;*/
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
@@ -101,7 +101,7 @@
 .colorful-tab-container {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   flex-direction: column; }
 
 .colorful-tab-content {
@@ -142,7 +142,7 @@
     box-sizing: border-box; }
 
 .colorful-tab-wrapper.flatline {
-  padding: 10px 20px 20px 20px; }
+  padding: 10px; }
   .colorful-tab-wrapper.flatline:before {
     padding-top: 55px; }
   .colorful-tab-wrapper.flatline .colorful-tab-menu {
