@@ -745,13 +745,13 @@ html, body{
 	z-index: 99999;
 	background-color: rgba(28, 25, 42, .8);
 	// overflow: hidden;
-	padding: 0px;
+	padding-top: 100px;
 
 	#close-btn{
 		display: inline-block;
 		float: right;
 		cursor: pointer;
-		margin-top: 50px;
+		margin-top: -50px;
 		margin-right: 50px;
 
 		#closeIt{

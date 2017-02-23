@@ -98,7 +98,7 @@
 
 	</style>
 </head>
-<body id="m_body">
+<body id="m_body" style="overflow: hidden;">
 <!-- 導覽列 -->
 <nav id="nav">
 		<div class="relative">
@@ -132,62 +132,57 @@
 <div id="particles-js"></div> 
 <div id="m_wrapper">
 
-	<!-- <h1>Allie213's Account</h1> -->
-	<div class="m_user_img m_info_id">
-		<a href="#m_lightbox_id"><img src="img/forum/f_005.png"></a>
+	<!-- <div class="container" style="position: relative; width: 100%;"> -->
+	<div class="m_user_img m_info_id lightbox-btn">
+		<img src="img/forum/f_005.png">
 		<div class="m_user_lv">
 			<p><span>Allie213</span></p>
 			<p>星際過客</p>
 			<p>From Mars</p>
 		</div>
+		<!-- <h3>哈囉！歡迎來到...</h3> -->
 	</div>
+	<!-- </div> -->
 	<!-- <canvas id="canvas" width="1300" height="592" style="background-color: transparent;"> 
 	</canvas>-->
 	
-	<div class="m_infos">
-		<div class="m_infos_left">
-			<div class="m_info m_info_activity">
-				<span class="m_label"><a href="#m_lightbox_activity"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 我的活動</a></span>
-				<span class="m_value">
-				已報名1場活動</span>
+	<div class="m_info m_info_activity lightbox-btn">
+		<span class="m_label"><a href="#m_lightbox_activity"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 我的活動</a></span>
+		<span class="m_value">
+		已報名1場活動</span>
 
-			</div>
-
-			<div class="m_info m_info_forumpost">
-				<span class="m_label"><a href="#m_lightbox_post"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 我的貼文</a></span>
-				<span class="m_value">已發表1則貼文</span>
-				
-			</div>	
-		</div>
-
-		<div class="m_infos_right">
-
-			<div class="m_info m_info_photo">
-				<span class="m_label"><a href="#m_lightbox_photo"><i class="fa fa-picture-o" aria-hidden="true"></i> 我的照片</a></span>
-				<span class="m_value">已分享9張照片</span>
-
-			</div>
-
-			<div class="m_info m_info_save">
-				<span class="m_label"><a href="#m_lightbox_save"><i class="fa fa-star" aria-hidden="true"></i> 我的收藏</a></span>
-				<span class="m_value">已收藏1則貼文</span>
-				
-			</div>	
-			
-		</div>
 	</div>
 
-	
+	<div class="m_info m_info_forumpost lightbox-btn">
+		<span class="m_label"><a href="#m_lightbox_post"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 我的貼文</a></span>
+		<span class="m_value">已發表1則貼文</span>
+		
+	</div>	
+
+
+	<div class="m_info m_info_photo lightbox-btn">
+		<span class="m_label"><a href="#m_lightbox_photo"><i class="fa fa-picture-o" aria-hidden="true"></i> 我的照片</a></span>
+		<span class="m_value">已分享9張照片</span>
+
+	</div>
+
+	<div class="m_info m_info_save lightbox-btn">
+		<span class="m_label"><a href="#m_lightbox_save"><i class="fa fa-star" aria-hidden="true"></i> 我的收藏</a></span>
+		<span class="m_value">已收藏1則貼文</span>
+		
+	</div>	
+			
 </div>
 
 <!-- light box開始 -->
 <!-- 帳號修改 -->
-<div class="m_lightbox_area">
+<div class="m_lightbox_area" id="ff_lightbox">
+	<div id="close-btn">
+		<div id="closeIt">CLOSE</div>
+		<img class="closeIco" src="img/close.svg" alt="close icon">
+	</div>
 <div class="container">
 <div class="row">
-	<div style="width: 100%; height: 30px"; >
-		<div class="fa fa-times" aria-hidden="true" id="m_close_id"></div>
-	</div>
 
 <div class="lightbox_content">
 	<div class="m_left">
@@ -202,91 +197,55 @@
 	<div class="m_right">
 	<!-- 右側區內容區塊 -->
 	<ul class="m_content">
-		<li class="m_id"> <!-- 個人資料 -->
-		 
+		<li class="m_id lightbox-main"> <!-- 個人資料 -->
 			<div class="m_title">
 				<h4><i class="fa fa-globe" aria-hidden="true"></i> 修改會員資料</h4>
 			</div>
-			<table border="0">
-				<tr><th width="30%" style="background-color: #000">會員帳號 ID</th>
-				<td width="70%">Allie213</td></tr>
-
-				<tr><th width="30%" style="background-color: #000">密碼 Password</th>
-				<td width="70%">
-					<input type="text" name="" value="****">
-				</td></tr>
-
-				<tr><th width="30%" style="background-color: #000">更換大頭照 Photo</th>
-				<td width="70%">
-					<input type="file" name="" value="****" height="30">
-				</td></tr>
-
-				<tr><th width="30%" style="background-color: #000">姓名 name</th>
-				<td width="70%">
-					<input type="text" name="" value="莊*娟">
-				</td></tr>
-
-				<tr><th width="30%" style="background-color: #000">電子信箱e-mail</th>
-				<td width="70%">
-					<input type="email" name="" value="shujiuan213@gmail.com" style="width: 200px">
-				</td></tr>
-
-				<tr><th width="30%" style="background-color: #000">行動電話mobile</th>
-				<td width="70%">
-					<input type="tel" pattern="[0][9][0-9]{8}" name="" value="0919000000" style="width: 150px">
-				</td></tr>
-
-				<tr><th width="30%" style="background-color: #000">家裡電話home</th>
-				<td width="70%">
-					<input type="tel" name="" value="03-0000000" style="width: 150px">
-				</td></tr>
-
-				<tr><th width="30%" style="background-color: #000">通訊地址Address</th>
-				<td width="70%">
-					<input type="text" name="" value="桃園市中壢區中大路000號" style="width: 350px">
-				</td></tr>
-			</table>
-
+			<div class="account_info">
+				<p><span class="info-th">會員帳號 ID</span><span class="info-td">Allie213</span></p>
+				<p><span class="info-th">密碼 Password</span><span class="info-td"><input type="text" name="" value="****"></span></p>
+				<p><span class="info-th">更換大頭照 Photo</span><span class="info-td"><input type="file" name="" value="" style="border: 0px solid #000;background-color: transparent;"></span></p>
+				<p><span class="info-th">暱稱 Nickname</span><span class="info-td"><input type="text" name="" value="沙漠裡的魚"></span></p>
+				<p><span class="info-th">電子信箱e-mail</span><span class="info-td"><input type="email" name="" value="shujiuan213@gmail.com"></span></p>
+			</div>
 			<button class="btn-lg btn-blue">確認修改</button>	
 		</li>
+		<li class="m_activity lightbox-main"> <!-- 活動 -->
+			<div class="m_title">
+				<h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 我的活動</h4>
+			</div>
+			<ul class="m_sub_tab">
+				<li><span>已報名活動</span></li>
+				<li><span>主辦活動</span></li>
+			</ul>
 
-		<li class="m_activity"> <!-- 活動 -->
-			
-				<div class="m_title">
-					<h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 我的活動</h4>
-				</div>
-				<ul class="m_sub_tab">
-					<li><span>已報名活動</span></li>
-					<li><span>主辦的活動</span></li>
-				</ul>
-
-				<div class="m_activity_table" >
-					<ul class="m_tab_content">
-					<!-- 第一個tab -->
-				    <li>
-						
-						<div class="m_act_box box1">
-							<div class="m_act_photo">
-								<img src="img/a_002.jpg">
+			<div class="m_activity_table" >
+				<ul class="m_tab_content">
+				<!-- 第一個tab -->
+			    <li>
+					
+					<div class="m_act_box box1">
+						<div class="m_act_photo">
+							<img src="img/a_002.jpg">
+						</div>
+						<div class="m_act_info">
+							<h3>墾丁南十字星觀星露營</h3>
+							
+								<p>日期：2017-05-01至2017-05-05</p>
+								<p>主辦人：Leo S</p>
+							
+							<div class="f_btn">
+								<button>取消</button>
+								<button>查看</button>
 							</div>
-							<div class="m_act_info">
-								<h3>墾丁南十字星觀星露營</h3>
-								
-									<p>日期：2017-05-01至2017-05-05</p>
-									<p>主辦人：Leo S</p>
-								
-								<div class="f_btn">
-									<button>取消</button>
-									<button>查看</button>
-								</div>
-								<div class="m_type">
-									<p>休閒聯誼</p>
-								</div>	
-							</div>
-							<div class="clear"></div>
-						
-					    </div>
-					</li>
+							<div class="m_type">
+								<p>休閒聯誼</p>
+							</div>	
+						</div>
+						<div class="clear"></div>
+					
+				    </div>
+				</li>
 					<!-- 第二個tab -->
 					 <li>
 						<div class="m_act_box box1">
@@ -313,13 +272,13 @@
 					</ul> 
 				</div>	
 		</li>
-		<li class="m_posts"><!-- 貼文 -->
-				<div class="m_title">
-					<h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 我的貼文</h4>
-				</div>
+		<li class="m_posts lightbox-main"><!-- 貼文 -->
+			<div class="m_title">
+				<h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 我的貼文</h4>
+			</div>
 			<ul class="m_sub_tab1">
-				<li><span>我的主題</span></li>
-				<li><span>參與的主題</span></li>
+				<!-- <li><span>我的主題</span></li> -->
+				<!-- <li><span>參與主題</span></li> -->
 			</ul>
 			<div class="m_activity_table1" >
 				<ul class="m_tab_content1">
@@ -341,7 +300,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<!-- <li>
 						<div class="m_post_box box1">
 							<div class="m_post_info">
 								<h3>主題：如何清楚拍攝星軌</h3>
@@ -358,7 +317,7 @@
 								</div>	
 							</div>
 						</div>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 			<!-- </div> -->
