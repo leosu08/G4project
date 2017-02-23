@@ -16,15 +16,7 @@ $(document).ready(function(){
 			// var aaTop = $('#f_section2').offset().top;
 	
 
-	// lightbox效果--主題被點擊後，lightbox跳出
-		$('.ff_lightbox_link').click(function(){
-			$('.ff_lightbox').css('display','block')
-			// alert('ok');
-		});
-
-		$('#close-btn').click(function(){
-			$('.ff_lightbox').css('display','none')
-		})
+	
 
 
 		//popular box hover effect
@@ -39,24 +31,20 @@ $(document).ready(function(){
 
 		})
 
-		//lightbox close-btn
-		$('#close-btn').hover(function(){
-			$('#closeIt').css({
-				color: '#ffc889',
-				opacity: '1'
-			});
-			$('.closeIco').attr({
-				src: 'img/close2.svg'
-			});
-		},function(){
-			$('#closeIt').css({
-				color: 'white',
-				opacity: '1'
-			});
-			$('.closeIco').attr({
-				src: 'img/close.svg'
-			});
+
+		//貼文內容切換
+		$('.ff_post').click(function(e){
+			e.preventDefault();
+			$('.f_posts').fadeOut(1000);
+			$('.post_text').delay(1000).fadeIn(1000);
+
 		})
+
+		$('#f_tab1').click(function(){
+			$('.post_text').fadeOut(1000);
+			$('.f_posts-1').delay(1000).fadeIn(1000);
+		})
+
 
 
 
