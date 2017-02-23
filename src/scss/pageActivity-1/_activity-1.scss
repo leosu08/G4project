@@ -437,7 +437,7 @@
 	}
 
 	#a_1activity_wrapper{
-		padding-top: 100px;
+		
 		.aa_banner{
 			margin-top: 0;
 			// padding-top: 80px;
@@ -449,6 +449,15 @@
 				text-align: center;
 				font-weight: 900;
 			}
+		}
+
+		.aa_content{
+			width: 100%;
+			overflow: auto;
+			height: 100vh;
+			overflow-y: auto;
+			overflow-x:hidden;
+			padding-top: 100px; 
 		}
 	}
 

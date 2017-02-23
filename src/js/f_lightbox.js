@@ -43,16 +43,21 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	// lightbox效果--主題被點擊後，lightbox跳出
-		$('.ff_lightbox_link').click(function(){
+		$('.ff_lightbox_link').click(function(e){
+			e.preventDefault();
 			$('#ff_lightbox').css({
-				transform: 'scale(1)',
+				transform: 'scale(1) ',
 				transition:'.5s linear'
+
 			})
 			
 		});
 
 		$('#close-btn').click(function(){
-			$('#ff_lightbox').css('display','none')
+			$('#ff_lightbox').css({
+				transform: 'scale(0)',
+				transition:'.5s linear'
+			})
 		})
 
 
