@@ -18,7 +18,7 @@ function search(){
 		$member -> bindValue(":mem_email",$_GET['memEmail']);
 		$member -> bindValue(":mem_psw",$_GET["memPsw"]);
 		$member -> execute();
-
+		
 				  if( $member->rowCount() == 0 ){
 				    echo json_encode(array('msg' => 'fail'));
 				  }else{ 
