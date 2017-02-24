@@ -81,7 +81,22 @@
                     border: 1px solid rgba(218, 175, 115, 1);
                 }
             }
+             .subMenu{
+                position:absolute;
+                top: 80px;right: 70px;
+                background:rgba(29, 34, 60,.8);
+                width:180px;
+                text-align:center;
+                // display:none;
+                li{
+                    display:block;
+                    a{
+                        padding:10px 10px;
+                        border: 0px;
+                }
+            }
         }
+    }
         #navMemPhoto {
             text-align: center;
             cursor: pointer;

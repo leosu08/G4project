@@ -887,7 +887,26 @@ $(function() {
 $(function() { //=================ajax系列=========
         
 
-            $.ajax({
+
+
+        
+            //============know=========
+              $.getJSON('php/indexKnow.php',function(res){
+                for(var i = 0 ; i<res.length ; i++){
+                    console.log('url("src/'+res[i].spe_img+'")');
+                    $('.know:eq('+ i +')').find('.pic>img').attr('src',res[i].authorImg);
+                    $('.know:eq('+ i +')').css({'background-image':'url("'+res[i].spe_img+'")'})
+                                          .find('.memberId').text(res[i].author)
+                                          .siblings('.heading').text(res[i].title)
+                                          .siblings('.description').children('h2').text(res[i].title)
+                                          .siblings('p').text(res[i].content);
+                }
+              })
+              //===============know===============
+
+
+
+            $.ajax({//===============forum=============
                 type:'GET',
                 url:'php/indexForum.php',
                 dataType:'json',
@@ -898,8 +917,9 @@ $(function() { //=================ajax系列=========
                     console.log(res);
                     for(var i=0;i<res.length;i++){
                          $('.forumBox:eq('+ i +')').find('.pic>img').attr('src',res[i].mem_img)
-                          $('.forumBox:eq('+ i +')').find('.memberId').text(res[i].mem_name);
-                         $('.forumBack:eq('+ i +')').children('p').text(res[i].pla_content);
+                          $('.forumBox:eq('+ i +')').find('.memberId').text(res[i].mem_name)
+                         .siblings('h4').text(res[i].pla_title);
+                         $('.forumBack:eq('+ i +') .contentMore').children('p').text(res[i].pla_content);
 
                     }
                 }
