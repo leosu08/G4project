@@ -187,7 +187,7 @@ function onClickHandler(date, obj) {
       }
       if(date[1] !== null) {
         text2 = date[1].format('YYYY-MM-DD'); 
-        $('#a-timePicker4').val('09:00PM');
+        $('#a-timePicker4').val('09:00:00');
       }
 
       $box.text(text);

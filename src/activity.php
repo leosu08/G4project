@@ -444,6 +444,50 @@
 						<div class="a-scrollArea" id="aa-activities">
 							<div class="col-xs-12 col-sm-12 col-md-12 a-pReset">
 								<!-- 第一則活動 -->
+				<?php 
+					try {
+						require_once("php/connect.php");
+
+						$sql = "select * from act join actCla using(actCla_no)";
+						$act = $pdo->prepare($sql);
+						$act->execute();
+					    while($actRow = $act->fetch()){
+
+					    	$str = '<div class="col-xs-12 col-sm-6 col-md-6 ">
+									<div class="aa-box">
+										<div class="box-img">
+											<img src="'.$actRow["act_img"].'" alt="" >
+										</div>
+										<div class="box-text">
+											<h4>'.$actRow["act_name"].'</h4>
+											
+											<p class="aa-date">'.$actRow["act_startDate"].'~'.$actRow["act_endDate"].'</p>
+											<p class="aa-desc">
+												'.((mb_strlen($actRow["act_info"], "UTF8")>10) ? mb_substr($actRow["act_info"],0,20, "UTF8") : $actRow["act_info"]).' '.((mb_strlen($actRow["act_info"], "UTF8")>10) ? nl2br(' ...') : nl2br('')).'
+											</p>
+											<div class="aa-btn-area">
+												<div class="social-icon">
+													<i class="fa fa-star-o" aria-hidden="true"></i><span></span>20人收藏
+												</div>
+												<div class="aa-btn btn-blue btn-lg">
+													<a href="" class="ff_lightbox_link">熱烈報名中</a>
+													<input type="hidden" name="" value="'.$actRow["act_no"].'" class="a-act_no">
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+										<div class="aa-tag">
+											<span>'.$actRow["actCla_name"].'</span>
+										</div>	
+									</div>
+								</div>';
+					    	echo $str;
+					    }
+					} catch (Exception $e) {
+						
+					}
+
+				?>
 								<div class="col-xs-12 col-sm-6 col-md-6 ">
 									<div class="aa-box">
 										<div class="box-img">
@@ -452,7 +496,7 @@
 										<div class="box-text">
 											<h4>墾丁南十字星觀星露營</h4>
 											<p class="aa-date">2017-05-02~2017-05-06</p>
-											<p class="aa-desc">
+											<p class="aa-desc" >
 												時序漸入夏，落山風遠離了恆春半島，也是正是認識春夏星空及屬於南部球南十字星座的好時間...
 											</p>
 											<div class="aa-btn-area">
@@ -461,146 +505,6 @@
 												</div>
 												<div class="aa-btn btn-blue btn-lg">
 													<a href="" class="ff_lightbox_link">熱烈報名中</a>
-												</div>
-												<div class="clear"></div>
-											</div>
-										</div>
-										<div class="aa-tag">
-											<span>休閒聯誼</span>
-										</div>	
-									</div>
-								</div>
-								<!-- 單則活動結束 -->
-								<!-- 單則活動 -->
-								<div class="col-xs-12 col-sm-6 col-md-6 ">
-									<div class="aa-box">
-										<div class="box-img">
-											<img src="img/a_001.jpg" alt="" >
-										</div>
-										<div class="box-text">
-											<h4>墾丁南十字星觀星露營</h4>
-											<p class="aa-date">2017-05-02~2017-05-06</p>
-											<p class="aa-desc">
-												時序漸入夏，落山風遠離了恆春半島，也是正是認識春夏星空及屬於南部球南十字星座的好時間...
-											</p>
-											<div class="aa-btn-area">
-												<div class="social-icon">
-													<i class="fa fa-star-o" aria-hidden="true"></i><span></span>20人收藏
-												</div>
-												<div class="aa-btn btn-blue btn-lg">
-													<a href="#">熱烈報名中</a>
-												</div>
-												<div class="clear"></div>
-											</div>
-										</div>
-										<div class="aa-tag">
-											<span>休閒聯誼</span>
-										</div>	
-									</div>
-								</div>
-								<!-- 單則活動結束 -->
-								<!-- 單則活動 -->
-								<div class="col-xs-12 col-sm-6 col-md-6 ">
-									<div class="aa-box">
-										<div class="box-img">
-											<img src="img/a_002.jpg" alt="" >
-										</div>
-										<div class="box-text">
-											<h4>墾丁南十字星觀星露營</h4>
-											<p class="aa-date">2017-05-02~2017-05-06</p>
-											<p class="aa-desc">
-												時序漸入夏，落山風遠離了恆春半島，也是正是認識春夏星空及屬於南部球南十字星座的好時間...
-											</p>
-											<div class="aa-btn-area">
-												<div class="social-icon">
-													<i class="fa fa-star-o" aria-hidden="true"></i><span></span>20人收藏
-												</div>
-												<div class="aa-btn btn-blue btn-lg">
-													<a href="#">熱烈報名中</a>
-												</div>
-												<div class="clear"></div>
-											</div>
-										</div>
-										<div class="aa-tag">
-											<span>休閒聯誼</span>
-										</div>	
-									</div>
-								</div>
-								<!-- 單則活動結束 -->
-								<!-- 單則活動 -->
-								<div class="col-xs-12 col-sm-6 col-md-6 ">
-									<div class="aa-box">
-										<div class="box-img">
-											<img src="img/a_004.jpg" alt="" >
-										</div>
-										<div class="box-text">
-											<h4>墾丁南十字星觀星露營</h4>
-											<p class="aa-date">2017-05-02~2017-05-06</p>
-											<p class="aa-desc">
-												時序漸入夏，落山風遠離了恆春半島，也是正是認識春夏星空及屬於南部球南十字星座的好時間...
-											</p>
-											<div class="aa-btn-area">
-												<div class="social-icon">
-													<i class="fa fa-star-o" aria-hidden="true"></i><span></span>20人收藏
-												</div>
-												<div class="aa-btn btn-blue btn-lg">
-													<a href="#">熱烈報名中</a>
-												</div>
-												<div class="clear"></div>
-											</div>
-										</div>
-										<div class="aa-tag">
-											<span>休閒聯誼</span>
-										</div>	
-									</div>
-								</div>
-								<!-- 單則活動結束 -->
-								<!-- 單則活動 -->
-								<div class="col-xs-12 col-sm-6 col-md-6 ">
-									<div class="aa-box">
-										<div class="box-img">
-											<img src="img/a_001.jpg" alt="" >
-										</div>
-										<div class="box-text">
-											<h4>墾丁南十字星觀星露營</h4>
-											<p class="aa-date">2017-05-02~2017-05-06</p>
-											<p class="aa-desc">
-												時序漸入夏，落山風遠離了恆春半島，也是正是認識春夏星空及屬於南部球南十字星座的好時間...
-											</p>
-											<div class="aa-btn-area">
-												<div class="social-icon">
-													<i class="fa fa-star-o" aria-hidden="true"></i><span></span>20人收藏
-												</div>
-												<div class="aa-btn btn-blue btn-lg">
-													<a href="#">熱烈報名中</a>
-												</div>
-												<div class="clear"></div>
-											</div>
-										</div>
-										<div class="aa-tag">
-											<span>休閒聯誼</span>
-										</div>	
-									</div>
-								</div>
-								<!-- 單則活動結束 -->
-								<!-- 單則活動 -->
-								<div class="col-xs-12 col-sm-6 col-md-6 ">
-									<div class="aa-box">
-										<div class="box-img">
-											<img src="img/a_007.jpg" alt="" >
-										</div>
-										<div class="box-text">
-											<h4>墾丁南十字星觀星露營</h4>
-											<p class="aa-date">2017-05-02~2017-05-06</p>
-											<p class="aa-desc">
-												時序漸入夏，落山風遠離了恆春半島，也是正是認識春夏星空及屬於南部球南十字星座的好時間...
-											</p>
-											<div class="aa-btn-area">
-												<div class="social-icon">
-													<i class="fa fa-star-o" aria-hidden="true"></i><span></span>20人收藏
-												</div>
-												<div class="aa-btn btn-blue btn-lg">
-													<a href="#">熱烈報名中</a>
 												</div>
 												<div class="clear"></div>
 											</div>
@@ -642,6 +546,12 @@
 
 <!-- 單則活動內容 -->
 
+
+
+
+
+
+
 <div id="ff_lightbox"  style="transform: scale(0);" class="a-activity-lightbox element2">
 <section id="a_1activity_wrapper" >
    <div id="close-btn">
@@ -652,20 +562,51 @@
 	<div class="aa_content">
 		<div class="aa_banner">
 			<div class="aa_info">
-				<h3>墾丁南十字星觀星露營</h3>
-				<p>時序漸入夏，落山風遠離了恆春半島，5月的墾丁在春雨澆淋下，大地重披翠綠青衫，天地一片明淨，也正是認識春夏星空及屬於南半球的南十字星座的好時間，邀請您一起感受兼具知性與感性的夜空。 </p>
+				<h3 id="a-lb-act_name"></h3>
+				<p id="a-lb-act_info"></p>
 				<span class="Organiser"><i class="fa fa-user-o" aria-hidden="true"></i>主辦人：Leo S</span>
-				<span class="day"><i class="fa fa-calendar-o" aria-hidden="true"></i>日期：2017-05-01(週一) 8:00~2017-05-02(週二)16:00</span>
-				<span class="type"><i class="fa fa-tags" aria-hidden="true"></i>類型：休閒聯誼</span>
-				<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>地點：屏東縣恆春鎮100號(貓鼻頭國家公園)</span>
-				<span class="cost"><i class="fa fa-money" aria-hidden="true"></i>費用：3000元</span>
+				<span class="day"  id="a-lb-act_date"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
+				<span class="type"><i class="fa fa-tags" aria-hidden="true"></i>類型：<span id="a-lb-actCla_name"></span></span>
+				<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>地點：<span id="a-lb-act_place"></span></span>
+				<span class="cost"><i class="fa fa-money" aria-hidden="true"></i>費用：<span id="a-lb-act_price"></span>元</span>
 				<div class="btn-lg btn-blue"><a href="">我要報名</a></div>
 			</div>
 		</div>
 		<div class="aa_comments">
 			<div class="container">
-			<div class="row">
-			<h4>主辦人-評價Comment</h4>
+				<div class="row" id="a-comm">
+					<h4>主辦人-評價Comment</h4>
+
+<!-- 	try {
+		require_once("php/connect.php");
+		$sql = "select * from actMsg,act where act.act_no=";
+		$actMsg = $pdo->prepare($sql);
+		$actMsg->execute();
+
+		while($actMsgRow = $actMsg->fetch()){
+			echo '<div class="comment ct1">
+				<div class="user">
+					<div class="user-pic">
+						<img src="img/i-member2.png">
+					</div>
+					<div class="user-info">
+						<span><a href="">Kattie918</a></span>
+					</div>
+				</div>
+				<div class="ct-content">
+					<p>參加活動：'.$actMsgRow["act_name"].'<span class="ct-stars"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span></p>
+					<p>'.$actMsgRow["actMsg_content"].'</p>
+					<p>2015-06-01 11:00</p>
+				</div>
+				<div class="clear"></div>
+			</div>';
+		}
+	} catch (Exception $e) {
+		
+	}
+ -->
+ 
+
 			<div class="comment ct1">
 				<div class="user">
 					<div class="user-pic">
@@ -682,7 +623,7 @@
 				</div>
 				<div class="clear"></div>
 			</div>
-			<div class="comment ct2">
+<!-- 			<div class="comment ct2">
 				<div class="user">
 					<div class="user-pic">
 						<img src="img/i-member2.png">
@@ -729,7 +670,7 @@
 					<p>2015-06-01 11:00</p>
 				</div>
 				<div class="clear"></div>
-			</div>
+			</div> -->
 			</div>
 			</div>
 		</div>
