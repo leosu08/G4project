@@ -1,3 +1,119 @@
+// var gulp = require('gulp'),
+//     browserSync = require('browser-sync'),
+//     sass = require('gulp-sass'),
+//     bower = require('gulp-bower'),
+//     connect = require('gulp-connect-php'),
+//     postcss = require('gulp-postcss'),
+//     autoprefixer = require('autoprefixer'),
+//     gulpPlumber = require('gulp-plumber');
+
+// var reload      = browserSync.reload;
+
+
+// //php
+// gulp.task('php', function() {
+//     connect.server({
+//         base: 'src/php/*.php',
+//         keepalive: true,
+//         port: 8080,
+//         open: false
+//     });
+// });
+
+
+// gulp.task('css',function(){
+//   var plugins = [
+//     autoprefixer ({broswer : ['last 1 vrsion']})
+//   ];
+//    return gulp.src('src/css/*.css')
+//    .pipe(postcss(plugins))
+//    .pipe(gulp.dest('./css/finish'));
+// });
+
+
+
+// //bower
+// gulp.task('bower', function() {
+//     return bower('./bower_components')
+//         .pipe(gulpPlumber())
+//         .pipe(gulp.dest('src/libs/'))
+// });
+
+// //  sass
+// gulp.task('styles', function() {
+//     gulp.src('src/scss/*.scss') //要處理的scss檔案
+//         //  .pipe(gulpPlumber())
+//         .pipe(sass().on('error', sass.logError))
+//         .pipe(sass({
+//             outputStyle: 'expanded' // compact , expanded, nested
+//         }))
+//         .pipe(gulp.dest('css')) //指定編譯後的路徑
+
+// });
+
+
+// //broswerSync server
+// gulp.task('server', ['php'], function() {
+//     browserSync.init({
+//         injectChanges: true,
+//         proxy: '127.0.0.1:8080',
+//         port: 8888,
+//         open: true
+//     });
+//     gulp.watch('src/scss/*.scss', ['styles']).on('change', reload); //watch  sass
+//     gulp.watch('src/*.html').on('change', reload); //watch html
+//     gulp.watch('src/css/*.css', ['css']).on('change', reload); //watch  sass
+//     gulp.watch('./bower_components', ['bower']); //watch html
+//     gulp.watch('src/php/*.php').on('change', function () {
+//     browserSync.reload();
+//     });
+// });
+
+// //broswerSync static
+// gulp.task('static', ['styles'], function() {
+//     browserSync.init({
+//       server: {
+//           baseDir: "src/"
+//       }
+//     });
+//     gulp.watch('src/scss/*.scss', ['styles']).on('change', reload); //watch  sass
+//     gulp.watch('src/css/*.css', ['css']).on('change', reload); //watch  sass
+//     gulp.watch('src/*.html').on('change', reload); //watch html
+//     gulp.watch('./bower_components', ['bower']); //watch html
+// });
+
+
+// gulp.task('online', ['server']);
+// gulp.task('online', ['serve' , 'bower']);
+
+// gulp.task('default', ['static']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     minifyCSS = require('gulp-clean-css'),

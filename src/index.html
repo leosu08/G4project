@@ -12,19 +12,6 @@
     <link rel="stylesheet" type="text/css" href="libs/pg-calendar/src/css/pignose.calendar.css" />
     <link type="text/css" href="libs/pg-calendar/dist/pignose.calendar.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="libs/jquery/dist/jquery.min.js"></script>
-    <script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
-    <script src="js/skrollr.min.js"></script>
-    <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
-    <script type="text/javascript" src="libs/pg-calendar/demo/js/semantic.ui.min.js"></script>
-    <script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script>
-    <script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script>
-    <script src="libs/pg-calendar/src/js/pignose.calendar.js"></script>
-    <!-- <script src="js/jquery.mobile.custom.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
-    <script src="js/movingStar.js"></script>
-    <script src="js/index.js"></script>
     <title>ZeroGravity</title>
 </head>
 
@@ -32,20 +19,28 @@
     <nav id="nav">
         <div class="relative">
             <div class="row">
-                <!-- <input type="checkbox" id="navButtonHidden"> -->
-                <div id="navButton"><i class="fa fa-bars"></i></div>
+                <div id="ham">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
                 <div id="logo">
                     <a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
                 </div>
                 <ul class="mainMenu menu">
-                    <li><a href="activity.html">觀星活動</a></li>
-                    <li><a href="forum.html">星際論壇</a></li>
-                    <li><a href="photo.html">照片牆</a></li>
-                    <li><a href="article.html">星知識</a></li>
+                    <li><a class="onThisPage" href="#">觀星活動</a></li>
+                    <li><a href="#">星際論壇</a></li>
+                    <li><a href="#">照片牆</a></li>
+                    <li><a href="#">星知識</a></li>
+                    <li><a href="#">新手村</a></li>
                 </ul>
                 <ul class="mainMenu signArea">
+                    <li id="navMemPhoto">
+                        <img src="">
+                    </li>
+                    <li id="navMemInfo">
+                        <span id="navMemberName"></span>
+                    </li>
                     <li id="signLeft">
-                        <span><a href="#">註冊</a></span>
+                        <span><a href="#" id="navSignup">註冊</a></span>
                     </li>
                     <li id="signRight">
                         <span><a href="#" id="navLogin">登入</a></span>
@@ -126,53 +121,38 @@
                 <div class="activity">
                     <div class="act act01" data-111p="transform:scale(0) translate3d(-10%,-730px,-350px);opacity:0;" data-129p="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-173p="transform:scale(0.8) translate3d(100px,0px,0);opacity:1" data-184p="transform:scale(0.8) translate3d(300px,330px,0);opacity:0">
                         <div class="pic">
-                            <img src="img/i-act01.jpg">
+                            <img src="">
                         </div>
                         <img class="img-collection img-collection1" src="img/i-could2.png">
-                        <div class="content content1">
-                            <h3>台東夜拍趣</h3>
-                            <p>3天2夜觀星露營</p>
-                        </div>
+                        <div class="content content1"></div>
                     </div>
                     <div class="act act02" id="i-act02" data-177p="transform:scale(0) translate3d(530px,-330px,-250px);opacity:0;" data-196p="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-240p="transform:scale(1) translate3d(0px,0px,0);opacity:1" data-251p="transform:scale(2) translate3d(-300px,-430px,0);opacity:0">
                         <div class="pic">
-                            <img src="img/i-act02.jpg">
+                            <img src="">
                         </div>
                         <img class="img-collection img-collection2" src="img/i-could3.png">
-                        <div class="content content2">
-                            <h3>墾丁觀星露營</h3>
-                            <p>3天2夜觀星露營</p>
-                        </div>
+                        <div class="content content2"></div>
                     </div>
                     <div class="act act03" data-244p="transform:scale(0) translate3d(-130px,-630px,-350px);opacity:0;" data-262p="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-307p="transform:scale(1) translate3d(200px,330px,0);opacity:1" data-318p="transform:scale(2) translate3d(200px,-430px,0);opacity:0">
                         <div class="pic">
-                            <img src="img/i-act03.jpg">
+                            <img src="">
                         </div>
                         <img class="img-collection img-collection1" src="img/i-could2.png">
-                        <div class="content content3">
-                            <h3>年度獅子座流星雨</h3>
-                            <p>一年一度要去要快</p>
-                        </div>
+                        <div class="content content3"></div>
                     </div>
                     <div class="act act04" data-311p="transform:scale(0) translate3d(330px,-430px,-350px);opacity:0;" data-329p="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-373p="transform:scale(1) translate3d(0px,0px,0);opacity:1" data-384p="transform:scale(2) translate3d(0px,0px,0);opacity:0">
                         <div class="pic">
-                            <img src="img/i-act04.jpg">
+                            <img src="">
                         </div>
                         <img class="img-collection img-collection2" src="img/i-could3.png">
-                        <div class="content content4">
-                            <h3>墾丁南十字星觀星露營</h3>
-                            <p>3天2夜觀星露營</p>
-                        </div>
+                        <div class="content content4"></div>
                     </div>
                     <div class="act act05" data-378p="transform:scale(0) translate3d(-330px,-730px,-350px);opacity:0;" data-396p="transform:scale(1) translate3d(0,0px,0);opacity:1;" data-440p="transform:scale(1) translate3d(0px,0px,0);opacity:1" data-452p="transform:scale(2) translate3d(200px,0px,0);opacity:0">
                         <div class="pic">
-                            <img src="img/i-act05.jpg">
+                            <img src="">
                         </div>
                         <img class="img-collection img-collection1" src="img/i-could2.png">
-                        <div class="content content5">
-                            <h3>武嶺親子團</h3>
-                            <p>3天2夜觀星露營</p>
-                        </div>
+                        <div class="content content5"></div>
                     </div>
                 </div>
             </div>
@@ -185,16 +165,16 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="forumBox forumBox1">
                             <div class="forum">
-                                <div class="pic"><img src="img/i-member.png"></div>
+                                <div class="pic"><img src=""></div>
                                 <div class="content">
-                                    <h4>大家今年要去看極光嗎？</h4>
-                                    <p class="memberId">Allie213</p>
+                                    <h4></h4>
+                                    <p class="memberId"></p>
                                     <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                                 </div>
                             </div>
                             <div class="forum forumBack">
                                 <div class="contentMore">
-                                    <p>大家今年要去看極光嗎大家今年要去，看極光嗎大家今年要去看極光嗎大，家今年要去，看極光嗎大家今年要去看極光嗎大家今</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="top"></div>
@@ -206,16 +186,16 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="forumBox forumBox2">
                             <div class="forum">
-                                <div class="pic"><img src="img/i-member.png"></div>
+                                <div class="pic"><img src=""></div>
                                 <div class="content">
-                                    <h4>大家今年要去看極光嗎？</h4>
-                                    <p class="memberId">Allie213</p>
+                                    <h4></h4>
+                                    <p class="memberId"></p>
                                     <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                                 </div>
                             </div>
                             <div class="forum forumBack">
                                 <div class="contentMore">
-                                    <p>大家今年要去看極光嗎大家今年要去，看極光嗎大家今年要去看極光嗎大，家今年要去，看極光嗎大家今年要去看極光嗎大家今</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="top"></div>
@@ -227,16 +207,16 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="forumBox forumBox3">
                             <div class="forum">
-                                <div class="pic"><img src="img/i-member.png"></div>
+                                <div class="pic"><img src=""></div>
                                 <div class="content">
-                                    <h4>大家今年要去看極光嗎？</h4>
-                                    <p class="memberId">Allie213</p>
+                                    <h4></h4>
+                                    <p class="memberId"></p>
                                     <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                                 </div>
                             </div>
                             <div class="forum forumBack">
                                 <div class="contentMore">
-                                    <p>大家今年要去看極光嗎大家今年要去，看極光嗎大家今年要去看極光嗎大，家今年要去，看極光嗎大家今年要去看極光嗎大家今</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="top"></div>
@@ -248,16 +228,16 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="forumBox forumBox4">
                             <div class="forum">
-                                <div class="pic"><img src="img/i-member.png"></div>
+                                <div class="pic"><img src=""></div>
                                 <div class="content">
-                                    <h4>大家今年要去看極光嗎？</h4>
-                                    <p class="memberId">Allie213</p>
+                                    <h4></h4>
+                                    <p class="memberId"></p>
                                     <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                                 </div>
                             </div>
                             <div class="forum forumBack">
                                 <div class="contentMore">
-                                    <p>大家今年要去看極光嗎大家今年要去，看極光嗎大家今年要去看極光嗎大，家今年要去，看極光嗎大家今年要去看極光嗎大家今</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="top"></div>
@@ -269,16 +249,16 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="forumBox forumBox5">
                             <div class="forum">
-                                <div class="pic"><img src="img/i-member.png"></div>
+                                <div class="pic"><img src=""></div>
                                 <div class="content">
-                                    <h4>大家今年要去看極光嗎？</h4>
-                                    <p class="memberId">Allie213</p>
+                                    <h4></h4>
+                                    <p class="memberId"></p>
                                     <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                                 </div>
                             </div>
                             <div class="forum forumBack">
                                 <div class="contentMore">
-                                    <p>大家今年要去看極光嗎大家今年要去，看極光嗎大家今年要去看極光嗎大，家今年要去，看極光嗎大家今年要去看極光嗎大家今</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="top"></div>
@@ -290,16 +270,16 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="forumBox forumBox6">
                             <div class="forum">
-                                <div class="pic"><img src="img/i-member.png"></div>
+                                <div class="pic"><img src=""></div>
                                 <div class="content">
-                                    <h4>大家今年要去看極光嗎？</h4>
-                                    <p class="memberId">Allie213</p>
+                                    <h4></h4>
+                                    <p class="memberId"></p>
                                     <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                                 </div>
                             </div>
                             <div class="forum forumBack">
                                 <div class="contentMore">
-                                    <p>大家今年要去看極光嗎大家今年要去，看極光嗎大家今年要去看極光嗎大，家今年要去，看極光嗎大家今年要去看極光嗎大家今</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="top"></div>
@@ -311,16 +291,16 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="forumBox forumBox7">
                             <div class="forum">
-                                <div class="pic"><img src="img/i-member.png"></div>
+                                <div class="pic"><img src=""></div>
                                 <div class="content">
-                                    <h4>大家今年要去看極光嗎？</h4>
-                                    <p class="memberId">Allie213</p>
+                                    <h4></h4>
+                                    <p class="memberId"></p>
                                     <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                                 </div>
                             </div>
                             <div class="forum forumBack">
                                 <div class="contentMore">
-                                    <p>大家今年要去看極光嗎大家今年要去，看極光嗎大家今年要去看極光嗎大，家今年要去，看極光嗎大家今年要去看極光嗎大家今</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="top"></div>
@@ -332,16 +312,16 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="forumBox forumBox8">
                             <div class="forum">
-                                <div class="pic"><img src="img/i-member.png"></div>
+                                <div class="pic"><img src=""></div>
                                 <div class="content">
-                                    <h4>大家今年要去看極光嗎？</h4>
-                                    <p class="memberId">Allie213</p>
+                                    <h4></h4>
+                                    <p class="memberId"></p>
                                     <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                                 </div>
                             </div>
                             <div class="forum forumBack">
                                 <div class="contentMore">
-                                    <p>大家今年要去看極光嗎大家今年要去，看極光嗎大家今年要去看極光嗎大，家今年要去，看極光嗎大家今年要去看極光嗎大家今</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="top"></div>
@@ -353,16 +333,16 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="forumBox forumBox9">
                             <div class="forum">
-                                <div class="pic"><img src="img/i-member.png"></div>
+                                <div class="pic"><img src=""></div>
                                 <div class="content">
-                                    <h4>大家今年要去看極光嗎？</h4>
-                                    <p class="memberId">Allie213</p>
+                                    <h4></h4>
+                                    <p class="memberId"></p>
                                     <p class="count"><i class="fa fa-eye" aria-hidden="true"></i><span>30</span><i class="fa fa-comment-o" aria-hidden="true"></i><span>100</span></p>
                                 </div>
                             </div>
                             <div class="forum forumBack">
                                 <div class="contentMore">
-                                    <p>大家今年要去看極光嗎大家今年要去，看極光嗎大家今年要去看極光嗎大，家今年要去，看極光嗎大家今年要去看極光嗎大家今</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="top"></div>
@@ -381,74 +361,76 @@
                 <div class="gallery">
                     <div class="pic pic1">
                         <div class="picContainer">
-                            <img class="photo" src="img/a_009.jpg">
+                            <img class="photo" src="">
                             <a href="photo.html"></a>
                             <div class="detail"><i class="fa fa-eye"></i></div>
                             <div class="memInfo">
-                                <img src="img/p_people5.jpg" alt=""><span>Allen0213</span></div>
+                                <img class="memPic" src="">
+                                <span></span>
+                            </div>
                         </div>
                     </div>
                     <div class="pic pic2">
                         <div class="picContainer">
                             <a href="photo.html"></a>
-                            <img class="photo" src="img/a_013.jpg">
+                            <img class="photo" src="">
                             <div class="detail"><i class="fa fa-eye"></i></div>
                             <div class="memInfo">
-                                <img src="img/p_people5.jpg" alt=""><span>Allen0213</span></div>
+                                <img class="memPic" src="" alt=""><span></span></div>
                         </div>
                     </div>
                     <div class="pic pic3">
                         <div class="picContainer">
                             <a href="photo.html"></a>
-                            <img class="photo" src="img/a_012.jpg">
+                            <img class="photo" src="">
                             <div class="detail"><i class="fa fa-eye"></i></div>
                             <div class="memInfo">
-                                <img src="img/p_people5.jpg" alt=""><span>Allen0213</span></div>
+                                <img class="memPic" src="" alt=""><span></span></div>
                         </div>
                     </div>
                     <div class="pic pic4">
                         <div class="picContainer">
                             <a href="photo.html"></a>
-                            <img class="photo" src="img/a_007.jpg">
+                            <img class="photo" src="">
                             <div class="detail"><i class="fa fa-eye"></i></div>
                             <div class="memInfo">
-                                <img src="img/p_people5.jpg" alt=""><span>Allen0213</span></div>
+                                <img class="memPic" src="" alt=""><span></span></div>
                         </div>
                     </div>
                     <div class="pic pic5">
                         <div class="picContainer">
                             <a href="photo.html"></a>
-                            <img class="photo" src="img/p_bigpic_001.jpg">
+                            <img class="photo" src="">
                             <div class="detail"><i class="fa fa-eye"></i></div>
                             <div class="memInfo">
-                                <img src="img/p_people5.jpg" alt=""><span>Allen0213</span></div>
+                                <img class="memPic" src="" alt=""><span></span></div>
                         </div>
                     </div>
                     <div class="pic pic6">
                         <div class="picContainer">
                             <a href="photo.html"></a>
-                            <img class="photo" src="img/index/i-gallery.jpg">
+                            <img class="photo" src="">
                             <div class="detail"><i class="fa fa-eye"></i></div>
                             <div class="memInfo">
-                                <img src="img/p_people5.jpg" alt=""><span>Allen0213</span></div>
+                                <img class="memPic" src="" alt=""><span></span></div>
                         </div>
                     </div>
                     <div class="pic pic7">
                         <div class="picContainer">
                             <a href="photo.html"></a>
-                            <img class="photo" src="img/i-act04.jpg">
+                            <img class="photo" src="">
                             <div class="detail"><i class="fa fa-eye"></i></div>
                             <div class="memInfo">
-                                <img src="img/p_people5.jpg" alt=""><span>Allen0213</span></div>
+                                <img class="memPic" src="" alt=""><span></span></div>
                         </div>
                     </div>
                     <div class="pic pic8">
                         <div class="picContainer">
                             <a href="photo.html"></a>
-                            <img class="photo" src="img/i-act05.jpg">
+                            <img class="photo" src="">
                             <div class="detail"><i class="fa fa-eye"></i></div>
                             <div class="memInfo">
-                                <img src="img/p_people5.jpg" alt=""><span>Allen0213</span></div>
+                                <img class="memPic" src="" alt=""><span></span></div>
                         </div>
                     </div>
                 </div>
@@ -576,13 +558,16 @@
         <div class="i-lightboxBg"></div>
         <div class="login">
             <h4>會員登入</h4>
-            <input id="loginAccount" type="Email" value="guest">
-            <input id="loginPsw" type="password" value="guest">
-            <input id="loginConfirmPsw" type="password" placeholder="*確認密碼">
-            <input id="loginMemName" type="text" placeholder="*暱稱(2~12個字元)">
-            <div class="searchBar-btn" id="i-loginBtn">
-                <a href="#">登入</a>
-            </div>
+            <!-- <form action="php/login.php" method="post"> -->
+                <input id="loginAccount" type="Email" value="guest" name="memEmail">
+                <input id="loginPsw" type="password" value="guest" name="memPsw" maxlength="12" minlength="4">
+                <input id="loginConfirmPsw" type="password" placeholder="*確認密碼"  maxlength="12" minlength="4">
+                <input id="loginMemName" type="text" placeholder="*暱稱(2~12個字元)" name="memName" maxlength="12" minlength="2">
+                <input type="submit" class="searchBar-btn" id="i-loginBtn" value="登入">
+                <!-- <div class="searchBar-btn" id="i-loginBtn">
+                    <a href="#">登入</a>
+                </div> -->
+            <!-- </form> -->
             <div class="logOn">
                 按此註冊會員
             </div>
@@ -591,6 +576,16 @@
 </body>
 
 </html>
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+<script src="js/skrollr.min.js"></script>
+<script src="libs/gsap/src/minified/TweenMax.min.js"></script>
+<script type="text/javascript" src="libs/pg-calendar/demo/js/semantic.ui.min.js"></script>
+<script type="text/javascript" src="libs/pg-calendar/demo/js/prism.min.js"></script>
+<script type="text/javascript" src="libs/pg-calendar/vender/moment.min.js"></script>
+<script src="libs/pg-calendar/src/js/pignose.calendar.js"></script>
+<script src="js/movingStar.js"></script>
+<script src="js/index.js"></script>
 <script type="text/javascript">
 var s = skrollr.init({
     render: function(data) {

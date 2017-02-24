@@ -1,6 +1,16 @@
 @include respones(xs) {
 	//在此輸入內容
+#f_section1{
+	.f_title{
 
+		width: 80%;
+		transform:scale(0.7);
+		h1{
+			display: inline-block;
+			width: 100%;
+		}
+	}
+}
 #f_section2{
 		
 
