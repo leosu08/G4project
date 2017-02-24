@@ -17,7 +17,7 @@
         }
     }
     @else if $screen-size == "lg" {
-        @media screen and (min-width: $rwd-md-breakpoint) {
+        @media screen and (min-width: $rwd-md-breakpoint+1) {
              @content;
         }
 }

@@ -5,22 +5,16 @@
         padding-top: 15px;
         padding-left: 50px;
     }
-
-
-
     .mainMenu {
         float: left;
         padding-top: 20px;
-
         li {
             display: inline-block;
             position: relative;
         }
-
         &.menu {
-            width: 74%;
+            width: 72%;
             text-align: right;
-
             a {
                 display: block;
                 color: $white;
@@ -28,84 +22,100 @@
                 padding: 14px 10px;
                 letter-spacing: 1px;
                 font-weight: 800;
-                &:hover{
-                  color:#86d4f5;
+                &:hover {
+                    color: #86d4f5;
                 }
-                &:before{
-            			content: '';
-            		    width: 0%;
-            		    height: 0px;
-            		    border: 0px solid #86d4f5;
-            		    /*#daaf73*/
-            		    position: absolute;
-            		    top: 80%;
-            		    left: 0;
-            		    bottom: 0;
-            		    right: 0;
-            		    margin: auto;
-            		    /*box-shadow: 1px 1px 1px #333;*/
-            		}
-                &.onThisPage:before{
-                  content: '';
-            		    width: 80%;
-            		    height: 0px;
-            		    border: 1px solid #86d4f5;
-            		    /*#daaf73*/
-            		    position: absolute;
-            		    top: 80%;
-            		    left: 0;
-            		    bottom: 0;
-            		    right: 0;
-            		    margin: auto;
+                &:before {
+                    content: '';
+                    width: 0%;
+                    height: 0px;
+                    border: 0px solid #86d4f5;
+                    /*#daaf73*/
+                    position: absolute;
+                    top: 80%;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
+                    /*box-shadow: 1px 1px 1px #333;*/
                 }
-                &.onThisPage{
-                  color:$blue-green;
+                &.onThisPage:before {
+                    content: '';
+                    width: 80%;
+                    height: 0px;
+                    border: 1px solid #86d4f5;
+                    /*#daaf73*/
+                    position: absolute;
+                    top: 80%;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
                 }
-                &:hover:before{
-                  width: 80%;
-                  border: 1px solid #86d4f5;
-                  transition: .6s;
+                &.onThisPage {
+                    color: $blue-green;
+                }
+                &:hover:before {
+                    width: 80%;
+                    border: 1px solid #86d4f5;
+                    transition: .6s;
                 }
             }
         }
-
         &.signArea {
             width: 14%;
-            text-align: right;
-            padding-right: 100px;
+            text-align: center;
+            padding-right: 40px;
             a {
-              display: block;
-          		font-size: 15px;
-          	  color: rgba(218, 175, 115, 0.6);
-        	    letter-spacing: 1px;
-      		    padding: 10px 10px;
-      		    margin-top: 5px;
-      		    margin-right: 5px;
-              font-weight: 800;
-      		    border: 1px solid rgba(218, 175, 115, 0.6);
-              &:hover{
-                  color:rgba(218, 175, 115, 1);
-                  border: 1px solid rgba(218, 175, 115, 1);
-              }
-            }
-            .fa{
-              display: none;
+                display: block;
+                font-size: 15px;
+                color: rgba(218, 175, 115, 0.6);
+                letter-spacing: 1px;
+                padding: 10px 10px;
+                margin-top: 5px;
+                margin-right: 5px;
+                font-weight: 800;
+                border: 1px solid rgba(218, 175, 115, 0.6);
+                &:hover {
+                    color: rgba(218, 175, 115, 1);
+                    border: 1px solid rgba(218, 175, 115, 1);
+                }
             }
         }
-        #signRight a{
-          background-color: rgba(218, 175, 115, 1);
-          border: 1px solid rgba(218, 175, 115, 1);
-          color:$white;
-          text-shadow: 0px 0px 3px $grey;
-          &:hover{
-              background-color: rgba(218, 175, 115, 0);
-              border: 1px solid rgba(218, 175, 115, 0.6);
-              color:rgba(218, 175, 115, 1);
-          }
+        #navMemPhoto {
+            text-align: center;
+            cursor: pointer;
+            img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                vertical-align: middle;
+                &:hover{
+                  box-shadow:0px 0px 10px 1px rgba(218, 175, 115, 1);
+                 }
+            }
+            
+        }
+        #navMemberName {
+            color: #ddddcc;
+            font-size: 14px;
+            display: block;
+            cursor: pointer;
+            margin-top:5px;
+        }
+        #signRight a {
+            background-color: rgba(218, 175, 115, 1);
+            border: 1px solid rgba(218, 175, 115, 1);
+            color: $white;
+            text-shadow: 0px 0px 3px $grey;
+            &:hover {
+                background-color: rgba(218, 175, 115, 0);
+                border: 1px solid rgba(218, 175, 115, 0.6);
+                color: rgba(218, 175, 115, 1);
+            }
         }
     }
-
-    #navButton{
-      display: none;
+    #navButton {
+        display: none;
     }
 }
