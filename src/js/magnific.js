@@ -47,6 +47,8 @@ $('#n-article').magnificPopup({
   },
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
+<<<<<<< HEAD
+=======
 
 // 活動
 $('#aa-activities').magnificPopup({
@@ -61,6 +63,7 @@ $('#aa-activities').magnificPopup({
 });
 
 
+>>>>>>> 2d6b43747b3e5dc7a951e2d34718899f4fb53c63
 
 
 // Image popups

@@ -536,7 +536,9 @@
 }
 
 
-
+/*=====================================
+            Ôö¼Ó»î„Óí“Ãæ
+    =======================================*/
 .a-lb-add{
 	background: url("../img/a_008.jpg");
 	padding: 20px;
@@ -612,7 +614,15 @@
 .a-x{
 	float: right;
 	font-size: $fz-h5;
+}//Ôö¼Ó»î„Óí“Ãæ½YÊø
 
+
+
+
+
+/*=====================================
+            »î„ÓÔ”¼ší“Ãæ
+    =======================================*/
 .a-lb-act{
 	background:url("../img/a_008.jpg");
 	background-position: center top;
@@ -710,7 +720,7 @@
 		}
 	}
 
-
+}//»î„Ó½YÊø
 
 
 .a-phone-control{
@@ -731,7 +741,7 @@
 	overflow-y:scroll;
 }
 
-
+//å–®å‰‡æ´»å‹•é–‹å§‹
 #a_1activity_wrapper{
 
 
@@ -937,13 +947,14 @@
 		}
 	}
 }
+// 0216修改
 
 
-@import "pageBranch/pageRecommend";
 
-@import "pageMain/maginic";
-@import "pageBranch/addACT";
-@import "pageBranch/addACT_2";
+
+//å–®å‰‡æ´»å‹•çµæŸ
+
+
 @import "pageMain/xs";
 @import "pageMain/sm";
 @import "pageMain/md";
@@ -952,4 +963,7 @@
 @import "pageBranch/sm";
 @import "pageBranch/md";
 @import "pageBranch/lg";
+@import "pageBranch/pageRecommend";
+@import "pageMain/maginic";
+@import "pageBranch/addACT";
 // @import "../layout/nav";

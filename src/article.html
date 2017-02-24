@@ -6,14 +6,25 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 	<title>星知識</title>
-	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"> -->
-     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-     <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-     <link rel="stylesheet" type="text/css" href="css/magnific.css">
-     <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
-     <script type="text/javascript" src="js/magnific.js"></script>
-	<!-- <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script> -->
+	
+     <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> -->
+     
+	<script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	<!-- tweenmax -->
+	<script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
+
+
+	<!-- scrollmagic -->
+	<script type="text/javascript" src="libs/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+	<script type="text/javascript" src="libs/ScrollMagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+	<script type="text/javascript" src="libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	<!-- this page's js -->
+	<script src="js/f_lightbox.js"></script>
+	<script src="js/article.js"></script>
 
 	<style type="text/css">
 		*{
@@ -67,12 +78,38 @@
 		  /*.6 .9 .9*/
 		 
 		}
-	
-		
+
+		.kn-svg{
+			position: absolute;
+		    top: 50%;
+		    left: 10%;
+		    bottom: 0;
+		    right: 0;
+		    margin: auto;
+		    /*fill:transparent;*/
+			stroke:rgba(255,255,255,.4);
+			stroke-width:2;
+			stroke-dasharray:3000; 
+			stroke-dashoffset:3000;
+			
+			/*z-index: 999;*/
+			transition: .5s;
+		}
+		@keyframes change{
+			  /*0%{fill:transparent;stroke-dashoffset:-1400;}*/
+			to{stroke-dashoffset:0;}
+			/*100%{stroke-dashoffset:0;}*/
+		}
+
+		.ff-svg{
+			animation: change 5s 0s 1 linear both;
+		}
 
 
 
 	</style>
+		
+		
 </head>
 <body id="kn_wrapper">
 <!-- 導覽列 -->
@@ -119,30 +156,42 @@
 <div class="kn_content">
 	<div class="container">
 		<div class="row">
+			<svg class="kn-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px" height="3000px" viewBox="0 0 800 200" enable-background="new 0 0 500 200" xml:space="preserve">
+				<circle fill="rgba(255,255,255,1)" cx="250" cy="20" r="5"/>
+				<path d="M250 20 L500 120" stroke="rgba(255,255,255,.4)" fill="none"/>
+				<path d="M500 120 L100 420" stroke="rgba(255,255,255,.4)" fill="none"/>
+				<path d="M100 420 L500 620" stroke="rgba(255,255,255,.4)" fill="none"/>
+				<path d="M500 620 L100 1020" stroke="rgba(255,255,255,.4)" fill="none"/>
+				<path d="M100 1020 L500 1320" stroke="rgba(255,255,255,.4)" fill="none"/>
+				<circle fill="rgba(255,255,255,1)" cx="500" cy="1320" r="5"/>
+			</svg>
 			<ul class="kn_posts" id="n-article">
-				<li class="kn-p"><a href="#n-lb" data-effect="mfp-3d-unfold">
+				<li class="kn-p  ff_lightbox_link">
 					<h3>NASA背後的故事-〔關鍵少數〕探討「種族」與「性別」的標籤</h3>
-					<p class="text">一樁眾人皆知的歷史事件，背後卻藏著不為人知的秘密奉獻，文獻鮮少記載...</p></a>
+					<p class="text">一樁眾人皆知的歷史事件，背後卻藏著不為人知的秘密奉獻，文獻鮮少記載...</p>
+					<!-- <div id="kn-svg" > -->
+					
 				</li>
-				<li class="kn-p"><a href="#n-lb" data-effect="mfp-3d-unfold">
+				<li class="kn-p ff_lightbox_link">
 					<h3>真正九大行星現身！</h3>
-					<p class="text">美國學者表示，他們有足夠證據證明第九大行星的存在，「新的」第九大行星比被除...</p></a>
+					<p class="text">美國學者表示，他們有足夠證據證明第九大行星的存在，「新的」第九大行星比被除...</p>
+
 				</li>
-				<li class="kn-p"><a href="#n-lb" data-effect="mfp-3d-unfold">
+				<li class="kn-p  ff_lightbox_link">
 					<h3>NASA背後的故事-〔關鍵少數〕探討「種族」與「性別」的標籤</h3>
-					<p class="text">一樁眾人皆知的歷史事件，背後卻藏著不為人知的秘密奉獻，文獻鮮少記載...</p></a>
+					<p class="text">一樁眾人皆知的歷史事件，背後卻藏著不為人知的秘密奉獻，文獻鮮少記載...</p>
 				</li>
-				<li class="kn-p"><a href="#n-lb" data-effect="mfp-3d-unfold">
+				<li class="kn-p  ff_lightbox_link">
 					<h3>真正九大行星現身！</h3>
-					<p class="text">美國學者表示，他們有足夠證據證明第九大行星的存在，「新的」第九大行星比被除...</p></a>
+					<p class="text">美國學者表示，他們有足夠證據證明第九大行星的存在，「新的」第九大行星比被除...</p>
 				</li>
-				<li class="kn-p"><a href="#n-lb" data-effect="mfp-3d-unfold">
+				<li class="kn-p  ff_lightbox_link">
 					<h3>NASA背後的故事-〔關鍵少數〕探討「種族」與「性別」的標籤</h3>
-					<p class="text">一樁眾人皆知的歷史事件，背後卻藏著不為人知的秘密奉獻，文獻鮮少記載...</p></a>
+					<p class="text">一樁眾人皆知的歷史事件，背後卻藏著不為人知的秘密奉獻，文獻鮮少記載...</p>
 				</li>
-				<li class="kn-p"><a href="#n-lb" data-effect="mfp-3d-unfold">
+				<li class="kn-p  ff_lightbox_link">
 					<h3>真正九大行星現身！</h3>
-					<p class="text">美國學者表示，他們有足夠證據證明第九大行星的存在，「新的」第九大行星比被除...</p></a>
+					<p class="text">美國學者表示，他們有足夠證據證明第九大行星的存在，「新的」第九大行星比被除...</p>
 				</li>
 				
 				<li class="clear"></li>
@@ -152,48 +201,49 @@
 </div>
 
 <!-- 單篇文章 燈箱開啟 -->
-<div class="kn_one_post white-popup mfp-with-anim mfp-hide"  id="n-lb">
-	<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+<div class="kn_one_post"  id="ff_lightbox" style="transform: scale(0);">
+	<div id="close-btn">
+		<div id="closeIt">CLOSE</div>
+		<img class="closeIco" src="img/close.svg" alt="close icon">
+	</div>
 	<div class="container">
-		<div class="row">
-			<div class="content">
-				
-				<div class="post">
-					<h3>NASA背後的故事-〔關鍵少數〕探討「種族」與「性別」的標籤</h3>
-					<p class="post-info">
-						<span>一月19日, 2017</span>
-						<span>作者：沙漠裡的魚</span>
-					</p>
-					<p class="social-icon">
-						<i class="fa fa-eye" aria-hidden="true">20</i>
-						<i class="fa fa-star-o" aria-hidden="true">20</i>
-						<i class="fa fa-share-square-o" aria-hidden="true">20</i>
+		<div class="content">
+			<div class="post">
+				<h3>NASA背後的故事-〔關鍵少數〕探討「種族」與「性別」的標籤</h3>
+				<p class="post-info">
+					<span>一月19日, 2017</span>
+					<span>作者：沙漠裡的魚</span>
+				</p>
+				<p class="social-icon">
+					<i class="fa fa-eye" aria-hidden="true">20</i>
+					<i class="fa fa-star-o" aria-hidden="true">20</i>
+					<i class="fa fa-share-square-o" aria-hidden="true">20</i>
 
-					</p>
-					<div class="clear"></div>
-					<div class="main">
-						<img src="img/kn-1.jpg">
-						<p>在1960年代、美國與蘇聯冷戰時期，一場又一場的太空競爭，如果沒有凱薩琳強生（塔拉吉韓森飾）、桃樂斯范恩（塔薇亞史班森飾）和瑪莉傑克森（賈奈兒夢內飾）的貢獻，太空人約翰葛倫（John Glenn）就無法完成繞行地球的創舉，美國也無法藉此狠狠滅了蘇聯威風。 時隔半世紀，電影《關鍵少數》才向世人揭露這3位在NASA工作的非裔女科學家的故事。儘管電影詼諧地帶過了苦痛，但相信現實中的人生，並不如此開滿外掛，總能輕而易舉地翻越歧視的高牆。</p>
-						<p>先是膚色，後是性別，最後才是工作能力。她們要面對的「玻璃天花板」一個比一個還要高。一句句短而有力的對白，包藏在嬉笑怒罵裡，卻是對性別、種族歧視，一次次的叩問－－你偶爾會驚訝，帶有偏見與歧視的句型，仍確確實實地潛伏於現世。 </p>
-						<p>擔任製作人之一的菲董（Pharrell Williams）表示，「縱使被過去舊時代的黑暗包圍著，她仍看到的是未來。她看到一個女性得以承擔各種期望，並被平等地對待－－我們愈早能有這個共識，我想地球會變得更好。」 他口中的「她」，是指現年高齡90多歲的凱薩琳強生。</p>
+				</p>
+				<div class="clear"></div>
+				<div class="main">
+					<img src="img/kn-1.jpg">
+					<p>在1960年代、美國與蘇聯冷戰時期，一場又一場的太空競爭，如果沒有凱薩琳強生（塔拉吉韓森飾）、桃樂斯范恩（塔薇亞史班森飾）和瑪莉傑克森（賈奈兒夢內飾）的貢獻，太空人約翰葛倫（John Glenn）就無法完成繞行地球的創舉，美國也無法藉此狠狠滅了蘇聯威風。 時隔半世紀，電影《關鍵少數》才向世人揭露這3位在NASA工作的非裔女科學家的故事。儘管電影詼諧地帶過了苦痛，但相信現實中的人生，並不如此開滿外掛，總能輕而易舉地翻越歧視的高牆。</p>
+					<p>先是膚色，後是性別，最後才是工作能力。她們要面對的「玻璃天花板」一個比一個還要高。一句句短而有力的對白，包藏在嬉笑怒罵裡，卻是對性別、種族歧視，一次次的叩問－－你偶爾會驚訝，帶有偏見與歧視的句型，仍確確實實地潛伏於現世。 </p>
+					<p>擔任製作人之一的菲董（Pharrell Williams）表示，「縱使被過去舊時代的黑暗包圍著，她仍看到的是未來。她看到一個女性得以承擔各種期望，並被平等地對待－－我們愈早能有這個共識，我想地球會變得更好。」 他口中的「她」，是指現年高齡90多歲的凱薩琳強生。</p>
+				</div>
+				<div class="kn-comment">
+					<div class="kn-title">
+						<h4>我要留言</h4>
+						<span><a href="">Login<i class="fa fa-caret-down" aria-hidden="true"></i></a></span>
+						<div class="clear"></div>
 					</div>
-					<div class="kn-comment">
-						<div class="kn-title">
-							<h4>Comment</h4>
-							<span><a href="">Login<i class="fa fa-caret-down" aria-hidden="true"></i></a></span>
-							<div class="clear"></div>
+					<div class="comment-box">
+						<div class="comment-user">
+							<i class="fa fa-user" aria-hidden="true"></i>
 						</div>
-						<div class="comment-box">
-							<div class="comment-user">
-								<i class="fa fa-user" aria-hidden="true"></i>
-							</div>
-							<textarea placeholder="Join the discussion"></textarea>
-						</div>
-						
+						<textarea placeholder="Join the discussion"></textarea>
 					</div>
+					
 				</div>
 			</div>
 		</div>
+	
 	</div>
 </div>
 <!-- 單篇文章 燈箱結束 -->
