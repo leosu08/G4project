@@ -133,7 +133,7 @@ function initAutocomplete() {
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function(place) {
       var icon = {
-        url: 'img/a_001.jpg',
+        url: '../img/a_001.jpg',
         size: new google.maps.Size(71, 71),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
@@ -147,8 +147,7 @@ function initAutocomplete() {
         title: place.name,
         position: place.geometry.location
       }));
-      console.log(document.getElementById("a-add-mapInput").value);
-      console.log(markers[0].getPosition().lng());
+
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
         bounds.union(place.geometry.viewport);

@@ -1,3 +1,4 @@
+
 function initMap() {
     markerb = [];
     markers =[];
@@ -16,6 +17,47 @@ function initMap() {
         center: twCenter,
         mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
     });
+
+// This example adds a search box to a map, using the Google Place Autocomplete
+// feature. People can enter geographical searches. The search box will return a
+// pick list containing a mix of places and predicted search terms.
+
+function toggleBounce() {
+  if (markera.getAnimation() !== null) {
+    markera.setAnimation(null);
+  } else {
+    markera.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
+function initAutocomplete() {
+  var styles= [
+                  {
+                      "featureType": "water",
+                      "elementType": "geometry.fill",
+                      "stylers": [
+                          {
+                              "color": "#444444"
+                          }
+                      ]
+                  }
+              ]
+
+  // Create a new StyledMapType object, passing it the array of styles,
+  // as well as the name to be displayed on the map type control.
+  var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Styled Map"});
+
+  twCenter={lat: 23.876571, lng: 121.091443};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: twCenter,
+    zoom: 7,
+    // disableDefaultUI:true,
+    mapTypeControl:false,
+    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    
+  });//map結束
+>>>>>>> 37054db9ce31a52e4a8ada23b8773f7f84b807eb
     //Associate the styled map with the MapTypeId and set it to display.
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
