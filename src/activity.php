@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -556,7 +558,8 @@
 <section id="a_1activity_wrapper" >
    <div id="close-btn">
 		<div id="closeIt">CLOSE</div>
-		<img class="closeIco" src="img/close.svg" alt="close icon">
+		
+		<img class="closeIco" src="img/a_005.jpg" alt="close icon">
 	</div>
 	<div class="container">
 	<div class="aa_content">
