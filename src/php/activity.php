@@ -65,9 +65,9 @@ try{
         $act->bindValue(":act_no",$_REQUEST["act_no"]);
 
 
-        $sql = "select * from actMsg,act where act.act_no=:act_no";
-        $act = $pdo->prepare( $sql );
-        $act->bindValue(":act_no",$_REQUEST["act_no"]);
+        // $sql = "select * from actMsg,act where act.act_no=:act_no";
+        // $act = $pdo->prepare( $sql );
+        // $act->bindValue(":act_no",$_REQUEST["act_no"]);
       
   }//
 
