@@ -72,6 +72,14 @@ try{
   }//
 
 
+  if(isset($_REQUEST["actCom_no"])){
+
+        $sql = "select * from actMsg,act where act.act_no=:act_no and actMsg.act_no=:act_no";
+        $act = $pdo->prepare( $sql );
+        $act->bindValue(":act_no",$_REQUEST["actCom_no"]);
+      
+  }//
+
 
 
 
@@ -82,7 +90,7 @@ try{
     echo "{}";
   }else{ //找得到
     $actArray =array();
-    while($actRow = $act->fetch()){
+    while($actRow = $act->fetch(PDO::FETCH_ASSOC)){
       $actArray[] = $actRow; 
       
     }
