@@ -1,9 +1,6 @@
 @include respones(xs) {
 	//在此輸入內容
 #kn_wrapper{
-	.kn-svg{
-		display: none;
-	}
 
 	.kn_content{
 		.kn_posts{
@@ -45,11 +42,7 @@
 		.content{
 			padding: 0px;
 			width: 100%;
-			padding-top: 10px;
-		}
-
-		.post{
-			padding: 0px;
+			padding-top: 80px;
 		}
 
 		.post-info, .social-icon{
@@ -67,7 +60,6 @@
 
 		h3{
 			font-size: 18px;
-			line-height: 1.5em;
 		}
 
 		.mfp-close{

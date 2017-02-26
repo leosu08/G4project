@@ -33,16 +33,10 @@ $(function(){
 			_dotIndex=0;
 		}
 	})//leftBtn
-	_liWidth = $('.a-add-dot').width()/5.6;
-	$(window).resize(function(){
-		_liWidth = $('.a-add-dot').width()/5.6;
-		$('.a-add-dot').children( 'li:lt('+_dotIndex+')').children().css({'width':_liWidth});
-		console.log(_liWidth);
-	})
+
 	$("#a-add-rightBtn").click(function(){
 		_dotIndex++;
-		
-		console.log(_liWidth);
+		console.log(_dotIndex);
 		if(_dotIndex <=5){
 			
 			_move = -1*_dotIndex * _mainWidth;
@@ -54,20 +48,19 @@ $(function(){
 			});
 			$('.a-add-dot').children( 'li:eq('+_dotIndex+')').addClass('a-black');
 			
-			$('.a-add-dot').children( 'li:eq('+_dotFix+')').children().animate({'width':_liWidth});
+			$('.a-add-dot').children( 'li:eq('+_dotFix+')').children().animate({'width':200});
 			$('.a-add-dot').children( 'li:lt('+_dotIndex+')').css({
-				'backgroundColor':'#FFC889'
-			})
+			'backgroundColor':'#FFC889'
+				})
 			$('.a-add-dot').children( 'li:eq('+_dotIndex+')').css({
 			'backgroundColor':'#E88D00'
 				})
 		}else{
 			_dotIndex=5;
-			$('.a-add-dot').children( 'li:eq(4)').css({
+			$('.a-add-dot').children( 'li:eq(5)').css({
 				'backgroundColor':'#FFC889'
 			});
 		}
-		console.log('test',_dotIndex);
 		
 	})//rightBtn
 

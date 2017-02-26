@@ -1,36 +1,103 @@
 @include respones(sm) {
 		//在此輸入內容
-.p-tabsearch{
+ .p-tabsearch{
+	.container{
+		height: 120px;
+	}
+ 	.p-search{
+ 		margin: 15px 0 15px 0px;
+ 		padding-left: 140px;
+	}
 	.p-tab{
-		margin: 10px 0 10px 0;
-		text-align: center;
-	}
-	.p-tab a{
- 		text-decoration: none;
- 		color: #333;
- 		font-size:16px;
- 		float: left;
-		display: inline-block;
-		padding: 7px;
-		margin: 10px;
-	}
-
-	.p-tab a:hover{
-		border: 2px solid #7FC8E7;
-	}
-
-}
-.p-in-content{
-	.content{
-		padding-bottom:5px;
-		margin-bottom: 10px;
-		margin-left: 0px;
-		margin-right: 0px;
-
-
+		height: 60px;
+		text-align:center;
+		.label{
+			a{
+				
+				font-size:16px;
+				
+			}
 		}
-	.message{
-		padding: 0px;
 	}
-	}
+}
+#f_bg1{
+	display: none;
+}
+.p-new-content{
+	margin-top: 50px;
+ .p-n-pic{
+ 		padding: 10px 20px 10px 20px;
+ 		margin-top: 20px;
+ 		img{
+ 			width: 100%;
+ 			border-radius: 5px 5px;
+
+ 		}
+ 		.user{
+			padding: 10px 10px 10px 10px;
+ 			img{
+ 				width:40px;
+ 				height: 40px;
+ 				border-radius: 50%;
+ 				float: left;
+ 			}
+ 			p{
+ 				margin-top: 15px;
+ 				margin-left: 10px;
+ 				font-size: 12px;
+ 				color:#000;
+ 				float: left;
+ 			}
+ 		}
+ 		.p-n-icon{
+			padding: 10px 10px 10px 10px;
+ 			.a{
+ 				width: 80px;
+ 				height: 30px;
+ 				float: left;
+ 				background-color: #eee;
+ 				border: 1px solid #ddd;
+ 				border-radius: 2px 2px;
+ 				margin-right: 10px;
+ 				margin-bottom: 16px;
+ 				top: 10px;
+ 				bottom: 0;
+ 				left: 60%;
+ 				right: 0;
+
+ 				.fa-heart{
+					margin-top: 8px;
+					margin-left:8px;
+					font-size:14px;
+					color: #F15151;
+ 				}
+ 				h5{
+ 					display: inline-block;
+ 					margin-left: 10px;
+ 					color: #555;
+ 					font-size: 14px;
+ 				}
+ 			}
+ 			.b{
+ 				width: 40px;
+ 				height: 30px;
+ 				float: left;
+ 				background-color:#eee;
+ 				border: 1px solid #ddd;
+ 				border-radius: 5px 5px;
+ 				top: 10px;
+ 				bottom: 0;
+ 				left: 85%;
+ 				right: 0;
+ 				.fa-share{
+ 					font-size: 14px;
+ 					margin-top: 9px;
+					margin-left: 12px;
+					color: #888;
+ 				}
+ 			}
+ 			
+ 		}
+ 	}
+}
 } 

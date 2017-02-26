@@ -33,7 +33,17 @@
 		background-image: radial-gradient(ellipse at center, rgba(31, 76, 116, 1) 0%, rgba(29, 34, 60,0.8) 30%, rgba(9, 10, 15, 0.5) 50%);
 		position: relative;
 // ##1
-	
+		h1{
+			font-size: $fz-h3;
+			color: $white;
+			text-align: center;
+			font-family: Lato;
+		    font-weight: 300;
+		    letter-spacing: .4em;
+		    text-transform: uppercase;
+		    padding-top: 100px;
+		    text-shadow: 0 10px 5px rgba(0,0,0,.2);
+		}
 // ##2
 		@keyframes m_float{
 				0% {transform:translateY(-8px);}
@@ -56,25 +66,6 @@
 			box-shadow: 1px 1px 6px #000;
 			z-index: 999;
 			transition:3s cubic-bezier(.24,1.21,.32,1.54);
-
-			h3{
-				font-size: 20px;
-				color: $white;
-				text-align: center;
-				font-family: Lato;
-			    font-weight: 300;
-			    letter-spacing: .4em;
-			    text-transform: uppercase;
-			    padding-top: 100px;
-			    text-shadow: 0 10px 5px rgba(0,0,0,.2);
-			    position: absolute;
-			    top:20%;
-			    left: -100%;
-			    right: 0;
-			    bottom: 0;
-			    margin: auto;
-			    width: 500px;
-			}
 			
 
 			
@@ -104,7 +95,6 @@
 			    transition: 1s 0.5s cubic-bezier(0.24, 1.21, 0.32, 1.54);
 			    font-size: 16px;
 			    letter-spacing: 0.05em;
-			    font-weight: 800;
 
 			    span{
 			    	// color: rgb(245, 178, 134);
@@ -143,23 +133,50 @@
 		}
 // ##4
 
+		.m_infos{
+			width: 100%;
+			height: 50%;
+			// background-color: #000;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			// z-index: -20;
+			color: #fff;
+			text-align: center;
 
-			
+			span{
+				display: block;
+				margin-bottom: 7px;
+				letter-spacing: 0.05em;
+			}
+
+			.fa{
+				font-size: 24px;
+				// border: 1px solid #fff;
+				// padding: 10px;
+				// border-radius:50%;
+				// background-color: rgba(255,255,255,0.3); 
+			}
+
+			.m_label>a{
+				color: rgb(115, 182, 239);
+				font-size: 18px;
+				font-weight: 800;
+
+
+			}
+
+			.m_value{
+				font-size: 14px;
+				color: rgba(255,255,255,0.5);
+			}
 
 			.m_info{
 					position: absolute;
 					text-align: center;
-					top: -50%;
-					left: 50%;
-					bottom: 0;
-					right: 0;
-					margin: auto;
-					z-index: 9999;
-					width: 150px;
-					height: 80px;
-					animation: m_float 6s linear 0s infinite alternate;
-
-
 
 					&:hover{
 						// transform:scale(1.1,1.1);
@@ -171,75 +188,81 @@
 						padding: 10px;
 						transition:.5s all;
 
-					}
-
-					span{
-						display: block;
-						margin-bottom: 7px;
-						letter-spacing: 0.05em;
-					}
-
-					.fa{
-						font-size: 24px;
-						// border: 1px solid #fff;
-						// padding: 10px;
-						// border-radius:50%;
-						// background-color: rgba(255,255,255,0.3); 
-					}
-
-					.m_label>a{
-						color: rgb(115, 182, 239);
-						font-size: 18px;
-						font-weight: 800;
+						
 
 
 
 					}
+				}
 
-					.m_value{
-						font-size: 15px;
-						color: rgba(255,255,255,.8);
-						font-weight: 800;
-					}
+			.m_infos_left{
+				width: 50%;
+				height: 100%;
+				// background-color: #fff;
+				position: absolute;
+				left: 0;
+				text-align: right;
+
+				.m_info_activity{
+					right: 40%;
+					// animation: m_float 3s linear 0s infinite alternate;
+				}
+
+				.m_info_forumpost{
+					bottom: -20px;
+					right: 40%;
+					// animation: m_float 4.5s linear .5s infinite alternate;
+				}
+				
+				
+
+
 			}
 
-			.m_info_activity{
-				left: -40%;
-				animation: m_float 6s linear 3s infinite alternate;
+			.m_infos_right{
+				width: 50%;
+				height: 100%;
+				// background-color: #ccc;
+				position: absolute;
+				right: 0;
+				text-align: left;
+
+				.m_info_id{
+					left: 30%;
+					top: 20%;
+					// animation: m_float 3s linear .5s infinite alternate both;
+				}
+
+				.m_info_photo{
+					left: 40%;
+					top: 20%;
+					// animation: m_float 3s linear 0s infinite alternate;
+				}
+
+				.m_info_save{
+					bottom: -20px;
+					left: 30%;
+					// animation: m_float 5s linear 1s infinite alternate;
+
+				}
+				
 			}
-			.m_info_forumpost{
-				left: -45%;
-				top: 50%;
-				// bottom: 50%;
-			}
-			.m_info_photo{
-				left: 40%;
-				top:-40%;
-			}
-			.m_info_save{
-				top: 60%;
-			}
 
 
-
-
-			
-		
-
-
-		
+		}
 
 		
 	}
 
 // #lightbox區
 
-
-
 	.m_lightbox_area{
 		width: 100%;
 		height:100vh;
-		// background-image: linear-gradient( #1f4c74 0%, rgba(29, 34, 60, 0.8) 30%, rgba(9, 10, 15, 0.9) 70%);
+		// background-color: rgba(0,0,0,0.8);
+		// background-color: rgb(31, 76, 116);
+		// background-image: url(../img/forum/f_003.jpg);
+		background-image: linear-gradient( #1f4c74 0%, rgba(29, 34, 60, 0.8) 30%, rgba(9, 10, 15, 0.9) 70%);
 		color: #fff;
 		position: fixed;
 		top: 0;
@@ -247,12 +270,10 @@
 		left: 0;
 		right: 0;
 		z-index: 999999;
-		// overflow: hidden;
+		overflow: hidden;
 		padding-top: 50px;
 		transform:scale(0);
 		transition:1s ease;
-
-
 
 		.fa-times{
 			font-size: 15px;
@@ -315,27 +336,11 @@
 		.m_right{
 			width: 80%;
 			// background-color: rgba(255,255,255,0.3);
-			// overflow-y: auto;
+			overflow-y: auto;
 
 			.m_content{
-				width: 80%;
+				width: 90%;
 				margin: auto;
-				position: relative;
-				height: 100%;
-
-				.lightbox-main{
-					// outline: 1px solid red;
-					height: 100%;
-					// overflow: hidden;
-					// position: absolute;
-					// top: 0;
-					// bottom: 0;
-					// left: 0;
-					// right: 0;
-					// margin: auto;
-				}
-
-				
 			}
 
 			.m_title{
@@ -356,45 +361,32 @@
 					// background-color: #fff;
 				}
 			}
-			.account_info{
+			table{
 				width: 80%;
 				margin: auto;
 				border: 1px solid rgba(255,255,255,0.1);
 				letter-spacing: 0.05em;
 				font-family: Arial;
 				color:  rgba(255,255,255,1);
-				font-weight: 800;
+				font-weight: 400;
 				letter-spacing: 0.08em;
 				margin-top: 30px;
 
-				p{
+				th, td{
 					padding:20px; 
 					border-bottom: 1px dotted rgba(255,255,255,0.6);
 				}
 
-				.info-th{
-					display: inline-block;
-					width: 40%;
+				th{
 					text-transform: uppercase;
-					text-align: center;
+					text-align: right;
 					font-weight: 300;
-					font-size: 14px;
 
-				}
-
-				.info-td{
-					padding-left:20px; 
-					display: inline-block;
-					width: 60%;
 				}
 
 				input{
-					padding:7px 10px;
+					padding:3px 5px;
 					letter-spacing: 0.05em;
-					width: 80%;
-					background-color: #000;
-					border: 1px solid rgba(255,255,255,.5);
-					color: #fff;
 				}
 			}
 		}
@@ -662,7 +654,6 @@
 		padding-bottom: 30px;
 		height: 300px;
 		overflow-y:auto; 
-		overflow-x:hidden;
 
 		.m_tab_content{
 			position: relative;
@@ -729,8 +720,7 @@
 		border-radius: 5px;
 		padding-bottom: 30px;
 		height: 300px;
-		overflow-y:auto;
-		overflow-x:hidden;  
+		overflow-y:auto; 
 
 		.m_tab_content1{
 			position: relative;
@@ -755,11 +745,11 @@
 	//test
 
 	.m_id, .m_activity, .m_posts{
-		// display: block;
+		// display: none;
 	} 
 
 	.m_activity{
-		// display: block;
+		display: block;
 	}
 
 
@@ -771,7 +761,7 @@
 		
 		
 	
-@import "xs";
+// @import "xs";
 // @import "md";
 
 
