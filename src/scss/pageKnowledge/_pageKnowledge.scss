@@ -25,6 +25,7 @@
 				position: relative;
 				bottom: -200px;
 				opacity: 0;
+				cursor: pointer;
 
 
 				a{
@@ -120,7 +121,7 @@
 	.kn_one_post{
 	
 		.post{
-			padding: 50px;
+			padding: 10px;
 		}
 
 		.content{
@@ -147,6 +148,8 @@
 			border-bottom: 1px solid #fff;
 			text-align: center; 
 			margin-top: 50px;
+			line-height: 1.5em;
+		
 		}
 
 		.post-info{
@@ -309,7 +312,7 @@
 
 
 @import "xs";
-// @import "sm";
+@import "sm";
 // @import "md";
 @import "lg";
 

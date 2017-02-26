@@ -1,8 +1,8 @@
 $(function(){
   // Inline popups
-$('#inline-inside-popups').magnificPopup({
+$('#inline-popups').magnificPopup({
   delegate: 'a',
-  removalDelay: 500, //delay removal by X to allow out-animation
+  removalDelay: 1000, //delay removal by X to allow out-animation
   callbacks: {
     beforeOpen: function() {
        this.st.mainClass = this.st.el.attr('data-effect');
@@ -11,8 +11,19 @@ $('#inline-inside-popups').magnificPopup({
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
 
-
-$('#inline-content').magnificPopup({
+//活動頁
+$('#a-popups').magnificPopup({
+  delegate: 'a',
+  removalDelay: 1000, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+// 相片上傳
+$('#inline-upload').magnificPopup({
   delegate: 'a',
   removalDelay: 500, //delay removal by X to allow out-animation
   callbacks: {
@@ -36,6 +47,8 @@ $('#n-article').magnificPopup({
   },
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
+<<<<<<< HEAD
+=======
 
 // 活動
 $('#aa-activities').magnificPopup({
@@ -49,6 +62,8 @@ $('#aa-activities').magnificPopup({
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
 
+
+>>>>>>> 2d6b43747b3e5dc7a951e2d34718899f4fb53c63
 
 
 // Image popups
