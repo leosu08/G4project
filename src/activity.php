@@ -475,6 +475,10 @@
 												<div class="aa-btn btn-blue btn-lg">
 													<a href="" class="ff_lightbox_link">熱烈報名中</a>
 													<input type="hidden" name="" value="'.$actRow["act_no"].'" class="a-act_no">
+<<<<<<< HEAD
+													<input type="hidden" name="" value="'.$actRow["act_no"].'" class="a-comm-act_no">
+=======
+>>>>>>> 02172884eeb4917472feb6d3eba6fcbeb1559901
 												</div>
 												<div class="clear"></div>
 											</div>
@@ -559,8 +563,13 @@
 <section id="a_1activity_wrapper" >
    <div id="close-btn">
 		<div id="closeIt">CLOSE</div>
+<<<<<<< HEAD
+
+		<img class="closeIco" src="img/close.svg" alt="close icon">
+=======
 		 <svg class="closeIco" xmlns="img/close.svg" version="1.1"></svg>
 		<!-- <img class="closeIco" src="img/a_005.jpg" alt="close icon"> -->
+>>>>>>> 02172884eeb4917472feb6d3eba6fcbeb1559901
 	</div>
 	<div class="container">
 	<div class="aa_content">
@@ -611,7 +620,11 @@
  -->
  
 
+<<<<<<< HEAD
+<!-- 			<div class="comment ct1">
+=======
 			<div class="comment ct1">
+>>>>>>> 02172884eeb4917472feb6d3eba6fcbeb1559901
 				<div class="user">
 					<div class="user-pic">
 						<img src="img/i-member2.png">
@@ -626,7 +639,11 @@
 					<p>2015-06-01 11:00</p>
 				</div>
 				<div class="clear"></div>
+<<<<<<< HEAD
+			</div> -->
+=======
 			</div>
+>>>>>>> 02172884eeb4917472feb6d3eba6fcbeb1559901
 <!-- 			<div class="comment ct2">
 				<div class="user">
 					<div class="user-pic">
