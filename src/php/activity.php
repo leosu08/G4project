@@ -65,6 +65,7 @@ try{
         $act->bindValue(":act_no",$_REQUEST["act_no"]);
 
 
+<<<<<<< HEAD
         // $sql = "select * from actMsg,act where act.act_no=:act_no";
         // $act = $pdo->prepare( $sql );
         // $act->bindValue(":act_no",$_REQUEST["act_no"]);
@@ -72,17 +73,38 @@ try{
   }//
 
 
+  if(isset($_REQUEST["actCom_no"])){
+
+        $sql = "select * from actMsg,act where act.act_no=:act_no and actMsg.act_no=:act_no";
+        $act = $pdo->prepare( $sql );
+        $act->bindValue(":act_no",$_REQUEST["actCom_no"]);
+=======
+        $sql = "select * from actMsg,act where act.act_no=:act_no";
+        $act = $pdo->prepare( $sql );
+        $act->bindValue(":act_no",$_REQUEST["act_no"]);
+>>>>>>> 02172884eeb4917472feb6d3eba6fcbeb1559901
+      
+  }//
 
 
 
 
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 02172884eeb4917472feb6d3eba6fcbeb1559901
   $act->execute();//執行
   if( $act->rowCount() == 0 ){ //找不到
     //傳回空的JSON字串
     echo "{}";
   }else{ //找得到
     $actArray =array();
+<<<<<<< HEAD
+    while($actRow = $act->fetch(PDO::FETCH_ASSOC)){
+=======
     while($actRow = $act->fetch()){
+>>>>>>> 02172884eeb4917472feb6d3eba6fcbeb1559901
       $actArray[] = $actRow; 
       
     }
