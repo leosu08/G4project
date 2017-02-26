@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>相片內頁</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/p-normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/p-demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/p-component.css" />
+	 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	 <script src="js/p-wow.min.js"></script>
+     <script> new WOW().init();</script>
+     <script>
+     $(function(){
+		$(window).load(function(){
+		$(window).bind('scroll resize', function(){
+			var $this = $(this);
+			var $this_bottom=$this.scrollTop();
+			
+			//當高度小於100時，關閉區塊	
+			if($this_bottom < 10){
+				$('.p-go-top').stop().animate({bottom:"-80px"});
+				}
+			if($this_bottom > 10){
+				$('.p-go-top').stop().animate({bottom:"50px"});
+						
+				}
+			}).scroll();
+		});
+	});
+    
+     	$(function(){
+	
+			$("#goTop").click(function(){
+
+			$("html,body").animate({scrollTop:0},900);
+
+			return false;
+
+			});
+
+		});
+     </script>
+
+</head>
+<body>
+
+	<!-- 相片內頁 -->
+
+	<div class="p-in-content col-xs-12 col-sm-12 col-md-12">
+
+		<div class="row">
+			<div class="p-in-pic ">
+				<div class="p-in-pic-back"><a href="photo.html"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+				<div class="p-in-icon ">
+					<div class="a"><i class="fa fa-heart" aria-hidden="true"></i><h5>1555</h5></div>
+					<div class="b" id="b"><i class="fa fa-share" id="b" aria-hidden="true"></i></div>
+					<div class="c"><i class="fa fa-ban" aria-hidden="true"></i></div>
+				</div>
+				<div class="p-n-share "  id="divShow" style="opacity: 0">
+						<p><i class="fa fa-times" aria-hidden="true" ></i></p>
+						<h5 class="share-txt">分享一張相片至:</h5>
+						<div class="share-share">
+							<i class="fa fa-facebook-square" aria-hidden="true"></i>
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+							<i class="fa fa-twitter-square" aria-hidden="true"></i>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="p-go-top"><i id="goTop" class="fa fa-chevron-circle-up" aria-hidden="true"></i></div>
+		
+		<!-- 照片 -->
+		
+		<!-- 內文 -->
+		<div class="p-in-content col-xs-12 col-sm-12 col-md-12">
+			
+			<div class="container">
+				<div class="row">
+				<div class="left col-xs-12 col-sm-12 col-md-12">
+					<div class="mid">
+					<div class="user wow fadeInDown" data-wow-delay="0.2s">
+						<img src="img/p_people.jpg">
+						<h5>Allie213</h5>
+					</div>
+					<div class="content ">
+						<h3>gone with the wind</h3>
+						<p>no sense. the image simply poped up in my mind.so not sooc. but most of the books are real. one more + behind the scene!Biggest thankyou to you, lovely, talented Kiara for the testimonial :) I was shocked out of joy when I saw it.tumblr or facebook or portfolio facebook  or portfolio facebook or </p>
+					</div>
+
+					</div>
+				</div>
+
+				<div class="right col-xs-12 col-sm-12 col-md-12">
+					<div class="messagebox col-xs-12 col-sm-12 col-md-12">
+						<div class="message col-xs-12 col-sm-12 col-md-12">
+							<div class="ms-box">
+								<div class="ms-user">
+									<img src="img/p_people2.jpg">
+								
+								</div>
+								<div class="ms-content">
+									<h5>supermanatee </h5>
+									<h6>一個月</h6>
+									<p>Beautiful gallery</p>
+								</div>
+							</div>
+						</div>
+						<div class="message col-xs-12 col-sm-12 col-md-12">
+							<div class="ms-box">
+								<div class="ms-user">
+									<img src="img/p_people3.jpg">
+							
+								</div>
+								<div class="ms-content">
+									<h5>Anthony Thomas </h5>
+									<h6>一個月</h6>
+									<p>Wow great capture, very nice picture!</p>
+								</div>
+							</div>
+						</div>
+						<div class="message col-xs-12 col-sm-12 col-md-12">
+							<div class="ms-box">
+								<div class="ms-user">
+									<img src="img/p_people4.jpg">
+							
+								</div>
+								<div class="ms-content">
+									<h5>yupicard</h5>
+									<h6>一個月</h6>
+									<p>Wonderful image!</p>
+								</div>
+							</div>
+						</div>
+						<div class="message col-xs-12 col-sm-12 col-md-12">
+							<div class="ms-box">
+								<div class="ms-user">
+									<img src="img/p_people.jpg">
+							
+								</div>
+								<textarea name="massage"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="r-left col-xs-12 col-sm-12 col-md-12">
+						<div class="adress wow fadeInDown col-xs-12 col-sm-12 col-md-3 " data-wow-delay="0.25s" >
+							<i class="fa fa-map-marker" aria-hidden="true"></i><h2>Location</h2>
+							
+							<h5>Biarritz France</h5>
+							<h4>February 16, 2017</h4>
+						</div>
+						<div class="tag  wow fadeInDown col-xs-12 col-sm-12 col-md-3 " data-wow-delay="0.5s">
+							<i class="fa fa-tags" aria-hidden="true"></i><h2>Tag</h2>
+							<p><a href="#">#武嶺觀星團</a><a href="#">#南十字</a><a href="#">#白雪</a><a href="#">#今天初雪<a href="#">#武嶺觀星團</a></a></p>
+						</div>
+						<div class="icon  wow fadeInDown col-xs-12 col-sm-12 col-md-3" data-wow-delay="0.75s">
+							<i class="fa fa-heart" aria-hidden="true"></i><h2>Like</h2>
+							<h5>10000</h5>
+						</div>
+						<div class="number  wow fadeInDown col-xs-12 col-sm-12 col-md-3" data-wow-delay="1s">
+							<i class="fa fa-eye" aria-hidden="true"></i><h2>Views</h2>
+							<h5>100000</h5>
+						</div>
+					</div>
+					
+					<div class="recommend col-xs-12 col-sm-12 col-md-12">
+						<h2>Recommend</h2>
+						<div class="itembox">
+						<div class="item"><img src="img/p_p_001.png"></div>
+						<div class="item"><img src="img/p_p_002.png"></div>
+						<div class="item"><img src="img/p_p_003.png"></div>
+						<div class="item"><img src="img/p_p_004.png"></div>
+						</div>
+					</div>
+					<div class="back col-xs-12 col-sm-12 col-md-12">
+						<a href="photo.html"><h5>GO BACK</h5></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		</div>	
+	</div>
+	</div>
+</body>
+
+</html>
+<script type="text/javascript">
+  $(function(){
+  	       $('.p-in-icon .b').click(function(){
+  	       		$('#divShow').css({'z-index':'999'}).animate({'opacity':'1'},300);
+  	       })
+            // $("#dwivShow").hide();
+            
+            $('body').click(function(evt) {
+                if($(evt.target).parents("#divShow").length==0 && 
+                    evt.target.id != "b" && evt.target.id != "divShow") {
+                    $('#divShow').css({'z-index':'-1'}).animate({'opacity':'0'},300);
+                }
+            });
+            $('.p-n-share .fa-times').click(function(){
+            	$('#divShow').css({'z-index':'-1'}).animate({'opacity':'0'},300);
+            })
+        });
+
+</script>
+ <div class="p-in-icon ">
+					
+					<div class="b" id="b"><i class="fa fa-share" id="b" aria-hidden="true"></i></div>
+					
+				</div>
+				<div class="p-n-share "  id="divShow" style="opacity: 0">
+						<p><i class="fa fa-times" aria-hidden="true" ></i></p>
+						<h5 class="share-txt">分享一張相片至:</h5>
+						<div class="share-share">
+							<i class="fa fa-facebook-square" aria-hidden="true"></i>
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+							<i class="fa fa-twitter-square" aria-hidden="true"></i>
+						</div>
+				</div>
