@@ -1,6 +1,26 @@
 #admin {
   overflow: hidden;
-  background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%); }
+  background-image: url(../img/a_001.jpg); }
+  #admin ::-webkit-scrollbar {
+    width: 12px; }
+  #admin ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.5);
+    border-radius: 10px; }
+  #admin ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5); }
+  #admin ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #353535; }
+  #admin ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #353535; }
+  #admin :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #353535; }
+  #admin :-moz-placeholder {
+    /* Firefox 18- */
+    color: #353535; }
   #admin .logOut {
     position: absolute;
     top: 20px;
@@ -13,6 +33,10 @@
     font-size: 18px;
     color: #f1f1f1;
     border-radius: 5px; }
+  #admin .ad-logo {
+    position: relative;
+    top: 87px;
+    left: 61px; }
   #admin .main {
     margin-top: 0px;
     width: 100%;
@@ -21,10 +45,10 @@
     text-align: center;
     position: relative; }
     #admin .main #view {
-      background-color: rgba(255, 255, 255, 0.6);
-      max-width: 1050px;
-      height: 100%;
+      max-width: 80%;
+      height: 80%;
       overflow-y: scroll;
+      overflow-x: hidden;
       position: relative;
       border-radius: 5px;
       margin-top: 100px; }
@@ -44,13 +68,20 @@
       height: 100vh;
       float: left;
       width: 15%; }
+      #admin .main #adminNav p {
+        color: #fff;
+        position: relative;
+        left: -25px;
+        top: -10px;
+        text-align: left;
+        margin-left: 100px; }
       #admin .main #adminNav .adminMenu {
         width: 110px;
         margin-right: 30px;
         border-radius: 5px;
         text-align: center;
         background-color: #fff;
-        margin-left: 30px; }
+        margin-left: 70px; }
         #admin .main #adminNav .adminMenu li {
           height: 80px;
           padding-top: 5px;
@@ -74,33 +105,77 @@
             margin: 5px auto;
             font-size: 40px;
             color: #aaa; }
-    #admin .main #memberTable, #admin .main #forumTable, #admin .main #actTable, #admin .main #photoTable, #admin .main #knowTable {
-      width: 90%;
-      float: left;
+    #admin .main #memberTable, #admin .main #forumTable, #admin .main #actTable, #admin .main #photoTable, #admin .main #knowTable, #admin .main #admTable {
+      height: auto;
       position: absolute;
+      display: none;
       top: 0;
-      left: 200%;
-      right: 0;
-      margin: auto;
       background-color: #f1f1f1;
-      margin-top: 50px; }
-      #admin .main #memberTable th, #admin .main #forumTable th, #admin .main #actTable th, #admin .main #photoTable th, #admin .main #knowTable th {
-        background-color: rgba(0, 122, 223, 0.7);
+      margin-top: 20px; }
+      #admin .main #memberTable th, #admin .main #forumTable th, #admin .main #actTable th, #admin .main #photoTable th, #admin .main #knowTable th, #admin .main #admTable th {
+        background-color: rgba(68, 97, 150, 0.7);
         color: #f1f1f1;
         font-weight: 700;
-        font-size: 22px;
+        font-size: 18px;
         letter-spacing: 1px;
         text-shadow: 1px 0px 2px #212121;
         padding: 20px; }
-      #admin .main #memberTable tr:hover, #admin .main #forumTable tr:hover, #admin .main #actTable tr:hover, #admin .main #photoTable tr:hover, #admin .main #knowTable tr:hover {
+      #admin .main #memberTable tr:hover, #admin .main #forumTable tr:hover, #admin .main #actTable tr:hover, #admin .main #photoTable tr:hover, #admin .main #knowTable tr:hover, #admin .main #admTable tr:hover {
         background-color: rgba(0, 122, 223, 0.4);
         color: #111; }
-      #admin .main #memberTable tr, #admin .main #forumTable tr, #admin .main #actTable tr, #admin .main #photoTable tr, #admin .main #knowTable tr {
-        color: #444; }
-      #admin .main #memberTable td, #admin .main #memberTable tr, #admin .main #forumTable td, #admin .main #forumTable tr, #admin .main #actTable td, #admin .main #actTable tr, #admin .main #photoTable td, #admin .main #photoTable tr, #admin .main #knowTable td, #admin .main #knowTable tr {
-        padding: 30px 10px;
+      #admin .main #memberTable tr, #admin .main #forumTable tr, #admin .main #actTable tr, #admin .main #photoTable tr, #admin .main #knowTable tr, #admin .main #admTable tr {
+        color: #000; }
+      #admin .main #memberTable td, #admin .main #forumTable td, #admin .main #actTable td, #admin .main #photoTable td, #admin .main #knowTable td, #admin .main #admTable td {
+        font-size: 14px; }
+      #admin .main #memberTable td, #admin .main #memberTable tr, #admin .main #forumTable td, #admin .main #forumTable tr, #admin .main #actTable td, #admin .main #actTable tr, #admin .main #photoTable td, #admin .main #photoTable tr, #admin .main #knowTable td, #admin .main #knowTable tr, #admin .main #admTable td, #admin .main #admTable tr {
+        padding: 10px 5px 20px 5px;
         border-bottom: 1px solid #ccc;
         cursor: pointer;
         letter-spacing: .5px; }
     #admin .main #actTable {
       left: 0; }
+  #admin #ad-actAdd, #admin #ad-actChange, #admin #ad-plaChange {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    background-color: #f1f1f1;
+    margin-top: 20px; }
+  #admin #actChangeTable, #admin #plaChangeTable, #admin #speAddTable {
+    margin-top: 20px;
+    width: 90%;
+    z-index: 100;
+    background-color: #ccc;
+    text-align: left; }
+    #admin #actChangeTable th, #admin #plaChangeTable th, #admin #speAddTable th {
+      vertical-align: top;
+      text-align: center;
+      width: 200px;
+      background-color: rgba(68, 97, 150, 0.7);
+      color: #f1f1f1;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-shadow: 1px 0px 2px #212121;
+      padding: 20px; }
+    #admin #actChangeTable tr:hover, #admin #plaChangeTable tr:hover, #admin #speAddTable tr:hover {
+      background-color: rgba(0, 122, 223, 0.4);
+      color: #111; }
+    #admin #actChangeTable tr, #admin #plaChangeTable tr, #admin #speAddTable tr {
+      color: #000; }
+    #admin #actChangeTable td, #admin #actChangeTable tr, #admin #plaChangeTable td, #admin #plaChangeTable tr, #admin #speAddTable td, #admin #speAddTable tr {
+      padding: 30px 10px;
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+      letter-spacing: .5px; }
+      #admin #actChangeTable td input[type=submit], #admin #actChangeTable tr input[type=submit], #admin #plaChangeTable td input[type=submit], #admin #plaChangeTable tr input[type=submit], #admin #speAddTable td input[type=submit], #admin #speAddTable tr input[type=submit] {
+        cursor: pointer;
+        color: #fff;
+        margin-left: 20px; }
+  #admin i {
+    font-size: 30px; }
+
+@media screen and (min-device-width: 767px) and (max-device-width: 1440px) {
+  #admin .main #view {
+    height: 100%; } }
