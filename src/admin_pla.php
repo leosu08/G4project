@@ -19,46 +19,54 @@
             <img src="img/logo.png" alt="">
             
         </div>
+
         <div class="main">
-            <nav id="adminNav">
+           <nav id="adminNav">
             <P>後台管理系統</P>
                 <ul class="adminMenu">
 
-                    <li>
+                    <li><a href="admin_act.php">
                         <div class="pic">
                             <i class="fa fa-bullhorn" aria-hidden="true"></i>
                         </div>
-                        <a href="#">活動管理</a>
+                        活動管理</a>
                     </li>
-                    <li>
+                    <li><a href="admin_pla.php">
                       <div class="pic">
                           <i class="fa fa-commenting-o" aria-hidden="true"></i>
                       </div>
-                        <a href="#">論壇管理</a>
+                        論壇管理</a>
                     </li>
-                    <li>
+                    <li><a href="admin_spe.php">
                       <div class="pic">
                           <i class="fa fa-book" aria-hidden="true"></i>
                       </div>
-                        <a href="#">專欄管理</a>
+                        專欄管理</a>
                     </li>
-                    <li>
+                    <li><a href="admin_pho.php">
                       <div class="pic">
                           <i class="fa fa-camera" aria-hidden="true"></i>
                       </div>
-                        <a href="#">照片管理</a>
+                        照片管理</a>
                     </li>
-                    <li>
+                    <li><a href="admin_mem.php">
                       <div class="pic">
                           <i class="fa fa-users" aria-hidden="true"></i>
                       </div>
-                        <a href="#">會員管理</a>
+                        會員管理</a>
                     </li>
-                    <li>
-                        <a href="#">後台帳號管理</a>
+                    <li><a href="admin.php">
+                      <div class="pic">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </div>
+                        員工管理</a>
                     </li>
                 </ul>
             </nav>
+          <div class="view-wrapper">
+                <div class="admin-title">
+                    <p>論壇管理</p>
+                </div>
             <div id="view">
               <table id="actTable">
                <tr>
@@ -105,7 +113,7 @@
                             <td>'.$actRow["act_place"].'</td>
                             <td>'.$actRow["act_limit"].'</td>
                             <td>'.$actRow["act_price"].'</td>
-                            <td>'.((mb_strlen($actRow["act_info"], "UTF8")>10) ? mb_substr($actRow["act_info"],0,20, "UTF8") : $actRow["act_info"]).' '.((mb_strlen($actRow["act_info"], "UTF8")>10) ? nl2br(' ...') : nl2br('')).'</td>
+                            <td>'.((mb_strlen($actRow["act_info"], "UTF8")>10) ? mb_substr($actRow["act_info"],0,15, "UTF8") : $actRow["act_info"]).' '.((mb_strlen($actRow["act_info"], "UTF8")>10) ? nl2br(' ...') : nl2br('')).'</td>
                             <td class="ad-act-stateFinal"><input type="hidden" name="" value="'.$actRow["act_state"].'">'.$position.'</td>
                             <td>
                               <i class="fa fa-pencil-square-o ad-act_change" aria-hidden="true"></i>
@@ -151,14 +159,29 @@
                 <th>刪除</th> -->
                 <th>動作</th>
               </tr>
-              
-              <?php 
+            <?php 
                 try {
                   require_once("php/connect.php");
-                  $sql = "select * from pla join mem on pla.mem_no=mem.mem_no join plaCla on pla.plaCla_no=plaCla.plaCla_no group by pla_no order by pla_report desc";
-                  $pla = $pdo->prepare( $sql );  
-                  $pla->execute();
+                  //共幾筆
+                  $sql = "select count(*) totalRecords from pla";
+                  $prodCount = $pdo->query($sql);
+                  //獲取欄位
+                  $prodCountRow = $prodCount->fetch();
+                  //獲取欄位值"7"
+                  $totalRecords = $prodCountRow["totalRecords"];
 
+                  //每頁印幾筆
+                  $pageRecords = 7;
+                //$pageRecords
+
+                  //共幾頁，ceil是無條件進位
+                  $pages = ceil($totalRecords/$pageRecords);  
+
+                  //顯示目前這一筆
+                  $pageNo = isset($_REQUEST["pageNo"]) == false ? 1 : $_REQUEST["pageNo"];
+                  $start = ($pageNo - 1) * $pageRecords;
+                  $sql = "select * from pla join mem on pla.mem_no=mem.mem_no join plaCla on pla.plaCla_no=plaCla.plaCla_no group by pla_no order by pla_report desc limit $start, $pageRecords";
+                  $pla = $pdo->query( $sql);
                   while($plaRow = $pla->fetch()){
                       echo '<tr>
                             <td>'.$plaRow["pla_no"].'</td>
@@ -172,26 +195,35 @@
                             <td>'.$plaRow["pla_report"].'</td>
                             <td><i class="fa fa-pencil-square-o ad-pla_change" aria-hidden="true"></i></td>
                             </tr>';
+                  } //while
+                  //顯示頁數超連結  
+                  echo "<tr class='adm-page'><td colspan=12>";
+                  for( $i=1; $i<=$pages; $i++){
+                    echo "<a href='admin_pla.php?pageNo=$i'> $i</a> &nbsp;&nbsp;&nbsp;";
                   }
-               
-                } catch (Exception $ex) {
-                    echo "資料庫操作失敗,原因：",$ex->getMessage(),"<br>";
-                    echo "行號：",$ex->getLine(),"<br>";
+                  echo "</td></tr></table>";
+                    
+                } catch (PDOException $ex) {
+                  echo "資料庫操作失敗，原因 : " , $ex->getMessage() , "<br>";
+                  echo "行號 : " , $ex->getLine() , "<br>"; 
                 }
 
 
-               ?>
+
+                ?>  
 
               </table>
               <table id="knowTable">
                <tr>
                 <th>專欄文章編號</th>
                 <th>標題</th>
+                <th>作者</th>
                 <th>內容</th>
                 <th>發文日期</th>
                 <th>觀看數</th>
                 <!-- <th>會員照片</th> -->
                 <th>照片</th>
+                <th>動作</th>
               </tr>
               
               <?php 
@@ -205,10 +237,12 @@
                       echo '<tr>
                             <td>'.$speRow["spe_no"].'</td>
                             <td>'.$speRow["spe_title"].'</td>
+                            <td>'.$speRow["spe_author"].'</td>
                             <td>'.$speRow["spe_content"].'</td>
                             <td>'.$speRow["spe_date"].'</td>
                             <td>'.$speRow["spe_view"].'</td>
                             <td>'.$speRow["spe_img"].'</td>
+                            <td><i class="fa fa-pencil-square-o ad-spe_add" aria-hidden="true"></i></td>
                             </tr>';
                   }
                
@@ -228,15 +262,11 @@
                   <th>會員名稱</th>
                   <th>照片簡介</th>
                   <th>照片日期</th>
-                  <!-- <th>會員照片</th> -->
                   <th>照片路徑</th>
-  <!--                 <th>會員文章數</th>
-                  <th>會員照片數</th>
-                  <th>會員留言數</th>
-                  <th>參加活動數</th>
-                  <th>舉辦活動數</th> -->
+
                   <th>分享數</th>
-                  <!-- <th>更改權限</th> -->
+                  <th>檢舉數</th>
+                  <th>動作</th>
                 </tr>
               <?php 
                 try {
@@ -244,6 +274,7 @@
                   $sql = "select * from pho join mem using(mem_no)";
                   $pho = $pdo->prepare( $sql );  
                   $pho->execute();
+
 
                   while($phoRow = $pho->fetch()){
                       echo '<tr>
@@ -256,6 +287,11 @@
                             <td>'.$phoRow["pho_path"].'</td>
 
                             <td>'.$phoRow["pho_share"].'</td>
+                            <td>'.$phoRow["pho_report"].'</td>
+                            <td>
+                              <i class="fa fa-pencil-square-o ad-pho_change" aria-hidden="true"></i>
+                              
+                            </td>
                             </tr>';
                   }
                    // <td>'.$memRow["mem_img"].'</td>
@@ -513,14 +549,14 @@
                 </form>
               </div> -->
     </div><!-- view結束 -->
-
+</div><!-- view-wrapper end -->
 </body>
 
 </html>
 <script>
 $(function(){
   $('.adminMenu li:nth-child(2)').addClass('show');
-  $('#forumTable').show().css({'width':'90%'});
+  $('#forumTable').show().css({'width':'95%'});
 })
   
 </script>

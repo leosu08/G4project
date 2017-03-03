@@ -35,7 +35,7 @@
     border-radius: 5px; }
   #admin .ad-logo {
     position: relative;
-    top: 87px;
+    top: 107px;
     left: 61px; }
   #admin .main {
     margin-top: 0px;
@@ -43,15 +43,16 @@
     height: 800px;
     border-radius: 5px;
     text-align: center;
-    position: relative; }
+    position: relative;
+    margin-top: 100px; }
     #admin .main #view {
-      max-width: 80%;
+      margin-top: 27px;
+      max-width: 100%;
       height: 80%;
       overflow-y: scroll;
       overflow-x: hidden;
       position: relative;
-      border-radius: 5px;
-      margin-top: 100px; }
+      border-radius: 5px; }
       #admin .main #view:after {
         content: '';
         position: absolute;
@@ -65,14 +66,18 @@
         clear: both;
         z-index: -2; }
     #admin .main #adminNav {
+      position: relative;
+      z-index: 1000;
+      margin-top: 40px;
       height: 100vh;
       float: left;
       width: 15%; }
       #admin .main #adminNav p {
+        font-size: 14px;
         color: #fff;
         position: relative;
-        left: -25px;
-        top: -10px;
+        left: -20px;
+        top: -28px;
         text-align: left;
         margin-left: 100px; }
       #admin .main #adminNav .adminMenu {
@@ -84,7 +89,6 @@
         margin-left: 70px; }
         #admin .main #adminNav .adminMenu li {
           height: 80px;
-          padding-top: 5px;
           cursor: pointer; }
           #admin .main #adminNav .adminMenu li + li {
             border-top: 1px solid #ddf; }
@@ -97,7 +101,7 @@
           #admin .main #adminNav .adminMenu li a {
             display: block;
             color: #888;
-            margin-top: 10px; }
+            padding-top: 5px; }
           #admin .main #adminNav .adminMenu li .pic {
             width: 40px;
             height: 40px;
@@ -106,20 +110,23 @@
             font-size: 40px;
             color: #aaa; }
     #admin .main #memberTable, #admin .main #forumTable, #admin .main #actTable, #admin .main #photoTable, #admin .main #knowTable, #admin .main #admTable {
+      z-index: 10;
       height: auto;
       position: absolute;
       display: none;
       top: 0;
-      background-color: #f1f1f1;
-      margin-top: 20px; }
+      margin: auto;
+      left: 10px;
+      background-color: #f1f1f1; }
       #admin .main #memberTable th, #admin .main #forumTable th, #admin .main #actTable th, #admin .main #photoTable th, #admin .main #knowTable th, #admin .main #admTable th {
         background-color: rgba(68, 97, 150, 0.7);
         color: #f1f1f1;
         font-weight: 700;
-        font-size: 18px;
+        font-size: 16px;
         letter-spacing: 1px;
         text-shadow: 1px 0px 2px #212121;
-        padding: 20px; }
+        font-size: 16px;
+        padding: 1%; }
       #admin .main #memberTable tr:hover, #admin .main #forumTable tr:hover, #admin .main #actTable tr:hover, #admin .main #photoTable tr:hover, #admin .main #knowTable tr:hover, #admin .main #admTable tr:hover {
         background-color: rgba(0, 122, 223, 0.4);
         color: #111; }
@@ -127,8 +134,10 @@
         color: #000; }
       #admin .main #memberTable td, #admin .main #forumTable td, #admin .main #actTable td, #admin .main #photoTable td, #admin .main #knowTable td, #admin .main #admTable td {
         font-size: 14px; }
+        #admin .main #memberTable td p, #admin .main #forumTable td p, #admin .main #actTable td p, #admin .main #photoTable td p, #admin .main #knowTable td p, #admin .main #admTable td p {
+          text-align: left; }
       #admin .main #memberTable td, #admin .main #memberTable tr, #admin .main #forumTable td, #admin .main #forumTable tr, #admin .main #actTable td, #admin .main #actTable tr, #admin .main #photoTable td, #admin .main #photoTable tr, #admin .main #knowTable td, #admin .main #knowTable tr, #admin .main #admTable td, #admin .main #admTable tr {
-        padding: 10px 5px 20px 5px;
+        padding: .5% .1% 1% .1%;
         border-bottom: 1px solid #ccc;
         cursor: pointer;
         letter-spacing: .5px; }
@@ -142,13 +151,16 @@
     margin: auto;
     background-color: #f1f1f1;
     margin-top: 20px; }
-  #admin #actChangeTable, #admin #plaChangeTable, #admin #speAddTable {
-    margin-top: 20px;
-    width: 90%;
+  #admin #actChangeTable, #admin #plaChangeTable, #admin #speAddTable, #admin #phoChangeTable, #admin #speChangeTable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 95%;
     z-index: 100;
-    background-color: #ccc;
+    background-color: #eee;
     text-align: left; }
-    #admin #actChangeTable th, #admin #plaChangeTable th, #admin #speAddTable th {
+    #admin #actChangeTable th, #admin #plaChangeTable th, #admin #speAddTable th, #admin #phoChangeTable th, #admin #speChangeTable th {
       vertical-align: top;
       text-align: center;
       width: 200px;
@@ -159,22 +171,47 @@
       letter-spacing: 1px;
       text-shadow: 1px 0px 2px #212121;
       padding: 20px; }
-    #admin #actChangeTable tr:hover, #admin #plaChangeTable tr:hover, #admin #speAddTable tr:hover {
+    #admin #actChangeTable tr:hover, #admin #plaChangeTable tr:hover, #admin #speAddTable tr:hover, #admin #phoChangeTable tr:hover, #admin #speChangeTable tr:hover {
       background-color: rgba(0, 122, 223, 0.4);
       color: #111; }
-    #admin #actChangeTable tr, #admin #plaChangeTable tr, #admin #speAddTable tr {
+    #admin #actChangeTable tr, #admin #plaChangeTable tr, #admin #speAddTable tr, #admin #phoChangeTable tr, #admin #speChangeTable tr {
       color: #000; }
-    #admin #actChangeTable td, #admin #actChangeTable tr, #admin #plaChangeTable td, #admin #plaChangeTable tr, #admin #speAddTable td, #admin #speAddTable tr {
-      padding: 30px 10px;
+    #admin #actChangeTable td, #admin #actChangeTable tr, #admin #plaChangeTable td, #admin #plaChangeTable tr, #admin #speAddTable td, #admin #speAddTable tr, #admin #phoChangeTable td, #admin #phoChangeTable tr, #admin #speChangeTable td, #admin #speChangeTable tr {
+      padding: 20px 5px;
       border-bottom: 1px solid #ccc;
       cursor: pointer;
       letter-spacing: .5px; }
-      #admin #actChangeTable td input[type=submit], #admin #actChangeTable tr input[type=submit], #admin #plaChangeTable td input[type=submit], #admin #plaChangeTable tr input[type=submit], #admin #speAddTable td input[type=submit], #admin #speAddTable tr input[type=submit] {
+      #admin #actChangeTable td input[type=submit], #admin #actChangeTable td input[type=button], #admin #actChangeTable tr input[type=submit], #admin #actChangeTable tr input[type=button], #admin #plaChangeTable td input[type=submit], #admin #plaChangeTable td input[type=button], #admin #plaChangeTable tr input[type=submit], #admin #plaChangeTable tr input[type=button], #admin #speAddTable td input[type=submit], #admin #speAddTable td input[type=button], #admin #speAddTable tr input[type=submit], #admin #speAddTable tr input[type=button], #admin #phoChangeTable td input[type=submit], #admin #phoChangeTable td input[type=button], #admin #phoChangeTable tr input[type=submit], #admin #phoChangeTable tr input[type=button], #admin #speChangeTable td input[type=submit], #admin #speChangeTable td input[type=button], #admin #speChangeTable tr input[type=submit], #admin #speChangeTable tr input[type=button] {
         cursor: pointer;
         color: #fff;
         margin-left: 20px; }
+    #admin #actChangeTable textarea, #admin #plaChangeTable textarea, #admin #speAddTable textarea, #admin #phoChangeTable textarea, #admin #speChangeTable textarea {
+      resize: none; }
   #admin i {
     font-size: 30px; }
+  #admin .admin-title p {
+    text-shadow: 3px 3px 10px #fff;
+    width: 69%;
+    margin: auto;
+    text-align: left;
+    font-size: 28px;
+    color: #f1f1f1; }
+  #admin .view-wrapper {
+    margin: auto;
+    position: relative;
+    height: 800px;
+    width: 100%; }
+  #admin #admin-wrapper {
+    z-index: -1; }
+  #admin #pla-reportNum, #admin #pho-reportNum {
+    display: inline-block; }
+  #admin .admin-search {
+    position: absolute;
+    right: 5.1%;
+    top: 15px; }
+  #admin .ad-spe_add, #admin .ad-admAdd {
+    cursor: pointer;
+    color: #fff; }
 
 @media screen and (min-device-width: 767px) and (max-device-width: 1440px) {
   #admin .main #view {

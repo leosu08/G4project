@@ -44,12 +44,13 @@
   }
   .ad-logo{
     position: relative;
-    top: 87px;  
+    top: 107px;  
     left:61px;
 
 
   }
   .main{
+    // z-index: -1;
     margin-top: 0px;
     // float: left;
     width: 100%;
@@ -59,17 +60,19 @@
     border-radius: 5px;
     text-align: center;
     position: relative;
+    margin-top: 100px;
     #view{
       // background-color: rgba(255,255,255,0.2);
       // width:95%;
-      max-width: 80%;
+      margin-top: 27px;
+      max-width: 100%;
       // overflow-x:hidden;
       height: 80%;
       overflow-y: scroll;
       overflow-x:hidden;
       position: relative;
       border-radius: 5px;
-      margin-top: 100px;
+      
       &:after{
         content:'';
         position: absolute;
@@ -82,11 +85,15 @@
       }
     }
     #adminNav{
+      position: relative;
+      z-index: 1000;
+      margin-top: 40px;
         p{
+          font-size: 14px;
           color:#fff;
           position: relative;
-          left: -25px;  
-          top: -10px; 
+          left: -20px;  
+          top: -28px; 
           text-align: left;
           margin-left: 100px;   
         }
@@ -104,7 +111,6 @@
         margin-left: 70px;
         li{
           height: 80px;
-          padding-top: 5px;
           cursor: pointer;
           +li{
               border-top: 1px solid #ddf;
@@ -121,7 +127,7 @@
           a{
             display: block;
             color:#888;
-            margin-top: 10px;
+            padding-top: 5px;
           }
           .pic {
             width: 40px;
@@ -135,7 +141,7 @@
       }
     }
     #memberTable,#forumTable,#actTable,#photoTable,#knowTable,#admTable{
-
+        z-index: 10;
       // width: 90%;
         // float: left;
         // display: none;
@@ -143,21 +149,23 @@
         position: absolute;
         display: none;
         top: 0;
+        margin: auto;
+        left: 10px;
         // transition:.5s;
         // right: 0;
         // margin: auto;
         // background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
         background-color: #f1f1f1;
-        margin-top: 20px;
         th{
 
           background-color: rgba(68,97,150, 0.7);
           color:#f1f1f1;
           font-weight: 700;
-          font-size: 18px;
+          font-size: 16px;
           letter-spacing: 1px;
           text-shadow: 1px 0px 2px #212121;
-          padding: 20px;
+          font-size: 16px;
+          padding: 1%;
         }
         tr:hover{
           background-color: rgba(0, 122, 223, 0.4);
@@ -169,9 +177,12 @@
         }
         td{
           font-size: 14px;
+          p{
+            text-align: left;
+          }
         }
         td,tr{
-        padding:10px 5px 20px 5px;
+        padding:.5% .1% 1% .1%;
         border-bottom: 1px solid #ccc;
         cursor: pointer;
         letter-spacing: .5px;
@@ -195,13 +206,18 @@
         background-color: #f1f1f1;
         margin-top: 20px;
 }
-#actChangeTable,#plaChangeTable,#speAddTable{
-  margin-top: 20px;
-            width: 90%;
+#actChangeTable,#plaChangeTable,#speAddTable,#phoChangeTable,#speChangeTable{
+  position: absolute;
+        top: 0;
+        left: 0;
+        margin: auto;
+
+            width: 95%;
             z-index: 100;
-            background-color: #ccc;
+            background-color: #eee;
             text-align: left;
             th{
+
               vertical-align: top;
               text-align: center;
             width: 200px;
@@ -223,24 +239,60 @@
           }
 
           td,tr{
-          padding:30px 10px;
+          padding:20px 5px;
           border-bottom: 1px solid #ccc;
           cursor: pointer;
           letter-spacing: .5px;
-          input[type=submit]{
-            cursor: pointer;
-            color:#fff;
-            margin-left: 20px;
+           input[type=submit],input[type=button]{
+              cursor: pointer;
+              color:#fff;
+               margin-left: 20px;
+            }
           }
-        }
-
+  textarea{
+    resize: none;
+  }
 
   }
   i{
     font-size: 30px;
   }
 
-
+.admin-title{
+// position: absolute;
+// float: left;
+// left: 200px;
+  p{
+    text-shadow:3px 3px 10px #fff;
+    width: 69%;
+    margin: auto;
+    text-align: left;
+    font-size: 28px;
+    color:#f1f1f1;
+  }
+}
+.view-wrapper{
+  margin: auto;
+  // z-index: -1;
+  position: relative;
+  height: 800px;
+  width: 100%;
+}
+#admin-wrapper{
+  z-index: -1;
+}
+#pla-reportNum,#pho-reportNum{
+  display: inline-block;
+}
+.admin-search{
+  position: absolute;
+  right: 5.1%;
+  top: 15px;
+}
+.ad-spe_add,.ad-admAdd{
+  cursor: pointer;
+  color:#fff;
+}
 }//#admin end
 
 @media screen and (min-device-width: 767px) and (max-device-width: 1440px) { 

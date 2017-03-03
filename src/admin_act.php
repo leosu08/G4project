@@ -19,46 +19,64 @@
             <img src="img/logo.png" alt="">
             
         </div>
+
         <div class="main">
-            <nav id="adminNav">
+          <nav id="adminNav">
             <P>後台管理系統</P>
                 <ul class="adminMenu">
 
-                    <li>
+                    <li><a href="admin_act.php">
                         <div class="pic">
                             <i class="fa fa-bullhorn" aria-hidden="true"></i>
                         </div>
-                        <a href="#">活動管理</a>
+                        活動管理</a>
                     </li>
-                    <li>
+                    <li><a href="admin_pla.php">
                       <div class="pic">
                           <i class="fa fa-commenting-o" aria-hidden="true"></i>
                       </div>
-                        <a href="#">論壇管理</a>
+                        論壇管理</a>
                     </li>
-                    <li>
+                    <li><a href="admin_spe.php">
                       <div class="pic">
                           <i class="fa fa-book" aria-hidden="true"></i>
                       </div>
-                        <a href="#">專欄管理</a>
+                        專欄管理</a>
                     </li>
-                    <li>
+                    <li><a href="admin_pho.php">
                       <div class="pic">
                           <i class="fa fa-camera" aria-hidden="true"></i>
                       </div>
-                        <a href="#">照片管理</a>
+                        照片管理</a>
                     </li>
-                    <li>
+                    <li><a href="admin_mem.php">
                       <div class="pic">
                           <i class="fa fa-users" aria-hidden="true"></i>
                       </div>
-                        <a href="#">會員管理</a>
+                        會員管理</a>
                     </li>
-                    <li>
-                        <a href="#">後台帳號管理</a>
+                    <li><a href="admin.php">
+                      <div class="pic">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </div>
+                        員工管理</a>
                     </li>
                 </ul>
             </nav>
+          <div class="view-wrapper">
+                <div class="admin-title">
+                    <p>活動管理</p>
+                    <div class="admin-search">
+                      <select name="">
+                        <option value="act_name">活動名稱</option>
+                        <option value="actCla_name">活動類別</option>
+                        <option value="act_place">活動地點</option>
+                      </select>
+                      <input type="search" name="" value="" placeholder="">
+                      <input type="button" name="" value="搜尋" id="adm-search">
+                    </div>
+                </div>
+                
             <div id="view">
               <table id="actTable">
                <tr>
@@ -66,8 +84,6 @@
                 <th>活動類別</th>
                 <th>名稱</th>
                 <th>發起會員</th>
-                <th>開始日期</th>
-                <th>結束日期</th>
                 <th>地點</th>
                 <th>人數限制</th>
                 <th>費用</th>
@@ -75,66 +91,103 @@
                 <th>狀態</th>
                 <th>動作</th>
               </tr>
-              
-              <?php 
+
+               <?php 
                 try {
                   require_once("php/connect.php");
-                  $sql = "select * from act join mem on act.mem_no=mem.mem_no join actCla on act.actCla_no=actCla.actCla_no group by act_no";
-                  $act = $pdo->prepare( $sql );  
-                  $act->execute();
+                  if(isset($_REQUEST["act_class"])){
+                      $act_class =$_REQUEST["act_class"];
+                      $act_str = '"%'.$_REQUEST["act_str"].'%"';
+                      $sql = "select count(*) totalRecords from act join mem on act.mem_no=mem.mem_no join actCla on act.actCla_no=actCla.actCla_no where $act_class like $act_str";
+                      $prodCount = $pdo->query($sql);
+                      //獲取欄位
+                      $prodCountRow = $prodCount->fetch();
+                      //獲取欄位值"7"
+                      $totalRecords = $prodCountRow["totalRecords"];     
 
+                  }else{
+                    //共幾筆
+                    $sql = "select count(*) totalRecords from act";
+                    $prodCount = $pdo->query($sql);
+                    //獲取欄位
+                    $prodCountRow = $prodCount->fetch();
+                    //獲取欄位值"7"
+                    $totalRecords = $prodCountRow["totalRecords"];
+
+                  }
+
+                  //每頁印幾筆
+                  $pageRecords = 5;
+                //$pageRecords
+
+                  //共幾頁，ceil是無條件進位
+                  $pages = ceil($totalRecords/$pageRecords);  
+
+                  //顯示目前這一筆
+                  $pageNo = isset($_REQUEST["pageNo"]) == false ? 1 : $_REQUEST["pageNo"];
+                  $start = ($pageNo - 1) * $pageRecords;
+
+                  if(isset($_REQUEST["act_class"])){
+                    
+                    
+                    $sql = "select * from act join mem on act.mem_no=mem.mem_no join actCla on act.actCla_no=actCla.actCla_no where $act_class like $act_str group by act_no limit $start, $pageRecords";
+
+
+                  }else{
+                    $sql = "select * from act join mem on act.mem_no=mem.mem_no join actCla on act.actCla_no=actCla.actCla_no group by act_no limit $start, $pageRecords";
+                  }
+                  
+                  $act = $pdo->query( $sql);
+                  if($act->rowcount()==0){
+                    echo "<tr><td colspan=12>查無資料</td></tr>";
+                  }else{
                   while($actRow = $act->fetch()){
                       $state="";$state1="";$state2="";
                       if($actRow["act_state"]==0){
-                        $position = "<p>待審核</p>";
+                        $position = "<span>待審核</span>";
                         $state = "selected";
                       }elseif($actRow["act_state"]==1){
-                        $position = "<p style='color:green'>合格</p>";
+                        $position = "<span style='color:green'>合格</span>";
                         $state1 = "selected";
                       }else{
-                        $position = "<p style='color:red'>不合格</p>";
+                        $position = "<span style='color:red'>不合格</span>";
                         $state2 = "selected";
-                      }
+                      }                    
                       echo '<tr>
                             <td>'.$actRow["act_no"].'</td>
                             <td>'.$actRow["actCla_name"].'</td>
                             <td>'.$actRow["act_name"].'</td>
                             <td>'.$actRow["mem_name"].'</td>
-                            <td>'.$actRow["act_startDate"].'</td>
-                            <td>'.$actRow["act_endDate"].'</td>
                             <td>'.$actRow["act_place"].'</td>
                             <td>'.$actRow["act_limit"].'</td>
                             <td>'.$actRow["act_price"].'</td>
-                            <td>'.((mb_strlen($actRow["act_info"], "UTF8")>10) ? mb_substr($actRow["act_info"],0,20, "UTF8") : $actRow["act_info"]).' '.((mb_strlen($actRow["act_info"], "UTF8")>10) ? nl2br(' ...') : nl2br('')).'</td>
+                            <td>'.((mb_strlen($actRow["act_info"], "UTF8")>10) ? mb_substr($actRow["act_info"],0,15, "UTF8") : $actRow["act_info"]).' '.((mb_strlen($actRow["act_info"], "UTF8")>10) ? nl2br(' ...') : nl2br('')).'</td>
                             <td class="ad-act-stateFinal"><input type="hidden" name="" value="'.$actRow["act_state"].'">'.$position.'</td>
                             <td>
                               <i class="fa fa-pencil-square-o ad-act_change" aria-hidden="true"></i>
                               
                             </td>
 
-                            </tr>';
+                            </tr>';    
+                  } //while
+                  //顯示頁數超連結  
+                  echo "<tr class='adm-page'><td colspan=12>";
+                  for( $i=1; $i<=$pages; $i++){
+                    echo "<a href='admin_act.php?pageNo=$i'> $i</a> &nbsp;&nbsp;&nbsp;";
                   }
-               
-                } catch (Exception $ex) {
-                    echo "資料庫操作失敗,原因：",$ex->getMessage(),"<br>";
-                    echo "行號：",$ex->getLine(),"<br>";
+                  echo "</td></tr></table>";                  
+                }//else end
+
+                    
+                } catch (PDOException $ex) {
+                  echo "資料庫操作失敗，原因 : " , $ex->getMessage() , "<br>";
+                  echo "行號 : " , $ex->getLine() , "<br>"; 
                 }
 
 
-               ?>
-<!--                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  <td><input type="button" value="新增" class="ad-act_add"> </td>
-                </tr> -->
+
+                ?>  
+
               </table>
 
               <table id="forumTable">
@@ -187,6 +240,7 @@
                <tr>
                 <th>專欄文章編號</th>
                 <th>標題</th>
+                <th>作者</th>
                 <th>內容</th>
                 <th>發文日期</th>
                 <th>觀看數</th>
@@ -206,6 +260,7 @@
                       echo '<tr>
                             <td>'.$speRow["spe_no"].'</td>
                             <td>'.$speRow["spe_title"].'</td>
+                            <td>'.$speRow["spe_author"].'</td>
                             <td>'.$speRow["spe_content"].'</td>
                             <td>'.$speRow["spe_date"].'</td>
                             <td>'.$speRow["spe_view"].'</td>
@@ -230,15 +285,11 @@
                   <th>會員名稱</th>
                   <th>照片簡介</th>
                   <th>照片日期</th>
-                  <!-- <th>會員照片</th> -->
                   <th>照片路徑</th>
-  <!--                 <th>會員文章數</th>
-                  <th>會員照片數</th>
-                  <th>會員留言數</th>
-                  <th>參加活動數</th>
-                  <th>舉辦活動數</th> -->
+
                   <th>分享數</th>
-                  <!-- <th>更改權限</th> -->
+                  <th>檢舉數</th>
+                  <th>動作</th>
                 </tr>
               <?php 
                 try {
@@ -246,6 +297,7 @@
                   $sql = "select * from pho join mem using(mem_no)";
                   $pho = $pdo->prepare( $sql );  
                   $pho->execute();
+
 
                   while($phoRow = $pho->fetch()){
                       echo '<tr>
@@ -258,6 +310,11 @@
                             <td>'.$phoRow["pho_path"].'</td>
 
                             <td>'.$phoRow["pho_share"].'</td>
+                            <td>'.$phoRow["pho_report"].'</td>
+                            <td>
+                              <i class="fa fa-pencil-square-o ad-pho_change" aria-hidden="true"></i>
+                              
+                            </td>
                             </tr>';
                   }
                    // <td>'.$memRow["mem_img"].'</td>
@@ -515,14 +572,14 @@
                 </form>
               </div> -->
     </div><!-- view結束 -->
-
+</div><!-- view-wrapper end -->
 </body>
 
 </html>
 <script>
 $(function(){
   $('.adminMenu li:nth-child(1)').addClass('show');
-  $('#actTable').show().css({'width':'90%'});
+  $('#actTable').show().css({'width':'95%'});
 })
   
 </script>

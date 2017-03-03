@@ -440,7 +440,7 @@ function fileChange(){
 
 
 /*=====================================
-		ajax sendForm	            
+		ajax sendForm	upfile            
 =======================================*/	
 function sendForm(){
   

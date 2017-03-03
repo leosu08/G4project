@@ -1,40 +1,320 @@
 $(function(){
+/*=====================================
+            後端搜尋
+    =======================================*/
+$("#adm-search").click(function(){
+var act_class = $(this).prev().prev().val();
+var act_str = '%'+$(this).prev().val()+'%'; 
+console.log(act_class,act_str);
+document.location.href="admin_act.php?act_class="+act_class+"&act_str="+act_str+"";
+    // $.ajax({
+    //     url: 'php/admin.php',//php,jsp and etc..
+    //     type: 'POST',
+    //     data: {
+    //        act_class:act_class,
+    //        act_str:act_str
+    //     },
+    //     dataType: "json",
+    //     async: false,
+    //     success: function(data, textStatus, jqXHR) {
+    //         console.log('Success: ' + textStatus);
+    //         console.log(data);
+
+    //         for(var i=0;i<data.length;i++){
+    //             var temp =  
+    //         }
+    //     },
+
+    //     error: function(jqXHR, textStatus, errorThrown,data) {
+    //         // Handle errors here
+    //         console.log('Errors: ' + textStatus);
+    //         // STOP LOADING SPINNER
+    //          console.log(jqXHR);
+    //          console.log(errorThrown);
+    //     }
+
+    // });     
+})
+/*=====================================
+            修改專欄
+    =======================================*/
+$(".ad-spe_change").click(function(){
+        var spe_change = $(this).parent().parent().children("td:first-child");
+        $(this).parent().parent().parent().parent().css({'display':'none'});
+        console.log(spe_change.text());
+         $.ajax({
+            url: 'php/admin.php',//php,jsp and etc..
+            type: 'POST',
+            data: {
+               spe_change:spe_change.text()
+            },
+            dataType: "json",
+            async: false,
+            success: function(data, textStatus, jqXHR) {
+                console.log('Success: ' + textStatus);
+                console.log(data);
+               console.log();
+                $("#admTable").after(
+                '<div class="ad-remove">'+
+                '<form action="php/admin.php" method="post" enctype="multipart/form-data">'+
+                '<table id="speChangeTable">'+
+                  '<input name="spe_no" type="hidden" value="'+data[0].spe_no+'" />'+
+                  
+                  '<tr>'+
+                    '<th>專欄標題</th>'+
+                    '<td><input name="spe-title" type="text" value="'+data[0].spe_title+'"/></td>'+
+                  '</tr>'+
+                   '<tr>'+
+                    '<th>專欄作者</th>'+
+                    '<td><input name="spe_author" type="text" value="'+data[0].spe_author+'"/></td>'+
+                  '</tr>'+ 
+                    '<th>發表日期</th>'+
+                    '<td><input name="spe_date" type="date" value="'+data[0].spe_date+'"/></td>'+
+                  '</tr>'+                                     
+                  '<tr>'+
+                    '<th>專欄照片</th>'+
+                    '<td><input name="spe_img" type="file" /><img src="'+data[0].spe_img+'" alt="" width="200" /></td>'+
+                  '</tr>'+ 
+                  '<tr>'+
+                    '<th>專欄內容</th>'+
+                    '<td><textarea name="spe_content" id="" cols="40" rows="10">'+data[0].spe_content+'</textarea></td>'+
+                  '</tr>'+
+                  '<tr>'+
+                    '<th>確認修改</th>'+
+                    '<td><input type="submit" name="" value="確定修改" class="btn-lg btn-blue" id="ad-spe-change">'+
+                    '<input type="button" name="" value="取消修改" class="btn-lg btn-blue" id="ad-spe-cansel"></td>'+
+                  '</tr>'+
+                
+                '</table>'+
+                '</form>'+
+                '</div>'
+                
+              );
+              sendArea();      
+
+            },
+
+            error: function(jqXHR, textStatus, errorThrown,data) {
+                // Handle errors here
+                console.log('Errors: ' + textStatus);
+                // STOP LOADING SPINNER
+                 console.log(jqXHR);
+                 console.log(errorThrown);
+            }
+
+        }); 
+        speChange();       
+})
+function speChange(){
+/*=====================================
+            取消專欄編輯
+    =======================================*/
+    $("#ad-spe-cansel").click(function(){
+    $('div').remove('.ad-remove');
+    $('#knowTable').show();      
+})
+}
+
+/*=====================================
+            送出照片檢舉數
+    =======================================*/
+function pho_report(){
+/*=====================================
+            取消照片檢舉
+    =======================================*/
+    $("#pho-report").click(function(){
+        $("#pho-reportNum").text(0);
+    })
+    $("#ad-pho-cansel").click(function(){
+    $('div').remove('.ad-remove');
+    $('#photoTable').show();      
+})
+  $("#ad-pho-change").click(function(){
+    var pho_reportNo = $(this).parent().parent().parent().parent().children("input");
+    var pho_reportNum = $(this).parent().parent().prev().children("td").children("p");
+    console.log(pho_reportNo.val(),pho_reportNum.val());
+    $.ajax({
+        url: 'php/admin.php',//php,jsp and etc..
+        type: 'POST',
+        data: {
+           pho_reportNo:pho_reportNo.val(),
+           pho_reportNum:pho_reportNum.text()
+        },
+        dataType: "json",
+        async: false,
+        success: function(data, textStatus, jqXHR) {
+            console.log('Success: ' + textStatus);
+            console.log(data.pho_report);
+            // pho_report.text(data.pho_report);
+        },
+
+        error: function(jqXHR, textStatus, errorThrown,data) {
+            // Handle errors here
+            console.log('Errors: ' + textStatus);
+            // STOP LOADING SPINNER
+             console.log(jqXHR);
+             console.log(errorThrown);
+        }
+
+    });  
+    $('div').remove('.ad-remove');
+    $('#phoTable').show(); 
+    document.location.href="admin_pho.php"; 
+})  
+}
+
+/*=====================================
+            編輯照片檢舉數
+    =======================================*/
+$(".ad-pho_change").click(function(){
+        var pho_change = $(this).parent().parent().children("td:first-child");
+        $(this).parent().parent().parent().parent().hide();
+        console.log(pho_change.text());
+         $.ajax({
+            url: 'php/admin.php',//php,jsp and etc..
+            type: 'POST',
+            data: {
+               pho_change:pho_change.text()
+            },
+            dataType: "json",
+            async: false,
+            success: function(data, textStatus, jqXHR) {
+                console.log('Success: ' + textStatus);
+                console.log(data);
+               console.log();
+                $("#admTable").after(
+                '<div class="ad-remove">'+
+                '<table id="phoChangeTable">'+
+                  '<input type="hidden" value="'+data[0].pho_no+'" />'+
+                  
+                  '<tr>'+
+                    '<th>照片名稱</th>'+
+                    '<td>'+data[0].pho_name+'</td>'+
+                  '</tr>'+     
+                  '<tr>'+
+                    '<th>會員名稱</th>'+
+                    '<td>'+data[0].mem_name+'</td>'+
+                  '</tr>'+                  
+                  '<tr>'+
+                    '<th>上傳日期</th>'+
+                    '<td>'+data[0].pho_date+'</td>'+
+                  '</tr>'+
+                  '<tr>'+
+                    '<th>照片</th>'+
+                    '<td><img src="'+data[0].pho_path+'" alt="" width="200" /></td>'+
+                  '</tr>'+
+                  '<tr>'+
+                    '<th>拍攝地點</th>'+
+                    '<td>'+data[0].pho_place+'</td>'+
+                  '</tr>'+
+                  '<tr>'+
+                    '<th>被檢舉數</th>'+
+                    '<td><p id="pho-reportNum">'+data[0].pho_report+'</p><input style="color:#000" type="button" id="pho-report" value="取消檢舉數" placeholder=""></td>'+
+                  '</tr>'+
+                  '<tr>'+
+                    '<th>確認修改</th>'+
+                    '<td><input type="submit" name="" value="確定修改" class="btn-lg btn-blue" id="ad-pho-change"><input type="button" name="" value="取消修改" class="btn-lg btn-blue" id="ad-pho-cansel"></td>'+
+                  '</tr>'+
+                
+                '</table>'+
+                '</div>'
+                
+              );   
+              pho_report();
+            },
+
+            error: function(jqXHR, textStatus, errorThrown,data) {
+                // Handle errors here
+                console.log('Errors: ' + textStatus);
+                // STOP LOADING SPINNER
+                 console.log(jqXHR);
+                 console.log(errorThrown);
+            }
+
+        });        
+})
+
+/*=====================================
+            新增專欄圖片同步顯示
+    =======================================*/
+
+function fileChange(){
+    var file = document.getElementById('spe_img').files[0];
+    var fileName = file.name;
+    /*=====================================
+                fileReader
+        =======================================*/
+    //要new 一個FileReader
+    var readFile = new FileReader();
+
+    //以DataURL格式回傳結果，讀取圖檔和影片都使用此方法
+    readFile.readAsDataURL(file);
+    readFile.addEventListener('load',function(){
+        var image = document.getElementById('spe_imgShow');
+        //.src是HTML的屬性
+        //result是讀取到的內容
+       
+        image.src = readFile.result;
+        //HTML不用加單位
+        //EX:image.width=400;
+        //css的屬性需要加單位
+        image.style.maxWidth='200px';
+        // image.style.maxHeight = '100%';    
+},false);
+
+}//fileChange end 圖片同步顯示
+
 
 /*=====================================
             新增專欄
     =======================================*/
 $(".ad-spe_add").click(function(){    
-$(this).parent().parent().parent().parent().css({'display':'none'});
+$("#knowTable").hide();
+$('div').remove('.ad-remove');
 $("#admTable").after(
     '<div class="ad-remove">'+
+    '<form action="php/admin.php" method="post" enctype="multipart/form-data">'+
     '<table id="speAddTable">'+
+      
       '<tr>'+
         '<th>專欄標題</th>'+
-        '<td><input type="text" /></td>'+
+        '<td><input type="text" name="spe_title" /></td>'+
       '</tr>'+
        '<tr>'+
         '<th>專欄作者</th>'+
-        '<td><input type="text" /></td>'+
+        '<td><input type="text" name="spe_author" /></td>'+
       '</tr>'+                 
 
       '<tr>'+
         '<th>專欄照片</th>'+
-        '<td><input type="file" /></td>'+
+        '<td><input type="file" name="spe_img" id="spe_img" /><br><br><img src="" alt="" id="spe_imgShow" /></td>'+
       '</tr>'+                  
       '<tr>'+
         '<th>專欄內容</th>'+
-        '<td><textarea name="" id="" cols="30" rows="10"></textarea></td>'+
+        '<td><textarea name="spe_content" id="" cols="50" rows="10"></textarea></td>'+
       '</tr>'+
         '<th>確認修改</th>'+
-        '<td><input type="submit" name="" value="確定修改" class="btn-lg btn-blue" id="ad-spe-add"><input type="submit" name="" value="取消修改" class="btn-lg btn-blue" id="ad-spe-cansel"></td>'+
+        '<td><input type="submit" name="" value="確定修改" class="btn-lg btn-blue" id="ad-spe-add"><input type="button" name="" value="取消修改" class="btn-lg btn-blue" id="ad-spe-cansel"></td>'+
       '</tr>'+
 
     '</table>'+
+    '</form>'+
     '</div>'
 
     );
-
+    spe();
 })
+function spe(){
+/*=====================================
+            取消專欄新增
+    =======================================*/
+    $("#ad-spe-cansel").click(function(){
+    $('div').remove('.ad-remove');
+    $('#knowTable').show();      
+})
+    document.getElementById('spe_img').onchange = fileChange;    
+}
+
 // $(".ad-spe_add").click(function(){
 
 //         var spe_add = $(this).parent().parent().children("td:first-child");
@@ -68,6 +348,7 @@ $("#admTable").after(
 // })
 
 function sendArea(){
+    
     $("#ad-act-cansel").click(function(){
     $('div').remove('.ad-remove');
     $('#actTable').show();   
@@ -126,6 +407,7 @@ $(".ad-act_change").click(function(){
                 '<div class="ad-remove">'+
                 '<table id="actChangeTable">'+
                   '<input type="hidden" value="'+data[0].act_no+'" />'+
+                  
                   '<tr>'+
                     '<th>活動名稱</th>'+
                     '<td>'+data[0].act_name+'</td>'+
@@ -144,10 +426,13 @@ $(".ad-act_change").click(function(){
                     '<td>'+data[0].mem_name+'</td>'+
                   '</tr>'+                  
                   '<tr>'+
-                    '<th>發文日期</th>'+
+                    '<th>開始日期</th>'+
                     '<td>'+data[0].act_startDate+'</td>'+
                   '</tr>'+
-                  
+                  '<tr>'+
+                    '<th>結束日期</th>'+
+                    '<td>'+data[0].act_endDate+'</td>'+
+                  '</tr>'+                  
                     '<th>活動內容</th>'+
                     '<td>'+data[0].act_info+'</td>'+
                   '</tr>'+
@@ -164,7 +449,7 @@ $(".ad-act_change").click(function(){
                   '<tr>'+
                     '<th>確認修改</th>'+
                     '<td><input type="submit" name="" value="確定修改" class="btn-lg btn-blue" id="ad-act-change">'+
-                    '<input type="submit" name="" value="取消修改" class="btn-lg btn-blue" id="ad-act-cansel"></td>'+
+                    '<input type="button" name="" value="取消修改" class="btn-lg btn-blue" id="ad-act-cansel"></td>'+
                   '</tr>'+
                 
                 '</table>'+
@@ -195,20 +480,23 @@ function pla_report(){
 /*=====================================
             取消論壇文章檢舉
     =======================================*/
+    $("#pla-report").click(function(){
+        $("#pla-reportNum").text(0);
+    })
     $("#ad-pla-cansel").click(function(){
     $('div').remove('.ad-remove');
     $('#forumTable').show();      
 })
   $("#ad-pla-change").click(function(){
     var pla_reportNo = $(this).parent().parent().parent().parent().children("input");
-    var pla_reportNum = $(this).parent().parent().prev().children("td").children("input");
+    var pla_reportNum = $(this).parent().parent().prev().children("td").children("p");
     console.log(pla_reportNo.val(),pla_reportNum.val());
     $.ajax({
         url: 'php/admin.php',//php,jsp and etc..
         type: 'POST',
         data: {
            pla_reportNo:pla_reportNo.val(),
-           pla_reportNum:pla_reportNum.val()
+           pla_reportNum:pla_reportNum.text()
         },
         dataType: "json",
         async: false,
@@ -279,7 +567,7 @@ $(".ad-pla_change").click(function(){
                   '</tr>'+
                   '<tr>'+
                     '<th>被檢舉數</th>'+
-                    '<td><input type="text" name="pla_place" value="'+data[0].pla_report+'" placeholder=""></td>'+
+                    '<td><p id="pla-reportNum">'+data[0].pla_report+'</p><input id="pla-report" style="color:#000" type="button" value="取消檢舉數" placeholder=""></td>'+
                   '</tr>'+
                   '<tr>'+
                     '<th>確認修改</th>'+
@@ -518,35 +806,43 @@ $(".ad-pla_change").click(function(){
         })
     })    
 
-    /*=====================================
-                後端修改活動
-        =======================================*/
-    // $(".ad-act_change").click(function(){
-    //     console.log("click");
-    // $("#ad-actChange ").css({
-    //         "display":"block"
-    //     })
-    // })
-    // $("#a-lb-x").click(function(){
-    //      $("#ad-actAdd ").css({
-    //         "display":"none"
-    //     })
-    // })
+
+
     /*================================
-            後端新增活動
+                 管理員刪除
     ===================================*/
-    $(".ad-act_add").click(function(){
-        console.log("click");
-        $("#ad-actAdd ").css({
-            "display":"block"
-        })
+    adm_delete();
+    function adm_delete(){
+        $(".ad-adm_delete").click(function(){
+        var adm_delete=$(this).parent().parent().children("td:first-child");
+        console.log("adm_delete",adm_delete.text());
+         $.ajax({
+            url: 'php/admin.php',//php,jsp and etc..
+            type: 'POST',
+            data: {
+               adm_delete:adm_delete.text()
+            },
+            dataType: "json",
+            async: false,
+            success: function(data, textStatus, jqXHR) {
+                console.log('lightBox Success: ' + textStatus);
+                console.log(data);
+                adm_delete.parent().remove();
+
+            },
+
+            error: function(jqXHR, textStatus, errorThrown,data) {
+                // Handle errors here
+                console.log('Errors: ' + textStatus);
+                // STOP LOADING SPINNER
+                 console.log(jqXHR);
+                 console.log(errorThrown);
+            }
+
+        });
+
     })
-    $("#a-lb-x").click(function(){
-         $("#ad-actAdd ").css({
-            "display":"none"
-        })
-    })
-    /*================================
+        /*================================
             管理員帳號修改
     ===================================*/
     $(".ad-adm_change").click(function(){
@@ -570,40 +866,6 @@ $(".ad-pla_change").click(function(){
                 console.log('lightBox Success: ' + textStatus);
                 console.log(data);
                 alert(data.status);
-            },
-
-            error: function(jqXHR, textStatus, errorThrown,data) {
-                // Handle errors here
-                console.log('Errors: ' + textStatus);
-                // STOP LOADING SPINNER
-                 console.log(jqXHR);
-                 console.log(errorThrown);
-            }
-
-        });
-
-    })
-    /*================================
-                 管理員刪除
-    ===================================*/
-    adm_delete();
-    function adm_delete(){
-        $(".ad-adm_delete").click(function(){
-        var adm_delete=$(this).parent().parent().children("td:first-child");
-        console.log("adm_delete",adm_delete.text());
-         $.ajax({
-            url: 'php/admin.php',//php,jsp and etc..
-            type: 'POST',
-            data: {
-               adm_delete:adm_delete.text()
-            },
-            dataType: "json",
-            async: false,
-            success: function(data, textStatus, jqXHR) {
-                console.log('lightBox Success: ' + textStatus);
-                console.log(data);
-                adm_delete.parent().remove();
-
             },
 
             error: function(jqXHR, textStatus, errorThrown,data) {
@@ -643,8 +905,9 @@ $(".ad-pla_change").click(function(){
                 console.log('lightBox Success: ' + textStatus);
                 console.log(data);
                 $("#ad-before").before('<tr><td>'+data[0].adm_no+'</td><td><input type="text" value='+data[0].adm_name+' /></td><td><input type="text" value='+data[0].adm_acc+' /></td>'+
-                 '<td><input type="text" value='+data[0].adm_psw+' /></td><td><input type="button" value="修改" class="ad-adm_change"></td>'+ 
-                  '<td><input type="button" value="刪除" class="ad-adm_delete"></td></tr>');
+                 '<td><input type="text" value='+data[0].adm_psw+' /></td>'+
+                  '<td><i class="fa fa-pencil-square-o ad-adm_change" aria-hidden="true"></i></td>'+
+                  '<td><i class="fa fa-times ad-adm_delete" aria-hidden="true"></i></td> </tr>');
                 $("#adm_name").val("");$("#adm_acc").val("");$("#adm_psw").val("");
                 $("#adm_no").text(parseInt(data[0].adm_no)+1);
 
@@ -707,14 +970,17 @@ $(".ad-pla_change").click(function(){
 /*=====================================
                  表格出現
     =======================================*/
-$('.adminMenu li').click(function(){
-    var num = $(this).index();
-    console.log(num);
-    $('#view table:eq('+ num +')').show().css({'width':'90%'});
-    $('table').not('#view table:eq('+ num +')').css({'display':'none','width':'0%'});
-    $('div').remove('.ad-remove');
-    // $('form').css({'width':'0%'});
-})
+
+// $('.adminMenu li').click(function(){
+//     var text = $(this).children("a").text();
+//     var num = $(this).index();
+//     console.log(text);
+//     $('#view table:eq('+ num +')').show().css({'width':'90%'});
+//     $('table').not('#view table:eq('+ num +')').css({'display':'none','width':'0%'});
+//     $('div').remove('.ad-remove');
+//     $('.admin-title p').text(text);
+//     // $('form').css({'width':'0%'});
+// })
 
 
 
@@ -746,4 +1012,18 @@ $('.adminMenu li').click(function(){
 
     // }  
 
+    /*================================
+            後端新增活動
+    ===================================*/
+    $(".ad-act_add").click(function(){
+        console.log("click");
+        $("#ad-actAdd ").css({
+            "display":"block"
+        })
+    })
+    $("#a-lb-x").click(function(){
+         $("#ad-actAdd ").css({
+            "display":"none"
+        })
+    })
 })//init end
