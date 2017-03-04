@@ -1,206 +1,10 @@
 var act;
 $(function(){
 /*=====================================
-            lighBox Ajax
+            lightBox Ajax
     =======================================*/
-$(".ff_lightbox_link").click(function(){
-    var act_no = $(this).next("input").val();
-    $.ajax({
-        url: 'php/activity.php',//php,jsp and etc..
-        type: 'POST',
-        data: {
-            act_no:act_no
-        },
-        dataType: "json",
-        async: false,
-        success: function(data, textStatus, jqXHR) {
-            console.log('lightBox Success: ' + textStatus);
-            console.log(data);
-            $(".aa_banner").css({
-                'background':'url('+data[0].act_img+')'
-            });
-            $("#a-lb-act_name").text(data[0].act_name);
-            $("#a-lb-act_info").text(data[0].act_info);
-            $("#a-lb-act_date").text(data[0].act_startDate+"~"+data[0].act_startDate);
-            $("#a-lb-actCla_name").text(data[0].actCla_name);
-            $("#a-lb-act_place").text(data[0].act_place);
-            $("#a-lb-act_price").text(data[0].act_price);
-
-
-            // for(var i=0;i<=)
-            $("#a-comm").append(
-                '<div class="comment ct1"><div class="user"><div class="user-pic"><img src="img/i-member2.png">'+
-                '</div><div class="user-info"><span><a href="">Kattie918</a></span></div></div>'+'<div class="ct-content">'+
-                '<p>參加活動：2015年墾丁南十字觀星攝影<span class="ct-stars"><i class="fa fa-star" aria-hidden="true"></i>'+
-                '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>'+
-                '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span></p>'+
-                '<p>主辦很細心，活動安排很讚。很推薦大家參加他的活動唷！</p>'+
-                '<p>2015-06-01 11:00</p></div>'+
-                '<div class="clear"></div></div>'
-            )
-
-
-        },
-
-        error: function(jqXHR, textStatus, errorThrown) {
-            // Handle errors here
-            console.log('Errors: ' + textStatus);
-            // STOP LOADING SPINNER
-        }
-
-    });    
-})
-
-/*=====================================
-            jQuery撈全部Marker資料
-    =======================================*/
-//接著可透過JQuery或是自己弄個XMLHttpRequest的方式Send Form
-//JQuery
-$.ajax({
-    url: 'php/activity.php',//php,jsp and etc..
-    type: 'POST',
-    data: {
-        all:'1'
-    },
-    // cache: false,
-    dataType: "json",
-    async: false,
-    // processData: false, // Don't process the files
-    // contentType: false, // Set content type to false as jQuery will tell the server its a query string request
-    success: function(data, textStatus, jqXHR) {
-        // Handle errors here
-        console.log('Success: ' + textStatus);
-        //STOP LOADING SPINNER
-        // alert(data, textStatus, jqXHR);
-        console.log(data);
-
-        act=data;
-        newMarker();
-    },
-
-    error: function(jqXHR, textStatus, errorThrown) {
-        // Handle errors here
-        console.log('Errors: ' + textStatus);
-        // STOP LOADING SPINNER
-    }
-
-});
-
-
-/*================================
-      ajax
-===================================*/
-function showLatLng(jsonStr){
-
-    act = JSON.parse(jsonStr);
-    console.log(act[0].act_lat);
-    // var str = "<table border='1'>";
-    // str+="<tr><th>lat</th><td>"+act[0].act_lat+"</td></tr>";
-    // str+="<tr><th>lng</th><td>"+act[0].act_lng+"</td></tr>";
-    // str+="</table>";
-    // document.getElementById("show").innerText=jsonStr;  
-    // document.getElementById("showPanel").innerHTML=str;
-    newMarker();
-    // console.log(act[0]);
-
-}
-
-
-
-/*=====================================
-            getDate
-    =======================================*/
-function getDate(){
-
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange=function (){
-    if( xhr.readyState == 4){
-       if( xhr.status == 200 ){
-        //modify here
-        // alert(xhr.responseText);
-        showLatLng(xhr.responseText);
-       }else{
-          alert( xhr.status );
-       }
-   }
-  }
-  
-  var url = "php/activity.php?act_startDate=" + text+"&act_endDate="+ text2;
-  xhr.open("Get", url, true);
-  xhr.send( null );
-} 
-/*=====================================
-            getPlace
-    =======================================*/
-$(".a-getLatLng").click(function getPlace(){
-  console.log("lat",$(this).children("input").val());
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange=function (){
-    if( xhr.readyState == 4){
-       if( xhr.status == 200 ){
-        //modify here
-        alert(xhr.responseText);
-        showLatLng(xhr.responseText);
-       }else{
-          alert( xhr.status );
-       }
-   }
-  }
-  
-  var url = "php/activity.php?act_lat=" + $(this).children("input").val();
-  xhr.open("Get", url, true);
-  xhr.send( null );
-})
-/*=====================================
-            getStr
-    =======================================*/
-function getStr(){
-  console.log(document.getElementById("a-getStr").value);
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange=function (){
-    if( xhr.readyState == 4){
-       if( xhr.status == 200 ){
-        //modify here
-        // alert(xhr.responseText);
-        showLatLng(xhr.responseText);
-       }else{
-          alert( xhr.status );
-       }
-   }
-  }
-  
-  var url = "php/activity.php?act_name=" + document.getElementById("a-getStr").value;
-  xhr.open("Get", url, true);
-  xhr.send( null );
-}
-
-/*=====================================
-            getDate
-    =======================================*/    
-$(".a-getDate").click(function(){
-
-  console.log("input",$(this).children("input").val());
-
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange=function (){
-    if( xhr.readyState == 4){
-       if( xhr.status == 200 ){
-        //modify here
-        // alert(xhr.responseText);
-        showLatLng(xhr.responseText);
-       }else{
-          alert( xhr.status );
-       }
-   }
-  }
-  
-  var url = "php/activity.php?actCla_no="+$(this).children("input").val();
-  xhr.open("Get", url, true);
-  xhr.send( null );
-
-
-})
-
+lightBox();
+function lightBox(){
 /*=====================================
             lightbox
     =======================================*/
@@ -243,6 +47,274 @@ $('#close-btn').hover(function(){
         src: 'img/close.svg'
     });
 })//lightbox close-btn end
+$(".ff_lightbox_link").click(function(){
+    $('div').remove(".a-removeComm");
+    var act_no = $(this).next("input").val();
+    $.ajax({
+        url: 'php/activity.php',//php,jsp and etc..
+        type: 'POST',
+        data: {
+            act_no:act_no
+        },
+        dataType: "json",
+        async: false,
+        success: function(data, textStatus, jqXHR) {
+            console.log('lightBox Success: ' + textStatus);
+            console.log(data);
+                $(".aa_banner").css({
+                    'background':'url('+data[0][0].act_img+')'
+                });
+
+                $("#a-lb-act_name").text(data[0][0].act_name);
+                $("#a-lb-act_info").text(data[0][0].act_info);
+                $("#a-lb-act_date").text(data[0][0].act_startDate+"~"+data[0][0].act_endDate);
+                $("#a-lb-actCla_name").text(data[0][0].actCla_name);
+                $("#a-lb-act_place").text(data[0][0].act_place);
+                $("#a-lb-act_price").text(data[0][0].act_price);
+
+                // if(data[0].actMs)
+                if(data[1][0]!=0){
+                    for(var i=0;i<data.length;i++){
+                        $("#a-comm").append(
+                            '<div class="comment ct1 a-removeComm"><div class="user"><div class="user-pic"><img src="'+data[1][i].act_img+'">'+
+                            '</div><div class="user-info"><span><a href="">'+data[1][i].mem_name+'</a></span></div></div>'+'<div class="ct-content">'+
+                            '<p>參加活動：'+data[1][i].act_name+'<span class="ct-stars"><i class="fa fa-star" aria-hidden="true"></i>'+
+                            '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>'+
+                            '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span></p>'+
+                            '<p>'+data[1][i].actMsg_content+'</p>'+
+                            '<p>'+data[1][i].actMsg_content+'</p></div>'+
+                            '<div class="clear"></div></div>'
+                        )                
+                    }                    
+                }else{
+                    $("#a-comm").append(
+                        '<div class="ct-content a-removeComm" style="color:#fff;text-align:center;padding-bottom:30px;font-size:20px;">尚無評論</div>'
+                    );
+                }
+
+
+
+        },
+
+        error: function(jqXHR, textStatus, errorThrown) {
+            // Handle errors here
+            console.log('Errors: ' + textStatus);
+            console.log(jqXHR);
+            console.log(errorThrown);
+            // STOP LOADING SPINNER
+        }
+
+    });    
+})    
+}
+/*=====================================
+            特定標籤變色
+    =======================================*/
+$(".a-panel ul a").click(function(){
+    
+    var index = $(this).index();
+    console.log("click",index);
+    $(this).css({'background-color':'#86d4f5'});
+    $(this).siblings().css({'background':'none'});
+})
+$(".a-all").click(function(){
+    all();
+})
+/*=====================================
+            jQuery撈全部Marker資料
+    =======================================*/
+//接著可透過JQuery或是自己弄個XMLHttpRequest的方式Send Form
+//JQuery
+all();
+function all(){
+    $.ajax({
+        url: 'php/activity.php',//php,jsp and etc..
+        type: 'POST',
+        data: {
+            all:'1'
+        },
+        // cache: false,
+        dataType: "json",
+        async: false,
+        // processData: false, // Don't process the files
+        // contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+        success: function(data, textStatus, jqXHR) {
+            // Handle errors here
+            console.log('Success: ' + textStatus);
+            //STOP LOADING SPINNER
+            // console.log(data, textStatus, jqXHR);
+            console.log(data);
+
+            act=data;
+            newMarker();
+        },
+
+        error: function(jqXHR, textStatus, errorThrown) {
+            // Handle errors here
+            console.log('Errors: ' + textStatus);
+            // STOP LOADING SPINNER
+        }
+
+    });    
+}
+
+
+
+/*================================
+      ajax  傳到googleMap 產生marker
+===================================*/
+function showLatLng(jsonStr){
+
+    act = JSON.parse(jsonStr);
+    // console.log(act[0].act_lat);
+    // var str = "<table border='1'>";
+    // str+="<tr><th>lat</th><td>"+act[0].act_lat+"</td></tr>";
+    // str+="<tr><th>lng</th><td>"+act[0].act_lng+"</td></tr>";
+    // str+="</table>";
+    // document.getElementById("show").innerText=jsonStr;  
+    // document.getElementById("showPanel").innerHTML=str;
+    newMarker();
+    // console.log(act[0]);
+
+}
+/*=====================================
+            改變下方活動列表
+    =======================================*/
+function changeAct(data){
+    $('div').remove('.a-remove');
+    var act = JSON.parse(data);
+    console.log(act);
+    for(var i=0;i<act.length;i++){
+        $('#a-add').after('<div class="col-xs-12 col-sm-6 col-md-6 a-remove">'+
+                                        '<div class="aa-box">'+
+                                            '<div class="box-img">'+
+                                                '<img src="'+act[i].act_img+'" alt="'+act[i].act_name+'" >'+
+                                            '</div>'+
+                                            '<div class="box-text">'+
+                                                '<h4>'+act[i].act_name+'</h4>'+
+                                                '<p class="aa-date">'+act[i].act_startDate+'</p>'+
+                                                '<p class="aa-desc">'+act[i].act_info+'</p>'+
+                                                '<div class="aa-btn-area">'+
+                                                    '<div class="social-icon">'+
+                                                        '<i class="fa fa-star-o" aria-hidden="true"></i><span></span>20人收藏'+
+                                                    '</div>'+
+                                                    '<div class="aa-btn btn-blue btn-lg">'+
+                                                        '<a href="" class="ff_lightbox_link">熱烈報名中</a>'+
+                                                        '<input type="hidden" name="" value="'+act[i].act_no+'" class="a-act_no">'+
+                                                    '</div>'+
+                                                    '<div class="clear"></div>'+
+                                                '</div>'+
+                                            '</div>'+
+                                            '<div class="aa-tag">'+
+                                                '<span>'+act[i].actCla_name+'</span>'+
+                                            '</div>'+  
+                                        '</div></div>');   
+
+    }
+
+    lightBox();
+
+}
+
+/*=====================================
+            getDate
+    =======================================*/
+function getDate(){
+
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange=function (){
+    if( xhr.readyState == 4){
+       if( xhr.status == 200 ){
+        //modify here
+        // console.log(xhr.responseText);
+        showLatLng(xhr.responseText);
+        changeAct(xhr.responseText);
+       }else{
+          console.log( xhr.status );
+       }
+   }
+  }
+  
+  var url = "php/activity.php?act_startDate=" + text+"&act_endDate="+ text2;
+  xhr.open("Get", url, true);
+  xhr.send( null );
+} 
+/*=====================================
+            getPlace
+    =======================================*/
+$(".a-getLatLng").click(function getPlace(){
+  console.log("lat",$(this).children("input").val());
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange=function (){
+    if( xhr.readyState == 4){
+       if( xhr.status == 200 ){
+        //modify here
+        // console.log(xhr.responseText);
+        showLatLng(xhr.responseText);
+        changeAct(xhr.responseText);
+       }else{
+          console.log( xhr.status );
+       }
+   }
+  }
+  
+  var url = "php/activity.php?act_lat=" + $(this).children("input").val();
+  xhr.open("Get", url, true);
+  xhr.send( null );
+})
+/*=====================================
+            getStr
+    =======================================*/
+function getStr(){
+  console.log(document.getElementById("a-getStr").value);
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange=function (){
+    if( xhr.readyState == 4){
+       if( xhr.status == 200 ){
+        //modify here
+        // console.log(xhr.responseText);
+        showLatLng(xhr.responseText);
+        changeAct(xhr.responseText);
+       }else{
+          console.log( xhr.status );
+       }
+   }
+  }
+  
+  var url = "php/activity.php?act_name=" + document.getElementById("a-getStr").value;
+  xhr.open("Get", url, true);
+  xhr.send( null );
+}
+
+/*=====================================
+            getClass cla_no
+    =======================================*/    
+$(".a-getDate").click(function(){
+
+  console.log("input",$(this).children("input").val());
+
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange=function (){
+    if( xhr.readyState == 4){
+       if( xhr.status == 200 ){
+        //modify here
+        // console.log(xhr.responseText);
+        showLatLng(xhr.responseText);
+        changeAct(xhr.responseText);
+       }else{
+          console.log( xhr.status );
+       }
+   }
+  }
+  
+  var url = "php/activity.php?actCla_no="+$(this).children("input").val();
+  xhr.open("Get", url, true);
+  xhr.send( null );
+
+
+})
+
+
 
 /*=====================================
             彈出日曆

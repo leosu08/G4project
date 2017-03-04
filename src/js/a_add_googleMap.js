@@ -133,7 +133,7 @@ function initAutocomplete() {
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function(place) {
       var icon = {
-        url: '../img/a_001.jpg',
+        url: 'img/a_telescope.png',
         size: new google.maps.Size(71, 71),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),

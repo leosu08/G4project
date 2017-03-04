@@ -1,7 +1,62 @@
-$(function(){
-document.getElementById('act_img').onchange = fileChange;
-  $('#multiple').hide();
+$(function(){ 
 
+
+/*=====================================
+            消除placeHolder
+    =======================================*/
+$("#act_name").focus(function(){
+  $("#act_name").attr('placeholder','');
+}).blur(function(){
+  $("#act_name").attr('placeholder','請輸入活動名稱');
+})
+
+$("#a-add-mapInput").focus(function(){
+  $("#a-add-mapInput").attr('placeholder','');
+}).blur(function(){
+  $("#a-add-mapInput").attr('placeholder','請輸入地點');
+})
+
+
+/*=====================================
+            表單驗證
+    =======================================*/
+$('#a-add-next1').click(function(e){
+  console.log($(this).index());
+  e.preventDefault();
+  if($("#act_name").val()==""){
+    alert("請輸入活動名稱");
+    $("#act_name").focus();
+  }else if($("#a-add-mapInput").val()==""){
+    alert("請輸入地點");
+    $("#a-add-mapInput").focus();
+  }
+  else{
+    $.fn.fullpage.moveSectionDown();
+    
+  }
+});
+
+actCla_no="";
+$('#a-add-next2').click(function(e){
+ console.log($(this).index());
+ if($("#a-timePicker2").val()==""){
+    alert("請選擇時間");
+ }else{
+    $.fn.fullpage.moveSectionDown();
+ }  
+});
+$('#a-add-next3').click(function(e){
+  e.preventDefault();
+  if(actCla_no==""){
+    alert("請選擇類型");
+  }else{
+    $.fn.fullpage.moveSectionDown();
+  }
+});
+/*=====================================
+            顯示/隱藏日曆
+    =======================================*/
+  $('#multiple').hide();
   $('#a-add-mutiple1').focus(function(){
     $('#multiple').show().css({
       'position':'fixed',
@@ -144,7 +199,11 @@ function onClickHandler(date, obj) {
         text += date[0].format('YYYY-MM-DD');
 
         $('#a-add-phoneDate').html(
-          '<div class="a-text">活動日期</div><div  class="btn-calendar btn-lg btn-blue" style="line-height: 38px">選擇日期</div><div class="a-add-content" id="a-dateTime3"></div><input type="text" id="a-timePicker3" name="" value="" placeholder="" class="a-add-timePicker element2"><div class="a-add-content">'
+          '<div class="a-text">活動日期</div>'+
+          '<div  class="btn-calendar btn-lg btn-blue" style="line-height: 38px">選擇日期'+
+          '</div><div class="a-add-content" id="a-dateTime3">'+
+          '</div><input type="text" id="a-timePicker3" name="" value="" placeholder="" class="a-add-timePicker element2">'+
+          '<div class="a-add-content">'
           );
         $('#a-timePicker3').timepicker({ 'timeFormat': 'h:i A' });
         // $('#a-timePicker').timepicker('option', { useSelect: true });
@@ -166,7 +225,11 @@ function onClickHandler(date, obj) {
       if(date[0] !== null && date[1] !== null) {
         text += '';
         $('#a-add-phoneDate').html(
-          '<div class="a-text">活動日期</div><div  class="btn-calendar btn-lg btn-blue" style="line-height: 38px">選擇日期</div><div class="a-add-content" id="a-dateTime3"></div><input type="text" id="a-timePicker3" name="" value="" placeholder="" class="a-add-timePicker element2"><div class="a-add-content">到</div><div class="a-add-content" id="a-dateTime4"> </div><input type="text" id="a-timePicker4" name="" value="" placeholder="" class="a-add-timePicker element2"> '
+          '<div class="a-text">活動日期</div><div  class="btn-calendar btn-lg btn-blue" style="line-height: 38px">選擇日期'+
+          '</div><div class="a-add-content" id="a-dateTime3">'+
+          '</div><input type="text" id="a-timePicker3" name="" value="" placeholder="" class="a-add-timePicker element2">'+
+          '<div class="a-add-content">到</div><div class="a-add-content" id="a-dateTime4"> </div>'+
+          '<input type="text" id="a-timePicker4" name="" value="" placeholder="" class="a-add-timePicker element2"> '
           );
         $('#a-timePicker3').timepicker({ 'timeFormat': 'h:i A' });
         // $('#a-timePicker').timepicker('option', { useSelect: true });
@@ -361,15 +424,15 @@ function onClickHandler(date, obj) {
     // This use for DEMO page tab component.
     $('.menu .item').tab();
 
-    $('#a-timePicker1').timepicker({ 'timeFormat': 'h:i:s' });
+    $('#a-timePicker1').timepicker({ 'timeFormat': 'H:i:s' });
     // $('#a-timePicker').timepicker('option', { useSelect: true });
-    $('#a-timePicker1').val('09:00PM');
+    $('#a-timePicker1').val('21:00:00');
     $('#a-timePicker1').on('changeTime', function() {
         $('#a-time').text($(this).val());
 
     });
 
-    $('#a-timePicker2').timepicker({ 'timeFormat': 'h:i:s' });
+    $('#a-timePicker2').timepicker({ 'timeFormat': 'H:i:s' });
     // $('#a-timePicker').timepicker('option', { useSelect: true });
     $('#a-timePicker2').val('');
     $('#a-timePicker2').on('changeTime', function() {
@@ -380,7 +443,7 @@ function onClickHandler(date, obj) {
       $('.ui-timepicker-wrapper').addClass('element1');
     })
     
-$('#a-add-mapInput').click(function(){
+$('#a-add-next5').click(function(){
   var time1=document.getElementById("a-timePicker1").value;
   var time2=document.getElementById("a-timePicker2").value;
   var date1=document.getElementById("a-dateTime").value;
@@ -412,6 +475,7 @@ $('#a-add-mapInput').click(function(){
 /*=====================================
             圖片同步顯示
     =======================================*/
+document.getElementById('act_img').onchange = fileChange();   
 function fileChange(){
     var file = document.getElementById('act_img').files[0];
     var fileName = file.name;

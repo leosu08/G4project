@@ -243,6 +243,73 @@
             /*overflow-y: scroll;*/
             margin: 0 auto;
         }
+#map-canvas {
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  max-width: none;
+}
+#map-canvas img {
+  max-width: none !important;
+}
+.gm-style-iw {
+  cursor: pointer;
+  height: 40px;
+  width: 200px !important;
+  top: 15px !important;
+  left: 20px !important;
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+  border: 2px 2px 0px 2px  solid rgba(72, 181, 233, 0.6);
+  border-radius: 10px 10px 10px 10px;
+}
+#iw-container {
+  margin-bottom: 10px;
+}
+#iw-container .iw-title {
+  display: block;
+  text-align: center;
+  width:200px !important;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  background-color: #48b5e9;
+  color: white;
+  margin: 0;
+  border-radius: 2px 2px 0 0;
+}
+#iw-container .iw-content {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  margin-right: 1px;
+  padding: 15px 5px 20px 15px;
+  max-height: 140px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.iw-content img {
+  float: right;
+  margin: 0 5px 5px 10px; 
+}
+.iw-subTitle {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px 0;
+}
+.iw-bottom-gradient {
+  position: absolute;
+  width: 326px;
+  height: 25px;
+  bottom: 10px;
+  right: 18px;
+  background-color: #fff;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(66,255,255,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(66,255,255,1) 100%);
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(66,255,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(66,255,255,1) 100%);
+}       
 </style>
 
 </head>
@@ -252,31 +319,50 @@
 </canvas> -->
 <!-- 導覽列 -->
 <nav id="nav">
-	<div class="relative">
-		<div class="row">
-			<input type="checkbox" id="navButtonHidden">
-			<label id="navButton" for="navButtonHidden"></label>
-			<div id="logo">
-				<a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
-			</div>
-			<ul class="mainMenu menu">
-				<li><a href="activity.html" class="onThisPage">觀星活動</a></li>
-				<li><a href="forum.html">星際論壇</a></li>
-				<li><a href="photo.html">照片牆</a></li>
-				<li><a href="article.html">星知識</a></li>
-			</ul>
-			<ul class="mainMenu signArea">
-				<li id="signLeft">
-					<i class="fa fa-user-circle-o" aria-hidden="true"></i>
-					<span><a href="#">註冊</a></span>
-				</li>
-				<li id="signRight">
-					<span><a href="#">登入</a></span>
-				</li>
-			</ul>
-		</div>
-	</div>
-</nav>
+        <div class="relative">
+            <div class="row">
+                <div id="ham">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <div id="logo">
+                    <a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
+                </div>
+                <ul class="mainMenu menu">
+                    <li><a href="#" class="onThisPage">觀星活動</a></li>
+                    <li><a href="forum.html">星際論壇</a></li>
+                    <li><a href="photo.html">照片牆</a></li>
+                    <li><a href="article.html">星知識</a></li>
+                    <li><a href="#">新手村</a></li>
+                </ul>
+                <ul class="mainMenu signArea">
+                    <ul class="subMenu">
+                        <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>會員專區</a></li>
+                        <li><a href="#"><i class="fa fa-wpexplorer" aria-hidden="true"></i>我的活動</a></li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-grav" aria-hidden="true"></i>我的貼文</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-camera" aria-hidden="true"></i>
+                            我的照片</a></li>
+                        <li><a href="#">我的收藏</a></li>
+                        <li><a href="#" id="logOut">登出</a></li>
+                    </ul>
+                    <li id="navMemPhoto">
+                        <img src="">
+                    </li>
+                    <li id="navMemInfo">
+                        <span id="navMemberName"></span>
+                    </li>
+                    <li id="signLeft">
+                        <span><a href="#" id="navSignup">註冊</a></span>
+                    </li>
+                    <li id="signRight">
+                        <span><a href="#" id="navLogin">登入</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 <!-- 導覽列結束 -->
 
 <div id="fullpage">
@@ -388,7 +474,7 @@
 								 <div class="aa-test">
 									<p class="a-text"><i class="fa fa-tags" aria-hidden="true"></i>選擇活動類型</p>
 									<ul>
-										<a href="#" id="turnOff"><input type="hidden" name="all" value="all" placeholder="" id="a-all"><li>全部</li></a>
+										<a href="#" class="a-all"><input type="hidden" name="all" value="all" placeholder="" id="a-all"><li>全部</li></a>
 										<a href="#" class="a-getDate"><input type="hidden" name="" value="1" placeholder=""><li>天文觀測</li></a>
 										<a href="#" class="a-getDate"><input type="hidden" name="" value="2" placeholder=""><li>親子觀星</li></a>
 										<a href="#" class="a-getDate"><input type="hidden" name="" value="3" placeholder=""><li>天文攝影</li></a>
@@ -403,7 +489,7 @@
 								 <div class="aa-test">
 									<p class="a-text"><i class="fa fa-map-marker" aria-hidden="true"></i>選擇活動地點</p>
 									<ul>
-										<a href="#"><li>全部</li></a>
+										<a class="a-all" href="#"><li>全部</li></a>
 										<a href="#" class="a-getLatLng" id="a-north"><input type="hidden" name="" value="24.0000000" placeholder=""><li>北部地區</li></a>
 										<a href="#" class="a-getLatLng" id="a-center"><input type="hidden" name="" value="24.0000000" placeholder=""><li>中部地區</li></a>
 										<a href="#" class="a-getLatLng" id="a-south"><input type="hidden" name="" value="24.0000000" placeholder=""><li>南部地區</li></a>
@@ -445,7 +531,7 @@
 					<!-- 手機search bar結束 -->
 					<!-- 下方活動區塊 -->
 						<div class="a-scrollArea" id="aa-activities">
-							<div class="col-xs-12 col-sm-12 col-md-12 a-pReset">
+							<div class="col-xs-12 col-sm-12 col-md-12 a-pReset" id="a-add">
 								<!-- 第一則活動 -->
 				<?php 
 					try {
@@ -456,7 +542,7 @@
 						$act->execute();
 					    while($actRow = $act->fetch()){
 
-					    	$str = '<div class="col-xs-12 col-sm-6 col-md-6 ">
+					    	$str = '<div class="col-xs-12 col-sm-6 col-md-6 a-remove">
 									<div class="aa-box">
 										<div class="box-img">
 											<img src="'.$actRow["act_img"].'" alt="" >
@@ -490,39 +576,12 @@
 						
 					}
 
-				?>
-								<div class="col-xs-12 col-sm-6 col-md-6 ">
-									<div class="aa-box">
-										<div class="box-img">
-											<img src="img/a_007.jpg" alt="" >
-										</div>
-										<div class="box-text">
-											<h4>墾丁南十字星觀星露營</h4>
-											<p class="aa-date">2017-05-02~2017-05-06</p>
-											<p class="aa-desc" >
-												時序漸入夏，落山風遠離了恆春半島，也是正是認識春夏星空及屬於南部球南十字星座的好時間...
-											</p>
-											<div class="aa-btn-area">
-												<div class="social-icon">
-													<i class="fa fa-star-o" aria-hidden="true"></i><span></span>20人收藏
-												</div>
-												<div class="aa-btn btn-blue btn-lg">
-													<a href="" class="ff_lightbox_link">熱烈報名中</a>
-												</div>
-												<div class="clear"></div>
-											</div>
-										</div>
-										<div class="aa-tag">
-											<span>休閒聯誼</span>
-										</div>	
-									</div>
-								</div>
-								<!-- 單則活動結束 -->
+				?><!-- 單則活動結束 -->
 								
-							</div>
-							<div id="aa-more">
+				</div><!-- a-add end -->
+							<!-- <div id="aa-more">
 								<a href="#">載入更多</a>
-							</div>
+							</div> -->
 						</div>
 					    <!-- 活動區結束 scrollArea -->	
 					</div>
@@ -610,7 +669,7 @@
 	}
  -->
  
-
+<!-- 
 			<div class="comment ct1">
 				<div class="user">
 					<div class="user-pic">
@@ -626,7 +685,7 @@
 					<p>2015-06-01 11:00</p>
 				</div>
 				<div class="clear"></div>
-			</div>
+			</div> -->
 <!-- 			<div class="comment ct2">
 				<div class="user">
 					<div class="user-pic">
@@ -689,6 +748,25 @@
 
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoawYvLTgMObeyY-Ng0r4-f-vLhWoZZxQ&libraries=places&callback=initAutocomplete"
          async defer></script> -->
+<div class="loginPopup">
+        <div class="i-lightboxBg"></div>
+        <div class="login">
+            <h4>會員登入</h4>
+            <!-- <form action="php/login.php" method="post"> -->
+            <input id="loginAccount" type="Email" value="guest" name="memEmail">
+            <input id="loginPsw" type="password" value="guest" name="memPsw" maxlength="12" minlength="4">
+            <input id="loginConfirmPsw" type="password" placeholder="*確認密碼" maxlength="12" minlength="4">
+            <input id="loginMemName" type="text" placeholder="*暱稱(2~12個字元)" name="memName" maxlength="12" minlength="2">
+            <input type="submit" class="searchBar-btn" id="i-loginBtn" value="登入">
+            <!-- <div class="searchBar-btn" id="i-loginBtn">
+                    <a href="#">登入</a>
+                </div> -->
+            <!-- </form> -->
+            <div class="logOn">
+                按此註冊會員
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
@@ -699,7 +777,219 @@ console.log("input",$(this).children("input").val());
 </script> -->
 
 
+<script type="text/javascript">
+$(function(){
+  $('#navButton').click(function(){
+    if($('.mainMenu.menu').hasClass('open')){
+       $('#nav').animate({'background-color':'rgba(0,0,0,0.6)'},500);
+      $('body').css('overflow','visible');
+      $('#navButton').children('i').attr('class', 'fa fa-bars');
+      $('.mainMenu.menu').stop().animate({'left':'-100%'},400).removeClass('open');
+    }else{
+      $('#nav').animate({'background-color':'#020202'},500);
+      $('.mainMenu.menu').stop().animate({'left':'0'},400).addClass('open');
+      $('body').css('overflow','hidden');
+      $('#navButton').children('i').attr('class','fa fa-times');
+    }
+  })
 
+var mem = JSON.parse(localStorage.getItem('mem'));
+
+
+    //判定會員登入==================================
+    if (localStorage.mem) {
+        $('.mainMenu.signArea').children('li').css('display', 'none');
+        $('#navMemPhoto').css('display', 'inline-block').find('img').attr('src', mem.mem_img);
+        $('#navMemInfo').css('display', 'inline-block').find('#navMemberName').text(mem.mem_name);
+    }
+    //會員登入=====end==========
+
+
+    $('#logOut').click(function() {
+        localStorage.clear('mem');
+        $('.subMenu').removeClass('show');
+        $('#navMemPhoto').css('display', 'none').siblings('#navMemInfo').css('display', 'none')
+            .siblings('#signLeft').css('display', 'inline-block')
+            .siblings('#signRight').css('display', 'inline-block');
+    })
+
+    var lightBoxBg = $('.i-lightboxBg');
+
+    $('#navLogin').click(function(e) {
+        e.preventDefault();
+        onLogin();
+        loginSwitch();
+        lightBoxBg.css('background-color', 'rgba(0,0,0,0.7)');
+    });
+
+
+    $('#navSignup').click(function(e) {
+        e.preventDefault();
+        onLogin();
+        signUpSwitch();
+        lightBoxBg.css('background-color', 'rgba(0,0,0,0.7)');
+    })
+
+
+    lightBoxBg.click(offLogin);
+
+    $('.logOn').click(function() {
+        if ($(this).text() == '我要登入') {
+            loginSwitch();
+        } else {
+            signUpSwitch();
+        }
+    })
+
+
+    //切換登入註冊
+    function signUpSwitch() {
+        $('.logOn').text('我要登入')
+            .siblings('h4').text('會員註冊')
+            .siblings('#i-loginBtn').val('註冊')
+            .siblings('#loginConfirmPsw').stop().fadeIn(400)
+            .siblings('#loginMemName').stop().fadeIn(400)
+            .siblings('#loginAccount').attr('placeholder', '*帳號(Email)').val('')
+            .siblings('#loginPsw').attr('placeholder', '*密碼(4~12個字元)').val('');
+    }
+    //切換登入註冊
+    function loginSwitch() {
+        $('#i-loginBtn').val('登入')
+            .siblings('h4').text('會員登入')
+            .siblings('#loginConfirmPsw').stop().slideUp(400)
+            .siblings('#loginMemName').stop().slideUp(400)
+            .siblings('#loginAccount').attr('placeholder', '*帳號(Email)')
+            .siblings('#loginPsw').attr('placeholder', '*密碼(4~12個字元)')
+            .siblings('.logOn').text('我要註冊');
+    }
+
+
+    function offLogin() {
+        $('.loginPopup').css({
+            'display': 'none'
+        });
+        $('.login').css({
+            'display': 'none'
+        });
+        $('#nav').stop().fadeIn(600);
+        $('body').css({
+            'overflow': 'visible'
+        });
+    }
+
+    function onLogin() {
+        $('.loginPopup').css({
+            'display': 'block'
+        });
+        $('.login').css({
+            'display': 'block'
+        });
+        $('#nav').stop().slideUp(600);
+        $('body').css({
+            'overflow': 'hidden'
+        });
+        $('#loginAccount').val('guest');
+        $('#loginPsw').val('guest');
+    }
+
+    $('#navMemPhoto').click(function() {
+        $('.subMenu').toggleClass('show');
+    })
+
+
+    $('#i-loginBtn').click(function(e) {
+        e.preventDefault();
+        if ($('#i-loginBtn').val() == '登入') {
+            $.ajax({ //會員登入============
+                    type: 'GET',
+                    url: 'php/login.php',
+                    data: {
+                        memEmail: $('#loginAccount').val(),
+                        memPsw: $('#loginPsw').val()
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.msg) {
+                            loginFail();
+                        } else {
+                            var memInfo = {
+                                'mem_no': res.mem_no,
+                                'mem_name': res.mem_name,
+                                'mem_img': res.mem_img
+                            }
+                            localStorage.setItem("mem", JSON.stringify(memInfo));
+                            $('.mainMenu.signArea').children('li').css('display', 'none');
+                            $('#navMemPhoto').css('display', 'inline-block').find('img').attr('src', res.mem_img);
+                            $('#navMemInfo').css('display', 'inline-block').find('#navMemberName').text(res.mem_name);
+                            offLogin();
+                        }
+                    }
+
+                }) //會員登入============end========
+        } else {
+            if ($('#loginPsw').val() == $('#loginConfirmPsw').val()) {
+                $.ajax({ //會員註冊==============
+                    type: 'POST',
+                    url: 'php/login.php',
+                    data: {
+                        memEmail: $('#loginAccount').val(),
+                        memPsw: $('#loginPsw').val(),
+                        memName: $('#loginMemName').val()
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.msg == "fail") {
+                            regisFail();
+                        } else {
+                            var memInfo = {
+                                'mem_no': res.mem_no,
+                                'mem_name': res.mem_name,
+                                'mem_img': res.mem_img
+                            }
+                            localStorage.setItem("mem", JSON.stringify(memInfo));
+                            window.location.href = "member.html";
+                        }
+                    }
+                })
+            } else {
+                wrongPsw();
+            }
+        } //會員註冊======end========
+    })
+
+
+    $('.login').children('input').on('focus', function() {
+        $(this).siblings('p').remove();
+    })
+
+    function loginFail() {
+        var temp = '<p style="color:red">請確認您的帳號密碼</p>';
+        $('#loginAccount').val('').attr('placeholder', '*帳號(Email)')
+            .siblings('#loginPsw').val('').attr('placeholder', '*密碼(4~12個字元)')
+            .siblings('#i-loginBtn').siblings('p').remove().end().before(temp);
+    }
+
+
+    function regisFail() {
+        var temp = '<p style="color:red">帳號已被註冊或空白</p>';
+        $('#loginAccount').val('').attr('placeholder', '*帳號(Email)')
+            .siblings('#loginPsw').val('').attr('placeholder', '*密碼(4~12個字元)')
+            .siblings('#loginMemName').val('').attr('*暱稱(2~12個字元)')
+            .siblings('#i-loginBtn').siblings('p').remove().end().before(temp);
+    }
+
+    function wrongPsw() {
+        var temp = '<p style="color:red">請確認密碼</p>';
+        $('#loginPsw').val('').attr('placeholder', '*密碼(4~12個字元)')
+            .siblings('#i-loginBtn').siblings('p').remove().end().before(temp);
+    }
+
+
+
+
+  
+})	
+</script>
 
 
 
